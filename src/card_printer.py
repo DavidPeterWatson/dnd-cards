@@ -56,7 +56,7 @@ def print_card(deck, card, canvas, column, row):
     category_font =  category['Font']
     category_font_size =  category['Font Size']
     category_top_offset =  category['Top Offset']
-    category_text = card['Subclass'] + ' ' + card['Class']
+    category_text = card['Subcategory'] + ' ' + card['Category']
     canvas.setFont(category_font, category_font_size)
     canvas.drawCentredString((column + 0.5) * card_width * mm, (pdf_row * card_height + detail_height - category_top_offset ) * mm, category_text)
 

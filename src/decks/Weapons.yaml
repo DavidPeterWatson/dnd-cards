@@ -1,26 +1,28 @@
 Collections:
-  Equipment Collection:
+  Weapons:
     Cards:
-      - Name: Backpack Card
+      - Name: Longbow
+      - Name: Shortsword
 
 Cards:
-  Longbow Proficiency Card:
+  Longbow:
     Type: Weapon
-    Weapon Type: Ranged
     Header: Longbow
-    Sub Header: with proficiency
-    Cost: 50gp
+    Category: Weapon
+    Subcategory: Ranged
+    Cost: 2gp
     Weight: 2lb
     Range: 60
     Range with disadvantage: 120
-    Detail: Shoot arrows.
-    Image: longbow.png
+    Detail: Shoot stuff.
+    Image: Weapons/Longbow.png
 
-  Longbow Card:
+  Shortsword:
     Type: Weapon
-    Header: Longbow
-    Cost: 50gp
-    Range: 60
-    Range with disadvantage: 120
-    Detail: Shoot arrows.
-    Image: longbow.png
+    Header: Shortsword
+    Category: Weapon
+    Subcategory: Melee
+    Cost: 20gp
+    Weight: 4lb
+    Detail: Attack goblins.
+    Image: Weapons/Shortsword.png

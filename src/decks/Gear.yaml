@@ -7,44 +7,14 @@ Cards:
     Cost: 2gp
     Weight: 2lb
     Detail: Carry stuff.
-    Image: backpack.png
-
-  Longbow Card:
-    Type: Weapon
-    Category: Weapon
-    Subclass: Ranged
-    Header: Longbow
-    Cost: 2gp
-    Weight: 2lb
-    Detail: Shoot stuff.
-    Image: longbow.png
+    Image: Gear/Backpack.png
 
   Rope Card:
     Type: Gear
+    Header: Rope
     Category: Gear
     Subcategory: Climbing
-    Header: Rope
     Cost: 1gp
     Weight: 5lb
-    Detail: Climb  stuff.
-    Image: rope.png
-
-  Shortsword Card:
-    Type: Weapon
-    Category: Weapon
-    Subclass: Melee
-    Header: Shortsword
-    Cost: 20gp
-    Weight: 4lb
-    Detail: Attack goblins.
-    Image: sword.png
-
-  Damaia Card:
-    Type: Character
-    Category: tiefling
-    Subclass: barbarian
-    Header: Damaia
-    Cost: N/A
-    Weight: 120lb
-    Detail: Background goes here.
-    Image: tiefling barbarian.png
+    Detail: Climb stuff.
+    Image: Gear/Rope.png
