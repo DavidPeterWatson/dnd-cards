@@ -1,0 +1,45 @@
+Deck Styles:
+  Scroll Deck Style:
+    Type: Deck Style
+    Header:
+      Image: Scroll Header.png
+      Font: treasuremap.ttf
+      Font Size: 12
+      Height: 15
+      TextTop: 10
+    Border:
+      Image: Border.png
+    Detail:
+      Image: Scroll Detail.png
+      Height: 28
+      Font: Luminari.ttf
+      Font Size: 6
+      Top Offset: 12
+      Left Offset: 7
+    Category:
+      Font: treasuremap.ttf
+      Font Size: 9
+      Top Offset: 7
+    Background: Scroll Background.jpg
+    Back: Back.png
+    StyleFolder: Themes/Scroll
+    Image:
+      Folder: Collections
+      Top: 15
+      Left: 10
+      Height: 47
+      Width: 40
+    Page Size: A4 Page Size
+    Card Size: Playing Card Size
+    Columns: 3
+    Rows: 3
+
+Page Sizes:
+  A4 Page Size:
+    Width: 210
+    Height: 297
+
+Card Sizes:
+  Playing Card Size:
+    Width: 64
+    Height: 89

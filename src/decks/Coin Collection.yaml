@@ -1,0 +1,28 @@
+Collections:
+  Coin Collection:
+    Cards:
+      - Name: Gold Coin Card
+        Quantity: 10
+      - Name: 10 Gold Coins Card
+        Quantity: 10
+      - Name: Silver Coin Card
+        Quantity: 10
+      - Name: Bronze Coin Card
+        Quantity: 10
+
+Cards:
+  Gold Coin Card:
+    Type: Card
+    Card Type: Coin
+    Name: Gold Piece
+    Quantity: 1
+    Detail: Use to buy stuff
+    Image: gold piece.png
+
+  10 Gold Coins Card:
+    Type: Card
+    Card Type: Coin
+    Name: 10 Gold Pieces
+    Quantity: 10
+    Detail: Use to buy stuff
+    Image: 10 gold pieces.png

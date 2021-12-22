@@ -1,0 +1,13 @@
+src/__pycache__/__init__.cpython-39.pyc
+src/__pycache__/card_printer.cpython-310.pyc
+src/__pycache__/deck_compiler.cpython-310.pyc
+src/__pycache__/deck_loader.cpython-310.pyc
+src/__pycache__/deck_printer.cpython-310.pyc
+src/__pycache__/deck.cpython-310.pyc
+src/__pycache__/dnd_card.cpython-39.pyc
+src/__pycache__/exceptions.cpython-310.pyc
+src/__pycache__/test_borb.cpython-39-pytest-6.2.2.pyc
+src/__pycache__/test_generate.cpython-39-pytest-6.2.2.pyc
+src/__pycache__/types.cpython-37.pyc
+src/__pycache__/version.cpython-310.pyc
+.DS_Store

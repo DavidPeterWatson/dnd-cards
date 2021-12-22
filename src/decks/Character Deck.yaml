@@ -1,0 +1,13 @@
+Name: Nyx Daergel Deck
+Character Info: Nyx Daergel.yaml
+Deck Style: *scroll_deck_style
+Collections:
+  - Name: Condition Collection
+  - Name: Equipment Collection
+  - Name: Coin Collection
+
+Include Files:
+  - Scroll Deck Style.yaml
+  - Equipment Collection.yaml
+  - Condition Collection.yaml
+  - Coin Collection.yaml

@@ -1,0 +1,26 @@
+Collections:
+  Equipment Collection:
+    Cards:
+      - Name: Backpack Card
+
+Cards:
+  Longbow Proficiency Card:
+    Type: Weapon
+    Weapon Type: Ranged
+    Header: Longbow
+    Sub Header: with proficiency
+    Cost: 50gp
+    Weight: 2lb
+    Range: 60
+    Range with disadvantage: 120
+    Detail: Shoot arrows.
+    Image: longbow.png
+
+  Longbow Card:
+    Type: Weapon
+    Header: Longbow
+    Cost: 50gp
+    Range: 60
+    Range with disadvantage: 120
+    Detail: Shoot arrows.
+    Image: longbow.png

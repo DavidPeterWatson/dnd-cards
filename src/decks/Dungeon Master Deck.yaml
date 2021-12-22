@@ -1,0 +1,7 @@
+Name: Dungeon Master's Deck
+Style: Scroll Deck Style
+Files:
+  - Default Deck Styles.yaml
+  - Gear.yaml
+  - Weapons.yaml
+  - Conditions.yaml
