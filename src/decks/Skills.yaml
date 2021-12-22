@@ -1,0 +1,145 @@
+Cards:
+  Athletics:
+    Type: Skill
+    Header: Athletics
+    Category: Skill
+    Subcategory: Strength
+    Detail: Athletics.
+    Image: Skills/Athletics.jpg
+
+  Acrobatics:
+    Type: Skill
+    Header: Acrobatics
+    Category: Skill
+    Subcategory: Dexterity
+    Detail: Acrobatics.
+    Image: Skills/Acrobatics.jpg.webp
+
+  Sleight of Hand:
+    Type: Skill
+    Header: Sleight of Hand
+    Category: Skill
+    Subcategory: Dexterity
+    Detail: Sleight of Hand.
+    Image: Skills/Sleight of Hand.jpg
+
+  Stealth:
+    Type: Skill
+    Header: Stealth
+    Category: Skill
+    Subcategory: Dexterity
+    Detail: Stealth.
+    Image: Skills/Stealth.jpg.webp
+
+  Arcana:
+    Type: Skill
+    Header: Arcana
+    Category: Skill
+    Subcategory: Intelligence
+    Detail: Your Intelligence (Arcana) check measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, planes of existence, and the inhabitants of those planes.
+    Image: Skills/Arcana.jpg.webp
+    Link: https://nerdarchy.com/arcana-101-5e-dd-skills-and-skill-checks/
+
+  History:
+    Type: Skill
+    Header: History
+    Category: Skill
+    Subcategory: Intelligence
+    Detail: History.
+    Image: Skills/History.png
+
+  Investigation:
+    Type: Skill
+    Header: Investigation
+    Category: Skill
+    Subcategory: Intelligence
+    Detail: Investigation.
+    Image: Skills/Investigation.png
+
+  Nature:
+    Type: Skill
+    Header: Nature
+    Category: Skill
+    Subcategory: Intelligence
+    Detail: Nature.
+    Image: Skills/Nature.png
+
+  Religion:
+    Type: Skill
+    Header: Religion
+    Category: Skill
+    Subcategory: Intelligence
+    Detail: Religion.
+    Image: Skills/Religion.png
+
+  Animal Handling:
+    Type: Skill
+    Header: Animal Handling
+    Category: Skill
+    Subcategory: Wisdom
+    Detail: Animal Handling.
+    Image: Skills/Animal Handling.png
+
+  Insight:
+    Type: Skill
+    Header: Insight
+    Category: Skill
+    Subcategory: Wisdom
+    Detail: Insight.
+    Image: Skills/Insight.png
+
+  Medicine:
+    Type: Skill
+    Header: Medicine
+    Category: Skill
+    Subcategory: Wisdom
+    Detail: Medicine.
+    Image: Skills/Medicine.png
+
+  Perception:
+    Type: Skill
+    Header: Perception
+    Category: Skill
+    Subcategory: Wisdom
+    Detail: Perception.
+    Image: Skills/Perception.png
+
+  Survival:
+    Type: Skill
+    Header: Survival
+    Category: Skill
+    Subcategory: Wisdom
+    Detail: Survival.
+    Image: Skills/Survival.png
+
+  Deception:
+    Type: Skill
+    Header: Deception
+    Category: Skill
+    Subcategory: Charisma
+    Detail: Deception.
+    Image: Skills/Deception.png
+
+  Intimidation:
+    Type: Skill
+    Header: Intimidation
+    Category: Skill
+    Subcategory: Charisma
+    Detail: Intimidation.
+    Image: Skills/Intimidation.png
+
+  Performance:
+    Type: Skill
+    Header: Performance
+    Category: Skill
+    Subcategory: Charisma
+    Detail: Performance.
+    Image: Skills/Performance.png
+
+  Persuasion:
+    Type: Skill
+    Header: Persuasion
+    Category: Skill
+    Subcategory: Charisma
+    Detail: Persuasion.
+    Image: Skills/Persuasion.png

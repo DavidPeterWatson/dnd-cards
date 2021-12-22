@@ -8,12 +8,10 @@ import click
 
 @click.command()
 @click.option('--deck', prompt='Deck file')
-@click.option('--output', prompt='Output file',
-              help='The person to greet.')
-def build(deck, output):
+def build(deck):
     loaded_deck = load_deck(deck)
     compiled_deck = compile_deck(loaded_deck)
-    print_deck(compiled_deck, output)
+    print_deck(compiled_deck)
 
 
 if __name__ == '__main__':

@@ -8,6 +8,7 @@ click = "*"
 pytest = "*"
 pyyaml = "*"
 reportlab = "*"
+deepmerge = "*"
 
 [dev-packages]
 

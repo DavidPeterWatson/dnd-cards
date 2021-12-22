@@ -30,6 +30,8 @@ Deck Styles:
       Height: 47
       Width: 40
     Page Size: A4 Page Size
+    Top Margin: 10
+    Left Margin: 10
     Card Size: Playing Card Size
     Columns: 3
     Rows: 3

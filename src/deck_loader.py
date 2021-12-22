@@ -1,12 +1,14 @@
 import yaml
 import os
+from deepmerge import always_merger
 
 def load_deck(deck_filename):
     deck = open_deck(deck_filename)
     root_path = os.path.dirname(deck_filename)
     for filename in deck.get('Files', []):
         filepath = os.path.join(root_path, filename)
-        deck.update(load_deck(filepath))
+        loaded_deck = load_deck(filepath)
+        deck = always_merger.merge(deck, loaded_deck)
     print(yaml.safe_dump(deck, sort_keys=False))
     deck['Root Folder'] = root_path
     return deck

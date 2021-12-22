@@ -2,7 +2,7 @@ Cards:
   Backpack Card:
     Type: Gear
     Category: Gear
-    Subclass: ''
+    Subcategory: ''
     Header: Backpack
     Cost: 2gp
     Weight: 2lb

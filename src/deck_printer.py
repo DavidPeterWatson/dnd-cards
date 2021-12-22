@@ -12,8 +12,8 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from card_printer import print_card
 
-def print_deck(deck, output_filename):
-    canvas = Canvas(output_filename)
+def print_deck(deck):
+    canvas = Canvas(deck['Name'] + '.pdf')
     style = deck['Deck Styles'][deck['Style']]
     root_folder = deck['Root Folder']
     style_folder = style['StyleFolder']
@@ -30,6 +30,7 @@ def print_deck(deck, output_filename):
 
     row = -1
     columns = style['Columns']
+    rows = style['Columns']
     column = columns
     cards = deck['Cards']
     print(yaml.safe_dump(cards, sort_keys=False))
@@ -38,7 +39,9 @@ def print_deck(deck, output_filename):
         if column >= columns:
             column = 0
             row += 1
-    
+        if row >= rows:
+            row = 0
+            canvas.showPage()
         print_card(deck, cards[card], canvas, column, row)
 
     canvas.showPage()

@@ -8,11 +8,12 @@
 from reportlab.lib.units import mm
 import os
 import yaml
-
+from reportlab.lib import utils
 from decimal import Decimal
 
 def print_card(deck, card, canvas, column, row):
-    print(yaml.safe_dump(card, sort_keys=False))
+    card_header = card['Header']
+    print(f'printing card {card_header}')
     style = deck['Deck Styles'][deck['Style']]
     root_folder = deck['Root Folder']
     style_folder = style['StyleFolder']
@@ -35,6 +36,10 @@ def print_card(deck, card, canvas, column, row):
     image_width =  image['Width']
     image_top =  image['Top']
     image_filepath = os.path.join(root_folder, image_folder, image_filename)
+    img = utils.ImageReader(image_filepath)
+    iw, ih = utils.ImageReader(image_filepath).getSize()
+    aspect = ih / float(iw)
+    image_width = image_height / aspect
     canvas.drawImage(image_filepath, (column * card_width + (card_width - image_width) / 2) * mm, (pdf_row * card_height + card_height - image_top - image_height) * mm, image_width * mm, image_height * mm, mask='auto')
 
     # Draw Detail
@@ -56,7 +61,7 @@ def print_card(deck, card, canvas, column, row):
     category_font =  category['Font']
     category_font_size =  category['Font Size']
     category_top_offset =  category['Top Offset']
-    category_text = card['Subcategory'] + ' ' + card['Category']
+    category_text = card['Category'] + ' - ' + card['Subcategory']
     canvas.setFont(category_font, category_font_size)
     canvas.drawCentredString((column + 0.5) * card_width * mm, (pdf_row * card_height + detail_height - category_top_offset ) * mm, category_text)
 

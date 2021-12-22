@@ -3,7 +3,7 @@ Cards:
     Type: Condition
     Header: Exhaustion
     Category: Condition
-    Subcategory: ''
+    Subcategory: Level 1
     Level: 1
     Detail: Your muscles are sore and your eyelides grow heavy. You have disadvantage on ability checks.
     Image: Conditions/exhaustion level 1.png
@@ -12,7 +12,7 @@ Cards:
     Type: Condition
     Header: Exhaustion
     Category: Condition
-    Subcategory: ''
+    Subcategory: Level 2
     Level: 2
     Detail: Your legs feel like they weigh more than they do. You have disadvantage on ability checks, and your speed is halved
     Image: Conditions/exhaustion level 2.png

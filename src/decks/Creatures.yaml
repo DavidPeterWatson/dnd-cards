@@ -1,0 +1,24 @@
+Collections:
+  Weapons:
+    Cards:
+      - Name: Mastiv
+      - Name: Bat
+
+Cards:
+  Mastiv:
+    Type: Creature
+    Header: Mastiv
+    Category: Creature
+    Subcategory: Dog
+    Weight: 100lb
+    Detail: Shoot stuff.
+    Image: Creatures/Mastiv.png
+
+  Bat:
+    Type: Creature
+    Header: Shortsword
+    Category: Weapon
+    Subcategory: Melee
+    Weight: 10lb
+    Detail: Attack goblins.
+    Image: Creatures/Bat.png
