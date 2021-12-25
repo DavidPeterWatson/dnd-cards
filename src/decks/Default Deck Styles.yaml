@@ -14,7 +14,7 @@ Deck Styles:
       Height: 28
       Font: Luminari.ttf
       Font Size: 6
-      Top Offset: 12
+      Top Offset: 8
       Left Offset: 7
     Category:
       Font: treasuremap.ttf
@@ -22,16 +22,17 @@ Deck Styles:
       Top Offset: 7
     Background: Scroll Background.jpg
     Back: Back.png
-    StyleFolder: Themes/Scroll
+    Style Folder: Themes/Scroll
     Image:
       Folder: Images
       Top: 15
       Left: 10
-      Height: 47
+      Height: 50
       Width: 40
-    Page Size: A4 Page Size
-    Top Margin: 10
-    Left Margin: 10
+    Page:
+      Size: A4 Page Size
+      Bottom Margin: 15
+      Left Margin: 11
     Card Size: Playing Card Size
     Columns: 3
     Rows: 3

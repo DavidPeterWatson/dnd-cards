@@ -29,7 +29,7 @@ Cards:
     Category: Skill
     Subcategory: Dexterity
     Detail: Stealth.
-    Image: Skills/Stealth.jpg.webp
+    Image: Skills/Stealth.png
 
   Arcana:
     Type: Skill
@@ -40,106 +40,106 @@ Cards:
     Image: Skills/Arcana.jpg.webp
     Link: https://nerdarchy.com/arcana-101-5e-dd-skills-and-skill-checks/
 
-  History:
-    Type: Skill
-    Header: History
-    Category: Skill
-    Subcategory: Intelligence
-    Detail: History.
-    Image: Skills/History.png
+  # History:
+  #   Type: Skill
+  #   Header: History
+  #   Category: Skill
+  #   Subcategory: Intelligence
+  #   Detail: History.
+  #   Image: Skills/History.png
 
-  Investigation:
-    Type: Skill
-    Header: Investigation
-    Category: Skill
-    Subcategory: Intelligence
-    Detail: Investigation.
-    Image: Skills/Investigation.png
+  # Investigation:
+  #   Type: Skill
+  #   Header: Investigation
+  #   Category: Skill
+  #   Subcategory: Intelligence
+  #   Detail: Investigation.
+  #   Image: Skills/Investigation.png
 
-  Nature:
-    Type: Skill
-    Header: Nature
-    Category: Skill
-    Subcategory: Intelligence
-    Detail: Nature.
-    Image: Skills/Nature.png
+  # Nature:
+  #   Type: Skill
+  #   Header: Nature
+  #   Category: Skill
+  #   Subcategory: Intelligence
+  #   Detail: Nature.
+  #   Image: Skills/Nature.png
 
-  Religion:
-    Type: Skill
-    Header: Religion
-    Category: Skill
-    Subcategory: Intelligence
-    Detail: Religion.
-    Image: Skills/Religion.png
+  # Religion:
+  #   Type: Skill
+  #   Header: Religion
+  #   Category: Skill
+  #   Subcategory: Intelligence
+  #   Detail: Religion.
+  #   Image: Skills/Religion.png
 
-  Animal Handling:
-    Type: Skill
-    Header: Animal Handling
-    Category: Skill
-    Subcategory: Wisdom
-    Detail: Animal Handling.
-    Image: Skills/Animal Handling.png
+  # Animal Handling:
+  #   Type: Skill
+  #   Header: Animal Handling
+  #   Category: Skill
+  #   Subcategory: Wisdom
+  #   Detail: Animal Handling.
+  #   Image: Skills/Animal Handling.png
 
-  Insight:
-    Type: Skill
-    Header: Insight
-    Category: Skill
-    Subcategory: Wisdom
-    Detail: Insight.
-    Image: Skills/Insight.png
+  # Insight:
+  #   Type: Skill
+  #   Header: Insight
+  #   Category: Skill
+  #   Subcategory: Wisdom
+  #   Detail: Insight.
+  #   Image: Skills/Insight.png
 
-  Medicine:
-    Type: Skill
-    Header: Medicine
-    Category: Skill
-    Subcategory: Wisdom
-    Detail: Medicine.
-    Image: Skills/Medicine.png
+  # Medicine:
+  #   Type: Skill
+  #   Header: Medicine
+  #   Category: Skill
+  #   Subcategory: Wisdom
+  #   Detail: Medicine.
+  #   Image: Skills/Medicine.png
 
-  Perception:
-    Type: Skill
-    Header: Perception
-    Category: Skill
-    Subcategory: Wisdom
-    Detail: Perception.
-    Image: Skills/Perception.png
+  # Perception:
+  #   Type: Skill
+  #   Header: Perception
+  #   Category: Skill
+  #   Subcategory: Wisdom
+  #   Detail: Perception.
+  #   Image: Skills/Perception.png
 
-  Survival:
-    Type: Skill
-    Header: Survival
-    Category: Skill
-    Subcategory: Wisdom
-    Detail: Survival.
-    Image: Skills/Survival.png
+  # Survival:
+  #   Type: Skill
+  #   Header: Survival
+  #   Category: Skill
+  #   Subcategory: Wisdom
+  #   Detail: Survival.
+  #   Image: Skills/Survival.png
 
-  Deception:
-    Type: Skill
-    Header: Deception
-    Category: Skill
-    Subcategory: Charisma
-    Detail: Deception.
-    Image: Skills/Deception.png
+  # Deception:
+  #   Type: Skill
+  #   Header: Deception
+  #   Category: Skill
+  #   Subcategory: Charisma
+  #   Detail: Deception.
+  #   Image: Skills/Deception.png
 
-  Intimidation:
-    Type: Skill
-    Header: Intimidation
-    Category: Skill
-    Subcategory: Charisma
-    Detail: Intimidation.
-    Image: Skills/Intimidation.png
+  # Intimidation:
+  #   Type: Skill
+  #   Header: Intimidation
+  #   Category: Skill
+  #   Subcategory: Charisma
+  #   Detail: Intimidation.
+  #   Image: Skills/Intimidation.png
 
-  Performance:
-    Type: Skill
-    Header: Performance
-    Category: Skill
-    Subcategory: Charisma
-    Detail: Performance.
-    Image: Skills/Performance.png
+  # Performance:
+  #   Type: Skill
+  #   Header: Performance
+  #   Category: Skill
+  #   Subcategory: Charisma
+  #   Detail: Performance.
+  #   Image: Skills/Performance.png
 
-  Persuasion:
-    Type: Skill
-    Header: Persuasion
-    Category: Skill
-    Subcategory: Charisma
-    Detail: Persuasion.
-    Image: Skills/Persuasion.png
+  # Persuasion:
+  #   Type: Skill
+  #   Header: Persuasion
+  #   Category: Skill
+  #   Subcategory: Charisma
+  #   Detail: Persuasion.
+  #   Image: Skills/Persuasion.png

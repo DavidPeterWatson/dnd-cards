@@ -11,14 +11,14 @@ Cards:
     Category: Creature
     Subcategory: Dog
     Weight: 100lb
-    Detail: Shoot stuff.
+    Detail: Can  be riden by small creatures
     Image: Creatures/Mastiv.png
 
   Bat:
     Type: Creature
-    Header: Shortsword
-    Category: Weapon
-    Subcategory: Melee
+    Header: Bat
+    Category: Creature
+    Subcategory: Bat
     Weight: 10lb
-    Detail: Attack goblins.
+    Detail: Flies
     Image: Creatures/Bat.png

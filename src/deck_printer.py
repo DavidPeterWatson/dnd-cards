@@ -10,39 +10,51 @@ import os
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from card_printer import print_card
+from reportlab.lib.units import mm
 
-def print_deck(deck):
-    canvas = Canvas(deck['Name'] + '.pdf')
-    style = deck['Deck Styles'][deck['Style']]
-    root_folder = deck['Root Folder']
-    style_folder = style['StyleFolder']
+from deck import Deck
+from card import print_card
 
-    header = style['Header']
+def print_deck(deck_definition):
+    deck = Deck(deck_definition)
+    draw_cut_lines(deck)
+
+    header = deck.style['Header']
     header_font = header['Font']
-    header_font_path = os.path.join(root_folder, style_folder, header_font)
+    header_font_path = os.path.join(deck.style_path, header_font)
     pdfmetrics.registerFont(TTFont(header_font, header_font_path))
 
-    detail = style['Detail']
+    detail = deck.style['Detail']
     detail_font = detail['Font']
-    detail_font_path = os.path.join(root_folder, style_folder, detail_font)
+    detail_font_path = os.path.join(deck.style_path, detail_font)
     pdfmetrics.registerFont(TTFont(detail_font, detail_font_path))
 
+
     row = -1
-    columns = style['Columns']
-    rows = style['Columns']
-    column = columns
-    cards = deck['Cards']
+
+    column = deck.columns
+    cards = deck.definition['Cards']
     print(yaml.safe_dump(cards, sort_keys=False))
     for card in cards:
         column += 1
-        if column >= columns:
+        if column >= deck.columns:
             column = 0
             row += 1
-        if row >= rows:
+        if row >= deck.rows:
             row = 0
-            canvas.showPage()
-        print_card(deck, cards[card], canvas, column, row)
+            new_page(deck)
+        print_card(deck, cards[card], deck.canvas, column, row)
 
-    canvas.showPage()
-    canvas.save()
+    deck.canvas.showPage()
+    deck.canvas.save()
+
+def draw_cut_lines(deck: Deck):
+    deck.canvas.setLineWidth(1)
+    for column in range(deck.columns + 1):
+        deck.canvas.line(column * deck.card_width + deck.page_left_margin, 0, column * deck.card_width + deck.page_left_margin, deck.page_height)
+    for row in range(deck.rows + 1):
+        deck.canvas.line(0, row * deck.card_height + deck.page_bottom_margin, deck.page_width, row * deck.card_height + deck.page_bottom_margin)
+
+def new_page(deck: Deck):
+    deck.canvas.showPage()
+    draw_cut_lines(deck)
