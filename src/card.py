@@ -13,13 +13,21 @@ from reportlab.lib import utils
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
 from reportlab.platypus import Paragraph
+from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from deck import Deck
+import importlib
+import logging
 
-class Card:
-    def __init__(self, deck: Deck, card_definition, canvas, column, row):
+TOP = 'top'
+BOTTOM = 'bottom'
+MIDDLE = 'middle'
+
+class BaseCard:
+    def __init__(self, deck: Deck, definition, canvas, column, row):
         self.deck = deck
-        # self.style = deck['Deck Styles'][deck['Style']]
-        self.card_definition = card_definition
+        self.definition = definition
         self.canvas = canvas
         self.row = row
         page_row = abs(self.row - deck.rows + 1)
@@ -29,145 +37,184 @@ class Card:
         self.width = self.card_size['Width'] * mm
         self.height = self.card_size['Height'] * mm
 
-        # self.root_folder = deck['Root Folder']
-        # self.style_folder = self.style['Style Folder']
-        # self.style_path: str = os.path.join(self.root_folder, self.style_folder)
-        # image = self.style['Image']
-        # self.image_folder = image['Folder']
-        # self.image_path = os.path.join(deck.root_folder, deck.image_folder)
-
-        # self.page_left_margin = self.page['Left Margin'] * mm
-        # self.page_bottom_margin = self.page['Bottom Margin'] * mm
         self.x_offset = self.column * self.width + deck.page_left_margin
         self.y_offset =  page_row * self.height + deck.page_bottom_margin
+        self.x_back_offset = abs(self.column - 2) * self.width + deck.page_left_margin
 
 
-def print_card(deck, card_definition, canvas, column, row):
-    try:
-        card_header = card_definition['Header']
-        print(f'printing card {card_header}')
-        card = Card(deck, card_definition, canvas, column, row)
-        draw_background(card)
-        draw_artwork(card)
-        draw_detail(card)
-        draw_category(card)
-        draw_border(card)
-        draw_header(card)
-    except Exception:
-        traceback.print_exc()
+    def draw(self):
+        try:
+            self.draw_background()
+            self.draw_artwork()
+            self.draw_detail()
+            self.draw_specifications()
+            self.draw_category()
+            self.draw_border()
+            self.draw_header()
+        except Exception:
+            traceback.print_exc()
 
-def draw_background(card: Card):
-    try:
-        background_filename =  card.deck.style['Background']
-        background_filepath = os.path.join(card.deck.style_path, background_filename)
-        card.canvas.drawImage(background_filepath, card.x_offset, card.y_offset, card.width, card.height, mask='auto')
-    except Exception:
-        traceback.print_exc()
 
-def draw_artwork(card: Card):
-    try:
-        image = card.deck.style['Image']
-        image_filename = card.card_definition['Image']
-        image_height =  image['Height'] * mm
-        image_top =  image['Top'] * mm
-        image_filepath = os.path.join(card.deck.image_path, image_filename)
-        img = utils.ImageReader(image_filepath)
-        iw, ih = utils.ImageReader(image_filepath).getSize()
-        image_aspect_ratio = ih / float(iw)
-        image_width = image_height / image_aspect_ratio
-        draw_image(card, image_filepath, (card.width - image_width) / 2, card.height - image_top - image_height, image_width, image_height)
-    except Exception:
-        traceback.print_exc()
+    def draw_background(self):
+        try:
+            background_filename =  self.deck.style['Background']
+            background_filepath = os.path.join(self.deck.style_path, background_filename)
+            self.canvas.drawImage(background_filepath, self.x_offset, self.y_offset, self.width, self.height, mask='auto')
+        except Exception:
+            traceback.print_exc()
 
-def draw_detail(card: Card):
-    try:
-        detail = card.deck.style['Detail']
-        detail_filename =  detail['Image']
-        detail_height =  detail['Height'] * mm
-        detail_font =  detail['Font']
-        detail_font_size =  detail['Font Size']
-        detail_top_offset =  detail['Top Offset'] * mm
-        detail_left_offset =  detail['Left Offset'] * mm
-        detail_text = card.card_definition['Detail']
-        detail_filepath = os.path.join(card.deck.style_path, detail_filename)
-        card.canvas.drawImage(detail_filepath, card.x_offset, card.y_offset, card.width, detail_height, mask='auto')
-        # card.canvas.setFont(detail_font, detail_font_size)
-        # card.canvas.drawString(card.x_offset + detail_left_offset, card.y_offset + detail_height - detail_top_offset, detail_text)
-        x = card.x_offset + detail_left_offset 
-        y = card.y_offset + detail_height - detail_top_offset
-        draw_paragraph(card.canvas, detail_text, x, y, card.width - detail_left_offset * 2, detail_height, detail_font, detail_font_size)
-    except Exception:
-        traceback.print_exc()
 
-def draw_category(card: Card):
-    try:
-        detail = card.deck.style['Detail']
-        detail_height =  detail['Height'] * mm
-        category = card.deck.style['Category']
-        category_font =  category['Font']
-        category_font_size =  category['Font Size']
-        category_top_offset =  category['Top Offset'] * mm
-        category_text = card.card_definition['Category'] + ' - ' + card.card_definition['Subcategory']
-        card.canvas.setFont(category_font, category_font_size)
-        # canvas.drawCentredString((column + 0.5) * card_width * mm, (pdf_row * card_height + detail_height - category_top_offset ) * mm, category_text)
-        draw_centred_string(card, category_text, card.width / 2,  detail_height - category_top_offset)
-    except Exception:
-        traceback.print_exc()
+    def draw_back(self):
+        try:
+            back = self.deck.definition['Back']
+            back_image =  back['Image']
+            back_image_filepath = os.path.join(self.deck.back_path, back_image)
+            self.canvas.drawImage(back_image_filepath, self.x_back_offset, self.y_offset, self.width, self.height, mask='auto')
+        except Exception:
+            traceback.print_exc()
 
-def draw_border(card: Card):
-    try:
-        border = card.deck.style['Border']
-        border_filename =  border['Image']
-        border_filepath = os.path.join(card.deck.style_path, border_filename)
-        # canvas.drawImage(border_filepath, column * card_width * mm, pdf_row * card_height * mm, card_width * mm, card_height * mm, mask='auto')
-        draw_image(card, border_filepath, 0, 0, card.width, card.height)
-    except Exception:
-        traceback.print_exc()
 
-def draw_header(card: Card):
-    try:
-        header = card.deck.style['Header']
-        header_filename =  header['Image']
-        header_height =  header['Height'] * mm
-        text_top = header['TextTop'] * mm
-        header_font = header['Font'] 
-        header_font_size = header['Font Size']
-        header_filepath = os.path.join(card.deck.style_path, header_filename)
-        # canvas.drawImage(header_filepath, column * card_width * mm, (pdf_row * card_height + card_height - header_height) * mm, card_width * mm, header_height * mm, mask='auto')
-        draw_image(card, header_filepath, 0, card.height - header_height, card.width, header_height)
-        card.canvas.setFont(header_font, header_font_size)
-        draw_centred_string(card, card.card_definition['Header'], card.width / 2, card.height - text_top)
-        # card.canvas.drawCentredString((column + 0.5) * card_width * mm, (pdf_row * card_height + card_height - text_top) * mm, card['Header'])
-    except Exception:
-        traceback.print_exc()
+    def draw_specifications(self):
+        pass
 
-def draw_image(card: Card, image_filepath, x_offset, y_offset, width, height):
-    card.canvas.drawImage(image_filepath, card.x_offset + x_offset, card.y_offset + y_offset, width, height, mask='auto')
 
-def draw_centred_string(card: Card, text: str, x_offset, y_offset):
-    card.canvas.drawCentredString(card.x_offset + x_offset, card.y_offset + y_offset, text)
-    # style = ParagraphStyle(
-    #     name='Normal',
-    #     fontName=fontName,
-    #     fontSize=fontSize,
-    #     alignment=TA_CENTER,
-    #     spaceAfter=1 * mm
-    # )
-    # message_style = ParagraphStyle('Normal', alignment=TA_CENTER)
-    # message = text.replace('\n', '<br />')
-    # message = Paragraph(message, style=message_style)
-    # w, h = message.wrap(width, height)
-    # message.drawOn(card.canvas, card.x_offset + x_offset, card.y_offset + y_offset - height)
+    def draw_artwork(self):
+        try:
+            image = self.deck.style['Image']
+            image_height =  image['Height'] * mm
+            image_top =  image['Top'] * mm
+            image_filename = self.definition['Image']
+            image_filepath = os.path.join(self.deck.image_path, image_filename)
+            iw, ih = utils.ImageReader(image_filepath).getSize()
+            image_aspect_ratio = ih / float(iw)
+            image_width = image_height / image_aspect_ratio
+            self.draw_image(image_filepath, (self.width - image_width) / 2, self.height - image_top - image_height, image_width, image_height)
+        except Exception:
+            traceback.print_exc()
 
-def draw_paragraph(canvas, msg, x, y, max_width, max_height, fontName, fontSize):
-    style = ParagraphStyle(
-        name='Normal',
-        fontName=fontName,
-        fontSize=fontSize,
-        # alignment=alignment,
-        leading=fontSize+2
-    )
-    message = msg.replace('\n', '<br />')
-    message = Paragraph(message, style=style)
-    w, h = message.wrap(max_width, max_height)
-    message.drawOn(canvas, x, y - h)
+
+    def draw_specification(self, label, value, row, alignment = TA_LEFT):
+        try:
+            if value == '':
+                return
+            image = self.deck.style['Image']
+            image_top =  image['Top'] * mm
+            specs = self.deck.style['Specifications']
+            spec_label_font =  specs['Label Font']
+            spec_label_font_size =  specs['Label Font Size']
+            spec_value_font =  specs['Value Font']
+            spec_value_font_size =  specs['Value Font Size']
+            spec_offset =  specs['Offset'] * mm
+            spec_height =  specs['Height'] * mm
+            spec_width =  specs['Width'] * mm
+            spec_spacing =  specs['Spacing'] * mm
+            y_offset = self.height - image_top - row * (spec_height + spec_spacing)
+            if alignment == TA_LEFT:
+                x_offset = spec_offset
+            if alignment == TA_RIGHT:
+                x_offset = self.width - spec_offset - spec_width
+            self.draw_paragraph(label, self.x_offset + x_offset, self.y_offset + y_offset, spec_width, spec_height, spec_label_font, spec_label_font_size, TA_CENTER, TOP)
+            self.draw_paragraph(value, self.x_offset + x_offset, self.y_offset + y_offset, spec_width, spec_height, spec_value_font, spec_value_font_size, TA_CENTER, MIDDLE)
+
+        except Exception:
+            traceback.print_exc()
+
+
+    def draw_category(self):
+        try:
+            detail = self.deck.style['Detail']
+            detail_height =  detail['Height'] * mm
+            category = self.deck.style['Category']
+            category_font =  category['Font']
+            category_font_size =  category['Font Size']
+            category_height =  category['Height'] * mm
+            category_top_text_offset = category['Top Text Offset'] * mm
+            category_text = self.definition['Category'] + ' - ' + self.definition['Subcategory']
+            self.draw_paragraph(category_text, self.x_offset, self.y_offset + detail_height + category_height - category_top_text_offset, self.width, category_height - category_top_text_offset, category_font, category_font_size, TA_CENTER, MIDDLE)
+            # self.draw_centred_string(category_text, self.width / 2,  detail_height, category_font, category_font_size)
+        except Exception:
+            traceback.print_exc()
+
+
+    def draw_detail(self):
+        try:
+            category = self.deck.style['Category']
+            category_height =  category['Height'] * mm
+
+            detail = self.deck.style['Detail']
+            detail_filename =  detail['Image']
+            detail_height =  detail['Height'] * mm
+            detail_font =  detail['Font']
+            detail_font_size =  detail['Font Size']
+            detail_left_offset =  detail['Left Offset'] * mm
+            detail_text = self.definition['Detail']
+            detail_filepath = os.path.join(self.deck.style_path, detail_filename)
+            self.canvas.drawImage(detail_filepath, self.x_offset, self.y_offset, self.width, detail_height + category_height, mask='auto')
+            x = self.x_offset + detail_left_offset 
+            y = self.y_offset + detail_height
+            self.draw_paragraph(detail_text, x, y, self.width - detail_left_offset * 2, detail_height, detail_font, detail_font_size, TA_LEFT)
+        except Exception:
+            traceback.print_exc()
+
+
+    def draw_border(self):
+        try:
+            border = self.deck.style['Border']
+            border_filename =  border['Image']
+            border_filepath = os.path.join(self.deck.style_path, border_filename)
+            self.draw_image(border_filepath, 0, 0, self.width, self.height)
+        except Exception:
+            traceback.print_exc()
+
+
+    def draw_header(self):
+        try:
+            header = self.deck.style['Header']
+            header_filename =  header['Image']
+            header_height =  header['Height'] * mm
+            text_top = header['TextTop'] * mm
+            header_font = header['Font'] 
+            header_font_size = header['Font Size']
+            header_filepath = os.path.join(self.deck.style_path, header_filename)
+            header_text = self.definition['Header']
+            self.draw_image(header_filepath, 0, self.height - header_height, self.width, header_height)
+            self.draw_paragraph(header_text, self.x_offset, self.y_offset + self.height - text_top, self.width, header_height - text_top, header_font, header_font_size, TA_CENTER, MIDDLE)
+        except Exception:
+            traceback.print_exc()
+
+
+    def draw_image(self, image_filepath, x_offset, y_offset, width, height):
+        self.canvas.drawImage(image_filepath, self.x_offset + x_offset, self.y_offset + y_offset, width, height, mask='auto')
+
+
+    def draw_paragraph(self, msg, x, y, max_width, max_height, fontName, fontSize, alignment = TA_LEFT, vertical_alignment = TOP):
+        self.register_font(fontName)
+
+        style = ParagraphStyle(
+            name='Normal',
+            fontName=fontName,
+            fontSize=fontSize,
+            alignment=alignment
+        )
+        w, font_height = Paragraph('T', style=style).wrap(max_width, max_height)
+        style = ParagraphStyle(
+            name='Normal',
+            fontName=fontName,
+            fontSize=fontSize,
+            alignment=alignment,
+            leading=font_height/2
+        )
+        message = str(msg).replace('\n', '<br />')
+        message = Paragraph(message, style=style)
+        w, h = message.wrap(max_width, max_height)
+        effective_y = y - h
+        if vertical_alignment == BOTTOM:
+            effective_y = y - max_height
+        if vertical_alignment == MIDDLE:
+            effective_y = y - ((max_height - h) / 2.0) - h
+        message.drawOn(self.canvas, x, effective_y)
+
+
+    def register_font(self, font):
+        detail_font_path = os.path.join(self.deck.style_path, font)
+        pdfmetrics.registerFont(TTFont(font, detail_font_path))

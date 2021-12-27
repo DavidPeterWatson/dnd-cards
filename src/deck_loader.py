@@ -9,7 +9,7 @@ def load_deck(deck_filename):
         filepath = os.path.join(root_path, filename)
         loaded_deck = load_deck(filepath)
         deck = always_merger.merge(deck, loaded_deck)
-    print(yaml.safe_dump(deck, sort_keys=False))
+    # print(yaml.safe_dump(deck, sort_keys=False))
     deck['Root Folder'] = root_path
     return deck
 

@@ -13,48 +13,57 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.units import mm
 
 from deck import Deck
-from card import print_card
+from card_type_provider import CardTypeProvider
+
+FRONT_PAGE = 0.5
+BACK_PAGE = 10
 
 def print_deck(deck_definition):
     deck = Deck(deck_definition)
-    draw_cut_lines(deck)
+    draw_cut_lines(deck, FRONT_PAGE)
 
-    header = deck.style['Header']
-    header_font = header['Font']
-    header_font_path = os.path.join(deck.style_path, header_font)
-    pdfmetrics.registerFont(TTFont(header_font, header_font_path))
-
-    detail = deck.style['Detail']
-    detail_font = detail['Font']
-    detail_font_path = os.path.join(deck.style_path, detail_font)
-    pdfmetrics.registerFont(TTFont(detail_font, detail_font_path))
-
-
+    card_type_provider = CardTypeProvider()
     row = -1
-
     column = deck.columns
     cards = deck.definition['Cards']
-    print(yaml.safe_dump(cards, sort_keys=False))
-    for card in cards:
+    # print(yaml.safe_dump(cards, sort_keys=False))
+    card_backs = []
+    for card_name in cards:
+        card_definition = cards[card_name]
+        print(f'printing card {card_name}')
         column += 1
         if column >= deck.columns:
             column = 0
             row += 1
         if row >= deck.rows:
             row = 0
-            new_page(deck)
-        print_card(deck, cards[card], deck.canvas, column, row)
+            new_page(deck, BACK_PAGE)
+            for card_back in card_backs:
+                card_back.draw_back()
+            card_backs = []
+            new_page(deck, FRONT_PAGE)
+        card_type = card_type_provider.get_card_type(card_definition['Type'])
+        card = card_type(deck, card_definition, deck.canvas, column, row)
+        card.draw()
+        card_backs.append(card)
 
+    if len(card_backs) > 0:
+        new_page(deck, BACK_PAGE)
+        for card_back in card_backs:
+            card_back.draw_back()
+        card_backs = []
     deck.canvas.showPage()
     deck.canvas.save()
 
-def draw_cut_lines(deck: Deck):
-    deck.canvas.setLineWidth(1)
+
+def draw_cut_lines(deck: Deck, line_width):
+    deck.canvas.setLineWidth(line_width)
+    # self.pdf.setFillColor(colors.black)
     for column in range(deck.columns + 1):
         deck.canvas.line(column * deck.card_width + deck.page_left_margin, 0, column * deck.card_width + deck.page_left_margin, deck.page_height)
     for row in range(deck.rows + 1):
         deck.canvas.line(0, row * deck.card_height + deck.page_bottom_margin, deck.page_width, row * deck.card_height + deck.page_bottom_margin)
 
-def new_page(deck: Deck):
+def new_page(deck: Deck, line_width):
     deck.canvas.showPage()
-    draw_cut_lines(deck)
+    draw_cut_lines(deck, line_width)

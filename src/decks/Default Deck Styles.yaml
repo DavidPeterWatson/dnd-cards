@@ -3,36 +3,47 @@ Deck Styles:
     Type: Deck Style
     Header:
       Image: Scroll Header.png
-      Font: treasuremap.ttf
-      Font Size: 12
+      Font: DUNGRG__.TTF
+      Font Size: 18
       Height: 15
-      TextTop: 10
+      TextTop: 2
     Border:
       Image: Border.png
-    Detail:
-      Image: Scroll Detail.png
-      Height: 28
-      Font: Luminari.ttf
-      Font Size: 6
-      Top Offset: 8
-      Left Offset: 7
-    Category:
-      Font: treasuremap.ttf
-      Font Size: 9
-      Top Offset: 7
-    Background: Scroll Background.jpg
-    Back: Back.png
-    Style Folder: Themes/Scroll
     Image:
       Folder: Images
       Top: 15
       Left: 10
-      Height: 50
+      Height: 47
       Width: 40
+    Back:
+      Folder: Backs
+      Colour: '#000000'
+    Specifications:
+      Offset: 4
+      Label Font: DUNGRG__.TTF
+      Label Font Size: 6
+      Value Font: DUNGRG__.TTF
+      Value Font Size: 9
+      Height: 9
+      Width: 11
+      Spacing: -1
+    Category:
+      Font: DUNGRG__.TTF
+      Font Size: 12
+      Height: 7
+      Top Text Offset: 2
+    Detail:
+      Image: Scroll Detail.png
+      Height: 21
+      Font: Luminari.ttf
+      Font Size: 6
+      Left Offset: 7
+    Background: Scroll Background.png
+    Style Folder: Themes/Scroll
     Page:
       Size: A4 Page Size
       Bottom Margin: 15
-      Left Margin: 11
+      Left Margin: 9.5
     Card Size: Playing Card Size
     Columns: 3
     Rows: 3

@@ -1,20 +1,22 @@
 Cards:
-  Backpack Card:
+  Backpack:
     Type: Gear
     Category: Gear
     Subcategory: ''
     Header: Backpack
     Cost: 2gp
     Weight: 2lb
+    Rarity: Std
     Detail: Carry stuff.
     Image: Gear/Backpack.png
 
-  Rope Card:
+  Rope:
     Type: Gear
     Header: Rope
     Category: Gear
     Subcategory: Climbing
     Cost: 1gp
     Weight: 5lb
+    Rarity: Std
     Detail: Climb stuff.
     Image: Gear/Rope.png

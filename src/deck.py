@@ -1,4 +1,5 @@
 import os
+import yaml
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.units import mm
 
@@ -24,3 +25,8 @@ class Deck():
         self.image = self.style['Image']
         self.image_folder = self.image['Folder']
         self.image_path = os.path.join(self.root_folder, self.image_folder)
+
+        self.back = self.style['Back']
+        # print(yaml.safe_dump(self.back, sort_keys=False))
+        self.back_folder = self.back['Folder']
+        self.back_path: str = os.path.join(self.root_folder, self.back_folder)
