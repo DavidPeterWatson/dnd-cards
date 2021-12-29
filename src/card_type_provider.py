@@ -1,7 +1,7 @@
 import os
 import logging
 import importlib
-from card import BaseCard
+from card import Card
 
 logging.getLogger().setLevel(logging.INFO)
 
@@ -14,12 +14,12 @@ class CardTypeProvider:
 
 
     def get_card_type(self, card_type: str):
-        return self.card_types.get(card_type, BaseCard)
+        return self.card_types.get(card_type, Card)
 
 
     def load_card_types(self):
         card_types = {}
-        for filename in filter(lambda x: x.endswith('.py'), os.listdir(CARD_TYPES_FOLDER)):
+        for filename in filter(lambda x: x.endswith('.py') and x != '__init__.py', os.listdir(CARD_TYPES_FOLDER)):
             try:
                 card_type, card_class = self.load_card_type('{}.{}'.format(CARD_TYPES_FOLDER, filename[:-3]))
                 card_types[card_type] = card_class
@@ -30,4 +30,6 @@ class CardTypeProvider:
 
     def load_card_type(self, filename):
         module = importlib.import_module(filename)
-        return module.get_card_type(), getattr(module, 'Card')
+        class_name = module.get_class_name()
+        # print(f'class name {class_name}')
+        return class_name, getattr(module, class_name)

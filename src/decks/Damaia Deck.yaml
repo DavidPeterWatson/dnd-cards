@@ -18,7 +18,8 @@ Cards:
     Sex: female
     Alignment: chaotic good
     Weight: 120lb
-    Detail: Background goes here.
+    Desccription: Basic description goes here
+    Details: Background goes here.
     Image: tiefling barbarian.png
 
     Ability scores:

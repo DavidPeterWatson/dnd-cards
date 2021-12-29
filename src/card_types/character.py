@@ -1,32 +1,33 @@
-from card import BaseCard
+from card_types.creature import Creature
 import traceback
-from reportlab.lib.units import mm
-from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
+import yaml
 
-
-def get_card_type():
+def get_class_name():
     return 'Character'
 
+class Character(Creature):
 
-class Card(BaseCard):
+    def pre_draw(self):
+        super().pre_draw()
+        self.complete_gear()
+        self.add_carrying_capacity()
+        self.add_categories()
+        pass
 
-    def draw_specifications(self):
-        try:
-            self.draw_specification('Level', self.definition['Level'], 0, TA_RIGHT)
-            self.draw_specification('Weight', self.definition['Weight'], 1, TA_RIGHT)
-            self.draw_specification('Speed', self.definition['Speed'], 2, TA_RIGHT)
-            self.draw_specification('Hit Points', self.definition['Hit Points'], 3, TA_RIGHT)
-            self.draw_specification('Armor Class', self.definition['Armor Class'], 4, TA_RIGHT)
-            self.draw_specification('Proficiency', self.definition['Proficiency Bonus'], 5, TA_RIGHT)
+    def complete_gear(self):
+        for pack in self.info['Equipment'].get('Packs', []):
+            print(pack)
+            pack_info = self.deck.packs.get(pack, {})
+            print(yaml.safe_dump(pack_info))
+            for gear in pack_info.get('Gear', []):
+                if gear in self.deck.cards:
+                    self.info['Equipment']['Gear'].append(gear)
 
-            ability_modifiers = self.definition['Ability Modifiers']
-            self.draw_specification('Strength', ability_modifiers['Strength'], 0, TA_LEFT)
-            self.draw_specification('Dexterity', ability_modifiers['Dexterity'], 1, TA_LEFT)
-            self.draw_specification('Constitution', ability_modifiers['Constitution'], 2, TA_LEFT)
-            self.draw_specification('Intelligence', ability_modifiers['Intelligence'], 3, TA_LEFT)
-            self.draw_specification('Wisdom', ability_modifiers['Wisdom'], 4, TA_LEFT)
-            self.draw_specification('Charisma', ability_modifiers['Charisma'], 5, TA_LEFT)
 
- 
-        except Exception:
-            traceback.print_exc()
+    def add_categories(self):
+        self.info['Category'] = self.info.get('Subrace') + ' ' + self.info.get('Race')
+        self.info['Subcategory'] = self.info.get('Class')
+
+
+    def is_in_deck(deck, card_info):
+        return True

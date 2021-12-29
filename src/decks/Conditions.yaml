@@ -1,37 +1,44 @@
 Cards:
-  Exhaustion Level 1:
+  Exhaustion Level 1: &exhaustion1
     Type: Condition
     Header: Exhaustion I
     Category: Condition
     Subcategory: Level 1
     Level: 1
-    Detail: Your muscles are sore and your eyelides grow heavy. You have disadvantage on ability checks.
+    Description: Your muscles are sore and your eyelides grow heavy. You have disadvantage on ability checks.
     Image: Conditions/exhaustion level 1.jpg
 
-  Exhaustion Level 2:
+  Exhaustion Level 1 Copy 1: *exhaustion1
+
+  Exhaustion Level 2: &exhaustion2
     Type: Condition
     Header: Exhaustion II
     Category: Condition
     Subcategory: Level 2
     Level: 2
-    Detail: Your legs feel like they weigh more than they do. You have disadvantage on ability checks, and your speed is halved
+    Description: Your legs feel like they weigh more than they do. You have disadvantage on ability checks, and your speed is halved
     Image: Conditions/exhaustion level 2.jpg
 
-  Exhaustion Level 3:
+  # Exhaustion Level 2 Copy 1: *exhaustion2
+
+  Exhaustion Level 3: &exhaustion3
     Type: Condition
     Header: Exhaustion III
     Category: Condition
     Subcategory: Level 3
     Level: 3
-    Detail: Your legs feel like they weigh more than they do. You have disadvantage on ability checks, and your speed is halved
+    Description: Your legs feel like they weigh more than they do. You have disadvantage on ability checks, and your speed is halved
     Image: Conditions/exhaustion level 3.jpg
 
-  Exhaustion Level 4:
+  # Exhaustion Level 3 Copy 1: *exhaustion3
+
+  Exhaustion Level 4: &exhaustion4
     Type: Condition
     Header: Exhaustion IV
     Category: Condition
     Subcategory: Level 4
     Level: 4
-    Detail: Your legs feel like they weigh more than they do. You have disadvantage on ability checks, and your speed is halved
+    Description: Your legs feel like they weigh more than they do. You have disadvantage on ability checks, and your speed is halved
     Image: Conditions/exhaustion level 4.jpg
 
+  # Exhaustion Level 4 Copy 1: *exhaustion4

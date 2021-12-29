@@ -3,15 +3,15 @@ Deck Styles:
     Type: Deck Style
     Header:
       Image: Scroll Header.png
-      Font: DUNGRG__.TTF
-      Font Size: 18
-      Height: 15
+      Font: Tiamat Condensed SC Regular Regular.ttf
+      Font Size: 14
+      Height: 12.5
       TextTop: 2
     Border:
       Image: Border.png
     Image:
       Folder: Images
-      Top: 15
+      Top: 12.5
       Left: 10
       Height: 47
       Width: 40
@@ -19,25 +19,32 @@ Deck Styles:
       Folder: Backs
       Colour: '#000000'
     Specifications:
-      Offset: 4
-      Label Font: DUNGRG__.TTF
-      Label Font Size: 6
-      Value Font: DUNGRG__.TTF
-      Value Font Size: 9
+      Offset: 3.5
+      Label Font: LibreBaskerville-Regular.ttf
+      Label Font Size: 5
+      Value Font: LibreBaskerville-Regular.ttf
+      Value Font Size: 8
       Height: 9
-      Width: 11
+      Width: 12
       Spacing: -1
     Category:
-      Font: DUNGRG__.TTF
-      Font Size: 12
+      Font: LibreBaskerville-Regular.ttf
+      Font Size: 9
       Height: 7
-      Top Text Offset: 2
-    Detail:
+      Top Padding: 0
+      Left Padding: 15
+      # Image: Wooden Sign.png
+    Description:
       Image: Scroll Detail.png
-      Height: 21
-      Font: Luminari.ttf
+      Height: 22
+      Font: LibreBaskerville-Regular.ttf
+      Font Size: 7
+      Top Padding: 3
+      Left Padding: 5
+    Details:
+      Font: LibreBaskerville-Regular.ttf
       Font Size: 6
-      Left Offset: 7
+      Padding: 5
     Background: Scroll Background.png
     Style Folder: Themes/Scroll
     Page:

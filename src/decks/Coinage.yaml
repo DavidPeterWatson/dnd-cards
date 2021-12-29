@@ -1,23 +1,20 @@
-Collections:
-  Coinage Collection:
-    Cards:
-      - Name: Gold Coin
-        Quantity: 10
-      - Name: 10 Gold Coins
-        Quantity: 10
-      - Name: Silver Coin
-        Quantity: 10
-      - Name: Bronze Coin
-        Quantity: 10
-
 Cards:
-  Gold Coin:
+  Gold Coin: 
     Type: Coin
     Header: Gold Coin
     Category: Currency
     Subcategory: Gold
     Quantity: 1
-    Detail: Use to buy stuff
+    Description: Use to buy stuff
+    Image: Coins/Gold Coin.png
+
+  Gold Coin Copy 1:
+    Type: Coin
+    Header: Gold Coin
+    Category: Currency
+    Subcategory: Gold
+    Quantity: 1
+    Description: Use to buy stuff
     Image: Coins/Gold Coin.png
 
   10 Gold Coins:
@@ -26,5 +23,5 @@ Cards:
     Category: Currency
     Subcategory: Gold
     Quantity: 10
-    Detail: Use to buy stuff
+    Description: Use to buy stuff
     Image: Coins/Gold Coin.png

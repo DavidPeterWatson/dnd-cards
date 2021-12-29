@@ -1,0 +1,15 @@
+Cards:
+  Tusk:
+    Type: Gear
+    Header: Tusk
+    Category: Item
+    Subcategory: Trophy
+    Cost: ''
+    Weight: 2lb
+    Rarity: Std
+    # Hit Points: 2
+    Description: Tusk
+    Image: Gear/Tusk.png
+    Links:
+      - https://www.dndbeyond.com/equipment/quiver
+      - https://roll20.net/compendium/dnd5e/Quiver#content

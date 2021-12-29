@@ -1,0 +1,70 @@
+Cards:
+  Order of Combat:
+    Type: Rule
+    Header: Order of Combat
+    Category: Rule
+    Subcategory: Combat
+    Details: |
+      <b>1.Determine surprise.</b>
+      The DM determines whether anyone involved in the combat encounter is surprised.
+
+      2. Establish positions.
+      The DM decides where all the characters and monsters are located. Given the adventurers’ marching order or their stated positions in the room or other location, the DM figures out where the adversaries are—how far away and in what direction.
+
+      3.Roll initiative.
+      Everyone involved rolls initiative, determining the order of combatants’ turns.
+
+      4.Take turns.
+      Each participant in the battle takes a turn in initiative order.
+
+      5.Begin the next round.
+      When everyone involved in the combat has had a turn, the round ends. Repeat step 4 until the fighting stops.
+
+  Structure of Play:
+    Type: Rule
+    Header: Structure of Play
+    Category: Rule
+    Subcategory: Combat
+    Details: |
+      1. The DM describes the environment.
+      The DM tells the players where their adventurers are and what’s around them, presenting the basic scope of options available: how many doors lead out of a room, what’s on a table, who’s in the tavern, and so on. The players can ask questions to make sure they understand what their characters perceive.
+
+      2. The players describe what they want to do.
+      The players don’t need to take turns, but the DM listens to every player and decides how to resolve those actions. Sometimes, resolving a task is easy. If an adventurer wants to walk across a room and open a door, the DM might just say that the door opens and describe what lies beyond. But the door might be locked, the floor might hide a deadly trap, or some other circumstance might make it challenging for an adventurer to complete a task. In those cases, the DM decides what happens, often relying on the roll of a die to determine the results of an action.
+
+      3. The DM narrates the results of the adventurers’ actions.
+      Describing the results often leads to another decision point, which brings the flow of the game right back to step 1.
+
+  Combat Turn:
+    Type: Rule
+    Header: Combat Turn
+    Category: Rule
+    Subcategory: Combat
+    Details: |
+      On your turn, you can move a distance up to your speed and take one action. You decide whether to move first or take your action first. Your speed—sometimes called your walking speed—is noted on your character sheet.
+      The most common actions you can take are described in the “Actions in Combat” section later in this chapter. Many class features and other abilities provide additional options for your action.
+      The “Movement and Position” section later in this chapter gives the rules for your move.
+      You can forgo moving, taking an action, or doing anything at all on your turn. If you can’t decide what to do on your turn, consider taking the Dodge or Ready action.
+
+  Core Rule:
+    Type: Rule
+    Header: Core Rule
+    Category: Rule
+    Subcategory: Core
+    Details: |
+      1. Roll the die. Roll a d20, then add the modifier of the ability score used for the roll. A Dexterity saving throw, for instance, uses your Dexterity modifier.
+      2. Apply circumstantial bonuses and penalties. A spell, a particular circumstance, or some other effect might give a bonus or penalty to the roll.
+      3. Compare the total to a target number. If the total equals or exceeds the target number, the roll is a success. Otherwise, it’s a failure. The target number for an ability check or saving throw is called a Difficulty Class (DC).
+        For an attack roll, it’s the Armor Class (AC) of the target being attacked. The DM is usually the one who determines target numbers and tells players whether their ability checks, attack rolls, and saving throws succeed or fail.
+
+  Coinage:
+    Type: Rule
+    Header: Coinage
+    Category: Rule
+    Subcategory: Core
+    Details: |
+      Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).
+      One gold piece is worth ten silver pieces, the most prevalent coin among commoners. One silver piece is worth ten copper pieces, which are common among laborers and beggars.
+      Unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.
+      A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.
+ 

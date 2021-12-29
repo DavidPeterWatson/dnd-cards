@@ -18,34 +18,34 @@ from card_type_provider import CardTypeProvider
 FRONT_PAGE = 0.5
 BACK_PAGE = 10
 
-def print_deck(deck_definition):
-    deck = Deck(deck_definition)
+def print_deck(info):
+    deck = Deck(info)
     draw_cut_lines(deck, FRONT_PAGE)
 
     card_type_provider = CardTypeProvider()
     row = -1
     column = deck.columns
-    cards = deck.definition['Cards']
-    # print(yaml.safe_dump(cards, sort_keys=False))
+    cards = deck.info['Cards']
     card_backs = []
-    for card_name in cards:
-        card_definition = cards[card_name]
-        print(f'printing card {card_name}')
-        column += 1
-        if column >= deck.columns:
-            column = 0
-            row += 1
-        if row >= deck.rows:
-            row = 0
-            new_page(deck, BACK_PAGE)
-            for card_back in card_backs:
-                card_back.draw_back()
-            card_backs = []
-            new_page(deck, FRONT_PAGE)
-        card_type = card_type_provider.get_card_type(card_definition['Type'])
-        card = card_type(deck, card_definition, deck.canvas, column, row)
-        card.draw()
-        card_backs.append(card)
+    for card_name, card_info in cards.items():
+        card_info['Name'] = card_name
+        card_type = card_type_provider.get_card_type(card_info['Type'])
+        if card_type.is_in_deck(deck, card_info):
+            print(f'printing card {card_name}')
+            column += 1
+            if column >= deck.columns:
+                column = 0
+                row += 1
+            if row >= deck.rows:
+                row = 0
+                new_page(deck, BACK_PAGE)
+                for card_back in card_backs:
+                    card_back.draw_back()
+                card_backs = []
+                new_page(deck, FRONT_PAGE)
+            card = card_type(deck, card_info, deck.canvas, column, row)
+            card.draw()
+            card_backs.append(card)
 
     if len(card_backs) > 0:
         new_page(deck, BACK_PAGE)

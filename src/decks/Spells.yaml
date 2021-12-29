@@ -2,19 +2,32 @@ Cards:
   Find Familiar:
     Type: Spell
     Header: Find Familiar
-    Category: Spell
-    Subcategory: Conjuration
+    School: Conjuration
     Level: 1
     Range: 10ft
     Casting Time: 1m
-    Detail: 'Special Attack: Once per turn you can deal an extra 1d6 damage to one creature you hit with an attack with finesse or ranged weapon if you have advantage on the attack.'
+    Duration: Unlimited
+    Classes:
+      - Bard
+      - Sorcerer
+      - Warlock
+      - Wizard
+    Description: You gain the service of a familiar, a spirit that takes an animal form you choose.
+    Details: |
+      You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, toad, hawk, Lizard, Octopus, owl, Poisonous Snake, quipper, rat, raven, Sea Horse, Spider, or Weasel. Appearing in an unoccupied space within range, the familiar has the Statistics of the chosen form, though it is a Celestial, fey, or fiend (your choice) instead of a beast.
+      Your familiar acts independently of you, but it always obeys your commands. In Combat, it rolls its own Initiative and acts on its own turn. A familiar can't Attack, but it can take other Actions as normal.
+      When the familiar drops to 0 Hit Points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.
+      While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any Special Senses that the familiar has. During this time, you are deaf and blind with regard to your own Senses.
+      As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.
+      You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.
+      When you Cast a Spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its Reaction to deliver the spell when you cast it. If the spell requires an Attack roll, you use your Attack modifier for the roll. 
     Image: Spells/Find Familiar.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Find%20Familiar#h-Find%20Familiar
 
   Thaumaturgy:
     Type: Spell
     Header: Thaumaturgy
-    Category: Spell
-    Subcategory: Transmutation
     School: Transmutation
     Classes:
       - Cleric
@@ -24,9 +37,9 @@ Cards:
     Range: 30ft
     Casting Time: 1a
     Level: Cantrip
-    Link: https://www.dndbeyond.com/spells/thaumaturgy
-    Detail: You manifest a minor wonder, a sign of supernatural power, within range.
-    BackDetail: |
+    Image: Spells/Thaumaturgy.jpg
+    Description: You manifest a minor wonder, a sign of supernatural power, within range.
+    Details: |
       You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:
       Your voice booms up to three times as loud as normal for 1 minute.
       You cause flames to flicker, brighten, dim, or change color for 1 minute.
@@ -35,5 +48,34 @@ Cards:
       You instantaneously cause an unlocked door or window to fly open or slam shut.
       You alter the appearance of your eyes for 1 minute.
       If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
-    Image: Spells/Thaumaturgy.jpg
+    Links:
+      - https://www.dndbeyond.com/spells/thaumaturgy
 
+  Minor Illusion:
+    Type: Spell
+    Header: Minor Illusion
+    School: Illusion
+    Level: Cantrip
+    Range: 30ft
+    Casting Time: 1m
+    Duration: 1m
+    Classes:
+      - Bard
+      - Sorcerer
+      - Warlock
+      - Wizard
+    Capabilities:
+      - Natural Illusionist
+    Components:
+      - S
+      - Material (A bit of fleece)
+    Description: You create a sound or an image of an object within range that lasts for the duration.
+    Details: |
+      The Illusion ends if you dismiss it as an action or cast this spell again.
+      If you create a sound, its volume can range from a Whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the Duration, or you can make discrete Sounds at different times before the spell ends.
+      If you create an image of an object - such as a chair, muddy footprints, or a small chest - it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory Effect. Physical interaction with the image reveals it to be an Illusion, because things can pass through it.
+      If a creature uses its action to examine the sound or image, the creature can determine that it is an Illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the Illusion for what it is, the Illusion becomes faint to the creature.
+    Image: Spells/Find Familiar.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Spells:Minor%20Illusion/#h-Minor%20Illusion
+      - https://www.dndbeyond.com/spells/minor-illusion

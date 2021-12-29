@@ -1,33 +1,43 @@
 Name: Nyx Daergel Deck
-Character Info: Nyx Daergel.yaml
+Type: Character
+Character: Nyx Daergel
 Style: Scroll Deck Style
 Back:
-  Image: Back2.png
+  Image: Back1.png
 Files:
   - Default Deck Styles.yaml
-  - Gear.yaml
+  - Spells.yaml
   - Weapons.yaml
+  - Gear.yaml
+  - Items.yaml
+  - Packs.yaml
   - Conditions.yaml
+  - Coinage.yaml
 
 Cards:
-  Nyx Deargel:
+  Nyx Daergel:
     Type: Character
     Header: Nyx Daergel
-    Race: forest gnome
-    Class: ranger
-    Subclass: beast master
-    Background: outlander
-    Category: Forest Gnome
-    Subcategory: Ranger
+    Race: Gnome
+    Subrace: Forest
+    Class: Ranger
+    Subclass: Beast Master
+    Background: Outlander
     Sex: female
     Alignment: chaotic good
     Level: 1
     Weight: 50lb
     Speed: 30ft
     Hit Points: 11
+    Hit Die: d10
     Armor Class: 15
-    Proficiency Bonus: 2
-    Detail: 'Whatever'
+    Proficiency Bonus: '+2'
+    Description: 'Nyx Daergel was outcast by her fellow gnomes and now looks after the animals of the forest.'
+    Details: |
+      Details go here
+      Details go here
+      Details go here
+      Details go here
     Image: Characters/Forest Gnome Ranger.png
 
     Ability Scores:
@@ -39,16 +49,60 @@ Cards:
       Charisma: 10
 
     Ability Modifiers:
-      Strength: -1
-      Dexterity: +3
-      Constitution: +1
-      Intelligence: +2
-      Wisdom: +2
-      Charisma: +0
+      Strength: '-1'
+      Dexterity: '+3'
+      Constitution: '+1'
+      Intelligence: '+2'
+      Wisdom: '+2'
+      Charisma: '+0'
 
-#     Hit die: d10
-#     Hit points: 11
+    Equipment:
+      Weapons:
+        - Shortsword
+        - Longbow
+      Packs:
+        - Explorer’s Pack
+      Gear:
+        - Staff
+        - Quiver of Arrows
+        - Hunting Trap
+        - Tusk
+        - Traveler’s Clothes
+        - Belt Pouch
+        - 10 Gold Coins
+      Armor:
+        - leather armor
 
+    Proficiencies:
+      Weapon Skill Type:
+        - Simple
+        - Martial
+      Weapons:
+        - Simple
+        - Martial
+      Armor:
+        - Light Armor
+        - Medium Armor
+        - Shields
+      Tools: None
+      Skills:
+        - Animal Handling
+        - Nature
+        - Survival
+      Languages:
+        - Common
+        - Gnomish
+    Saving Throws:
+      - Strength
+      - Dexterity
+    Primary Abilities:
+      - Dexterity
+      - Wisdom
+    Capabilities:
+      - Natural Illusionist
+      - 
+    Features: ['favored enemy', 'natural explorer']
+      
 #     Racial proficiencies:
 #       Weapons: 
 #       Armor: 
@@ -77,9 +131,5 @@ Cards:
 #       Your armor is: ['scale mail']
 #       Your equipment is: ["explorer's pack", a staff, a hunting trap, a trophy from an animal you killed, and a set of traveler's clothes]
 
-#     Features and spells (if applicable):
-#       Your class features are: ['favored enemy', 'natural explorer']
-#       Your cantrips are: []
-#       Your first level spells are: []
 
 #   Your background story is: You have chosen not to write a background story of your character.

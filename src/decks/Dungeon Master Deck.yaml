@@ -1,12 +1,11 @@
 Name: Dungeon Master's Deck
 Style: Scroll Deck Style
+Type: Dungeon Master
 Back:
   Image: Back1.png
 Files:
   - Default Deck Styles.yaml
-  - Gear.yaml
-  - Weapons.yaml
-  - Conditions.yaml
+  - Rules.yaml
   - Spells.yaml
   - Skills.yaml
   - Coinage.yaml

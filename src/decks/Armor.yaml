@@ -1,0 +1,15 @@
+
+Cards:
+  Leather Armor:
+    Type: Armor
+    Category: Armor
+    Subcategory: Light
+    Header: Leather Armor
+    Cost: 10gp
+    Armor Class: 11
+    Weight: 10lb
+    Rarity: Std
+    Description: A backpack can hold one cubic foot or 30 pounds of gear. You can also strap items, such as a Bedroll or a coil of rope, to the outside of a backpack.
+    Image: Armor/Leather Armor.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Backpack#h-Backpack

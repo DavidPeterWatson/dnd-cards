@@ -1,0 +1,111 @@
+Name: Wizard Deck
+Type: Character
+Character: Wizard
+Style: Scroll Deck Style
+Back:
+  Image: Back2.png
+Files:
+  - Default Deck Styles.yaml
+  - Spells.yaml
+  - Gear.yaml
+  - Weapons.yaml
+
+Cards:
+  Wizard:
+    Type: Character
+    Header: Wizard
+    Race: Elf
+    Subrace: High
+    Class: Wizard
+    Subclass: ''
+    Background: High Born
+    Sex: female
+    Alignment: nuetral good
+    Level: 1
+    Weight: 120lb
+    Speed: 30ft
+    Hit Points: 11
+    Hit Die: d10
+    Armor Class: 15
+    Proficiency Bonus: +2
+    Description: 'Wizard.'
+    Details: |
+      Details go here
+      Details go here
+      Details go here
+      Details go here
+    Image: Characters/Human Wizard.png
+
+    Ability Scores:
+      Strength: 8
+      Dexterity: 16
+      Constitution: 13
+      Intelligence: 14
+      Wisdom: 14
+      Charisma: 10
+
+    Ability Modifiers:
+      Strength: -1
+      Dexterity: +3
+      Constitution: +1
+      Intelligence: +2
+      Wisdom: +2
+      Charisma: +0
+    
+    Proficiencies:
+      Weapons:
+        - Simple
+        - Martial
+      Armor: []
+      Tools: []
+      Skills:
+        - Animal Handling
+        - Nature
+        - Survival
+      Languages:
+        - Common
+        - Elvish
+      Saving Throws:
+        - Strength
+        - Dexterity
+      Primary Abilities:
+        - Dexterity
+        - Wisdom
+      Capabilities:
+        - Natural Illusionist
+      Prepared Spells:
+        - Find Familiar
+#     Racial proficiencies:
+#       Weapons: 
+#       Armor: 
+#       Tools: 
+#       Languages: [Common, Gnomish]
+#       Other: [Natural illusionist, Speak with small beasts, Gnome cunning, Darkvision 60 ft]
+
+#     Class proficiencies:
+#       Weapons: [simple weapons, martial weapons]
+#       Armor: [light armor, medium armor, shields]
+#       Tools: None
+#       Skills: [animal handling, naturesurvival]
+#       Saving throws: [strength, dexterity]
+#       Primary ability: [dexterity,  wisdom]
+
+#     Character background proficiencies:
+#       Tools: one type of musical instrument
+#       Skills:
+#         - athletics
+#         - survival
+#       Languages: one of your choice
+
+
+#     Equipment:
+#       Your weapons are: ['two shortswords', 'longbow']
+#       Your armor is: ['scale mail']
+#       Your equipment is: ["explorer's pack", a staff, a hunting trap, a trophy from an animal you killed, and a set of traveler's clothes]
+
+#     Features and spells (if applicable):
+#       Your class features are: ['favored enemy', 'natural explorer']
+#       Your cantrips are: []
+#       Your first level spells are: []
+
+#   Your background story is: You have chosen not to write a background story of your character.

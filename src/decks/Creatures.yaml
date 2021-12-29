@@ -14,7 +14,11 @@ Cards:
     Speed: 40ft
     Hit Points: 5
     Armor Class: 12
-    Detail: Keen Hearing and Smell. The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+    Proficiency Bonus: 2
+    Description: |
+      Keen Hearing and Smell. The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell. Mastiffs can be trained as guard dogs, hunting dogs, and war dogs. Halflings and other Small humanoids ride them as mounts.
+    # Details: |
+    #   Mastiffs are impressive hounds prized by humanoids for their loyalty and keen senses. Mastiffs can be trained as guard dogs, hunting dogs, and war dogs. Halflings and other Small humanoids ride them as mounts.
     Image: Creatures/Mastiv.png
     link: https://roll20.net/compendium/dnd5e/Mastiff#content
     Ability Scores:
@@ -26,12 +30,12 @@ Cards:
       Charisma: 7
 
     Ability Modifiers:
-      Strength: +1
-      Dexterity: +2
-      Constitution: +1
-      Intelligence: -4
-      Wisdom: +1
-      Charisma: -2
+      Strength: '+1'
+      Dexterity: '+2'
+      Constitution: '+1'
+      Intelligence: '-4'
+      Wisdom: '+1'
+      Charisma: '-2'
 
   Bat:
     Type: Creature
@@ -40,12 +44,10 @@ Cards:
     Subcategory: Bat
     Weight: 10lb
     Hit Points: 1
-    Speed: |
-      5 ft
-      fly 30ft
+    Speed: 30ft
     Armor Class: 15
-    Detail: |
-      Echolocation. The bat can't use its blindsight while deafened.
+    Description: |
+      Echolocation. The bat can't use its blindsight while deafened. 
       Keen Hearing. The bat has advantage on Wisdom (Perception) checks that rely on hearing.
     Image: Creatures/Bat.png
     Link: https://roll20.net/compendium/dnd5e/Monsters:Bat/#h-Bat
@@ -58,9 +60,9 @@ Cards:
       Charisma: 4
 
     Ability Modifiers:
-      Strength: -4
-      Dexterity: +2
-      Constitution: -1
-      Intelligence: -4
-      Wisdom: +1
-      Charisma: -3
+      Strength: '-4'
+      Dexterity: '+2'
+      Constitution: '-1'
+      Intelligence: '-4'
+      Wisdom: '+1'
+      Charisma: '-3'

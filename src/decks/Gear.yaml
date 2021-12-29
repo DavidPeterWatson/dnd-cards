@@ -1,3 +1,4 @@
+
 Cards:
   Backpack:
     Type: Gear
@@ -5,18 +6,164 @@ Cards:
     Subcategory: ''
     Header: Backpack
     Cost: 2gp
-    Weight: 2lb
+    Weight: 5lb
     Rarity: Std
-    Detail: Carry stuff.
+    Description: A backpack can hold one cubic foot or 30 pounds of gear. You can also strap items, such as a Bedroll or a coil of rope, to the outside of a backpack.
+    Packs:
+      - Explorer’s Pack
+      - Dungeoneer’s Pack
+      - Burglar’s Pack
+      - Entertainer’s Pack
+      - Priest’s Pack
+      - Scholar’s Pack
     Image: Gear/Backpack.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Backpack#h-Backpack
 
-  Rope:
+  Bedroll:
     Type: Gear
-    Header: Rope
+    Header: Bedroll
+    Category: Gear
+    Subcategory: ''
+    Cost: 1gp
+    Weight: 5lb
+    Rarity: Std
+    Hit Points: 2
+    Description: Bedroll.
+    Packs:
+      - Explorer’s Pack
+      - Dungeoneer’s Pack
+    Image: Gear/Bedroll.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/
+
+  Mess Kit:
+    Type: Gear
+    Header: Mess Kit
+    Category: Gear
+    Subcategory: ''
+    Cost: 1gp
+    Weight: 5lb
+    Rarity: Std
+    Hit Points: 2
+    Description: Mess Kit.
+    Image: Gear/Mess Kit.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/
+
+  Tinderbox:
+    Type: Gear
+    Header: Tinderbox
+    Category: Gear
+    Subcategory: ''
+    Cost: 1gp
+    Weight: 5lb
+    Rarity: Std
+    Hit Points: 2
+    Description: Tinderbox.
+    Image: Gear/Tinderbox.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/
+
+  Torch:
+    Type: Gear
+    Header: Torch
+    Category: Gear
+    Subcategory: ''
+    Cost: 1gp
+    Weight: 5lb
+    Rarity: Std
+    Hit Points: 2
+    Description: Torch.
+    Image: Gear/Mess Kit.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/
+
+  Rations:
+    Type: Gear
+    Header: Rations
+    Category: Gear
+    Subcategory: Sleeping
+    Cost: 1gp
+    Weight: 5lb
+    Rarity: Std
+    Hit Points: 2
+    Description: Rations.
+    Image: Gear/Rations.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/
+
+  Waterskin:
+    Type: Gear
+    Header: Waterskin
+    Category: Gear
+    Subcategory: Sleeping
+    Cost: 1gp
+    Weight: 5lb
+    Rarity: Std
+    Hit Points: 2
+    Description: Waterskin.
+    Image: Gear/Waterskin.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/
+
+  Hempen Rope:
+    Type: Gear
+    Header: Hempen Rope
     Category: Gear
     Subcategory: Climbing
     Cost: 1gp
     Weight: 5lb
     Rarity: Std
-    Detail: Climb stuff.
+    Hit Points: 2
+    Description: Hempen rope has 2 Hit Points and can be burst with a DC 17 Strength check.
     Image: Gear/Rope.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Items:Silk%20rope/#h-Silk%20rope
+
+  Staff:
+    Type: Gear
+    Header: Staff
+    Category: Gear
+    Subcategory: ""
+    Cost: 1gp
+    Weight: 4lb
+    Rarity: Std
+    # Hit Points: 2
+    Description: Staff
+    Image: Gear/Staff.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Staff#content
+      - https://the-griffons-saddlebag.tumblr.com/post/647004182615867393/𝗡𝗲𝘄-𝗶𝘁𝗲𝗺-staff-of-the-vineyard-staff
+
+  Hunting Trap:
+    Type: Gear
+    Header: Hunting Trap
+    Category: Gear
+    Subcategory: ""
+    Cost: 1gp
+    Weight: 4lb
+    Rarity: Std
+    # Hit Points: 2
+
+    Description: Hunting Trap
+    Details: |
+      When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its Movement is limited by the length of the chain (typically 3 feet long). A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature.
+    Image: Gear/Hunting Trap.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Hunting%20trap#content
+
+  Quiver of Arrows:
+    Type: Gear
+    Header: Quiver of Arrows
+    Category: Gear
+    Subcategory: ""
+    Cost: 1gp
+    Weight: 4lb
+    Rarity: Std
+    # Hit Points: 2
+    Description: Quiver of Arrows
+    Image: Gear/Quiver of Arrows.png
+    Links:
+      - https://www.dndbeyond.com/equipment/quiver
+      - https://roll20.net/compendium/dnd5e/Quiver#content

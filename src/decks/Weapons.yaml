@@ -8,8 +8,8 @@ Cards:
   Longbow:
     Type: Weapon
     Header: Longbow
-    Category: Martial
-    Subcategory: Ranged
+    Skill Type: Martial
+    Attack Type: Ranged
     Cost: 50gp
     Weight: 2lb
     Range: 150
@@ -21,14 +21,14 @@ Cards:
       - Ammunition
       - Heavy
       - Two-Handed
-    Detail: Shoot stuff.
+    Description: Shoot stuff.
     Image: Weapons/Longbow.png
 
   Shortsword:
     Type: Weapon
     Header: Shortsword
-    Category: Martial
-    Subcategory: Melee
+    Skill Type: Martial
+    Attack Type: Melee
     Cost: 10gp
     Weight: 2lb
     Damage: 1d6
@@ -37,15 +37,15 @@ Cards:
     Properties:
       - Finesse
       - Light
-    Detail: Attack goblins.
+    Description: Attack goblins.
     Image: Weapons/Shortsword.png
     Link: https://roll20.net/compendium/dnd5e/Items:Shortsword/#h-Shortsword
 
   Club:
     Type: Weapon
     Header: Club
-    Category: Simple
-    Subcategory: Melee
+    Skill Type: Simple
+    ttack Type: Melee
     Cost: 1sp
     Weight: 2lb
     Damage: 1d4
@@ -53,6 +53,6 @@ Cards:
     Rarity: Standard
     Properties:
       - Light
-    Detail: Wallop things.
+    Description: Wallop things.
     Image: Weapons/Wooden Club.png
     Link: hhttps://roll20.net/compendium/dnd5e/Club#content
