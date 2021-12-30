@@ -4,24 +4,53 @@ Cards:
     Header: Gold Coin
     Category: Currency
     Subcategory: Gold
-    Quantity: 1
     Description: Use to buy stuff
     Image: Coins/Gold Coin.png
 
-  Gold Coin Copy 1:
+  5 Gold Coins:
     Type: Coin
-    Header: Gold Coin
+    Header: 5 Gold Coins
     Category: Currency
     Subcategory: Gold
-    Quantity: 1
     Description: Use to buy stuff
-    Image: Coins/Gold Coin.png
+    Image: Coins/5 Gold Coins.png
 
   10 Gold Coins:
     Type: Coin
     Header: 10 Gold Coins
     Category: Currency
     Subcategory: Gold
-    Quantity: 10
     Description: Use to buy stuff
-    Image: Coins/Gold Coin.png
+    Image: Coins/10 Gold Coins.png
+
+  Silver Coin: 
+    Type: Coin
+    Header: Silver Coin
+    Category: Currency
+    Subcategory: Silver
+    Description: Use to buy stuff
+    Image: Coins/Silver Coin.png
+
+  5 Silver Coins:
+    Type: Coin
+    Header: 5 Silver Coins
+    Category: Currency
+    Subcategory: Silver
+    Description: Use to buy stuff
+    Image: Coins/5 Silver Coins.png
+
+  Copper Coin: 
+    Type: Coin
+    Header: Copper Coin
+    Category: Currency
+    Subcategory: Copper
+    Description: Use to buy stuff
+    Image: Coins/Copper Coin.png
+
+  5 Copper Coins:
+    Type: Coin
+    Header: 5 Copper Coins
+    Category: Currency
+    Subcategory: Copper
+    Description: Use to buy stuff
+    Image: Coins/5 Copper Coins.png

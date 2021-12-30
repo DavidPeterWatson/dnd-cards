@@ -52,8 +52,8 @@ class Card:
         try:
             self.pre_draw()
             self.draw_background()
-            if self.are_details_on_front():
-                self.draw_details()
+            if self.use_long_description():
+                self.draw_long_description()
             else:
                 self.draw_artwork()
                 self.draw_description()
@@ -64,11 +64,20 @@ class Card:
         except Exception:
             traceback.print_exc()
 
-    def are_details_on_front(self):
-        return not 'Image' in self.info and not 'Description' in self.info
+    def use_long_description(self):
+        return not 'Image' in self.info
 
     def pre_draw(self):
+        self.set_header()
+        self.set_categories()
         pass
+
+    def set_header(self):
+        if self.info.get('Header', '') == '':
+            self.info['Header'] = self.name
+
+    def set_categories(self):
+        self.info['Category'] = self.info.get('Category', self.info.get('Type', ''))
 
     def draw_background(self):
         try:
@@ -82,7 +91,7 @@ class Card:
     def draw_back(self):
         try:
             self.x_offset = self.x_back_offset
-            if 'Details' in self.info and not self.are_details_on_front():
+            if 'Details' in self.info:
                 self.draw_back_with_details()
             else:
                 self.draw_back_image()
@@ -91,10 +100,27 @@ class Card:
 
     def draw_back_image(self):
         try:
-            back = self.deck.info['Back']
-            back_image =  back['Image']
-            back_image_filepath = os.path.join(self.deck.back_path, back_image)
-            self.draw_image(back_image_filepath, 0, 0, self.width, self.height)
+            if 'Back Image' in self.info:
+                back_image = self.info.get('Back Image', '')
+                back_image_filepath = os.path.join(self.deck.image_path, back_image)
+                max_image_height =  self.height - 8 * mm
+                max_image_width =  self.width - 8 * mm
+                image_top =  4 * mm
+                if os.path.isfile(back_image_filepath):
+                    iw, ih = utils.ImageReader(back_image_filepath).getSize()
+                    image_aspect_ratio = ih / float(iw)
+                    image_height = max_image_height
+                    image_width = image_height / image_aspect_ratio
+                    if image_width > max_image_width:
+                        image_width = max_image_width
+                        image_height = max_image_width * image_aspect_ratio
+                        image_top = image_top + max_image_height - image_height
+                    self.draw_image(back_image_filepath, (self.width - image_width) / 2, self.height - image_top - image_height, image_width, image_height)
+            else:
+                back = self.deck.info['Back']
+                back_image = back['Image']
+                back_image_filepath = os.path.join(self.deck.back_path, back_image)
+                self.draw_image(back_image_filepath, 0, 0, self.width, self.height)
         except Exception:
             traceback.print_exc()
 
@@ -121,11 +147,28 @@ class Card:
             details = self.deck.style['Details']
             details_font =  details['Font']
             details_font_size =  details['Font Size']
+            details_line_spacing =  details['Line Spacing']
             details_padding =  details['Padding'] * mm
             detail_text = self.info.get('Details', '')
             x = self.x_offset + details_padding 
             y = self.y_offset + self.height - header_height
-            self.draw_paragraph(detail_text, x, y, self.width - details_padding * 2, self.height - header_height, details_font, details_font_size, TA_LEFT, TOP)
+            self.draw_paragraph(detail_text, x, y, self.width - details_padding * 2, self.height - header_height, details_font, details_font_size, details_line_spacing, TA_LEFT, TOP)
+        except Exception:
+            traceback.print_exc()
+
+    def draw_long_description(self):
+        try:
+            header = self.deck.style['Header']
+            header_height =  header['Height'] * mm
+            details = self.deck.style['Details']
+            details_font =  details['Font']
+            details_font_size =  details['Font Size']
+            details_line_spacing =  details['Line Spacing']
+            details_padding =  details['Padding'] * mm
+            detail_text = self.info.get('Description', '')
+            x = self.x_offset + details_padding 
+            y = self.y_offset + self.height - header_height
+            self.draw_paragraph(detail_text, x, y, self.width - details_padding * 2, self.height - header_height, details_font, details_font_size, details_line_spacing, TA_LEFT, TOP)
         except Exception:
             traceback.print_exc()
 
@@ -156,7 +199,7 @@ class Card:
             traceback.print_exc()
 
 
-    def draw_specification(self, label, value, row, alignment = TA_LEFT):
+    def draw_specification(self, label, value):
         try:
             if value == '':
                 return
@@ -167,17 +210,20 @@ class Card:
             spec_label_font_size =  specs['Label Font Size']
             spec_value_font =  specs['Value Font']
             spec_value_font_size =  specs['Value Font Size']
+            spec_line_spacing =  specs['Line Spacing']
             spec_offset =  specs['Offset'] * mm
             spec_height =  specs['Height'] * mm
             spec_width =  specs['Width'] * mm
             spec_spacing =  specs['Spacing'] * mm
+            alignment = self.deck.specifications[label]['Alignment']
+            row = self.deck.specifications[label]['Row']
             y_offset = self.height - image_top - row * (spec_height + spec_spacing)
-            if alignment == TA_LEFT:
+            if alignment == 'Left':
                 x_offset = spec_offset
-            if alignment == TA_RIGHT:
+            if alignment == 'Right':
                 x_offset = self.width - spec_offset - spec_width
-            self.draw_paragraph(label, self.x_offset + x_offset, self.y_offset + y_offset, spec_width, spec_height, spec_label_font, spec_label_font_size, TA_CENTER, TOP)
-            self.draw_paragraph(value, self.x_offset + x_offset, self.y_offset + y_offset, spec_width, spec_height, spec_value_font, spec_value_font_size, TA_CENTER, MIDDLE)
+            self.draw_paragraph(label, self.x_offset + x_offset, self.y_offset + y_offset, spec_width, spec_height, spec_label_font, spec_label_font_size, spec_line_spacing, TA_CENTER, TOP)
+            self.draw_paragraph(value, self.x_offset + x_offset, self.y_offset + y_offset, spec_width, spec_height, spec_value_font, spec_value_font_size, spec_line_spacing, TA_CENTER, MIDDLE)
 
         except Exception:
             traceback.print_exc()
@@ -190,6 +236,7 @@ class Card:
             category = self.deck.style['Category']
             category_font =  category['Font']
             category_font_size =  category['Font Size']
+            category_line_spacing =  category['Line Spacing']
             category_height =  category['Height'] * mm
             category_top_padding = category['Top Padding'] * mm
             category_left_padding = category['Left Padding'] * mm
@@ -201,7 +248,7 @@ class Card:
             category_filepath = os.path.join(self.deck.style_path, category_filename)
             self.draw_image(category_filepath, category_left_padding, detail_height, category_width, category_height)
             
-            self.draw_paragraph(category_text, self.x_offset + category_left_padding, self.y_offset + detail_height + category_height - category_top_padding, category_width, category_height - category_top_padding, category_font, category_font_size, TA_CENTER, MIDDLE)
+            self.draw_paragraph(category_text, self.x_offset + category_left_padding, self.y_offset + detail_height + category_height - category_top_padding, category_width, category_height - category_top_padding, category_font, category_font_size, category_line_spacing, TA_CENTER, MIDDLE)
         except Exception:
             traceback.print_exc()
 
@@ -213,6 +260,7 @@ class Card:
             description_height =  description['Height'] * mm
             description_font =  description['Font']
             description_font_size =  description['Font Size']
+            description_line_spacing =  description['Line Spacing']
             description_left_padding =  description['Left Padding'] * mm
             description_top_padding =  description['Top Padding'] * mm
             description_text = self.info.get('Description', '')
@@ -220,7 +268,7 @@ class Card:
             self.draw_image(description_filepath, 0, 0, self.width, description_height)
             x = self.x_offset + description_left_padding 
             y = self.y_offset + description_height - description_top_padding 
-            self.draw_paragraph(description_text, x, y, self.width - description_left_padding * 2, description_height, description_font, description_font_size, TA_LEFT, TOP)
+            self.draw_paragraph(description_text, x, y, self.width - description_left_padding * 2, description_height, description_font, description_font_size, description_line_spacing, TA_LEFT, TOP)
         except Exception:
             traceback.print_exc()
 
@@ -243,10 +291,11 @@ class Card:
             text_top = header['TextTop'] * mm
             header_font = header['Font'] 
             header_font_size = header['Font Size']
+            header_line_spacing = header['Line Spacing']
             header_filepath = os.path.join(self.deck.style_path, header_filename)
             header_text = self.info['Header']
             self.draw_image(header_filepath, 0, self.height - header_height, self.width, header_height)
-            self.draw_paragraph(header_text, self.x_offset, self.y_offset + self.height - text_top, self.width, header_height - text_top, header_font, header_font_size, TA_CENTER, MIDDLE)
+            self.draw_paragraph(header_text, self.x_offset, self.y_offset + self.height - text_top, self.width, header_height - text_top, header_font, header_font_size, header_line_spacing, TA_CENTER, MIDDLE)
         except Exception:
             traceback.print_exc()
 
@@ -256,7 +305,7 @@ class Card:
             self.canvas.drawImage(image_filepath, self.x_offset + x_offset, self.y_offset + y_offset, width, height, mask='auto')
 
 
-    def draw_paragraph(self, msg, x, y, max_width, max_height, fontName, fontSize, alignment, vertical_alignment):
+    def draw_paragraph(self, msg, x, y, max_width, max_height, fontName, fontSize, line_spacing, alignment, vertical_alignment):
         self.register_font(fontName)
 
         style = ParagraphStyle(
@@ -264,7 +313,7 @@ class Card:
             fontName=fontName,
             fontSize=fontSize,
             alignment=alignment,
-            leading=fontSize
+            leading=fontSize * line_spacing
         )
         styles = getSampleStyleSheet()
         message = str(msg).replace('\n', '<br/>')

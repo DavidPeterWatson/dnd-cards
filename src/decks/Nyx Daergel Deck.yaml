@@ -11,8 +11,10 @@ Files:
   - Gear.yaml
   - Items.yaml
   - Packs.yaml
-  - Conditions.yaml
   - Coinage.yaml
+  - Conditions.yaml
+  - Skills.yaml
+  - Actions.yaml
 
 Cards:
   Nyx Daergel:
@@ -33,11 +35,11 @@ Cards:
     Armor Class: 15
     Proficiency Bonus: '+2'
     Description: 'Nyx Daergel was outcast by her fellow gnomes and now looks after the animals of the forest.'
-    Details: |
-      Details go here
-      Details go here
-      Details go here
-      Details go here
+    # Details: |
+    #   Details go here
+    #   Details go here
+    #   Details go here
+    #   Details go here
     Image: Characters/Forest Gnome Ranger.png
 
     Ability Scores:
@@ -69,7 +71,19 @@ Cards:
         - Tusk
         - Traveler’s Clothes
         - Belt Pouch
-        - 10 Gold Coins
+      Coinage:
+        - Coin Type: 5 Gold Coins
+          Quantity: 2
+        - Coin Type: Gold Coin
+          Quantity: 4
+        - Coin Type: 5 Silver Coins
+          Quantity: 1
+        - Coin Type: Silver Coin
+          Quantity: 4
+        - Coin Type: 5 Copper Coins
+          Quantity: 1
+        - Coin Type: Copper Coin
+          Quantity: 5
       Armor:
         - leather armor
 
@@ -77,21 +91,20 @@ Cards:
       Weapon Skill Type:
         - Simple
         - Martial
-      Weapons:
-        - Simple
-        - Martial
       Armor:
         - Light Armor
         - Medium Armor
         - Shields
-      Tools: None
+      Tools: []
       Skills:
         - Animal Handling
         - Nature
         - Survival
+        - Athletics
       Languages:
         - Common
         - Gnomish
+        - One of your choice
     Saving Throws:
       - Strength
       - Dexterity
@@ -100,36 +113,8 @@ Cards:
       - Wisdom
     Capabilities:
       - Natural Illusionist
-      - 
-    Features: ['favored enemy', 'natural explorer']
-      
-#     Racial proficiencies:
-#       Weapons: 
-#       Armor: 
-#       Tools: 
-#       Languages: [Common, Gnomish]
-#       Other: [Natural illusionist, Speak with small beasts, Gnome cunning, Darkvision 60 ft]
-
-#     Class proficiencies:
-#       Weapons: [simple weapons, martial weapons]
-#       Armor: [light armor, medium armor, shields]
-#       Tools: None
-#       Skills: [animal handling, naturesurvival]
-#       Saving throws: [strength, dexterity]
-#       Primary ability: [dexterity,  wisdom]
-
-#     Character background proficiencies:
-#       Tools: one type of musical instrument
-#       Skills:
-#         - athletics
-#         - survival
-#       Languages: one of your choice
-
-
-#     Equipment:
-#       Your weapons are: ['two shortswords', 'longbow']
-#       Your armor is: ['scale mail']
-#       Your equipment is: ["explorer's pack", a staff, a hunting trap, a trophy from an animal you killed, and a set of traveler's clothes]
-
-
-#   Your background story is: You have chosen not to write a background story of your character.
+      - Favored enemy
+      - Natural explorer
+      - Speak with small beasts
+      - Gnome cunning
+      - Darkvision 60 ft

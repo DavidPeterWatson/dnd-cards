@@ -1,10 +1,7 @@
 Cards:
   Order of Combat:
     Type: Rule
-    Header: Order of Combat
-    Category: Rule
-    Subcategory: Combat
-    Details: |
+    Description: |
       <b>1.Determine surprise.</b>
       The DM determines whether anyone involved in the combat encounter is surprised.
 
@@ -22,10 +19,7 @@ Cards:
 
   Structure of Play:
     Type: Rule
-    Header: Structure of Play
-    Category: Rule
-    Subcategory: Combat
-    Details: |
+    Description: |
       1. The DM describes the environment.
       The DM tells the players where their adventurers are and what’s around them, presenting the basic scope of options available: how many doors lead out of a room, what’s on a table, who’s in the tavern, and so on. The players can ask questions to make sure they understand what their characters perceive.
 
@@ -37,10 +31,7 @@ Cards:
 
   Combat Turn:
     Type: Rule
-    Header: Combat Turn
-    Category: Rule
-    Subcategory: Combat
-    Details: |
+    Description: |
       On your turn, you can move a distance up to your speed and take one action. You decide whether to move first or take your action first. Your speed—sometimes called your walking speed—is noted on your character sheet.
       The most common actions you can take are described in the “Actions in Combat” section later in this chapter. Many class features and other abilities provide additional options for your action.
       The “Movement and Position” section later in this chapter gives the rules for your move.
@@ -48,10 +39,7 @@ Cards:
 
   Core Rule:
     Type: Rule
-    Header: Core Rule
-    Category: Rule
-    Subcategory: Core
-    Details: |
+    Description: |
       1. Roll the die. Roll a d20, then add the modifier of the ability score used for the roll. A Dexterity saving throw, for instance, uses your Dexterity modifier.
       2. Apply circumstantial bonuses and penalties. A spell, a particular circumstance, or some other effect might give a bonus or penalty to the roll.
       3. Compare the total to a target number. If the total equals or exceeds the target number, the roll is a success. Otherwise, it’s a failure. The target number for an ability check or saving throw is called a Difficulty Class (DC).
@@ -59,12 +47,37 @@ Cards:
 
   Coinage:
     Type: Rule
-    Header: Coinage
-    Category: Rule
-    Subcategory: Core
-    Details: |
+    Description: |
       Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).
       One gold piece is worth ten silver pieces, the most prevalent coin among commoners. One silver piece is worth ten copper pieces, which are common among laborers and beggars.
       Unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.
       A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.
- 
+
+  Surprise:
+    Type: Rule
+    Description: |
+      The DM determines who might be surprised. If neither side tries to be stealthy, they automatically notice each other. Otherwise, the DM compares the Dexterity (Stealth) checks of anyone hiding with the passive Wisdom (Perception) score of each creature on the opposing side. Any character or monster that doesn’t notice a threat is surprised at the start of the encounter.
+      If you’re surprised, you can’t move or take an action on your first turn of the combat, and you can’t take a reaction until that turn ends. A member of a group can be surprised even if the other members aren’t.
+
+  Passive Checks:
+    Type: Rule
+    Description: |
+      A passive check is a Special kind of ability check that doesn’t involve any die rolls. Such a check can represent the average result for a task done repeatedly, such as searching for Secret doors over and over again, or can be used when the GM wants to secretly determine whether the Characters succeed at something without rolling dice, such as noticing a hidden monster.
+
+      Here’s how to determine a character’s total for a passive check:
+      10 + all modifiers that normally apply to the check
+
+      If the character has advantage on the check, add 5. For disadvantage, subtract 5. The game refers to a passive check total as a score.
+
+      For example, if a 1st-level character has a Wisdom of 15 and proficiency in Perception, he or she has a passive Wisdom (Perception) score of 14.
+    Links:
+      - https://roll20.net/compendium/dnd5e/Ability%20Scores#content
+
+
+  Cover:
+    Type: Rule
+    Description: |
+      Walls, trees, creatures, and other obstacles can provide cover during combat, making a target more difficult to harm. A target can benefit from cover only when an attack or other effect originates on the opposite side of the cover. There are three degrees of cover. If a target is behind multiple sources of cover, only the most protective degree of cover applies; the degrees aren’t added together.
+      A target with half cover has a +2 bonus to AC and Dexterity saving throws. A target has half cover if an obstacle blocks at least half of its body. The obstacle might be a low wall, a large piece of furniture, a narrow tree trunk, or a creature, whether that creature is an enemy or a friend.
+      A target with three-quarters cover has a +5 bonus to AC and Dexterity saving throws. A target has three- quarters cover if about three-quarters of it is covered by an obstacle. The obstacle might be a portcullis, an arrow slit, or a thick tree trunk.
+      A target with total cover can’t be targeted directly by an attack or a spell, although some spells can reach such a target by including it in an area of effect. A target has total cover if it is completely concealed by an obstacle.

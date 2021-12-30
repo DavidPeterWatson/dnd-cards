@@ -5,7 +5,7 @@ Cards:
     School: Conjuration
     Level: 1
     Range: 10ft
-    Casting Time: 1m
+    Casting Time: 1min
     Duration: Unlimited
     Classes:
       - Bard
@@ -31,7 +31,7 @@ Cards:
     School: Transmutation
     Classes:
       - Cleric
-    Duration: 1m
+    Duration: 1min
     Components:
       - Verbal
     Range: 30ft
@@ -57,8 +57,8 @@ Cards:
     School: Illusion
     Level: Cantrip
     Range: 30ft
-    Casting Time: 1m
-    Duration: 1m
+    Casting Time: 1min
+    Duration: 1min
     Classes:
       - Bard
       - Sorcerer

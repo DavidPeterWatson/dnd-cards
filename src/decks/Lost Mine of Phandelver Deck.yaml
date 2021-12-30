@@ -1,0 +1,141 @@
+Name: Lost Mine of Phandelver Deck
+Type: Campaign
+Style: Scroll Deck Style
+Back:
+  Image: Back1.png
+Files:
+  - Default Deck Styles.yaml
+  - Rules.yaml
+  - Skills.yaml
+  - Coinage.yaml
+  - Creatures.yaml
+
+Cards:
+  Part 1.0.0 Goblen Arrows:
+    Type: Narrative
+    Description: |
+      "In the city of Neverwinter, a dwarf named Gundren Rockseeker asked you to bring a wagonload of provisions to the rough-and-tumble settlement of Phandalin, a couple of days’ travel southeast of the city. Gundren was clearly excited and more than a little secretive about his reasons for the trip, saying only that he and his brothers had found “something big,” and that he’d pay you ten gold pieces each for escorting his supplies safely to Barthen's Provisions, a trading post in Phandalin. He then set out ahead of you on horse, along with a warrior escort named Sildar Hallwinter, claiming he needed to arrive early to “take care of business.”
+      You’ve spent the last few days following the High Road south from Neverwinter, and you've just recently veered east along the Triboar Trail. You’ve encountered no trouble so far, but this territory can be dangerous. Bandits and outlaws have been known to lurk along the trail."
+
+  Part 1.0.1 Along the Route:
+    Type: Narrative
+    Description: |
+      Before continuing with the adventure, take a few minutes to do the following:
+      - Encourage the players to introduce their characters to each other if they haven’t done so already.
+      - Ask the players to think about how their characters came to know their dwarf patron, Gundren Rockseeker. Let the players concoct their own stories. If a player is hard-pressed to think of anything, suggest something simple. For example, Gundren could be a childhood friend or someone who helped the player’s character get out of a tough scrape. This exercise is a great opportunity for the players to contribute to the adventure’s backstory.
+      - Ask the players to give you the party’s marching order and how their characters are traveling. Who’s in front, and who’s bringing up the rear? If the characters are escorting Gundren’s wagonload of supplies, then one or two characters need to be driving the wagon. The rest of the characters can be riding on the wagon, walking alongside, or scouting ahead, as they like.
+
+  Part 1.0.2 The Wagon:
+    Type: Prop
+    Back Image: Transport/Cart Horses6-5x2.png
+    Description: |
+      The wagon is packed full of an assortment of mining supplies and food. This includes a dozen sacks of flour, several casks of salted pork, two kegs of strong ale, shovels, picks, and crowbars (about a dozen each), and five lanterns with a small barrel of oil (about fifty flasks in volume). The total value of the cargo is 100 gp.
+
+  Part 1.1.0 Goblin Ambush:
+    Type: Narrative
+    Description: |
+      "You’ve been on the Triboar Trail for about half a day. As you come around a bend, you spot two dead horses sprawled about fifty feet ahead of you, blocking the path. Each has several black-feathered arrows sticking out of it. The woods press close to the trail here, with a steep embankment and dense thickets on either side.""
+
+      Investigation:
+      "The horses belong to Gundren Rockseeker and Sildar Hallwinter. They’ve been dead about a day, and it’s clear that arrows killed the horses. The saddlebags have been looted. Nearby lies an empty leather map case."
+
+      "Four goblins are hiding in the woods, two on each side of the road. They wait until someone approaches the bodies and then attack with stealth."
+
+      When the time comes for the goblins to act, two of them rush forward and make melee attacks while two goblins stand 30 feet away from the party and make ranged attacks.
+
+  Part 1.1.0 Goblin Ambush Developments - Defeat:
+    Type: Narrative
+    Header: |
+      Part 1.1.0 Goblin Ambush
+      Developments - Defeat
+    Description: |
+      In the unlikely event that the goblins defeat the adventurers, they leave them unconscious, loot them and the wagon, then head back to the Cragmaw hideout. The characters can continue on to Phandalin, buy new gear at Barthen’s Provisions, return to the ambush site, and find the goblins’ trail.
+
+  Part 1.1.0 Goblin Ambush Developments - Goblin Knowledge:
+    Type: Narrative
+    Header: |
+      Part 1.1.0 Goblin Ambush
+      Developments - Knowledge
+    Description: |
+      The characters might capture one or more goblins by knocking them unconscious instead of killing them. A character can use any melee weapon to knock a goblin unconscious, succeeding if the attack deals enough damage to drop the goblin to 0 hit points. Once it regains consciousness after a few minutes, a captured goblin can be convinced to share what it knows.
+      If the characters capture or charm any of the goblins here, the goblins can be persuaded to divulge some useful information:
+        Goblin Knowledge
+
+  Part 1.1.0 Goblin Knowledge:
+    Type: Prop
+    Header: Goblin Knowledge
+    Description: |
+      What the Goblins Know:
+      - Cragmaw Hideout was setup by Cragmaw Goblin tribe to harass and plunder traffic moving along the Triboar Trail.
+      - Fewer than twenty goblins currently dwell in Cragmaw Hideout.
+      - Their leader is a bugbear named Klarg. He answers to King Grol, chief of the Cragmaw tribe, who dwells in Cragmaw Castle.
+      - Cragmaw Castle lies about twenty miles northeast of the Cragmaw hideout, in Neverwinter Wood.
+      - Klarg received a messenger goblin from King Crol a few days ago. The messenger told him that someone named the Black Spider was paying the Cragmaws to watch out for the dwarf Gundren Rockseeker, capture him, and send him and anything he was carrying back to King Grol. Klarg followed his orders. Gundren was ambushed and taken along with his personal effects, including a map.
+      - The dwarf and his map were delivered to King Grol, as instructed. The dwarf’s human companion is being held in the “eating cave”.
+
+  Part 1.1.0 Goblin Ambush Developments - Goblin Guide:
+    Type: Narrative
+    Header: |
+      Part 1.1.0 Goblin Ambush
+      Developments - Goblin Guide
+    Description: |
+      Persuasion:
+      A goblin can also be persuaded to lead the party to the Cragmaw hideout while avoiding traps along the way.
+
+  Part 1.1.0 Goblin Ambush Developments - Continue to Phandolin:
+    Type: Narrative
+    Header: |
+      Part 1.1.0 Goblin Ambush
+      Developments - To Phandolin
+    Description: |
+      The characters might not find the goblin trail, or they could decide to continue to Phandalin. In that case, skip ahead to part 2, “Phandalin.” Elmar Barthen (the owner of Barthen’s Provisions) seeks out the characters and informs them that Gundren Rockseeker never arrived. He recounts the goblin troubles and suggests that the characters return to the ambush site to investigate further (after they rest). Barthen also tells the party that Linene Graywind of the Lionshield Coster (see page 16) can provide more information on the goblin attacks.
+
+  Part 1.1.1 Goblin Trail:
+    Type: Narrative
+    Description: |
+      After the characters defeat the goblins, any inspection of the area reveals that the creatures have been using this place to stage ambushes for some time. A trail hidden behind thickets on the north side of the road leads northwest.
+
+      DC 10 Wisdom (Survival) Check:
+      "You recognize that about a dozen goblins have come and gone along the trail, as well as signs of two human-sized bodies being hauled away from the ambush site."
+
+      The party can easily steer the wagon away from the road and tie off the oxen while the group pursues the goblins.
+      The trail leads five miles northwest and ends at the Cragmaw hideout. Ask the players to determine the party’s marching order as the characters move down the trail. The order is important, because the goblins have set two traps to thwart pursuers.
+
+  Part 1.1.1 Goblin Trail Snare:
+    Type: Narrative
+    Description: |
+      About 10 minutes after heading down the trail, the party on the path encounters a hidden snare. If the characters are searching for traps, the character in the lead spots the trap automatically if his or her passive Wisdom (Perception) score is 12 or higher. Otherwise, the character must succeed on a DC 12 Wisdom (Perception) check to notice the trap. If the character fails to notice the trap, he or she triggers the snare and must succeed on a DC 10 Dexterity saving throw. On a failure, the character is suspended upside down 10 feet above the ground. The character is restrained until 1 or more slashing damage is dealt to the snare’s cord. (See the appendix in the rulebook for the effect of being restrained.) A character who isn’t carefully lowered down takes ld6 bludgeoning damage from the fall.
+
+  Part 1.1.1 Goblin Trail Pit:
+    Type: Narrative
+    Description: |
+      Another 10 minutes down the trail is a pit the goblins have camouflaged. The pit is 6 feet wide, 10 feet deep, and it triggers when a creature moves across it. The character in the lead spots the hidden pit automatically if his or her passive Wisdom (Perception) score is 15 or higher. Otherwise, the character must succeed on a DC 15 Wisdom (Perception) check to spot the hidden pit. If the trap isn’t detected, the lead character must succeed on a DC 10 Dexterity saving throw or fall in, taking ld6 bludgeoning damage. The pit’s walls are not steep, so no ability check is required to scramble out.
+
+  Part 1.1.2 Goblin Ambush XP:
+    Type: Narrative
+    Description: |
+      Defeating the goblin ambushers and finding the Cragmaw hideout completes a story milestone. When the party arrives at the hideout, award each character 75 XP. Make sure the players record this gain on their character sheets.
+
+
+  # Part 1.2.0 Cragmaw Hideout:
+  #   Type: Narrative
+  #   Description: |
+  #     The Cragmaw tribe is so named because each member of the tribe sharpens its teeth so they appear fierce and jagged.
+  #     General Features
+  #     - The Cragmaw cave slopes steeply upward. The entrance is at the foot of a good-sized hill, and the caves and passages are inside the hill itself.
+  #     - Ceilings. Most of the caves and passages have steeply sloping ceilings that create stalactite-covered vaults rising 20 to 30 feet above the floor.
+  #     - Light. Areas 1 and 2 are outside. The rest of the complex is dark unless stated otherwise. The boxed text for those locations assumes that the characters have darkvision or a light source.
+  #     - Rubble. Areas of crumbling rock and gravel are difficult terrain (see “Difficult Terrain” in the rulebook).
+  #     - Sound. The sound of water in the cave muffles noises to any creatures that aren’t listening carefully. Creatures can make a DC 15 Wisdom (Perception) check to attempt to hear activity in nearby chambers.
+  #     - Stalagmites. These upthrust spires of rock can provide cover (see “Cover” in the rulebook).
+  #     - Stream. The stream that flows through the complex is only 2 feet deep, cold, and slow moving, allowing creatures to easily wade through it.
+
+  # Part 1.2.1 Cave Mouth:
+  #   Type: Narrative
+  #   Description: |
+  #     "Following the goblins’ trail, you come across a large cave in a hillside five miles from the scene of the ambush. A shallow stream flows out of the cave mouth, which is screened by dense briar thickets. A narrow dry path leads into the cave on the right-hand side of the stream."
+
+  # Part 1.2.1 Cave Mouth Developments:
+  #   Type: Narrative
+  #   Description: |
+  #     The goblins in area 2 are supposed to be keeping watch on this area, but they are not paying attention. (Goblins can be lazy that way.) However, if the characters make a lot of noise here—for example, loudly arguing about what to do next, setting up a camp, cutting down brush, and so on—the goblins in area 2 notice and attack them through the thicket, which provides the goblins with three-quarters cover (see the rulebook for rules on cover).

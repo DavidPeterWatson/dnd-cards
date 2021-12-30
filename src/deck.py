@@ -2,6 +2,7 @@ import os
 import yaml
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.units import mm
+from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
 
 class Deck():
     def __init__(self, deck_info):
@@ -33,5 +34,25 @@ class Deck():
         self.type = self.info.get('Type', '')
         self.cards = self.info['Cards']
         self.packs = self.info.get('Packs', {})
-        
+        self.coinage = self.info.get('Coinage', {})
+
         self.character_info = self.cards.get(self.info.get('Character', ''), {})
+        self.build()
+        self.specifications = self.style['Specifications']['Named']
+
+    def build(self):
+        if self.type == 'Character':
+            for pack in self.character_info['Equipment'].get('Packs', []):
+                print(pack)
+                pack_info = self.packs.get(pack, {})
+                for gear in pack_info.get('Gear', []):
+                    if gear in self.cards:
+                        self.character_info['Equipment']['Gear'].append(gear)
+
+            for coinage in self.character_info['Equipment'].get('Coinage', []):
+                coin_type = coinage['Coin Type']
+                for quantity in range(1, int(coinage['Quantity']) + 1):
+                    coinage_name = f'{quantity} of {coin_type}'
+                    coinage_info = self.cards.get(coinage['Coin Type'], {})
+                    self.cards[coinage_name] = coinage_info
+                    self.character_info['Equipment']['Gear'].append(coinage_name)

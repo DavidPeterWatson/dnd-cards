@@ -20,6 +20,7 @@ BACK_PAGE = 10
 
 def print_deck(info):
     deck = Deck(info)
+    deck.build()
     draw_cut_lines(deck, FRONT_PAGE)
 
     card_type_provider = CardTypeProvider()

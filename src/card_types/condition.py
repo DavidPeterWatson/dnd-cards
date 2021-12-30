@@ -12,7 +12,7 @@ class Condition(Card):
 
     def draw_specifications(self):
         try:
-            self.draw_specification('Level', self.info['Level'], 0, TA_RIGHT)
+            self.draw_specification('Level', self.info['Level'])
 
         except Exception:
             traceback.print_exc()

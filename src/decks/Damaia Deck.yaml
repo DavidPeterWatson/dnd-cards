@@ -1,78 +1,118 @@
 Name: Damaia Deck
+Type: Character
+Character: Damaia
 Style: Scroll Deck Style
 Back:
   Image: Back1.png
 Files:
   - Default Deck Styles.yaml
-  - Gear.yaml
+  - Spells.yaml
   - Weapons.yaml
+  - Gear.yaml
+  - Items.yaml
+  - Packs.yaml
+  - Coinage.yaml
   - Conditions.yaml
+  - Skills.yaml
 
 Cards:
   Damaia:
     Type: Character
     Header: Damaia
-    Category: tiefling
-    Subclass: barbarian
-    Background: outlander
-    Sex: female
-    Alignment: chaotic good
+    Race: Tiefling
+    Subrace: ''
+    Class: Barbarian
+    Subclass: ''
+    Background: Outlander
+    Sex: Female
+    Alignment: Chaotic Nuetral
+    Level: 1
     Weight: 120lb
-    Desccription: Basic description goes here
-    Details: Background goes here.
-    Image: tiefling barbarian.png
+    Speed: 30ft
+    Hit Points: 14
+    Hit Die: d12
+    Armor Class: 15
+    Proficiency Bonus: '+2'
+    Description: 'Nyx Daergel was outcast by her fellow gnomes and now looks after the animals of the forest.'
+    Image: Characters/Tiefling Barbarian.png
 
-    Ability scores:
-      Strength: 8
-      Dexterity: 16
-      Constitution: 13
-      Intelligence: 14
-      Wisdom: 14
-      Charisma: 10
+  Ability Scores:
+    Strength: 15
+    Dexterity: 15
+    Constitution: 15
+    Intelligence: 10
+    Wisdom: 10
+    Charisma: 10
 
-    Ability modifiers:
-      Strength: -1
-      Dexterity: 3
-      Constitution: 1
-      Intelligence: 2
-      Wisdom: 	 2
-      Charisma: 0
-
-    Hit die: d10
-    Hit points: 11
-
-    Racial proficiencies:
-      Weapons: 
-      Armor: 
-      Tools: 
-      Languages:
-        - Common
-        - Gnomish
-      Other: [Natural illusionist, Speak with small beasts, Gnome cunning, Darkvision 60 ft]
-
-    Class proficiencies:
-      Weapons: [simple weapons, martial weapons]
-      Armor: [light armor, medium armor, shields]
-      Tools: None
-      Skills: [animal handling, naturesurvival]
-      Saving throws: [strength, dexterity]
-      Primary ability: [dexterity,  wisdom]
-
-    Character background proficiencies:
-      Tools: one type of musical instrument
-      Skills:
-        - athletics
-        - survival
-      Languages: one of your choice
+  Ability Modifiers:
+    Strength: '+2'
+    Dexterity: '+2'
+    Constitution: '+2'
+    Intelligence: '+0'
+    Wisdom: '+0'
+    Charisma: '+0'
 
     Equipment:
-      Your weapons are: ['two shortswords', 'longbow']
-      Your armor is: ['scale mail']
-      Your equipment is: ["explorer's pack", a staff, a hunting trap, a trophy from an animal you killed, and a set of traveler's clothes]
+      Weapons:
+        - Greataxe
+        - Dagger
+        - 4 Javelins
+      Packs:
+        - Explorer’s Pack
+      Gear:
+        - Staff
+        - Quiver of Arrows
+        - Hunting Trap
+        - Tusk
+        - Traveler’s Clothes
+        - Belt Pouch
+      Coinage:
+        - Coin Type: 5 Gold Coins
+          Quantity: 2
+        - Coin Type: Gold Coin
+          Quantity: 4
+        - Coin Type: 5 Silver Coins
+          Quantity: 1
+        - Coin Type: Silver Coin
+          Quantity: 4
+        - Coin Type: 5 Copper Coins
+          Quantity: 1
+        - Coin Type: Copper Coin
+          Quantity: 5
+      Armor:
+        - leather armor
 
-    Features and spells (if applicable):
-      Your class features are: ['favored enemy', 'natural explorer']
-      Your cantrips are: []
-      Your first level spells are: []
+    Proficiencies:
+      Weapon Skill Type:
+        - Simple
+        - Martial
+      Armor:
+        - Light Armor
+        - Medium Armor
+        - Shields
+      Tools: None
+      Skills:
+        - Athletics
+        - Perception
+        - Survival
+      Languages:
+        - Common
+        - Infernal
+        - One of your choice
+    Saving Throws:
+      - Strength
+      - Constitution
+    Primary Abilities:
+      - Strength
+    Capabilities:
+      - Darkvision 60 ft
+      - Hellish Resistance
+      - Infernal Legacy
+      - Rage
+      - Unarmored Defense
+      
 
-    Your background story is: You have chosen not to write a background story of your character.
+
+
+
+

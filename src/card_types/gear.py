@@ -12,10 +12,10 @@ class Gear(Card):
 
     def draw_specifications(self):
         try:
-            self.draw_specification('Cost', self.info.get('Cost', ''), 0, TA_RIGHT)
-            self.draw_specification('Weight', self.info.get('Weight', ''), 1, TA_RIGHT)
-            self.draw_specification('Rarity', self.info.get('Rarity', ''), 2, TA_RIGHT)
-            self.draw_specification('Hit Points', self.info.get('Hit Points', ''), 3, TA_RIGHT)
+            self.draw_specification('Cost', self.info.get('Cost', ''))
+            self.draw_specification('Weight', self.info.get('Weight', ''))
+            self.draw_specification('Rarity', self.info.get('Rarity', ''))
+            self.draw_specification('Hit Points', self.info.get('Hit Points', ''))
         except Exception:
             traceback.print_exc()
 

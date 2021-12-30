@@ -8,7 +8,7 @@ from deck_printer import print_deck, Deck
 import click
 
 @click.command()
-@click.option('--deck', prompt='Deck file')
+@click.option('--deck', '-d', prompt='Deck file')
 def build(deck):
     loaded_deck = load_deck(deck)
     compiled_deck = compile_deck(loaded_deck)

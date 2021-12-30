@@ -12,21 +12,21 @@ class Creature(Card):
 
     def draw_specifications(self):
         try:
-            self.draw_specification('Level', self.info.get('Level', ''), 0, TA_RIGHT)
-            self.draw_specification('Weight', self.info.get('Weight', ''), 1, TA_RIGHT)
-            self.draw_specification('Speed', self.info.get('Speed', ''), 2, TA_RIGHT)
-            self.draw_specification('Can Carry', self.info.get('Carrying Capacity', ''), 3, TA_RIGHT)
-            self.draw_specification('Hit Points', self.info.get('Hit Points', ''), 4, TA_RIGHT)
-            self.draw_specification('Armor Class', self.info.get('Armor Class', ''), 5, TA_RIGHT)
+            self.draw_specification('Level', self.info.get('Level', ''))
+            self.draw_specification('Weight', self.info.get('Weight', ''))
+            self.draw_specification('Speed', self.info.get('Speed', ''))
+            self.draw_specification('Can Carry', self.info.get('Carrying Capacity', ''))
+            self.draw_specification('Hit Points', self.info.get('Hit Points', ''))
+            self.draw_specification('Armor Class', self.info.get('Armor Class', ''))
 
             ability_modifiers = self.info.get('Ability Modifiers', {})
-            self.draw_specification('Strength', ability_modifiers.get('Strength', ''), 0, TA_LEFT)
-            self.draw_specification('Dexterity', ability_modifiers.get('Dexterity', ''), 1, TA_LEFT)
-            self.draw_specification('Constitution', ability_modifiers.get('Constitution', ''), 2, TA_LEFT)
-            self.draw_specification('Intelligence', ability_modifiers.get('Intelligence', ''), 3, TA_LEFT)
-            self.draw_specification('Wisdom', ability_modifiers.get('Wisdom', ''), 4, TA_LEFT)
-            self.draw_specification('Charisma', ability_modifiers.get('Charisma', ''), 5, TA_LEFT)
-            self.draw_specification('Proficiency', self.info.get('Proficiency Bonus', ''), 6, TA_LEFT)
+            self.draw_specification('Strength', ability_modifiers.get('Strength', ''))
+            self.draw_specification('Dexterity', ability_modifiers.get('Dexterity', ''))
+            self.draw_specification('Constitution', ability_modifiers.get('Constitution', ''))
+            self.draw_specification('Intelligence', ability_modifiers.get('Intelligence', ''))
+            self.draw_specification('Wisdom', ability_modifiers.get('Wisdom', ''))
+            self.draw_specification('Charisma', ability_modifiers.get('Charisma', ''))
+            self.draw_specification('Proficiency', self.info.get('Proficiency Bonus', ''))
  
         except Exception:
             traceback.print_exc()

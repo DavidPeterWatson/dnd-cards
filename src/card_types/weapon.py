@@ -19,18 +19,18 @@ class Weapon(Card):
 
     def draw_specifications(self):
         try:
-            self.draw_specification('Cost', self.info.get('Cost', ''), 0, TA_RIGHT)
-            self.draw_specification('Weight',  self.info.get('Weight', ''), 1, TA_RIGHT)
-            self.draw_specification('Damage', self.info.get('Damage', ''), 2, TA_RIGHT)
-            self.draw_specification('Range', self.info.get('Range', ''), 3, TA_RIGHT)
+            self.draw_specification('Cost', self.info.get('Cost', ''))
+            self.draw_specification('Weight',  self.info.get('Weight', ''))
+            self.draw_specification('Damage', self.info.get('Damage', ''))
+            self.draw_specification('Range', self.info.get('Range', ''))
 
             if self.info['Attack Type'] == 'Melee':
-                self.draw_specification('Strength', 'x', 0, TA_LEFT)
+                self.draw_specification('Strength', 'x')
             if self.info['Attack Type'] == 'Ranged':
-                self.draw_specification('Dexterity', 'x', 1, TA_LEFT)
+                self.draw_specification('Dexterity', 'x')
             
             if self.is_proficient():
-                self.draw_specification('Proficiency', 'x', 6, TA_LEFT)
+                self.draw_specification('Proficiency', 'x')
 
         except Exception:
             traceback.print_exc()
@@ -38,16 +38,16 @@ class Weapon(Card):
 
     def is_proficient(self):
         if self.deck.type == 'Character':
-            if self.name in self.deck.character_info['Proficiencies']['Weapons']:
+            if self.name in self.deck.character_info['Proficiencies'].get('Weapons', []):
                  return True
-            if self.info.get('Skill Type', 'Unspecified') in self.deck.character_info['Proficiencies']['Weapon Skill Type']:
+            if self.info.get('Skill Type', 'Unspecified') in self.deck.character_info['Proficiencies'].get('Weapon Skill Type', []):
                  return True
         return False
 
 
     def is_in_deck(deck: Deck, card_info):
         if deck.type == 'Character':
-            if card_info['Name'] in deck.character_info['Equipment']['Weapons']:
+            if card_info['Name'] in deck.character_info['Equipment'].get('Weapons', []):
                  return True
 
         return False
