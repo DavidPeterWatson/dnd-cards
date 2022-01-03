@@ -55,7 +55,7 @@ Cards:
         - Dagger
         - 4 Javelins
       Armor:
-        - leather armor
+        - Leather Armor
       Packs:
         - Explorer’s Pack
       Gear:
@@ -83,9 +83,9 @@ Cards:
       Weapon Skill Type:
         - Simple
         - Martial
-      Armor:
-        - Light Armor
-        - Medium Armor
+      Armor Type:
+        - Light
+        - Medium
         - Shields
       Tools: []
       Skills:

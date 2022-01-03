@@ -1,4 +1,3 @@
-
 Cards:
   Leather Armor:
     Type: Armor
@@ -9,7 +8,10 @@ Cards:
     Armor Class: 11
     Weight: 10lb
     Rarity: Std
-    Description: A backpack can hold one cubic foot or 30 pounds of gear. You can also strap items, such as a Bedroll or a coil of rope, to the outside of a backpack.
-    Image: Armor/Leather Armor.png
+    Armor Type: Light
+    Description: |
+      The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. 
+      Wearer Armor Class = Base Armor Class + Dexterity + Proficiency
+    Image: Armor/Studded Leather Armor.png
     Links:
-      - https://roll20.net/compendium/dnd5e/Backpack#h-Backpack
+      - https://roll20.net/compendium/dnd5e/Leather%20Armor#content

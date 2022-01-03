@@ -61,6 +61,26 @@ def build_deck(deck: Deck):
                 weapon_card.creature_info = deck.character_info
                 deck.cards.append(weapon_card)
 
+        for armor in deck.character_info.get('Equipment', {}).get('Armor', []):
+            armor_info = deck.library.get_card_info(armor)
+            if 'Type' not in armor_info:
+                 print(f'no type specified for {armor}')
+            else:
+                armor_class = card_type_provider.get_card_type(armor_info['Type'])
+                armor_card = armor_class(armor, armor_info, deck.style)
+                armor_card.creature_info = deck.character_info
+                deck.cards.append(armor_card)
+
+        for capability in deck.character_info.get('Capabilities', []):
+            capability_info = deck.library.get_card_info(capability)
+            if 'Type' not in capability_info:
+                 print(f'no type specified for {capability}')
+            else:
+                capability_class = card_type_provider.get_card_type(capability_info['Type'])
+                capability_card = capability_class(capability, capability_info, deck.style)
+                capability_card.creature_info = deck.character_info
+                deck.cards.append(capability_card)
+
     # def is_in_deck(deck: Deck, card_info):
     #     if deck.info['Type'] == 'Character':
     #         character_info = deck.info['Cards'][deck.info['Character']]

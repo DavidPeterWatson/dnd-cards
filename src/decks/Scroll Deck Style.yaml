@@ -92,6 +92,9 @@ Styles:
         Hit Points:
           Row: 3
           Alignment: Right
+        Armor Type:
+          Row: 3
+          Alignment: Right
         Armor Class:
           Row: 4
           Alignment: Right

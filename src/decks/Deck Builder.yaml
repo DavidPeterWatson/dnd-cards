@@ -6,10 +6,10 @@ Files:
   - Items.yaml
   - Packs.yaml
   - Coinage.yaml
-  # - Conditions.yaml
-  # - Skills.yaml
-  # - Actions.yaml
-  # - Armor.yaml
-  # - Capabilities.yaml
+  - Conditions.yaml
+  - Skills.yaml
+  - Actions.yaml
+  - Armor.yaml
+  - Capabilities.yaml
   - Nyx Daergel Deck.yaml
   - Damaia Deck.yaml

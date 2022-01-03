@@ -30,7 +30,5 @@ class Skill(Card):
         self.info['Subcategory'] = self.info.get('Ability', '')
 
     def is_proficient(self):
-        if self.deck.type == 'Character':
-            if self.name in self.deck.character_info['Proficiencies']['Skills']:
-                 return True
-        return False
+        if self.name in self.character_info['Proficiencies']['Skills']:
+             return True
