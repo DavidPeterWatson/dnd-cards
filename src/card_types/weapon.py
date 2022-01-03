@@ -1,7 +1,5 @@
 from card import Card
 import traceback
-from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
-from deck import Deck
 
 damage_type_string = {
     'acid': 'acid',
@@ -54,17 +52,8 @@ class Weapon(Card):
 
 
     def is_proficient(self):
-        if self.deck.type == 'Character':
-            if self.name in self.deck.character_info['Proficiencies'].get('Weapons', []):
-                 return True
-            if self.info.get('Skill Type', 'Unspecified') in self.deck.character_info['Proficiencies'].get('Weapon Skill Type', []):
-                 return True
-        return False
-
-
-    def is_in_deck(deck: Deck, card_info):
-        if deck.type == 'Character':
-            if card_info['Name'] in deck.character_info['Equipment'].get('Weapons', []):
-                 return True
-
+        if self.name in self.creature_info['Proficiencies'].get('Weapons', []):
+             return True
+        if self.info.get('Skill Type', 'Unspecified') in self.creature_info['Proficiencies'].get('Weapon Skill Type', []):
+             return True
         return False

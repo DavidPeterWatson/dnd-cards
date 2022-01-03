@@ -18,7 +18,7 @@ Styles:
       Folder: Images
       Top: 12
       Left: 10
-      Height: 47
+      Height: 54
       Width: 40
     Back:
       Folder: Backs
@@ -104,7 +104,7 @@ Styles:
     Category:
       Font: LibreBaskerville-Regular.ttf
       Font Size: 9
-      Height: 4
+      Height: 0
       Top Padding: 0
       Left Padding: 15
       Line Spacing: 1.2

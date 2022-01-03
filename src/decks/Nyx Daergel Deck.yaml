@@ -25,7 +25,7 @@ Cards:
     Hit Die: d10
     Armor Class: 15
     Proficiency Bonus: '+2'
-    Description: 'Nyx Daergel was outcast by her fellow gnomes and now looks after the animals of the forest.'
+    Description: 'Nyx Daergel was outcast by her fellow gnomes and now protects the forests.'
     Image: Characters/Forest Gnome Ranger.png
     Back Image: Characters/Forest Gnome Ranger.png
 
@@ -44,6 +44,9 @@ Cards:
       Intelligence: '+2'
       Wisdom: '+2'
       Charisma: '+0'
+
+    Prepared Spells:
+      - Minor Illusion
 
     Equipment:
       Weapons:

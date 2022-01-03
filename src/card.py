@@ -185,7 +185,7 @@ class Card:
                 if image_width > max_image_width:
                     image_width = max_image_width
                     image_height = max_image_width * image_aspect_ratio
-                    image_top = image_top + max_image_height - image_height
+                    image_top = image_top + (max_image_height - image_height) / 2
                 image_box = Box((self.width - image_width) / 2, self.height - image_top - image_height, image_width, image_height)
                 self.draw_image(image_filepath, position, image_box)
         except Exception:

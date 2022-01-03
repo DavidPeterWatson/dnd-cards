@@ -42,4 +42,34 @@ def build_deck(deck: Deck):
                 coin_card = coin_class(coin_type, coin_info, deck.style, coinage['Quantity'])
                 deck.cards.append(coin_card)
 
+        for spell_name in deck.character_info.get('Prepared Spells', []):
+            spell_info = deck.library.get_card_info(spell_name)
+            if 'Type' not in spell_info:
+                 print(f'no type specified for {spell_name}')
+            else:
+                spell_class = card_type_provider.get_card_type(spell_info['Type'])
+                spell_card = spell_class(spell_name, spell_info, deck.style)
+                deck.cards.append(spell_card)
+
+        for weapon_name in deck.character_info.get('Equipment', {}).get('Weapons', []):
+            weapon_info = deck.library.get_card_info(weapon_name)
+            if 'Type' not in weapon_info:
+                 print(f'no type specified for {weapon_name}')
+            else:
+                weapon_class = card_type_provider.get_card_type(weapon_info['Type'])
+                weapon_card = weapon_class(weapon_name, weapon_info, deck.style)
+                weapon_card.creature_info = deck.character_info
+                deck.cards.append(weapon_card)
+
+    # def is_in_deck(deck: Deck, card_info):
+    #     if deck.info['Type'] == 'Character':
+    #         character_info = deck.info['Cards'][deck.info['Character']]
+    #         if card_info['Name'] in character_info.get('Prepared Spells', []):
+    #              return True
+    #         merged = list(set(card_info.get('Capabilities', [])) & set(character_info.get('Capabilities', [])))
+    #         if len(merged) > 0:
+    #             return True
+    #     return False
+
+
     return deck

@@ -1,8 +1,11 @@
-Damaia Deck:
-  Style: Scroll Deck Style
-  Collate: True
-  Type: Character
-  Character: Nyx Daergel
+Decks:
+  Damaia Deck:
+    Style: Scroll Deck Style
+    Collate: True
+    Type: Character
+    Character: Damaia
+    Back:
+      Image: Back1.png
 
 Cards:
   Damaia:

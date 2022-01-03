@@ -1,8 +1,8 @@
 Name: Deck Builder
 Files:
   - Scroll Deck Style.yaml
-  # - Spells.yaml
-  # - Weapons.yaml
+  - Spells.yaml
+  - Weapons.yaml
   - Items.yaml
   - Packs.yaml
   - Coinage.yaml
@@ -12,3 +12,4 @@ Files:
   # - Armor.yaml
   # - Capabilities.yaml
   - Nyx Daergel Deck.yaml
+  - Damaia Deck.yaml
