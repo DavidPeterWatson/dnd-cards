@@ -31,5 +31,4 @@ class CardTypeProvider:
     def load_card_type(self, filename):
         module = importlib.import_module(filename)
         class_name = module.get_class_name()
-        # print(f'class name {class_name}')
         return class_name, getattr(module, class_name)

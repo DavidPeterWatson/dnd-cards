@@ -15,12 +15,12 @@ class Skill(Card):
         self.set_categories()
         pass
 
-    def draw_specifications(self):
+    def draw_specifications(self, position):
         try:
-            self.draw_specification(self.info['Ability'], 'x')
+            self.draw_specification(self.info['Ability'], 'x', position)
 
             if self.is_proficient():
-                self.draw_specification('Proficiency', 'x')
+                self.draw_specification('Proficiency', 'x', position)
             return
         except Exception:
             traceback.print_exc()
@@ -28,11 +28,6 @@ class Skill(Card):
     def set_categories(self):
         self.info['Category'] = 'Skill'
         self.info['Subcategory'] = self.info.get('Ability', '')
-
-    def is_in_deck(deck: Deck, card_info):
-        if deck.type == 'Character':
-            return True
-        return False
 
     def is_proficient(self):
         if self.deck.type == 'Character':

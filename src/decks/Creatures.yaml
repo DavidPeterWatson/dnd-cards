@@ -14,7 +14,7 @@ Cards:
     Speed: 40ft
     Hit Points: 5
     Armor Class: 12
-    Proficiency Bonus: 2
+    Proficiency Bonus: '+2'
     Description: |
       Keen Hearing and Smell. The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell. Mastiffs can be trained as guard dogs, hunting dogs, and war dogs. Halflings and other Small humanoids ride them as mounts.
     # Details: |
@@ -66,3 +66,82 @@ Cards:
       Intelligence: '-4'
       Wisdom: '+1'
       Charisma: '-3'
+
+  Goblin 1: &goblin
+    Type: Creature
+    Header: Goblin
+    Category: Goblin
+    Subcategory: ''
+    Race: Goblin
+    Subrace: ''
+    Weight: 40lb
+    Size: Small
+    Speed: 30ft
+    Hit Points: 7
+    Hit Die: 2d6
+    Armor Class: 15
+    Proficiency Bonus: '+2'
+    Alignment: Chaotic Nuetral
+    # Description: Goblins are black-hearted, gather in overwhelming numbers, and crave power, which they abuse.
+    Description: |
+      Stealth +6 Darkvision 60ft Perception 9
+      Scimitar Melee d20+4 reach 5ft 
+      1d6+2 slashing damage
+      Shortbow Ranged d20+4 range 80/320ft 
+      1d6+2 piercing damage
+    Image: Creatures/Goblin.png
+    Back Image: Creatures/Goblin.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Monsters:Goblin
+      - https://www.dndbeyond.com/monsters/goblin
+
+    Ability Scores:
+      Strength: 8
+      Dexterity: 14
+      Constitution: 10
+      Intelligence: 10
+      Wisdom: 8
+      Charisma: 8
+
+    Ability Modifiers:
+      Strength: '-1'
+      Dexterity: '+2'
+      Constitution: '+0'
+      Intelligence: '+0'
+      Wisdom: '-1'
+      Charisma: '-1'
+
+    Skills:
+      - Stealth +6
+
+    Equipment:
+      Weapons:
+        - Greataxe
+        - Dagger
+        - 4 Javelins
+      Armor:
+        - Leather Armor
+        - Shield
+
+    Senses:
+      - Darkvision 60 ft
+      - Passive Perception 9
+
+    Capabilities:
+      - Nimble Escape. The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
+
+    Languages:
+      - Common
+      - Goblin
+
+    Challenge: 1/4 (50 XP)
+
+    Actions:
+      - 'Scimitar. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1 d6 + 2) slashing damage.'
+      - 'Shorthow. Ranged Weapon Attack: +4 to hit, range 80 ft./320 ft., one target. Hit: 5 (ld6 + 2) piercing damage.'
+
+  Goblin 2: *goblin
+
+  Goblin 3: *goblin
+
+  Goblin 4: *goblin

@@ -1,18 +1,18 @@
 import exceptions as exceptions
 import version
 import yaml
-from deck_loader import load_deck
-from deck_compiler import compile_deck
-from deck_printer import print_deck, Deck
+from library_loader import load_library
+from deck_builder import build_decks
+from deck_printer import print_decks, Deck
 
 import click
 
 @click.command()
-@click.option('--deck', '-d', prompt='Deck file')
-def build(deck):
-    loaded_deck = load_deck(deck)
-    compiled_deck = compile_deck(loaded_deck)
-    print_deck(compiled_deck)
+@click.option('--file', '-f', prompt='File')
+def build(file):
+    library = load_library(file)
+    decks = build_decks(library)
+    print_decks(decks)
 
 
 if __name__ == '__main__':

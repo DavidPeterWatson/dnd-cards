@@ -1,7 +1,0 @@
-Name: Creature Deck
-Style: Scroll Deck Style
-Back:
-  Image: Back1.png
-Files:
-  - Default Deck Styles.yaml
-  - Creatures.yaml

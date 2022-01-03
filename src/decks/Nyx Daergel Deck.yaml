@@ -1,20 +1,11 @@
-Name: Nyx Daergel Deck
-Type: Character
-Character: Nyx Daergel
-Style: Scroll Deck Style
-Back:
-  Image: Back1.png
-Files:
-  - Default Deck Styles.yaml
-  - Spells.yaml
-  - Weapons.yaml
-  - Gear.yaml
-  - Items.yaml
-  - Packs.yaml
-  - Coinage.yaml
-  - Conditions.yaml
-  - Skills.yaml
-  - Actions.yaml
+Decks:
+  Nyx Daergel Deck:
+    Type: Character
+    Character: Nyx Daergel
+    Collate: True
+    Style: Scroll Deck Style
+    Back:
+      Image: Back1.png
 
 Cards:
   Nyx Daergel:
@@ -25,8 +16,8 @@ Cards:
     Class: Ranger
     Subclass: Beast Master
     Background: Outlander
-    Sex: female
-    Alignment: chaotic good
+    Sex: Female
+    Alignment: Chaotic Good
     Level: 1
     Weight: 50lb
     Speed: 30ft
@@ -35,12 +26,8 @@ Cards:
     Armor Class: 15
     Proficiency Bonus: '+2'
     Description: 'Nyx Daergel was outcast by her fellow gnomes and now looks after the animals of the forest.'
-    # Details: |
-    #   Details go here
-    #   Details go here
-    #   Details go here
-    #   Details go here
     Image: Characters/Forest Gnome Ranger.png
+    Back Image: Characters/Forest Gnome Ranger.png
 
     Ability Scores:
       Strength: 8
@@ -62,6 +49,8 @@ Cards:
       Weapons:
         - Shortsword
         - Longbow
+      Armor:
+        - leather armor
       Packs:
         - Explorer’s Pack
       Gear:
@@ -84,8 +73,6 @@ Cards:
           Quantity: 1
         - Coin Type: Copper Coin
           Quantity: 5
-      Armor:
-        - leather armor
 
     Proficiencies:
       Weapon Skill Type:
@@ -101,10 +88,10 @@ Cards:
         - Nature
         - Survival
         - Athletics
-      Languages:
-        - Common
-        - Gnomish
-        - One of your choice
+    Languages:
+      - Common
+      - Gnomish
+      - One of your choice
     Saving Throws:
       - Strength
       - Dexterity

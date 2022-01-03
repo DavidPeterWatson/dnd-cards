@@ -10,14 +10,14 @@ def get_class_name():
 
 class Condition(Card):
 
-    def draw_specifications(self):
+    def draw_specifications(self, position):
         try:
-            self.draw_specification('Level', self.info['Level'])
+            self.draw_specification('Level', self.info['Level'], position)
 
         except Exception:
             traceback.print_exc()
 
-    def is_in_deck(deck: Deck, card_info):
-        if deck.type == 'Character':
-            return True
-        return False
+    # def is_in_deck(deck: Deck, card_info):
+    #     if deck.type == 'Character':
+    #         return True
+    #     return False

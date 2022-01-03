@@ -1,7 +1,8 @@
 from card import Card
 import traceback
-from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
-from deck import Deck
+from reportlab.lib.units import mm
+from position import Position
+
 
 
 def get_class_name():
@@ -10,36 +11,52 @@ def get_class_name():
 
 class Creature(Card):
 
-    def draw_specifications(self):
+    def draw_specifications(self, position: Position):
         try:
-            self.draw_specification('Level', self.info.get('Level', ''))
-            self.draw_specification('Weight', self.info.get('Weight', ''))
-            self.draw_specification('Speed', self.info.get('Speed', ''))
-            self.draw_specification('Can Carry', self.info.get('Carrying Capacity', ''))
-            self.draw_specification('Hit Points', self.info.get('Hit Points', ''))
-            self.draw_specification('Armor Class', self.info.get('Armor Class', ''))
+            self.draw_specification('Level', self.info.get('Level', ''), position)
+            self.draw_specification('Weight', self.info.get('Weight', ''), position)
+            self.draw_specification('Speed', self.info.get('Speed', ''), position)
+            self.draw_specification('Hit Points', self.info.get('Hit Points', ''), position)
+            self.draw_specification('Armor Class', self.info.get('Armor Class', ''), position)
+            self.draw_specification('Initiative', self.info.get('Initiative', ''), position)
+            self.draw_specification('Perception', self.info.get('Passive Perception', ''), position)
 
             ability_modifiers = self.info.get('Ability Modifiers', {})
-            self.draw_specification('Strength', ability_modifiers.get('Strength', ''))
-            self.draw_specification('Dexterity', ability_modifiers.get('Dexterity', ''))
-            self.draw_specification('Constitution', ability_modifiers.get('Constitution', ''))
-            self.draw_specification('Intelligence', ability_modifiers.get('Intelligence', ''))
-            self.draw_specification('Wisdom', ability_modifiers.get('Wisdom', ''))
-            self.draw_specification('Charisma', ability_modifiers.get('Charisma', ''))
-            self.draw_specification('Proficiency', self.info.get('Proficiency Bonus', ''))
+            self.draw_specification('Strength', ability_modifiers.get('Strength', ''), position)
+            self.draw_specification('Dexterity', ability_modifiers.get('Dexterity', ''), position)
+            self.draw_specification('Constitution', ability_modifiers.get('Constitution', ''), position)
+            self.draw_specification('Intelligence', ability_modifiers.get('Intelligence', ''), position)
+            self.draw_specification('Wisdom', ability_modifiers.get('Wisdom', ''), position)
+            self.draw_specification('Charisma', ability_modifiers.get('Charisma', ''), position)
+            self.draw_specification('Proficiency', self.info.get('Proficiency Bonus', ''), position)
  
         except Exception:
             traceback.print_exc()
 
     def pre_draw(self):
         super().pre_draw()
+        self.set_passive_perception()
+        self.set_initiative()
         pass
 
-    def is_in_deck(deck: Deck, card_info):
-        if deck.type == 'Dungeon Master':
-            return True
-        return False
+    def draw_back_image(self, position, top_padding, bottom_padding, side_padding):
+        super().draw_back_image(position, self.style.header_height, 10*mm, 5*mm)
 
-    def add_carrying_capacity(self):
-        self.info['Carrying Capacity'] = str(int(self.info.get('Ability Scores', {}).get('Strength', 0)) * 15) + 'lb'
+    # def is_in_deck(deck: Deck, card_info):
+    #     if deck.type in ['Dungeon Master', 'Campaign']:
+    #         return True
+    #     return False
 
+
+    def set_passive_perception(self):
+        if not 'Passive Perception' in self.info:
+            ability_modifiers = self.info.get('Ability Modifiers', {})
+            wisdom = ability_modifiers.get('Wisdom', '0')
+            proficiency_bonus = ability_modifiers.get('Proficiency Bonus', '0')
+            self.info['Passive Perception'] = int(10) + int(wisdom) + int(proficiency_bonus)
+
+    def set_initiative(self):
+        if not 'Initiative' in self.info:
+            ability_modifiers = self.info.get('Ability Modifiers', {})
+            dexterity = ability_modifiers.get('Dexterity', '0')
+            self.info['Initiative'] = int(10) + int(dexterity)

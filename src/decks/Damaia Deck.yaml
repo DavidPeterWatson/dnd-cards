@@ -1,19 +1,8 @@
-Name: Damaia Deck
-Type: Character
-Character: Damaia
-Style: Scroll Deck Style
-Back:
-  Image: Back1.png
-Files:
-  - Default Deck Styles.yaml
-  - Spells.yaml
-  - Weapons.yaml
-  - Gear.yaml
-  - Items.yaml
-  - Packs.yaml
-  - Coinage.yaml
-  - Conditions.yaml
-  - Skills.yaml
+Damaia Deck:
+  Style: Scroll Deck Style
+  Collate: True
+  Type: Character
+  Character: Nyx Daergel
 
 Cards:
   Damaia:
@@ -33,30 +22,37 @@ Cards:
     Hit Die: d12
     Armor Class: 15
     Proficiency Bonus: '+2'
-    Description: 'Nyx Daergel was outcast by her fellow gnomes and now looks after the animals of the forest.'
+    Description: |
+      Capabilities: Darkvision 60 ft, Hellish Resistance, Infernal Legacy, Rage, Unarmored Defense
     Image: Characters/Tiefling Barbarian.png
+    Back Image: Characters/Tiefling Barbarian.png
 
-  Ability Scores:
-    Strength: 15
-    Dexterity: 15
-    Constitution: 15
-    Intelligence: 10
-    Wisdom: 10
-    Charisma: 10
+    Ability Scores:
+      Strength: 15
+      Dexterity: 15
+      Constitution: 15
+      Intelligence: 10
+      Wisdom: 10
+      Charisma: 10
 
-  Ability Modifiers:
-    Strength: '+2'
-    Dexterity: '+2'
-    Constitution: '+2'
-    Intelligence: '+0'
-    Wisdom: '+0'
-    Charisma: '+0'
+    Ability Modifiers:
+      Strength: '+2'
+      Dexterity: '+2'
+      Constitution: '+2'
+      Intelligence: '+0'
+      Wisdom: '+0'
+      Charisma: '+0'
+    Properties:
+      Rages: 2
+      Rage Damage: +2
 
     Equipment:
       Weapons:
         - Greataxe
         - Dagger
         - 4 Javelins
+      Armor:
+        - leather armor
       Packs:
         - Explorer’s Pack
       Gear:
@@ -79,8 +75,6 @@ Cards:
           Quantity: 1
         - Coin Type: Copper Coin
           Quantity: 5
-      Armor:
-        - leather armor
 
     Proficiencies:
       Weapon Skill Type:
@@ -90,15 +84,15 @@ Cards:
         - Light Armor
         - Medium Armor
         - Shields
-      Tools: None
+      Tools: []
       Skills:
         - Athletics
         - Perception
         - Survival
-      Languages:
-        - Common
-        - Infernal
-        - One of your choice
+    Languages:
+      - Common
+      - Infernal
+      - One of your choice
     Saving Throws:
       - Strength
       - Constitution

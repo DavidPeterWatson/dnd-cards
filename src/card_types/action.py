@@ -9,8 +9,6 @@ def get_class_name():
 
 class Action(Card):
 
-    def is_in_deck(deck: Deck, card_info):
-        if deck.type == 'Character':
-            return True
-        return False
-
+    def set_header(self):
+        
+        self.info['Header'] = f'{self.type} - {self.name}'

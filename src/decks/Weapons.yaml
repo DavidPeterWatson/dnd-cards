@@ -1,13 +1,6 @@
-Collections:
-  Weapons:
-    Cards:
-      - Name: Longbow
-      - Name: Shortsword
-
 Cards:
   Longbow:
     Type: Weapon
-    Header: Longbow
     Skill Type: Martial
     Attack Type: Ranged
     Cost: 50gp
@@ -18,15 +11,17 @@ Cards:
     Damage Type: piercing
     Rarity: Standard
     Properties:
-      - Ammunition
       - Heavy
+      - Ammunition
       - Two-Handed
-    Description: Shoot stuff.
+    Description: |
+      Attack Roll: d20 + Dexterity + Proficiency
+      Damage Roll: 1d8 + Dexterity
+      Properties: Heavy, Two-Handed, Ammunition
     Image: Weapons/Longbow.png
 
   Shortsword:
     Type: Weapon
-    Header: Shortsword
     Skill Type: Martial
     Attack Type: Melee
     Cost: 10gp
@@ -35,17 +30,19 @@ Cards:
     Damage Type: piercing
     Rarity: Standard
     Properties:
-      - Finesse
       - Light
-    Description: Attack goblins.
+      - Finesse
+    Description: |
+      Attack Roll: d20 + Dexterity + Proficiency
+      Damage Roll: 1d4 + Dexterity
+      Properties: Light, Finesse
     Image: Weapons/Shortsword.png
     Link: https://roll20.net/compendium/dnd5e/Items:Shortsword/#h-Shortsword
 
   Club:
     Type: Weapon
-    Header: Club
     Skill Type: Simple
-    ttack Type: Melee
+    Attack Type: Melee
     Cost: 1sp
     Weight: 2lb
     Damage: 1d4
@@ -53,6 +50,67 @@ Cards:
     Rarity: Standard
     Properties:
       - Light
-    Description: Wallop things.
+    Description: |
+      Attack Roll: d20 + Strength + Proficiency
+      Damage Roll: 1d4 + Strength
+      Properties: Light
     Image: Weapons/Wooden Club.png
     Link: hhttps://roll20.net/compendium/dnd5e/Club#content
+
+  Greataxe:
+    Type: Weapon
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 30gp
+    Weight: 7lb
+    Reach: 5ft
+    Damage: 1d12
+    Damage Type: slashing
+    Rarity: Standard
+    Properties:
+      - Heavy
+      - Two-Handed
+    Description: |
+      Attack Roll: d20 + Strength + Proficiency
+      Damage Roll: 1d12 + Strength
+      Properties: Heavy, Two-Handed
+    Image: Weapons/Greataxe.webp
+
+  Scimitar:
+    Type: Weapon
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 25gp
+    Weight: 3lb
+    Reach: 5ft
+    Damage: 1d6
+    Damage Type: slashing
+    Rarity: Standard
+    Properties:
+      - Finesse
+      - Light
+    Description: |
+      Attack Roll: d20 + Dexterity + Proficiency
+      Damage Roll: 1d6 + Dexterity
+      Properties: Light, Finesse
+    Image: Weapons/Scimitar.webp
+
+  Shortbow:
+    Type: Weapon
+    Skill Type: Martial
+    Attack Type: Ranged
+    Cost: 25gp
+    Weight: 2lb
+    Range: 80
+    Range with disadvantage: 320
+    Damage: 1d6
+    Damage Type: piercing
+    Rarity: Standard
+    Properties:
+      - Ammunition
+      - Two-Handed
+    Description: |
+      Attack Roll: d20 + Dexterity + Proficiency
+      Damage Roll: 1d6 + Dexterity
+      Properties: Two-Handed, Ammunition
+    Image: Weapons/Longbow.png
