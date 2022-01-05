@@ -1,13 +1,42 @@
 Decks:
-  Damaia Deck:
+  Damaia:
     Style: Scroll Deck Style
     Collate: True
-    Type: Character
-    Character: Damaia
     Back:
       Image: Back1.png
+    Collections:
+      - Damaia Full
+
+Collections:
+  Damaia Full:
+    Cards:
+      - Damaia
+      - Damaia Creature
+    Equipment for:
+      - Damaia
+    Spells for:
+      - Damaia
+    Actions for:
+      - Damaia
+    Capabilities for:
+      - Damaia
+    Skills for:
+      - Damaia
+  Damaia Actions:
+    Spells for:
+      - Damaia
+    Actions for:
+      - Damaia
+    Capabilities for:
+      - Damaia
+    Skills for:
+      - Damaia
 
 Cards:
+  Damaia Creature:
+    Based on: Damaia
+    Type: Creature
+  
   Damaia:
     Type: Character
     Header: Damaia
@@ -16,10 +45,9 @@ Cards:
     Class: Barbarian
     Subclass: ''
     Background: Outlander
-    Sex: Female
+    Gender: Female
     Alignment: Chaotic Nuetral
     Level: 1
-    Weight: 120lb
     Speed: 30ft
     Hit Points: 14
     Hit Die: d12
@@ -27,9 +55,8 @@ Cards:
     Proficiency Bonus: '+2'
     Description: |
       Capabilities: Darkvision 60 ft, Hellish Resistance, Infernal Legacy, Rage, Unarmored Defense
-    Image: Characters/Tiefling Barbarian.png
-    Back Image: Characters/Tiefling Barbarian.png
-
+    Image: Creatures/Tiefling Barbarian.png
+    Back Image: Creatures/Tiefling Barbarian.png
     Ability Scores:
       Strength: 15
       Dexterity: 15
@@ -37,7 +64,6 @@ Cards:
       Intelligence: 10
       Wisdom: 10
       Charisma: 10
-
     Ability Modifiers:
       Strength: '+2'
       Dexterity: '+2'
@@ -45,10 +71,6 @@ Cards:
       Intelligence: '+0'
       Wisdom: '+0'
       Charisma: '+0'
-    Properties:
-      Rages: 2
-      Rage Damage: +2
-
     Equipment:
       Weapons:
         - Greataxe
@@ -57,30 +79,17 @@ Cards:
       Armor:
         - Leather Armor
       Packs:
-        - Explorer’s Pack
-      Gear:
+        - Explorer's Pack
+        - 20gp Worth of Coins
+      Items:
         - Staff
         - Quiver of Arrows
         - Hunting Trap
         - Tusk
-        - Traveler’s Clothes
+        - Traveler's Clothes
         - Belt Pouch
-      Coinage:
-        - Coin Type: 5 Gold Coins
-          Quantity: 2
-        - Coin Type: Gold Coin
-          Quantity: 4
-        - Coin Type: 5 Silver Coins
-          Quantity: 1
-        - Coin Type: Silver Coin
-          Quantity: 4
-        - Coin Type: 5 Copper Coins
-          Quantity: 1
-        - Coin Type: Copper Coin
-          Quantity: 5
-
     Proficiencies:
-      Weapon Skill Type:
+      Weapon Skill Types:
         - Simple
         - Martial
       Armor Type:
@@ -105,7 +114,9 @@ Cards:
       - Darkvision 60 ft
       - Hellish Resistance
       - Infernal Legacy
-      - Rage
+      - Rage:
+          Rages: 2
+          Rage Damage: +2
       - Unarmored Defense
       
 

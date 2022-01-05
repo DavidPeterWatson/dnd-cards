@@ -2,6 +2,12 @@ from deck import Deck
 import yaml
 from card_type_provider import CardTypeProvider
 from card_types.character import Character
+from card import Card
+import traceback
+from deepmerge import always_merger
+from copy import deepcopy
+
+card_type_provider = CardTypeProvider()
 
 def build_decks(library):
     decks = []
@@ -15,81 +21,172 @@ def build_decks(library):
 
 
 def build_deck(deck: Deck):
-    card_type_provider = CardTypeProvider()
-
-    if deck.type == 'Character':
-        character_card = Character(deck.character_name, deck.character_info, deck.style)
-        deck.cards.append(character_card)
-
-        for pack_name in deck.character_info['Equipment'].get('Packs', []):
-            pack_info = deck.library.get_pack_info(pack_name)
-            for item in pack_info.get('Items', []):
-                item_info = deck.library.get_card_info(item)
-                if 'Type' not in item_info:
-                    print(f'no type specified for {item}')
-                else:
-                    card_class = card_type_provider.get_card_type(item_info['Type'])
-                    item_card = card_class(item, item_info, deck.style)
-                    deck.cards.append(item_card)
-
-        for coinage in deck.character_info['Equipment'].get('Coinage', []):
-            coin_type = coinage['Coin Type']
-            coin_info = deck.library.get_card_info(coin_type)
-            if 'Type' not in coin_info:
-                 print(f'no type specified for {item}')
-            else:
-                coin_class = card_type_provider.get_card_type(coin_info['Type'])
-                coin_card = coin_class(coin_type, coin_info, deck.style, coinage['Quantity'])
-                deck.cards.append(coin_card)
-
-        for spell_name in deck.character_info.get('Prepared Spells', []):
-            spell_info = deck.library.get_card_info(spell_name)
-            if 'Type' not in spell_info:
-                 print(f'no type specified for {spell_name}')
-            else:
-                spell_class = card_type_provider.get_card_type(spell_info['Type'])
-                spell_card = spell_class(spell_name, spell_info, deck.style)
-                deck.cards.append(spell_card)
-
-        for weapon_name in deck.character_info.get('Equipment', {}).get('Weapons', []):
-            weapon_info = deck.library.get_card_info(weapon_name)
-            if 'Type' not in weapon_info:
-                 print(f'no type specified for {weapon_name}')
-            else:
-                weapon_class = card_type_provider.get_card_type(weapon_info['Type'])
-                weapon_card = weapon_class(weapon_name, weapon_info, deck.style)
-                weapon_card.creature_info = deck.character_info
-                deck.cards.append(weapon_card)
-
-        for armor in deck.character_info.get('Equipment', {}).get('Armor', []):
-            armor_info = deck.library.get_card_info(armor)
-            if 'Type' not in armor_info:
-                 print(f'no type specified for {armor}')
-            else:
-                armor_class = card_type_provider.get_card_type(armor_info['Type'])
-                armor_card = armor_class(armor, armor_info, deck.style)
-                armor_card.creature_info = deck.character_info
-                deck.cards.append(armor_card)
-
-        for capability in deck.character_info.get('Capabilities', []):
-            capability_info = deck.library.get_card_info(capability)
-            if 'Type' not in capability_info:
-                 print(f'no type specified for {capability}')
-            else:
-                capability_class = card_type_provider.get_card_type(capability_info['Type'])
-                capability_card = capability_class(capability, capability_info, deck.style)
-                capability_card.creature_info = deck.character_info
-                deck.cards.append(capability_card)
-
-    # def is_in_deck(deck: Deck, card_info):
-    #     if deck.info['Type'] == 'Character':
-    #         character_info = deck.info['Cards'][deck.info['Character']]
-    #         if card_info['Name'] in character_info.get('Prepared Spells', []):
-    #              return True
-    #         merged = list(set(card_info.get('Capabilities', [])) & set(character_info.get('Capabilities', [])))
-    #         if len(merged) > 0:
-    #             return True
-    #     return False
-
-
+    deck.cards = create_deck_cards(deck)
     return deck
+
+
+def create_deck_cards(deck: Deck):
+    cards = create_basic_cards(deck)
+    cards.extend(create_collections(deck))
+    return cards
+
+
+def create_basic_cards(deck: Deck):
+    return create_cards(deck.info.get('Cards', []), deck)
+
+
+def create_collections(deck: Deck):
+    cards = []
+    for collection_name in deck.info.get('Collections', []):
+        cards.extend(create_collection_cards(collection_name, deck))
+    return cards
+
+
+def create_collection_cards(collection_name, deck: Deck):
+    collection = deck.library.get_collection(collection_name)
+    cards = create_cards(collection.get('Cards', []), deck)
+    for creature in collection.get('Equipment for', []):
+        creature_info = resolve_card_info(creature, deck)
+        if creature_info is not None:
+            cards.extend(create_creature_equipment_collection(creature_info, deck))
+
+    for creature in collection.get('Capabilities for', []):
+        creature_info = resolve_card_info(creature, deck)
+        if creature_info is not None:
+            cards.extend(create_creature_capabilitiy_cards(creature_info, deck))
+
+    for creature in collection.get('Skills for', []):
+        creature_info = resolve_card_info(creature, deck)
+        if creature_info is not None:
+            cards.extend(create_creature_skill_cards(creature_info, deck))
+
+    for creature in collection.get('Actions for', []):
+        creature_info = resolve_card_info(creature, deck)
+        if creature_info is not None:
+            cards.extend(create_creature_action_cards(creature_info, deck))
+
+    for creature in collection.get('Spells for', []):
+        creature_info = resolve_card_info(creature, deck)
+        if creature_info is not None:
+            cards.extend(create_creature_spell_cards(creature_info, deck))
+    return cards
+
+
+def create_creature_equipment_collection(creature_info, deck: Deck):
+    cards = []
+    cards.extend(create_creature_weapon_cards(creature_info, deck))
+    cards.extend(create_creature_armor_cards(creature_info, deck))
+    cards.extend(create_creature_pack_cards(creature_info, deck))
+    cards.extend(create_creature_item_cards(creature_info, deck))
+    return cards
+
+
+def create_creature_pack_cards(creature_info, deck: Deck):
+    cards = []
+    for pack_name in creature_info.get('Equipment', {}).get('Packs', []):
+        pack_info = deck.library.get_pack_info(pack_name)
+        cards.extend(create_cards(pack_info.get('Items', []), deck))
+    return cards
+
+
+def create_creature_item_cards(creature_info, deck: Deck):
+    return create_cards(creature_info.get('Equipment', {}).get('Items', []), deck)
+
+
+def create_creature_spell_cards(creature_info, deck: Deck):
+    return create_cards_for_creature(creature_info.get('Spells', []), creature_info, deck)
+
+
+def create_creature_armor_cards(creature_info, deck: Deck):
+    return create_cards_for_creature(creature_info.get('Equipment', {}).get('Armor', []), creature_info, deck)
+
+
+def create_creature_skill_cards(creature_info, deck: Deck):
+    return create_cards_for_creature(get_skills_list(), creature_info, deck)
+
+
+def create_creature_capabilitiy_cards(creature_info, deck: Deck):
+    return create_cards_for_creature(creature_info.get('Capabilities', []), creature_info, deck)
+
+
+def create_creature_action_cards(creature_info, deck: Deck):
+    return create_cards_for_creature(creature_info.get('Actions', []), creature_info, deck)
+
+
+def create_creature_weapon_cards(creature_info, deck: Deck):
+    return create_cards_for_creature(creature_info.get('Equipment', {}).get('Weapons', []), creature_info, deck)
+
+
+def create_copied_cards(card_name: str, quantity, deck):
+    card_info = deck.library.get_card_info(card_name)
+    if card_info is not None:
+        return create_cards([card_name for _ in range(quantity)], deck)
+
+
+def create_cards_for_creature(card_list, creature_info, deck):
+    cards = create_cards(card_list, deck)
+    for card in cards:
+        card.creature_info = creature_info
+    return cards
+
+
+def create_cards(card_list, deck: Deck):
+    cards = []
+    for card_name in card_list:
+        if type(card_name) is dict:
+            card_name = next(iter(card_name))
+        card = create_card(card_name, deck)
+        if card is not None:
+            cards.append(card)
+    return cards
+
+
+def create_card_for_creature(card_name: str, creature_info, deck):
+    card = create_card(card_name, deck)
+    card.creature_info = creature_info
+    return card
+
+
+def create_card(card_name: str, deck):
+    try:
+        card_info = resolve_card_info(card_name, deck)
+        if card_info is not None:
+            card_class = deck.card_type_provider.get_card_type(card_info.get('Type', ''))
+            return card_class(card_name, card_info, deck.style)
+        return None
+    except Exception:
+        traceback.print_exc()
+
+def resolve_card_info(card_name: str, deck):
+    card_info = deck.library.get_card_info(card_name)
+    if card_info is not None:
+        based_on = card_info.get('Based on', '')
+        based_on_info = resolve_card_info(based_on, deck)
+        if based_on_info is not None:
+            return always_merger.merge(deepcopy(based_on_info), card_info)
+    return deepcopy(card_info)
+
+def get_skills_list():
+    return [
+        'Athletics',
+        'Acrobatics',
+        'Sleight of Hand',
+        'Stealth',
+        'Constitution',
+        'Arcana',
+        'History',
+        'Investigation',
+        'Passive Investigation',
+        'Nature',
+        'Religion',
+        'Animal Handling',
+        'Insight',
+        'Medicine',
+        'Perception',
+        'Passive Perception',
+        'Survival',
+        'Deception',
+        'Intimidation',
+        'Performance',
+        'Persuasion'
+    ]

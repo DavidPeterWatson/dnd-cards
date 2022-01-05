@@ -10,7 +10,6 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from deck import Deck
 import importlib
 import logging
 
@@ -35,6 +34,7 @@ class Card:
         self.card_size = style.card_size
         self.width = self.card_size['Width'] * mm
         self.height = self.card_size['Height'] * mm
+        self.creature_info = None
 
 
     def draw_front(self, position: Position):
@@ -157,6 +157,7 @@ class Card:
         except Exception:
             traceback.print_exc()
 
+
     def draw_long_description(self, position: Position):
         try:
             description_text = self.info.get('Description', '')
@@ -240,10 +241,18 @@ class Card:
     def draw_description(self, position: Position):
         try:
             description_text = self.info.get('Description', '')
+            if description_text != '':
+                description_text = f'{description_text}\n'
+            instructions = self.get_instructions()
+            description_text = f'{description_text}{instructions}'
             self.draw_image(self.style.description_filepath, position, self.style.description_image_box)
             self.draw_paragraph(description_text, position, self.style.description_box, self.style.description_font_style)
         except Exception:
             traceback.print_exc()
+
+
+    def get_instructions(self):
+        return ''
 
 
     def draw_border(self, position: Position):
@@ -260,6 +269,7 @@ class Card:
             self.draw_paragraph(header_text, position, self.style.header_box, self.style.header_font_style)
         except Exception:
             traceback.print_exc()
+
 
     def draw_version(self, position: Position):
         try:

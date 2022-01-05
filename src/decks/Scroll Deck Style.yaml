@@ -92,14 +92,17 @@ Styles:
         Hit Points:
           Row: 3
           Alignment: Right
+        Hit Dice:
+          Row: 4
+          Alignment: Right
         Armor Type:
           Row: 3
           Alignment: Right
         Armor Class:
-          Row: 4
+          Row: 5
           Alignment: Right
         Initiative:
-          Row: 5
+          Row: 1
           Alignment: Right
         Perception:
           Row: 6
@@ -130,7 +133,7 @@ Styles:
     Page:
       Size: A4 Page Size
       Bottom Margin: 15
-      Left Margin: 9.5
+      Left Margin: 8.85
     Card Size: Playing Card Size
     Columns: 3
     Rows: 3

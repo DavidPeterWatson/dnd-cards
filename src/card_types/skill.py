@@ -1,7 +1,5 @@
 from card import Card
 import traceback
-from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
-from deck import Deck
 
 
 def get_class_name():
@@ -12,6 +10,8 @@ class Skill(Card):
 
     def pre_draw(self):
         super().pre_draw()
+        self.ability = self.info['Ability']
+        self.description = self.info['Description']
         self.set_categories()
         pass
 
@@ -29,6 +29,14 @@ class Skill(Card):
         self.info['Category'] = 'Skill'
         self.info['Subcategory'] = self.info.get('Ability', '')
 
+    def get_instructions(self):
+        ability = self.info['Ability']
+        instructions = f'Check: 1d20 + {ability}'
+        if self.is_proficient():
+            proficiency_bonus = self.info.get('Proficiency Bonus', '')
+            instructions = f'{instructions} + {proficiency_bonus}'
+        return instructions
+
     def is_proficient(self):
-        if self.name in self.character_info['Proficiencies']['Skills']:
+        if self.name in self.creature_info.get('Proficiencies', {}).get('Skills', []) and self.info.get('Proficiency Bonus', '') != '':
              return True

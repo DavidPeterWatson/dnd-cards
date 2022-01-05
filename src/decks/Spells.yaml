@@ -27,7 +27,6 @@ Cards:
 
   Thaumaturgy:
     Type: Spell
-    Header: Thaumaturgy
     School: Transmutation
     Classes:
       - Cleric
@@ -53,7 +52,6 @@ Cards:
 
   Minor Illusion:
     Type: Spell
-    Header: Minor Illusion
     School: Illusion
     Level: Cantrip
     Range: 30ft
@@ -79,3 +77,207 @@ Cards:
     Links:
       - https://roll20.net/compendium/dnd5e/Spells:Minor%20Illusion/#h-Minor%20Illusion
       - https://www.dndbeyond.com/spells/minor-illusion
+
+  Light:
+    Type: Spell
+    School: Illusion
+    Level: Cantrip
+    Range: 30ft
+    Casting Time: 1min
+    Duration: 1min
+    Classes:
+      - Bard
+      - Sorcerer
+      - Warlock
+      - Wizard
+    Components:
+      - S
+      - Material (A bit of fleece)
+    Description: You create a sound or an image of an object within range that lasts for the duration.
+    Details: |
+      The Illusion ends if you dismiss it as an action or cast this spell again.
+      If you create a sound, its volume can range from a Whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the Duration, or you can make discrete Sounds at different times before the spell ends.
+      If you create an image of an object - such as a chair, muddy footprints, or a small chest - it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory Effect. Physical interaction with the image reveals it to be an Illusion, because things can pass through it.
+      If a creature uses its action to examine the sound or image, the creature can determine that it is an Illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the Illusion for what it is, the Illusion becomes faint to the creature.
+    Image: Spells/Light.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Spells:Minor%20Illusion/#h-Minor%20Illusion
+      - https://www.dndbeyond.com/spells/minor-illusion
+  
+  Sacred Flame:
+    Type: Spell
+    School: Illusion
+    Level: Cantrip
+    Range: 30ft
+    Casting Time: 1min
+    Duration: 1min
+    Classes:
+      - Bard
+      - Sorcerer
+      - Warlock
+      - Wizard
+    Components:
+      - S
+      - Material (A bit of fleece)
+    Description: You create a sound or an image of an object within range that lasts for the duration.
+    Details: |
+    Image: Spells/Sacred Flame.png
+
+  Bless:
+    Type: Spell
+    School: Enchantment
+    Level: 1
+    Range: 30ft
+    Casting Time: 1action
+    Duration: 1min concentration
+    Classes:
+      - Cleric
+    Components:
+      - Verbal
+      - Somatic
+      - Material (a sprinkling of holy water)
+    Description: |
+      Target blessed creatures for each level 
+      Attack Roll: +1d4
+      Saving Throw: +1d4
+    Details: |
+      You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.
+      At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
+    Image: Spells/Bless.png
+
+  Cure Wounds:
+    Type: Spell
+    School: Evocation
+    Level: 1
+    Range: Touch
+    Casting Time: 1action
+    Duration: Instantaneous
+    Classes:
+      - Cleric
+    Components:
+      - Verbal
+      - Somatic
+    Description: |
+      Target creature hit points increases by 1d8 + Spellcasting Ability Modifier
+    Details: |
+      A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+      At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.
+    Image: Spells/Cure Wounds.png
+
+  Command:
+    Type: Spell
+    School: Enchantment
+    Level: 1
+    Range: 60ft
+    Casting Time: 1action
+    Duration: 1round
+    Classes:
+      - Cleric
+    Components:
+      - Verbal
+    Description: |
+      The target must succeed on a Wisdom saving throw or follow the command on its next turn.
+    Details: |
+      You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it.
+      Some typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target is prevented from following your command, the spell ends.
+      Approach. The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.
+      Drop. The target drops whatever it is holding and then ends its turn.
+      Flee. The target spends its turn moving away from you by the fastest available means.
+      Grovel. The target falls prone and then ends its turn. Halt. The target stays where it is and takes no actions.
+      At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.
+    Image: Spells/Command.png
+
+  Healing Word:
+    Type: Spell
+    School: Evocation
+    Level: 1
+    Range: 60ft
+    Casting Time: 1action
+    Duration: Instant
+    Classes:
+      - Cleric
+    Components:
+      - Verbal
+    Description: |
+      Target creature hit points increases by 1d4 + Spellcasting Ability Modifier
+    Details: |
+      A creature of your choice within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+      At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.
+    Image: Spells/Healing Word.png
+
+  Inflict Wounds:
+    Type: Spell
+    School: Necromancy
+    Level: 1
+    Range: Touch
+    Casting Time: 1action
+    Duration: Instant
+    Classes:
+      - Cleric
+    Components:
+      - Verbal
+      - Somatic
+    Description: |
+      Make a melee spell attack against a creature you can reach.
+      Damage: 3d10 necrotic damage
+    Details: |
+      Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.
+      At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.
+    Image: Spells/Inflict Wounds.png
+
+  Light:
+    Type: Spell
+    School: Evocation
+    Level: Cantrip
+    Range: Touch
+    Casting Time: 1action
+    Duration: 1hour
+    Classes:
+      - Cleric
+    Components:
+      - Somatic
+      - Material (a firefly or phosphorescent moss)
+    Description: |
+      The target must succeed on a Wisdom saving throw or follow the command on its next turn.
+    Details: |
+      You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like, and covering the object with something opaque blocks the light. The spell ends early if you cast it again or dismiss it as an action.
+      If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.
+    Image: Spells/Light.png
+
+  Shield of Faith:
+    Type: Spell
+    School: Abjuration
+    Level: 1
+    Range: 60ft
+    Casting Time: 1 bonus action
+    Duration: 10min Concentration
+    Classes:
+      - Cleric
+    Components:
+      - Verbal
+      - Somatic
+      - Material (a small parchment with a bit of holy text written on it)
+    Description: |
+      Target creature: +2 bonus to AC for the duration.
+    Details: |
+      A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.
+    Image: Spells/Shield of Faith.png
+
+  Sacred Flame:
+    Type: Spell
+    School: Enchantment
+    Level: 1
+    Range: 60ft
+    Casting Time: 1action
+    Duration: Instant
+    Classes:
+      - Cleric
+    Components:
+      - Verbal
+      - Somatic
+    Description: |
+      The target must succeed on a Wisdom saving throw or follow the command on its next turn.
+    Details: |
+      Flame-like radiance descends on a creature within range that you can see. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.
+      The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+    Image: Spells/Sacred Flame.png

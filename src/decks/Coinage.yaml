@@ -1,3 +1,25 @@
+Packs:
+  20gp Worth of Coins:
+    Cost: 20gp
+    Items:
+      - 5 Gold Coins
+      - 5 Gold Coins
+      - Gold Coin
+      - Gold Coin
+      - Gold Coin
+      - Gold Coin
+      - 5 Silver Coins
+      - Silver Coin
+      - Silver Coin
+      - Silver Coin
+      - Silver Coin
+      - 5 Copper Coins
+      - Copper Coin
+      - Copper Coin
+      - Copper Coin
+      - Copper Coin
+      - Copper Coin
+
 Cards:
   Gold Coin: 
     Type: Coin

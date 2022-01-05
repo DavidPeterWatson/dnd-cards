@@ -14,12 +14,11 @@ class Creature(Card):
     def draw_specifications(self, position: Position):
         try:
             self.draw_specification('Level', self.info.get('Level', ''), position)
-            self.draw_specification('Weight', self.info.get('Weight', ''), position)
             self.draw_specification('Speed', self.info.get('Speed', ''), position)
             self.draw_specification('Hit Points', self.info.get('Hit Points', ''), position)
+            self.draw_specification('Hit Dice', self.info.get('Hit Dice', ''), position)
             self.draw_specification('Armor Class', self.info.get('Armor Class', ''), position)
             self.draw_specification('Initiative', self.info.get('Initiative', ''), position)
-            self.draw_specification('Perception', self.info.get('Passive Perception', ''), position)
 
             ability_modifiers = self.info.get('Ability Modifiers', {})
             self.draw_specification('Strength', ability_modifiers.get('Strength', ''), position)
@@ -41,12 +40,6 @@ class Creature(Card):
 
     def draw_back_image(self, position, top_padding, bottom_padding, side_padding):
         super().draw_back_image(position, self.style.header_height, 10*mm, 5*mm)
-
-    # def is_in_deck(deck: Deck, card_info):
-    #     if deck.type in ['Dungeon Master', 'Campaign']:
-    #         return True
-    #     return False
-
 
     def set_passive_perception(self):
         if not 'Passive Perception' in self.info:

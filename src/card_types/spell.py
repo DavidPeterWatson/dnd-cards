@@ -24,13 +24,3 @@ class Spell(Card):
             self.draw_specification('Duration', self.info['Duration'], position)
         except Exception:
             traceback.print_exc()
-
-    # def is_in_deck(deck: Deck, card_info):
-    #     if deck.info['Type'] == 'Character':
-    #         character_info = deck.info['Cards'][deck.info['Character']]
-    #         if card_info['Name'] in character_info.get('Prepared Spells', []):
-    #              return True
-    #         merged = list(set(card_info.get('Capabilities', [])) & set(character_info.get('Capabilities', [])))
-    #         if len(merged) > 0:
-    #             return True
-    #     return False

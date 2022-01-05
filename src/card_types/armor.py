@@ -23,8 +23,8 @@ class Armor(Item):
             traceback.print_exc()
 
     def is_proficient(self):
-        if self.name in self.creature_info['Proficiencies'].get('Armor', []):
+        if self.name in self.creature_info.get('Proficiencies', {}).get('Armor', []):
              return True
-        if self.info.get('Armor Type', 'Unspecified') in self.creature_info['Proficiencies'].get('Armor Type', []):
+        if self.info.get('Armor Type', 'Unspecified') in self.creature_info.get('Proficiencies', {}).get('Armor Type', []):
              return True
         return False

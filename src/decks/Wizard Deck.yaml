@@ -7,7 +7,7 @@ Back:
 Files:
   - Default Deck Styles.yaml
   - Spells.yaml
-  - Gear.yaml
+  - Items.yaml
   - Weapons.yaml
 
 Cards:
@@ -19,7 +19,7 @@ Cards:
     Class: Wizard
     Subclass: ''
     Background: High Born
-    Sex: female
+    Gender: female
     Alignment: nuetral good
     Level: 1
     Weight: 120lb
@@ -34,7 +34,7 @@ Cards:
       Details go here
       Details go here
       Details go here
-    Image: Characters/Human Wizard.png
+    Image: Creatures/Human Wizard.png
 
     Ability Scores:
       Strength: 8
@@ -73,7 +73,7 @@ Cards:
         - Wisdom
       Capabilities:
         - Natural Illusionist
-      Prepared Spells:
+      Spells:
         - Find Familiar
 #     Racial proficiencies:
 #       Weapons: 

@@ -1,9 +1,9 @@
 Packs:
-  Explorer’s Pack:
+  Explorer's Pack:
     Cost: 10gp
     Items:
-      - Bedroll
       - Backpack
+      - Bedroll
       - Mess Kit
       - Tinderbox
       - 10 Torches
@@ -11,7 +11,7 @@ Packs:
       - Waterskin
       - 50 feet of hempen rope
 
-  Burglar’s Pack:
+  Burglar's Pack:
     Cost: 16gp
     Items:
       - Backpack
@@ -44,31 +44,36 @@ Packs:
       - sealing wax
       - soap
 
-  Dungeoneer’s Pack:
+  Dungeoneer's Pack:
     Cost: 12gp
     Items:
-      - backpack
-      - crowbar
-      - hammer
-      - 10 pitons
-      - 10 torches
-      - tinderbox
+      - Backpack
+      - Crowbar
+      - Hammer
+      - 10 Pitons
+      - 10 Torches
+      - Tinderbox
       - 10 days of rations
-      - waterskin
+      - Wwaterskin
       - 50 feet of hempen rope
 
-  Entertainer’s Pack:
+  Entertainer's Pack:
     Cost: 40gp
     Items:
-      - backpack
-      - bedroll
-      - 2 costumes
-      - 5 candles
-      - 5 days o f rations
+      - Backpack
+      - Bedroll
+      - Costume
+      - Costume
+      - Candle
+      - Candle
+      - Candle
+      - Candle
+      - Candle
+      - 5 days of rations
       - waterskin
       - disguise kit
 
-  Priest’s Pack:
+  Priest's Pack:
     Cost: 19gp
     Items:
       - backpack
@@ -82,7 +87,7 @@ Packs:
       - 2 days of rations
       - waterskin
 
-  Scholar’s Pack:
+  Scholar's Pack:
     Cost: 40gp
     Items:
       - backpack

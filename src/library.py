@@ -4,7 +4,7 @@ class Library():
         self.root_path = root_path
 
     def get_card_info(self, card_name):
-        return self.info.get('Cards', {}).get(card_name, {})
+        return self.info.get('Cards', {}).get(card_name, None)
 
 
     def get_pack_info(self, pack_name):
@@ -16,8 +16,15 @@ class Library():
 
 
     def get_deck_info(self, deck_name):
-        return self.info.get('Decks', {}).get(deck_name, {})
+        return self.get_decks().get(deck_name, {})
 
 
     def get_decks(self):
         return self.info.get('Decks', {})
+
+
+    def get_collections(self):
+        return self.info.get('Collections', {})
+
+    def get_collection(self, collection_name):
+        return self.info.get('Collections', {}).get(collection_name, {})

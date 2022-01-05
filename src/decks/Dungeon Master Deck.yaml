@@ -1,13 +1,7 @@
-Name: Dungeon Master's Deck
-Style: Scroll Deck Style
-Type: Dungeon Master
-Collate: True
-Back:
-  Image: Back1.png
-Files:
-  - Default Deck Styles.yaml
-  - Rules.yaml
-  - Skills.yaml
-  - Coinage.yaml
-  - Creatures.yaml
-  - Capabilities.yaml
+Deck:
+  Name: Dungeon Master's Deck
+  Style: Scroll Deck Style
+  Type: Dungeon Master
+  Collate: True
+  Back:
+    Image: Back1.png

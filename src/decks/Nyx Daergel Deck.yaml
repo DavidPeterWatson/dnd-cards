@@ -1,13 +1,29 @@
 Decks:
-  Nyx Daergel Deck:
-    Type: Character
-    Character: Nyx Daergel
+  Nyx Daergel:
     Collate: True
     Style: Scroll Deck Style
     Back:
       Image: Back1.png
+    Collections:
+      - Nyx Daergel
+
+Collections:
+  Nyx Daergel:
+    Cards:
+      - Nyx Daergel Creature
+      - Nyx Daergel
+    Equipment for:
+      - Nyx Daergel
+    # Spells for:
+    #   - Nyx Daergel
+    Actions for:
+      - Nyx Daergel
 
 Cards:
+  Nyx Daergel Creature:
+    Based on: Nyx Daergel
+    Type: Creature
+
   Nyx Daergel:
     Type: Character
     Header: Nyx Daergel
@@ -16,19 +32,17 @@ Cards:
     Class: Ranger
     Subclass: Beast Master
     Background: Outlander
-    Sex: Female
+    Gender: Female
     Alignment: Chaotic Good
     Level: 1
-    Weight: 50lb
     Speed: 30ft
     Hit Points: 11
-    Hit Die: d10
+    Hit Dice: 1d10
     Armor Class: 15
     Proficiency Bonus: '+2'
-    Description: 'Nyx Daergel was outcast by her fellow gnomes and now protects the forests.'
-    Image: Characters/Forest Gnome Ranger.png
-    Back Image: Characters/Forest Gnome Ranger.png
-
+    Description: Nyx Daergel was outcast by her fellow gnomes and now protects the forests.
+    Image: Creatures/Forest Gnome Ranger.png
+    Back Image: Creatures/Forest Gnome Ranger.png
     Ability Scores:
       Strength: 8
       Dexterity: 16
@@ -36,7 +50,6 @@ Cards:
       Intelligence: 14
       Wisdom: 14
       Charisma: 10
-
     Ability Modifiers:
       Strength: '-1'
       Dexterity: '+3'
@@ -44,10 +57,8 @@ Cards:
       Intelligence: '+2'
       Wisdom: '+2'
       Charisma: '+0'
-
-    Prepared Spells:
+    Spells:
       - Minor Illusion
-
     Equipment:
       Weapons:
         - Shortsword
@@ -55,30 +66,17 @@ Cards:
       Armor:
         - Leather Armor
       Packs:
-        - Explorer’s Pack
-      Gear:
+        - Explorer's Pack
+        - 20gp Worth of Coins
+      Items:
         - Staff
         - Quiver of Arrows
         - Hunting Trap
         - Tusk
-        - Traveler’s Clothes
+        - Traveler's Clothes
         - Belt Pouch
-      Coinage:
-        - Coin Type: 5 Gold Coins
-          Quantity: 2
-        - Coin Type: Gold Coin
-          Quantity: 4
-        - Coin Type: 5 Silver Coins
-          Quantity: 1
-        - Coin Type: Silver Coin
-          Quantity: 4
-        - Coin Type: 5 Copper Coins
-          Quantity: 1
-        - Coin Type: Copper Coin
-          Quantity: 5
-
     Proficiencies:
-      Weapon Skill Type:
+      Weapon Skill Types:
         - Simple
         - Martial
       Armor:
@@ -103,8 +101,9 @@ Cards:
       - Wisdom
     Capabilities:
       - Natural Illusionist
-      - Favored enemy
-      - Natural explorer
+      - Favored Enemy
+      - Natural Explorer
       - Speak with small beasts
-      - Gnome cunning
-      - Darkvision 60 ft
+      - Gnome Cunning
+      - Darkvision:
+          Range: 60 ft

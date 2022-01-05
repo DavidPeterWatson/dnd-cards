@@ -1,0 +1,151 @@
+Decks:
+  Kathra Rockseeker:
+    Collate: True
+    Style: Scroll Deck Style
+    Back:
+      Image: Back1.png
+    Collections:
+      - Kathra Rockseeker Full
+
+Collections:
+  Kathra Rockseeker Full:
+    Cards:
+      - Kathra Rockseeker
+      - Kathra Rockseeker Creature
+    Equipment for:
+      - Kathra Rockseeker
+    Spells for:
+      - Kathra Rockseeker
+    Actions for:
+      - Kathra Rockseeker
+    Capabilities for:
+      - Kathra Rockseeker
+    Skills for:
+      - Kathra Rockseeker
+  Kathra Rockseeker Actions:
+    Spells for:
+      - Kathra Rockseeker
+    Actions for:
+      - Kathra Rockseeker
+    Capabilities for:
+      - Kathra Rockseeker
+    Skills for:
+      - Kathra Rockseeker
+  Kathra Rockseeker Character:
+    Cards:
+      - Kathra Rockseeker
+      - Kathra Rockseeker Creature
+
+Cards:
+  Kathra Rockseeker Creature:
+    Based on: Kathra Rockseeker
+    Type: Creature
+    Header: Kathra Rockseeker
+
+  Kathra Rockseeker:
+    Type: Character
+    Race: Dwarf
+    Subrace: Hill
+    Class: Cleric
+    Subclass: Life Domain
+    Background: Soldier
+    Background Story: |
+      Trained as a soldier on the island of Mintarn, you traveled to Neverwinter as part of a mercenary company that serves as both army and city watch. You grew disillusioned with your fellow soldiers, who seem to enjoy their authority at the expense of the people they're supposed to protect. Everything came to a head recently, when you disobeyed an order and followed your conscience. You were suspended from active duty, though you kept your rank and your connection to the mercenaries. Since then, you have devoted yourself to your deity.
+    Bonds: I have three cousins, Gundren, Tharden, and  Nundro  Rockseeker who  are my  friends and cherished clan members.
+    Traits: I'm always polite and respectful. Also, I don't trust my gut feelings, so I tend to wait for others to act.
+    Ideals: Respect. People deserve to be treated with dignity and courtesy.
+    Flaws: I secretly wonder whether the gods care about mortal affairs at all.
+    Personal Goal: Teach the Redbrands a Lesson. You've heard that Daran Edermath in the town of Phandalin is looking for people of courage and principle to teach some bullies a lesson. These thugs, the Redbrands, have been throwing their weight around in Phandalin, much as your compatriots did in Neverwinter. Putting a stop to their villainy is a worthy goal.
+    Gender: Female
+    Alignment: Nuetral Good
+    Level: 1
+    Speed: 25ft
+    Hit Points: 11
+    Hit Dice: 1d8
+    Armor Class: 18
+    Proficiency Bonus: '+2'
+    Description: I'm always polite and respectful. Also, I don't trust my gut feelings, so I tend to wait for others to act.
+    Image: Creatures/Female Dwarf.png
+    Back Image: Creatures/Female Dwarf.png
+    Ability Scores:
+      Strength: 14
+      Dexterity: 8
+      Constitution: 15
+      Intelligence: 10
+      Wisdom: 16
+      Charisma: 12
+    Ability Modifiers:
+      Strength: '+2'
+      Dexterity: '-1'
+      Constitution: '+2'
+      Intelligence: '+0'
+      Wisdom: '+3'
+      Charisma: '+1'
+    Spells:
+      - Light
+      - Sacred Flame
+      - Thaumaturgy
+      - Command
+      - Healing Word
+      - Shield of Faith
+      - Inflict Wounds
+      - Bless
+      - Cure Wounds
+    Equipment:
+      Weapons:
+        - Warhammer
+        - Handaxe
+        - Handaxe
+      Armor:
+        - Chain mail
+        - Shield
+      Packs:
+        - Dungeoneer's Pack
+        - 20gp Worth of Coins
+      Items:
+        - Holy Symbol
+        - Mason's tools
+        - Dagger: taken from a fallen enemy as a trophy
+        - Deck of playing cards
+        - Set of common clothes
+        - Belt Pouch
+        - Rank Insignia (sergeant)
+    Proficiencies:
+      Weapon Skill Types:
+        - Simple
+      Weapons:
+        - Battleaxe
+        - Handaxe
+        - Light Hammer
+        - Warhammer
+      Armor:
+        - Light Armor
+        - Medium Armor
+        - Heavy Armor
+        - Shields
+      Tools:
+        - Mason's Tools
+      Vehicle Types:
+        - Land
+      Skills: []
+    Languages:
+      - Common
+      - Dwarvish
+    Saving Throws:
+      - Wisdom
+      - Charisma
+    Primary Abilities: []
+    Capabilities:
+      - Stonecunning
+      - Darkvision:
+          Range: 60 ft
+      - Spellcasting:
+          Ability: Wisdom
+      - Disciple of Life
+      - Dwarven Resilience
+      - Dwarven Toughness
+      - Mercenary Sergeant
+
+  Kathra Rockseeker Equipment:
+    Type: Equipment
+    Creature: Goblin with Scimitar

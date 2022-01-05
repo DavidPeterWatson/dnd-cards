@@ -17,7 +17,7 @@ Cards:
     Ability: Dexterity
     Description: Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation.
     Details: |
-      Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation, such as when you’re trying to run across a sheet of ice, balance on a tightrope, or stay upright on a rocking ship’s deck. The DM might also call for a Dexterity (Acrobatics) check to see if you can perform acrobatic stunts, including dives, rolls, somersaults, and flips.
+      Your Dexterity (Acrobatics) check covers your attempt to stay on your feet in a tricky situation, such as when you're trying to run across a sheet of ice, balance on a tightrope, or stay upright on a rocking ship's deck. The DM might also call for a Dexterity (Acrobatics) check to see if you can perform acrobatic stunts, including dives, rolls, somersaults, and flips.
     Image: Skills/Acrobatics.png
 
   Sleight of Hand:
@@ -26,7 +26,7 @@ Cards:
     Ability: Dexterity
     Description: Sleight of Hand.
     Details: |
-      Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check. The DM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person’s pocket.
+      Whenever you attempt an act of legerdemain or manual trickery, such as planting something on someone else or concealing an object on your person, make a Dexterity (Sleight of Hand) check. The DM might also call for a Dexterity (Sleight of Hand) check to determine whether you can lift a coin purse off another person or slip something out of another person's pocket.
     Image: Skills/Sleight of Hand.jpg
 
   Stealth:
@@ -37,9 +37,9 @@ Cards:
     Details: |
       Make a Dexterity (Stealth) check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.
       Hiding and Vision
-      When you try to hide, make a Dexterity (Stealth) check. Until you are discovered or you stop hiding, that check’s total is contested by the Wisdom (Perception) check of any creature that actively searches for signs of your presence.
-      You can’t hide from a creature that can see you, and if you make noise (such as shouting a warning or knocking over a vase), you give away your position. An invisible creature can’t be seen, so it can always try to hide. Signs of its passage might still be noticed, however, and it still has to stay quiet.
-      Passive Perception. When you hide, there’s a chance someone will notice you even if they aren’t searching. To determine whether such a creature notices you, the DM compares your Dexterity (Stealth) check with that creature’s passive Wisdom (Perception) score, which equals 10 + the creature’s Wisdom modifier, as well as any other bonuses or penalties. If the creature has advantage, add 5. For disadvantage, subtract 5.
+      When you try to hide, make a Dexterity (Stealth) check. Until you are discovered or you stop hiding, that check's total is contested by the Wisdom (Perception) check of any creature that actively searches for signs of your presence.
+      You can't hide from a creature that can see you, and if you make noise (such as shouting a warning or knocking over a vase), you give away your position. An invisible creature can't be seen, so it can always try to hide. Signs of its passage might still be noticed, however, and it still has to stay quiet.
+      Passive Perception. When you hide, there's a chance someone will notice you even if they aren't searching. To determine whether such a creature notices you, the DM compares your Dexterity (Stealth) check with that creature's passive Wisdom (Perception) score, which equals 10 + the creature's Wisdom modifier, as well as any other bonuses or penalties. If the creature has advantage, add 5. For disadvantage, subtract 5.
       For example, if a 1st-level character (with a proficiency bonus of +2) has a Wisdom of 15 (a +2 modifier) and proficiency in Perception, he or she has a passive Wisdom (Perception) of 14.
       What Can You See? One of the main factors in determining whether you can find a hidden creature or object is how well you can see in an area, which might be lightly or heavily obscured. In a lightly obscured area—such as dim light, patchy fog, or moderate foliage—creatures have disadvantage on Wisdom (Perception) checks that rely on sight. In a heavily obscured area—such as darkness, opaque fog, or dense foliage—vision is blocked, effectively imposing the blinded condition, as explained in the appendix.
     Image: Skills/Stealth.png
@@ -58,7 +58,7 @@ Cards:
     Type: Skill
     Header: Arcana
     Ability: Intelligence
-    Description: Your Intelligence (Arcana) check measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.
+    Description: Measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.
     Details: |
       Your Intelligence (Arcana) check measures your ability to recall lore about spells, magic items, eldritch symbols, magical traditions, the planes of existence, and the inhabitants of those planes.
     Image: Skills/Arcana.jpg.webp
@@ -75,11 +75,17 @@ Cards:
 
   Investigation:
     Type: Skill
-    Header: Investigation
     Ability: Intelligence
     Description: Investigation.
     Details: |
       When you look around for clues and make deductions based on those clues, you make an Intelligence (Investigation) check. You might deduce the location of a hidden object, discern from the appearance of a wound what kind of weapon dealt it, or determine the weakest point in a tunnel that could cause it to collapse. Poring through ancient scrolls in search of a hidden fragment of knowledge might also call for an Intelligence (Investigation) check.
+    Image: Skills/Investigation.png
+
+  Passive Investigation:
+    Type: PassiveSkill
+    Ability: Intelligence
+    Skill: Investigation
+    Description: Your Passive Intelligence (Investigation) is used to determine your Investigation without a roll.
     Image: Skills/Investigation.png
 
   Nature:
@@ -106,7 +112,7 @@ Cards:
     Ability: Wisdom
     Description: Animal Handling.
     Details: |
-      When there is any question whether you can calm down a domesticated animal, keep a mount from getting spooked, or intuit an animal’s intentions, the DM might call for a Wisdom (Animal Handling) check. You also make a Wisdom (Animal Handling) check to control your mount when you attempt a risky maneuver.
+      When there is any question whether you can calm down a domesticated animal, keep a mount from getting spooked, or intuit an animal's intentions, the DM might call for a Wisdom (Animal Handling) check. You also make a Wisdom (Animal Handling) check to control your mount when you attempt a risky maneuver.
     Image: Skills/Animal Handling.png
 
   Insight:
@@ -115,7 +121,7 @@ Cards:
     Ability: Wisdom
     Description: Insight.
     Details: |
-      Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or predicting someone’s next move. Doing so involves gleaning clues from body language, speech habits, and changes in mannerisms.
+      Your Wisdom (Insight) check decides whether you can determine the true intentions of a creature, such as when searching out a lie or predicting someone's next move. Doing so involves gleaning clues from body language, speech habits, and changes in mannerisms.
     Image: Skills/Insight.png
 
   Medicine:
@@ -136,6 +142,13 @@ Cards:
       Your Wisdom (Perception) check lets you spot, hear, or otherwise detect the presence of something. It measures your general awareness of your surroundings and the keenness of your senses. For example, you might try to hear a conversation through a closed door, eavesdrop under an open window, or hear monsters moving stealthily in the forest. Or you might try to spot things that are obscured or easy to miss, whether they are orcs lying in ambush on a road, thugs hiding in the shadows of an alley, or candlelight under a closed secret door.
     Image: Skills/Perception.png
 
+  Passive Perception:
+    Type: PassiveSkill
+    Ability: Wisdom
+    Skill: Perception
+    Description: Your Passive Wisdom (Perception) is used to determine your perception without a roll.
+    Image: Skills/Perception.png
+
   Survival:
     Type: Skill
     Header: Survival
@@ -151,7 +164,7 @@ Cards:
     Ability: Charisma
     Description: Deception.
     Details: |
-      Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This deception can encompass everything from misleading others through ambiguity to telling outright lies. Typical situations include trying to fast-talk a guard, con a merchant, earn money through gambling, pass yourself off in a disguise, dull someone’s suspicions with false assurances, or maintain a straight face while telling a blatant lie.
+      Your Charisma (Deception) check determines whether you can convincingly hide the truth, either verbally or through your actions. This deception can encompass everything from misleading others through ambiguity to telling outright lies. Typical situations include trying to fast-talk a guard, con a merchant, earn money through gambling, pass yourself off in a disguise, dull someone's suspicions with false assurances, or maintain a straight face while telling a blatant lie.
     Image: Skills/Deception.png
 
   Intimidation:

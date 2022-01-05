@@ -1,6 +1,7 @@
 Cards:
   Longbow:
     Type: Weapon
+    Subcategory: Bow
     Skill Type: Martial
     Attack Type: Ranged
     Cost: 50gp
@@ -8,34 +9,27 @@ Cards:
     Range: 150
     Range with disadvantage: 600
     Damage: 1d8
-    Damage Type: piercing
+    Damage Type: Piercing
     Rarity: Standard
     Properties:
       - Heavy
       - Ammunition
       - Two-Handed
-    Description: |
-      Attack Roll: d20 + Dexterity + Proficiency
-      Damage Roll: 1d8 + Dexterity
-      Properties: Heavy, Two-Handed, Ammunition
     Image: Weapons/Longbow.png
 
   Shortsword:
     Type: Weapon
+    Subcategory: Sword
     Skill Type: Martial
     Attack Type: Melee
     Cost: 10gp
     Weight: 2lb
     Damage: 1d6
-    Damage Type: piercing
+    Damage Type: Piercing
     Rarity: Standard
     Properties:
       - Light
       - Finesse
-    Description: |
-      Attack Roll: d20 + Dexterity + Proficiency
-      Damage Roll: 1d4 + Dexterity
-      Properties: Light, Finesse
     Image: Weapons/Shortsword.png
     Link: https://roll20.net/compendium/dnd5e/Items:Shortsword/#h-Shortsword
 
@@ -46,57 +40,48 @@ Cards:
     Cost: 1sp
     Weight: 2lb
     Damage: 1d4
-    Damage Type: bludgeoning
+    Damage Type: Bludgeoning
     Rarity: Standard
     Properties:
       - Light
-    Description: |
-      Attack Roll: d20 + Strength + Proficiency
-      Damage Roll: 1d4 + Strength
-      Properties: Light
     Image: Weapons/Wooden Club.png
     Link: hhttps://roll20.net/compendium/dnd5e/Club#content
 
   Greataxe:
     Type: Weapon
+    Subcategory: Axe
     Skill Type: Martial
     Attack Type: Melee
     Cost: 30gp
     Weight: 7lb
     Reach: 5ft
     Damage: 1d12
-    Damage Type: slashing
+    Damage Type: Slashing
     Rarity: Standard
     Properties:
       - Heavy
       - Two-Handed
-    Description: |
-      Attack Roll: d20 + Strength + Proficiency
-      Damage Roll: 1d12 + Strength
-      Properties: Heavy, Two-Handed
-    Image: Weapons/Greataxe.webp
+    Image: Weapons/Greataxe.png
 
   Scimitar:
     Type: Weapon
+    Subcategory: Sword
     Skill Type: Martial
     Attack Type: Melee
     Cost: 25gp
     Weight: 3lb
     Reach: 5ft
     Damage: 1d6
-    Damage Type: slashing
+    Damage Type: Slashing
     Rarity: Standard
     Properties:
       - Finesse
       - Light
-    Description: |
-      Attack Roll: d20 + Dexterity + Proficiency
-      Damage Roll: 1d6 + Dexterity
-      Properties: Light, Finesse
-    Image: Weapons/Scimitar.webp
+    Image: Weapons/Scimitar.png
 
   Shortbow:
     Type: Weapon
+    Subcategory: Bow
     Skill Type: Martial
     Attack Type: Ranged
     Cost: 25gp
@@ -104,13 +89,81 @@ Cards:
     Range: 80
     Range with disadvantage: 320
     Damage: 1d6
-    Damage Type: piercing
+    Damage Type: Piercing
     Rarity: Standard
     Properties:
       - Ammunition
       - Two-Handed
-    Description: |
-      Attack Roll: d20 + Dexterity + Proficiency
-      Damage Roll: 1d6 + Dexterity
-      Properties: Two-Handed, Ammunition
     Image: Weapons/Longbow.png
+
+  Warhammer:
+    Type: Weapon
+    Subcategory: Hammer
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 15gp
+    Weight: 2lb
+    Reach: 5ft
+    Damage: 1d8
+    Damage Type: Bludgeoning
+    Rarity: Standard
+    Properties:
+      - Versatile:
+          Damage: 1d10
+    Image: Weapons/Warhammer.png
+    Links:
+     - https://roll20.net/compendium/dnd5e/Warhammer#content
+     - https://www.dndbeyond.com/equipment/warhammer
+
+  Handaxe:
+    Type: Weapon
+    Subcategory: Axe
+    Skill Type: Simple
+    Attack Type: Melee
+    Cost: 5gp
+    Weight: 2lb
+    Reach: 5ft
+    Damage: 1d6
+    Damage Type: Slashing
+    Rarity: Standard
+    Properties:
+      - Light
+      - Thrown:
+          Range: 20/60
+    Image: Weapons/Handaxe.png
+    Links:
+     - https://roll20.net/compendium/dnd5e/Items:Handaxe/#h-Handaxe
+     - https://www.dndbeyond.com/equipment/handaxe
+
+
+  Morningstar:
+    Type: Weapon
+    Subcategory: Morningstar
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 15gp
+    Weight: 4lb
+    Reach: 5ft
+    Damage: 1d8
+    Damage Type: Piercing
+    Rarity: Standard
+    Image: Weapons/Morningstar.png
+    Links:
+     - https://roll20.net/compendium/dnd5e/Items:Morningstar#content
+     - https://www.dndbeyond.com/equipment/morningstar
+
+  Dagger:
+    Type: Weapon
+    Subcategory: Morningstar
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 15gp
+    Weight: 4lb
+    Reach: 5ft
+    Damage: 1d8
+    Damage Type: Piercing
+    Rarity: Standard
+    Image: Weapons/Morningstar.png
+    Links:
+     - https://roll20.net/compendium/dnd5e/Items:Morningstar#content
+     - https://www.dndbeyond.com/equipment/morningstar

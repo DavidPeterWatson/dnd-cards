@@ -1,8 +1,7 @@
-
 Cards:
   Backpack:
     Type: Item
-    Category: Gear
+    Category: ''
     Subcategory: ''
     Header: Backpack
     Cost: 2gp
@@ -10,130 +9,130 @@ Cards:
     Rarity: Std
     Description: A backpack can hold one cubic foot or 30 pounds of gear. You can also strap items, such as a Bedroll or a coil of rope, to the outside of a backpack.
     Packs:
-      - Explorer’s Pack
-      - Dungeoneer’s Pack
-      - Burglar’s Pack
-      - Entertainer’s Pack
-      - Priest’s Pack
-      - Scholar’s Pack
-    Image: Gear/Backpack.png
+      - Explorer's Pack
+      - Dungeoneer's Pack
+      - Burglar's Pack
+      - Entertainer's Pack
+      - Priest's Pack
+      - Scholar's Pack
+    Image: Items/Backpack.png
     Links:
       - https://roll20.net/compendium/dnd5e/Backpack#h-Backpack
 
+
+  Belt Pouch:
+    Based on: Leather Pouch
+    Description: A pouch to keep coins.
+
+  Component Pouch:
+    Based on: Leather Pouch
+    Description: A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material Components and other Special items you need to cast your Spells, except for those Components that have a specific cost (as indicated in a spell's description).
+
+  Leather Pouch:
+    Type: Item
+    Based on: Pouch
+    Description: A leather pouch can hold up to 20 Sling bullets or 50 Blowgun needles, among other things. It can hold up to 1/5 cubic foot or 6 pounds of gear.
+    Image: Items/Leather Pouch.png
+
+  Pouch:
+    Type: Item
+    Cost: 2gp
+    Weight: 5lb
+    Rarity: Std
+    Description: A cloth or leather pouch can hold up to 20 Sling bullets or 50 Blowgun needles, among other things. It can hold up to 1/5 cubic foot or 6 pounds of gear.
+    Image: Items/Pouch.png
+
+
   Bedroll:
     Type: Item
-    Header: Bedroll
-    Category: Gear
     Subcategory: Sleeping
     Cost: 1gp
     Weight: 5lb
     Rarity: Std
     Description: Bedroll.
-    Packs:
-      - Explorer’s Pack
-      - Dungeoneer’s Pack
-    Image: Gear/Bedroll.png
+    Image: Items/Bedroll.png
     Links:
       - https://roll20.net/compendium/dnd5e/
 
   Mess Kit:
     Type: Item
-    Header: Mess Kit
-    Category: Gear
     Subcategory: Food & Drink
     Cost: 1gp
-    Weight: 2sp
+    Weight: 2lb
     Rarity: Std
     Description: A mess kit was a compact collection of essential cutlery and kitchen implements that allowed preparation and consumption of food while traveling.
-    Image: Gear/Mess Kit.png
+    Image: Items/Mess Kit.png
     Links:
       - https://roll20.net/compendium/dnd5e/Mess%20kit#content
       - https://forgottenrealms.fandom.com/wiki/Mess_kit
 
   Tinderbox:
     Type: Item
-    Header: Tinderbox
-    Category: Gear
-    Subcategory: ''
     Cost: 1gp
-    Weight: 5lb
+    Weight: 1lb
     Rarity: Std
     Description: Tinderbox.
-    Image: Gear/Tinderbox.png
+    Image: Items/Tinderbox.png
     Links:
       - https://roll20.net/compendium/dnd5e/
 
   Torch:
     Type: Item
-    Header: Torch
-    Category: Gear
-    Subcategory: ''
     Cost: 1gp
-    Weight: 5lb
+    Weight: 1lb
     Rarity: Std
     Description: Torch.
-    Image: Gear/Torch.png
+    Image: Items/Torch.png
     Links:
       - https://roll20.net/compendium/dnd5e/
 
   Rations:
     Type: Item
-    Header: Rations
-    Category: Gear
     Subcategory: Food & Drink
     Cost: 1gp
-    Weight: 5lb
+    Weight: 4lb
     Rarity: Std
     Description: Rations.
-    Image: Gear/Rations.png
+    Image: Items/Rations.png
     Links:
       - https://roll20.net/compendium/dnd5e/
 
   Waterskin:
     Type: Item
-    Header: Waterskin
-    Category: Gear
     Subcategory: Food & Drink
     Cost: 1gp
-    Weight: 5lb
+    Weight: 3lb
     Rarity: Std
     Description: Waterskin.
-    Image: Gear/Waterskin.png
+    Image: Items/Waterskin.png
     Links:
       - https://roll20.net/compendium/dnd5e/
 
   Hempen Rope:
     Type: Item
-    Header: Hempen Rope
-    Category: Gear
     Subcategory: Climbing
     Cost: 1gp
     Weight: 5lb
     Rarity: Std
     Hit Points: 2
     Description: Hempen rope has 2 Hit Points and can be burst with a DC 17 Strength check.
-    Image: Gear/Hempen Rope.png
+    Image: Items/Hempen Rope.png
     Links:
       - https://roll20.net/compendium/dnd5e/Items:Silk%20rope/#h-Silk%20rope
 
   Staff:
     Type: Item
-    Header: Staff
-    Category: Gear
-    Subcategory: ''
     Cost: 1gp
     Weight: 4lb
     Rarity: Std
     Description: Staff
-    Image: Gear/Staff.png
+    Image: Items/Staff.png
     Links:
       - https://roll20.net/compendium/dnd5e/Staff#content
       - https://the-griffons-saddlebag.tumblr.com/post/647004182615867393/𝗡𝗲𝘄-𝗶𝘁𝗲𝗺-staff-of-the-vineyard-staff
 
   Hunting Trap:
     Type: Item
-    Header: Hunting Trap
-    Category: Gear
     Subcategory: Hunting
     Cost: 1gp
     Weight: 4lb
@@ -141,20 +140,18 @@ Cards:
     Description: Hunting Trap
     Details: |
       When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its Movement is limited by the length of the chain (typically 3 feet long). A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature.
-    Image: Gear/Hunting Trap.png
+    Image: Items/Hunting Trap.png
     Links:
       - https://roll20.net/compendium/dnd5e/Hunting%20trap#content
 
   Quiver of Arrows:
     Type: Item
-    Header: Quiver of Arrows
-    Category: Gear
     Subcategory: 'Ammunition'
     Cost: 1gp
     Weight: 4lb
     Rarity: Std
     Description: Quiver of Arrows
-    Image: Gear/Quiver of Arrows.png
+    Image: Items/Quiver of Arrows.png
     Links:
       - https://www.dndbeyond.com/equipment/quiver
       - https://roll20.net/compendium/dnd5e/Quiver#content
@@ -169,7 +166,7 @@ Cards:
     Rarity: Std
     # Hit Points: 2
     Description: Tusk
-    Image: Gear/Tusk.png
+    Image: Items/Tusk.png
     Links:
       - https://www.dndbeyond.com/equipment/quiver
       - https://roll20.net/compendium/dnd5e/Quiver#content

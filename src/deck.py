@@ -3,6 +3,7 @@ import yaml
 from reportlab.pdfgen.canvas import Canvas
 from library import Library
 from style import Style
+from card_type_provider import CardTypeProvider
 
 
 class Deck():
@@ -16,7 +17,6 @@ class Deck():
         self.style = Style(style_name, library)
         self.type = self.info.get('Type', '')
         self.cards = []
-        self.character_name = self.info.get('Character', '')
-        self.character_info = library.get_card_info(self.character_name)
+        self.card_type_provider = CardTypeProvider()
 
 
