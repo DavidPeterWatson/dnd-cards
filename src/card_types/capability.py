@@ -5,6 +5,8 @@ import traceback
 def get_class_name():
     return 'Capability'
 
+def get_card_type():
+    return 'Capability'
 
 class Capability(Action):
 

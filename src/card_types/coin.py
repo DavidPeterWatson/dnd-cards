@@ -6,6 +6,8 @@ from deck import Deck
 def get_class_name():
     return 'Coin'
 
+def get_card_type():
+    return 'Coin'
 
 class Coin(Item):
 

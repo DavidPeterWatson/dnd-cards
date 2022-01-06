@@ -1,4 +1,80 @@
+Spell Slot Allocations:
+  Cleric Level 1 Spell Slots:
+    Spell Slots:
+      - Level 1 Spell Slot
+      - Level 1 Spell Slot
+  Cleric Level 2 Spell Slots:
+    Spell Slots:
+      - Level 1 Spell Slot
+  Cleric Level 3 Spell Slots:
+    Spell Slots:
+      - Level 1 Spell Slot
+      - Level 2 Spell Slot
+      - Level 2 Spell Slot
+  Cleric Level 4 Spell Slots:
+    Spell Slots:
+      - Level 2 Spell Slot
+  Cleric Level 5 Spell Slots:
+    Spell Slots:
+      - Level 3 Spell Slot
+      - Level 3 Spell Slot
+
 Cards:
+  Level 1 Spell Slot:
+    Type: Spell Slot
+    Level: 1
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with the spell.
+    Image: Spells/Level 1 Spell Slot.png
+
+  Level 2 Spell Slot:
+    Type: Spell Slot
+    Level: 2
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with the spell.
+    Image: Spells/Level 2 Spell Slot.png
+
+  Level 3 Spell Slot:
+    Type: Spell Slot
+    Level: 3
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
+    Image: Spells/Level 3 Spell Slot.png
+
+  Level 4 Spell Slot:
+    Type: Spell Slot
+    Level: 4
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
+    Image: Spells/Level 4 Spell Slot.png
+
+  Level 5 Spell Slot:
+    Type: Spell Slot
+    Level: 5
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
+    Image: Spells/Level 5 Spell Slot.png
+
+  Level 6 Spell Slot:
+    Type: Spell Slot
+    Level: 6
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
+    Image: Spells/Level 6 Spell Slot.png
+
+  Level 7 Spell Slot:
+    Type: Spell Slot
+    Level: 7
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
+    Image: Spells/Level 7 Spell Slot.png
+
+  Level 8 Spell Slot:
+    Type: Spell Slot
+    Level: 8
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
+    Image: Spells/Level 8 Spell Slot.png
+
+  Level 9 Spell Slot:
+    Type: Spell Slot
+    Level: 9
+    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
+    Image: Spells/Level 9 Spell Slot.png
+
+
   Find Familiar:
     Type: Spell
     Header: Find Familiar
@@ -128,7 +204,7 @@ Cards:
     School: Enchantment
     Level: 1
     Range: 30ft
-    Casting Time: 1action
+    Casting Time: 1 action
     Duration: 1min concentration
     Classes:
       - Cleric
@@ -150,7 +226,7 @@ Cards:
     School: Evocation
     Level: 1
     Range: Touch
-    Casting Time: 1action
+    Casting Time: 1 action
     Duration: Instantaneous
     Classes:
       - Cleric
@@ -169,8 +245,8 @@ Cards:
     School: Enchantment
     Level: 1
     Range: 60ft
-    Casting Time: 1action
-    Duration: 1round
+    Casting Time: 1 action
+    Duration: 1 round
     Classes:
       - Cleric
     Components:
@@ -192,7 +268,7 @@ Cards:
     School: Evocation
     Level: 1
     Range: 60ft
-    Casting Time: 1action
+    Casting Time: 1 action
     Duration: Instant
     Classes:
       - Cleric
@@ -210,7 +286,7 @@ Cards:
     School: Necromancy
     Level: 1
     Range: Touch
-    Casting Time: 1action
+    Casting Time: 1 action
     Duration: Instant
     Classes:
       - Cleric
@@ -230,7 +306,7 @@ Cards:
     School: Evocation
     Level: Cantrip
     Range: Touch
-    Casting Time: 1action
+    Casting Time: 1 action
     Duration: 1hour
     Classes:
       - Cleric
@@ -268,7 +344,7 @@ Cards:
     School: Enchantment
     Level: 1
     Range: 60ft
-    Casting Time: 1action
+    Casting Time: 1 action
     Duration: Instant
     Classes:
       - Cleric

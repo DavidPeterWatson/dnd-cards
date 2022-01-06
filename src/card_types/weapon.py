@@ -4,6 +4,8 @@ import traceback
 def get_class_name():
     return 'Weapon'
 
+def get_card_type():
+    return 'Weapon'
 
 class Weapon(Card):
 

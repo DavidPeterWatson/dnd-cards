@@ -3,10 +3,11 @@ import traceback
 
 from position import Position
 
-
 def get_class_name():
     return 'Armor'
 
+def get_card_type():
+    return 'Armor'
 
 class Armor(Item):
 

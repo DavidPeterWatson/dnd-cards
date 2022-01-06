@@ -5,6 +5,8 @@ import traceback
 def get_class_name():
     return 'Skill'
 
+def get_card_type():
+    return 'Skill'
 
 class Skill(Card):
 

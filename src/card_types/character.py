@@ -5,6 +5,9 @@ import yaml
 def get_class_name():
     return 'Character'
 
+def get_card_type():
+    return 'Character'
+
 class Character(Creature):
 
     def pre_draw(self):

@@ -8,6 +8,8 @@ from position import Position
 def get_class_name():
     return 'Creature'
 
+def get_card_type():
+    return 'Creature'
 
 class Creature(Card):
 
@@ -36,6 +38,7 @@ class Creature(Card):
         super().pre_draw()
         self.set_passive_perception()
         self.set_initiative()
+        self.info['Back Image'] = self.info['Image']
         pass
 
     def draw_back_image(self, position, top_padding, bottom_padding, side_padding):

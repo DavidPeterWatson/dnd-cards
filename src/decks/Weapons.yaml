@@ -152,18 +152,24 @@ Cards:
      - https://roll20.net/compendium/dnd5e/Items:Morningstar#content
      - https://www.dndbeyond.com/equipment/morningstar
 
+
   Dagger:
     Type: Weapon
     Subcategory: Morningstar
     Skill Type: Martial
     Attack Type: Melee
-    Cost: 15gp
-    Weight: 4lb
+    Cost: 2gp
+    Weight: 1lb
     Reach: 5ft
-    Damage: 1d8
+    Damage: 1d4
     Damage Type: Piercing
     Rarity: Standard
-    Image: Weapons/Morningstar.png
+    Properties:
+      - Finesse
+      - Light
+      - Thrown:
+          Range: 20/60
+    Image: Weapons/Dagger.png
     Links:
-     - https://roll20.net/compendium/dnd5e/Items:Morningstar#content
-     - https://www.dndbeyond.com/equipment/morningstar
+     - https://www.dndbeyond.com/equipment/dagger
+     - https://roll20.net/compendium/dnd5e/Dagger#content

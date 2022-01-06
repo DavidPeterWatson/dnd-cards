@@ -68,7 +68,9 @@ def create_collection_cards(collection_name, deck: Deck):
     for creature in collection.get('Spells for', []):
         creature_info = resolve_card_info(creature, deck)
         if creature_info is not None:
+            cards.extend(create_creature_spell_slot_cards(creature_info, deck))
             cards.extend(create_creature_spell_cards(creature_info, deck))
+
     return cards
 
 
@@ -92,6 +94,13 @@ def create_creature_pack_cards(creature_info, deck: Deck):
 def create_creature_item_cards(creature_info, deck: Deck):
     return create_cards(creature_info.get('Equipment', {}).get('Items', []), deck)
 
+def create_creature_spell_slot_cards(creature_info, deck: Deck):
+    cards = []
+    for spell_slot_allocation_name in creature_info.get('Spell Slot Allocations', []):
+        spell_slot_allocation_info = deck.library.get_spell_slot_allocation_info(spell_slot_allocation_name)
+        print(spell_slot_allocation_info)
+        cards.extend(create_cards(spell_slot_allocation_info.get('Spell Slots', []), deck))
+    return cards
 
 def create_creature_spell_cards(creature_info, deck: Deck):
     return create_cards_for_creature(creature_info.get('Spells', []), creature_info, deck)

@@ -6,7 +6,14 @@ Decks:
       Image: Back1.png
     Collections:
       - Lost Mine of Phandelver Part 1 Goblin Ambush
-      # - Lost Mine of Phandelver Part 1 Cragmaw Hideout
+
+  Lost Mine of Phandelver Part 1 Cragmaw Hideout:
+    Style: Scroll Deck Style
+    Collate: True
+    Back:
+      Image: Back1.png
+    Collections:
+      - Lost Mine of Phandelver Part 1 Cragmaw Hideout
 
 Collections:
   Lost Mine of Phandelver Part 1 Goblin Ambush:
@@ -530,7 +537,7 @@ Cards:
     Description: Townmaster of Phandalin with a quest for the party
 
   Sildar Hallwinter:
-    Type: NPC
+    Type: Creature
     Based on: HumanMaleCommoner
     Description: Member of the Lords' Alliance with two quests for the party
 

@@ -91,6 +91,8 @@ Cards:
       - Inflict Wounds
       - Bless
       - Cure Wounds
+    Spell Slot Allocations:
+      - Cleric Level 1 Spell Slots
     Equipment:
       Weapons:
         - Warhammer
@@ -102,10 +104,11 @@ Cards:
       Packs:
         - Dungeoneer's Pack
         - 20gp Worth of Coins
+        - Cleric Level 1 Spell Slots
       Items:
         - Holy Symbol
         - Mason's tools
-        - Dagger: taken from a fallen enemy as a trophy
+        - Dagger taken from a fallen enemy as a trophy
         - Deck of playing cards
         - Set of common clothes
         - Belt Pouch

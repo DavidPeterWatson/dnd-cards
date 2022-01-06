@@ -82,7 +82,7 @@ Cards:
     Image: Skills/Investigation.png
 
   Passive Investigation:
-    Type: PassiveSkill
+    Type: Passive Skill
     Ability: Intelligence
     Skill: Investigation
     Description: Your Passive Intelligence (Investigation) is used to determine your Investigation without a roll.
@@ -143,7 +143,7 @@ Cards:
     Image: Skills/Perception.png
 
   Passive Perception:
-    Type: PassiveSkill
+    Type: Passive Skill
     Ability: Wisdom
     Skill: Perception
     Description: Your Passive Wisdom (Perception) is used to determine your perception without a roll.

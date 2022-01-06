@@ -77,7 +77,6 @@ Cards:
       Wisdom: '+1'
       Charisma: '-2'
     Image: Creatures/Mastiv.png
-    Back Image: Creatures/Mastiv.png
     link: https://roll20.net/compendium/dnd5e/Mastiff#content
 
   Bat:
@@ -133,7 +132,6 @@ Cards:
       Stealth +6 Darkvision 60ft
       Goblins are black-hearted, gather in overwhelming numbers, and crave power, which they abuse
     Image: Creatures/Goblin.png
-    Back Image: Creatures/Goblin.png
     Links:
       - https://roll20.net/compendium/dnd5e/Monsters:Goblin
       - https://www.dndbeyond.com/monsters/goblin
@@ -182,7 +180,6 @@ Cards:
     Description: |
       Brute +6 Darkvision 60ft
     Image: Creatures/Bugbear.png
-    Back Image: Creatures/Bugbear.png
     Links:
       - https://roll20.net/compendium/dnd5e/Monsters:Goblin
       - https://www.dndbeyond.com/monsters/goblin

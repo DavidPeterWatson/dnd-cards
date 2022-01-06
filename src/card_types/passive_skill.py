@@ -4,6 +4,8 @@ import traceback
 def get_class_name():
     return 'PassiveSkill'
 
+def get_card_type():
+    return 'Passive Skill'
 
 class PassiveSkill(Skill):
 

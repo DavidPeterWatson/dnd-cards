@@ -6,6 +6,9 @@ from deck import Deck
 def get_class_name():
     return 'Action'
 
+def get_card_type():
+    return 'Action'
+
 class Action(Card):
 
     def draw_specifications(self, position):

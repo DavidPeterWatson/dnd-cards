@@ -1,25 +1,18 @@
 from card import Card
 import traceback
-from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
 from deck import Deck
-
+import yaml
 
 def get_class_name():
-    return 'Condition'
+    return 'SpellSlot'
 
 def get_card_type():
-    return 'Condition'
+    return 'Spell Slot'
 
-class Condition(Card):
+class SpellSlot(Card):
 
     def draw_specifications(self, position):
         try:
             self.draw_specification('Level', self.info['Level'], position)
-
         except Exception:
             traceback.print_exc()
-
-    # def is_in_deck(deck: Deck, card_info):
-    #     if deck.type == 'Character':
-    #         return True
-    #     return False

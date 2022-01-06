@@ -11,7 +11,7 @@ Cards:
     Armor Type: Light
     Description: |
       The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. 
-      Wearer Armor Class = Base Armor Class + Dexterity + Proficiency
+      Armor Class = Base Armor Class + Dexterity + Proficiency
     Image: Armor/Studded Leather Armor.png
     Links:
       - https://roll20.net/compendium/dnd5e/Leather%20Armor#content

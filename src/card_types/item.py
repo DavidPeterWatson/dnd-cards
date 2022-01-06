@@ -7,6 +7,8 @@ from position import Position
 def get_class_name():
     return 'Item'
 
+def get_card_type():
+    return 'Item'
 
 class Item(Card):
 

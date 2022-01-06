@@ -9,6 +9,8 @@ from position import Position
 def get_class_name():
     return 'Prop'
 
+def get_card_type():
+    return 'Prop'
 
 class Prop(Card):
 

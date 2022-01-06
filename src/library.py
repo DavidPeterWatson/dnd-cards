@@ -10,6 +10,8 @@ class Library():
     def get_pack_info(self, pack_name):
         return self.info.get('Packs', {}).get(pack_name, {})
 
+    def get_spell_slot_allocation_info(self, spell_slot_allocation_name):
+        return self.info.get('Spell Slot Allocations', {}).get(spell_slot_allocation_name, {})
 
     def get_style(self, style_name):
         return self.info.get('Styles', {}).get(style_name, {})
