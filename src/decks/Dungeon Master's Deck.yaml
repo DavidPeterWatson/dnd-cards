@@ -5,12 +5,12 @@ Decks:
     Back:
       Image: Back1.png
     Collections:
-      # - Characters
+      - Creatures
       # - Weapons
       - Conditions
 
 Collections:
-  Characters:
+  Creatures:
     Cards:
       - Damaia Creature
       - Nyx Daergel Creature

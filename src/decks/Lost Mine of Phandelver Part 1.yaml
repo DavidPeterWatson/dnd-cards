@@ -48,23 +48,38 @@ Collections:
       - Cave Mouth
       - Cave Mouth Developments
       - Goblin Blind
+      # - Goblin
+      # - Goblin
       - Kennel
+      - Wolf
+      - Wolf
+      - Wolf
       - Kennel Fissure
       - Kennel Developments
       - Steep Passage
       - Steep Passage Goblin Guard
+      # - Goblin
       - Steep Passage Rubble Passage
       - Overpass
       - Flood
       - Goblin Den
+      # - Goblin
+      - Goblin
+      - Goblin
+      - Goblin
+      - Goblin
+      - Yeemik
       - Goblin Den Sildar Hallwinter
       - Sildar Knowledge
-      - Background
+      - LMoP Background
       - Goblin Den Developments
       - Sildar Hallwinter
       - Twin Pools Cave
       - Klarg's Cave
       - Klarg
+      - Ripper
+      - Goblin
+      - Goblin
       - Klarg's Cave Developments
       - Klarg's Cave Treasure
       - What's Next?
@@ -212,7 +227,7 @@ Cards:
     Part: 1
     Chapter: Cragmaw Hideout
     Encounter: 0
-    Back Image: Maps/Cragmaw Hideout Portrait.jpeg
+    Back Image: Maps/Cragmaw Hideout Map for DM.png
     Description: |
       The Cragmaw tribe is so named because each member of the tribe sharpens its teeth so they appear fierce and jagged.
       - The Cragmaw cave slopes steeply upward. The entrance is at the foot of a good-sized hill, and the caves and passages are inside the hill itself.
@@ -269,6 +284,7 @@ Cards:
     Details: |
       Three wolves are confined here. They can't reach targets standing on the steps, but all three attack any creature except a goblin that moves into the room (see the “Developments” section). Goblins in nearby caves ignore the sounds of fighting wolves, since they constantly snap and snarl at each other. A character who tries to calm the animals can attempt a DC 15 Wisdom (Animal Handling) check. On a success, the wolves allow the character to move throughout the room. If the wolves are given food, the DC drops to 10.
 
+
   Kennel Fissure:
     Type: Narrative
     Number: 1.2.3.1
@@ -320,7 +336,7 @@ Cards:
     Chapter: Cragmaw Hideout
     Encounter: Steep Passage
     Description: |
-      Western Passage. This passage is choked with rubble and has steep escarpments. Treat the area as difficult terrain (see “Difficult Terrain” in the rulebook). The ledge between the two escarpments is fragile. Any weight in excess of 100 pounds loosens the whole mass and sends it tumbling down to the east. Any creature on the ledge when it falls must make a DC 10 Dexterity saving throw, taking 2d6 bludgeoning damage on a failure, or half as much damage on a success. The creature also falls prone on a failed save (see “Being Prone” in the rulebook).
+      Western Passage. This passage is choked with rubble and has steep escarpments. Treat the area as difficult terrain. The ledge between the two escarpments is fragile. Any weight in excess of 100 pounds loosens the whole mass and sends it tumbling down to the east. Any creature on the ledge when it falls must make a DC 10 Dexterity saving throw, taking 2d6 bludgeoning damage on a failure, or half as much damage on a success. The creature also falls prone on a failed save.
 
   Overpass:
     Type: Narrative
@@ -377,12 +393,15 @@ Cards:
       Sildar Hallwinter, a human warrior, is held prisoner in this chamber. He is securely bound on the southern ledge of the cavern. The goblins have been beating and tormenting him, so he is weak and at 1 hit point.
       The goblin leader, Yeemik, is second-in-command
       of the whole hideout. If he sees that the characters are getting the upper hand, he grabs Sildar and drags him over to the edge of the upper level. “Truce, or this human dies!” he shouts.
-      Yeemik wants to oust Klarg and become the new boss. If the adventurers agree to parley, Yeemik tries to convince them to kill Klarg in area 8, promising to release Sildar when they bring back the bugbear's head. Sildar groggily warns the characters that they shouldn't trust the goblin, and he's right. If the characters take the deal, Yeemik tries to force them to pay a rich ransom for Sildar even after they complete their part of the bargain.  If the characters refuse to parley, Yeemik shoves Sildar over the edge and continues with the fight. Sildar takes ld6 bludgeoning damage from the fall, which is enough to drop him to 0 hit points. Quick-acting characters can try to stabilize him before he dies (see “Damage, Healing, and Dying” in the rulebook).
-
+      Yeemik wants to oust Klarg and become the new boss. If the adventurers agree to parley, Yeemik tries to convince them to kill Klarg in area 8, promising to release Sildar when they bring back the bugbear's head. Sildar groggily warns the characters that they shouldn't trust the goblin, and he's right. If the characters take the deal, Yeemik tries to force them to pay a rich ransom for Sildar even after they complete their part of the bargain.  If the characters refuse to parley, Yeemik shoves Sildar over the edge and continues with the fight. Sildar takes ld6 bludgeoning damage from the fall, which is enough to drop him to 0 hit points. Quick-acting characters can try to stabilize him before he dies. 
     Details:
       Sildar Hallwinter is a kindhearted human male of nearly
       fifty years who holds a place of honor in the famous griffon cavalry of the great city of Waterdeep. He is an agent of the Lords' Alliance, a group of allied political powers concerned with mutual security and prosperity. Members of the order ensure the safety of cities and other settlements by proactively eliminating threats by any means, while bringing honor and glory to their leaders and homelands.
       Sildar met Gundren Rockseeker in Neverwinter and agreed to accompany him back to Phandalin. Sildar wants to investigate the fate of Iarno Albrek, a human wizard and fellow member of the Lords' Alliance who disappeared shortly after arriving in Phandalin. Sildar hopes to learn what happened to Iarno, assist Gundren in reopening the old mine, and help restore Phandalin to a civilized center of wealth and prosperity.
+
+  Yeemik:
+    Based on: Goblin
+    Hit Points: 12
 
   Sildar Hallwinter:
     Type: Creature
@@ -403,7 +422,7 @@ Cards:
       - Sildar's contact in Phandalin is a human wizard named Iarno Albrek. The wizard traveled to the town two months ago to establish order there. After the Lords' Alliance received no word from Iarno, Sildar decided to investigate.
       - Sildar tells the characters that he intends to continue on to Phandalin, since it's the nearest settlement. He offers to pay the party 50 gp to provide escort. Although he has no money on him, Sildar can secure a loan to pay the characters within a day after arriving in Phandalin. First, he hopes they'll put a stop to the goblin raids by clearing out the caves.
 
-  Background:
+  LMoP Background:
     Type: Narrative
     Number: 
     Campaign: Lost Mine of Phandelver
@@ -460,6 +479,9 @@ Cards:
 
   Klarg:
     Based on: Bugbear
+
+  Ripper:
+    Based on: Wolf
 
   Klarg's Treasure:
     Type: Item

@@ -217,3 +217,42 @@ Cards:
       Weapons:
         - Morningstar
 
+  Wolf:
+    Type: Creature
+    Category: Beast
+    Size: Medium
+    Hit Points: 11
+    Hit Dice: 2d8+2
+    Speed: 40ft
+    Armor Class: 13
+    Alignment: Unaligned
+    Challenge: 1/4
+    Challenge XP: 50
+    Description: |
+      Bite. Melee Weapon Attack: +4 to hit, reach 5 ft, one target. Hit: 7 (2d4 + 2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+    Details: |
+      Keen Hearing and Smell. The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell. 
+      Pack Tactics. The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated.
+    Image: Creatures/Wolf.png
+    Link:
+      - https://roll20.net/compendium/dnd5e/Wolf#content
+      - https://www.dndbeyond.com/monsters/wolf
+    Ability Scores:
+      Strength: 12
+      Dexterity: 15
+      Constitution: 12
+      Intelligence: 3
+      Wisdom: 12
+      Charisma: 6
+    Ability Modifiers:
+      Strength: '+1'
+      Dexterity: '+2'
+      Constitution: '+1'
+      Intelligence: '-4'
+      Wisdom: '+1'
+      Charisma: '-2'
+    Capabilities:
+      - Keen Hearing and Smell
+      - Pack Tactics
+    Actions:
+      - "Bite. Melee Weapon Attack: +4 to hit, reach 5 ft, one target. Hit: 7 (2d4 + 2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone."

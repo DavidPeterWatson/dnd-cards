@@ -97,7 +97,7 @@ class Card:
         try:
             border_width =  self.style.border_width
             self.draw_background(position)
-            self.draw_back_image(position, self.style.header_height, border_width*mm, border_width*mm)
+            self.draw_back_image(position, self.style.header_height, border_width, border_width)
             self.draw_border(position)
             self.draw_header(position)
         except Exception:
