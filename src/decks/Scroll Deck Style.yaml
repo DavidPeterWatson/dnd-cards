@@ -6,8 +6,8 @@ Styles:
       Font: Tiamat Condensed SC Regular Regular.ttf
       Font Size: 12
       Line Spacing: 1
-      Height: 12.5
-      TextTop: 2.5
+      Height: 12
+      TextTop: 3
     Border:
       Image: Border.png
       Width: 4
@@ -108,12 +108,14 @@ Styles:
           Row: 6
           Alignment: Right
     Category:
-      Font: LibreBaskerville-Regular.ttf
-      Font Size: 9
+      Font: Tiamat Condensed SC Regular Regular.ttf #LibreBaskerville-Regular.ttf
+      Font Size: 8
       Height: 0
-      Top Padding: 0
-      Left Padding: 15
-      Line Spacing: 1.2
+      Top Padding: -1
+      Left Padding: 11
+      Line Spacing: 1
+      # Vertical Alignment: TOP
+      # Horizontal Alignment: MIDDLE
       # Image: Wooden Sign.png
     Description:
       Image: Scroll Detail.png

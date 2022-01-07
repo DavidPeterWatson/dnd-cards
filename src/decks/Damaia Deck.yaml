@@ -5,13 +5,12 @@ Decks:
     Back:
       Image: Back1.png
     Collections:
-      - Damaia Full
+      - Damaia Actions
 
 Collections:
   Damaia Full:
     Cards:
       - Damaia
-      - Damaia Creature
     Equipment for:
       - Damaia
     Spells for:
@@ -23,14 +22,16 @@ Collections:
     Skills for:
       - Damaia
   Damaia Actions:
-    Spells for:
+    Weapons for:
       - Damaia
+    # Spells for:
+    #   - Damaia
     Actions for:
       - Damaia
-    Capabilities for:
-      - Damaia
-    Skills for:
-      - Damaia
+    # Capabilities for:
+    #   - Damaia
+    # Skills for:
+    #   - Damaia
 
 Cards:
   Damaia Creature:
@@ -39,6 +40,7 @@ Cards:
   
   Damaia:
     Type: Character
+    Category: Humanoid
     Header: Damaia
     Race: Tiefling
     Subrace: ''
@@ -73,19 +75,21 @@ Cards:
       Charisma: '+0'
     Equipment:
       Weapons:
-        - Greataxe
-        - Dagger
-        - 4 Javelins
-      Armor:
-        - Leather Armor
-      Packs:
-        - Explorer's Pack
-        - 20gp Worth of Coins
+        # - Greataxe
+        # - Dagger
+        - Javelin
+        - Javelin
+        - Javelin
+        - Javelin
+      # Armor:
+      #   - Leather Armor
+      # Packs:
+      #   - Explorer's Pack
+      #   - 20gp Worth of Coins
       Items:
-        - Staff
-        - Quiver of Arrows
-        - Hunting Trap
-        - Tusk
+        # - Staff
+        # - Hunting Trap
+        # - Tusk
         - Traveler's Clothes
         - Belt Pouch
     Proficiencies:

@@ -11,7 +11,6 @@ Collections:
   Kathra Rockseeker Full:
     Cards:
       - Kathra Rockseeker
-      - Kathra Rockseeker Creature
     Equipment for:
       - Kathra Rockseeker
     Spells for:
@@ -34,7 +33,6 @@ Collections:
   Kathra Rockseeker Character:
     Cards:
       - Kathra Rockseeker
-      - Kathra Rockseeker Creature
 
 Cards:
   Kathra Rockseeker Creature:
@@ -44,6 +42,7 @@ Cards:
 
   Kathra Rockseeker:
     Type: Character
+    Category: Humanoid
     Race: Dwarf
     Subrace: Hill
     Class: Cleric
@@ -101,10 +100,10 @@ Cards:
       Armor:
         - Chain mail
         - Shield
-      Packs:
-        - Dungeoneer's Pack
-        - 20gp Worth of Coins
-        - Cleric Level 1 Spell Slots
+      # Packs:
+        # - Dungeoneer's Pack
+        # - 20gp Worth of Coins
+        # - Cleric Level 1 Spell Slots
       Items:
         - Holy Symbol
         - Mason's tools

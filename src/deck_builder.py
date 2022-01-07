@@ -50,6 +50,11 @@ def create_collection_cards(collection_name, deck: Deck):
         if creature_info is not None:
             cards.extend(create_creature_equipment_collection(creature_info, deck))
 
+    for creature in collection.get('Weapons for', []):
+        creature_info = resolve_card_info(creature, deck)
+        if creature_info is not None:
+            cards.extend(create_creature_weapon_cards(creature_info, deck))
+
     for creature in collection.get('Capabilities for', []):
         creature_info = resolve_card_info(creature, deck)
         if creature_info is not None:
@@ -119,17 +124,11 @@ def create_creature_capabilitiy_cards(creature_info, deck: Deck):
 
 
 def create_creature_action_cards(creature_info, deck: Deck):
-    return create_cards_for_creature(creature_info.get('Actions', []), creature_info, deck)
+    return create_cards_for_creature(get_combat_actions_list(), creature_info, deck)
 
 
 def create_creature_weapon_cards(creature_info, deck: Deck):
     return create_cards_for_creature(creature_info.get('Equipment', {}).get('Weapons', []), creature_info, deck)
-
-
-def create_copied_cards(card_name: str, quantity, deck):
-    card_info = deck.library.get_card_info(card_name)
-    if card_info is not None:
-        return create_cards([card_name for _ in range(quantity)], deck)
 
 
 def create_cards_for_creature(card_list, creature_info, deck):
@@ -159,6 +158,8 @@ def create_card_for_creature(card_name: str, creature_info, deck):
 def create_card(card_name: str, deck):
     try:
         card_info = resolve_card_info(card_name, deck)
+        if card_info is None:
+            print(f'Card not found -> {card_name}')
         if card_info is not None:
             card_class = deck.card_type_provider.get_card_type(card_info.get('Type', ''))
             return card_class(card_name, card_info, deck.style)
@@ -199,3 +200,19 @@ def get_skills_list():
         'Performance',
         'Persuasion'
     ]
+
+
+def get_combat_actions_list():
+    return [
+        'Attack',
+        'Cast a Spell',
+        'Dash'
+        'Disengage',
+        'Dodge',
+        'Help',
+        'Hide',
+        'Ready',
+        'Search',
+        'Use an Object',
+    ]
+  

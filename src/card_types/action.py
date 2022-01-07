@@ -18,6 +18,3 @@ class Action(Card):
 
         except Exception:
             traceback.print_exc()
-
-    def set_header(self):
-        self.info['Header'] = f'{self.type} - {self.name}'

@@ -10,13 +10,16 @@ Decks:
 Collections:
   Nyx Daergel:
     Cards:
-      - Nyx Daergel Creature
       - Nyx Daergel
     Equipment for:
       - Nyx Daergel
     # Spells for:
     #   - Nyx Daergel
     Actions for:
+      - Nyx Daergel
+    Capabilities for:
+      - Nyx Daergel
+    Skills for:
       - Nyx Daergel
 
 Cards:
@@ -27,6 +30,7 @@ Cards:
   Nyx Daergel:
     Type: Character
     Header: Nyx Daergel
+    Category: Humanoid
     Race: Gnome
     Subrace: Forest
     Class: Ranger
@@ -63,17 +67,17 @@ Cards:
       Weapons:
         - Shortsword
         - Longbow
-      Armor:
-        - Leather Armor
-      Packs:
-        - Explorer's Pack
-        - 20gp Worth of Coins
+      # Armor:
+      #   - Leather Armor
+      # Packs:
+        # - Explorer's Pack
+        # - 20gp Worth of Coins
       Items:
-        - Staff
-        - Quiver of Arrows
-        - Hunting Trap
-        - Tusk
-        - Traveler's Clothes
+        # - Staff
+        # - Quiver of Arrows
+        # - Hunting Trap
+        # - Tusk
+        # - Traveler's Clothes
         - Belt Pouch
     Proficiencies:
       Weapon Skill Types:

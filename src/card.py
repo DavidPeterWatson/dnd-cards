@@ -47,10 +47,10 @@ class Card:
                 self.draw_artwork(position)
                 self.draw_description(position)
                 self.draw_specifications(position)
-                self.draw_category(position)
             self.draw_version(position)
             self.draw_border(position)
             self.draw_header(position)
+           
         except Exception:
             traceback.print_exc()
 
@@ -228,11 +228,8 @@ class Card:
 
     def draw_category(self, position: Position):
         try:
-            # category_text = self.info['Category']
-            # if self.info.get('Subcategory', '') != '':
-            #     category_text = category_text + ' - ' + self.info['Subcategory']
-            # self.draw_image(self.style.category_filepath, position, self.style.category_image_box)
-            # self.draw_paragraph(category_text, position, self.style.category_box, self.style.category_font_style)
+            category_text =  self.info['Category'].lower()
+            self.draw_paragraph(category_text, position, self.style.category_box, self.style.category_font_style)
             pass
         except Exception:
             traceback.print_exc()
@@ -267,6 +264,7 @@ class Card:
             header_text = self.info['Header']
             self.draw_image(self.style.header_filepath, position, self.style.header_image_box)
             self.draw_paragraph(header_text, position, self.style.header_box, self.style.header_font_style)
+            self.draw_category(position)
         except Exception:
             traceback.print_exc()
 

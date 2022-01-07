@@ -2,7 +2,7 @@ Cards:
   Commoner:
     Type: Creature
     Size: Medium
-    Subcategory: Humanoid
+    Category: Humanoid
     Hit Points: 4
     Hit Dice: 168
     Speed: 30ft
@@ -48,7 +48,7 @@ Cards:
     Type: Creature
     Header: Mastiff
     Size: Medium
-    Subcategory: Beast
+    Category: Beast
     Weight: 100lb
     Speed: 40ft
     Hit Points: 5
@@ -81,7 +81,7 @@ Cards:
 
   Bat:
     Type: Creature
-    Subcategory: Beast
+    Category: Beast
     Size: Tiny
     Hit Points: 1
     Hit Dice: 1d4-1

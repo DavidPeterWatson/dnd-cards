@@ -173,3 +173,21 @@ Cards:
     Links:
      - https://www.dndbeyond.com/equipment/dagger
      - https://roll20.net/compendium/dnd5e/Dagger#content
+
+  Javelin:
+    Type: Weapon
+    Subcategory: Javelin
+    Skill Type: Simple
+    Attack Type: Melee
+    Cost: 6sp
+    Weight: 2lb
+    Damage: 1d6
+    Damage Type: Piercing
+    Rarity: Standard
+    Properties:
+      - Thrown:
+          Range: 30/120ft
+    Image: Weapons/Javelin.webp
+    Links:
+     - https://www.dndbeyond.com/equipment/javelin
+     - https://roll20.net/compendium/dnd5e/Javelin#content

@@ -1,7 +1,0 @@
-Deck:
-  Name: Dungeon Master's Deck
-  Style: Scroll Deck Style
-  Type: Dungeon Master
-  Collate: True
-  Back:
-    Image: Back1.png

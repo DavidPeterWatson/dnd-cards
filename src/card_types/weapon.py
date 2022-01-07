@@ -9,9 +9,13 @@ def get_card_type():
 
 class Weapon(Card):
 
+    def __init__(self, name, info, style, quantity = 1):
+        super().__init__(name, info, style, quantity) 
+        self.creature_info = {}
+
     def pre_draw(self):
         super().pre_draw()
-        self.info['Category'] = self.info.get('Skill Type', '') + ' ' + self.info.get('Attack Type')
+        self.info['Category'] = self.info.get('Attack Type') + ' ' + self.info.get('Skill Type', '') + ' Weapon'
         pass
 
 
@@ -32,6 +36,7 @@ class Weapon(Card):
         except Exception:
             traceback.print_exc()
 
+
     def get_instructions(self):
         ability_modifier = self.get_ability_modifier()
         instructions = f'Attack Roll: 1d20 + {ability_modifier}'
@@ -39,7 +44,14 @@ class Weapon(Card):
             instructions = f'{instructions} + Proficiency'
         damage = self.info.get('Damage', '')
         instructions = f'{instructions}\nDamage Roll: {damage} + {ability_modifier}'
+        instructions += self.get_properties()
         return instructions
+
+
+    def get_properties(self):
+        properties = get_property_string(self.info.get('Properties', []))
+        return f'\nProperties: {properties}' if properties != '' else ''
+    
 
     def is_proficient(self):
         if self.name in self.creature_info.get('Proficiencies', {}).get('Weapons', []):
@@ -48,12 +60,35 @@ class Weapon(Card):
              return True
         return False
 
+
     def get_ability_modifier(self):
         if self.info['Attack Type'] == 'Melee':
             if 'Finesse' in self.info.get('Properties', []):
                 ability_scores = self.creature_info.get('Ability Scores', {})
-                if ability_scores.get('Dexterity') > ability_scores.get('Strength'):
+                if ability_scores.get('Dexterity', 0) > ability_scores.get('Strength', 0):
                     return 'Dexterity'
             return 'Strength'
         if self.info['Attack Type'] == 'Ranged':
             return 'Dexterity'
+
+
+def get_property_string(property):
+    if type(property) is dict:
+        return get_dict_string(property)
+    if type(property) is list:
+        return get_list_string(property)
+    return str(property)
+
+
+def get_list_string(property_list):
+    properties = ''
+    for property in property_list:
+        properties = properties + (', ' if properties else '') + get_property_string(property)
+    return properties
+
+
+def get_dict_string(dict_properties):
+    properties = ''
+    for property_name in dict_properties:
+        properties = properties + f'{property_name}: ' + get_property_string(dict_properties[property_name])
+    return properties

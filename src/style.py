@@ -34,7 +34,6 @@ class Style():
 
         self.specifications = self.info['Specifications']['Named']
 
-
         self.background_filename =  self.info['Background']
         self.background_filepath = os.path.join(self.style_path, self.background_filename)
 
@@ -90,12 +89,16 @@ class Style():
         category_font =  category['Font']
         category_font_size =  category['Font Size']
         category_line_spacing =  category['Line Spacing']
-        category_height =  category['Height'] * mm
+        # category_height =  category['Height'] * mm
         category_top_padding = category['Top Padding'] * mm
         category_left_padding = category['Left Padding'] * mm
-        category_width = card_width - category_left_padding * 2
-        category_filename =  category.get('Image', '')
-        self.category_filepath = os.path.join(self.style_path, category_filename)
-        self.category_image_box = Box(category_left_padding, description_height, category_width, category_height)
-        self.category_box = Box(category_left_padding, description_height + category_height - category_top_padding, category_width, category_height - category_top_padding)
-        self.category_font_style = FontStyle(category_font, category_font_size, category_line_spacing, CENTER, MIDDLE)
+        # category_vertical_alignment = category['Vertical Alignment']
+        # category_horizonal_alignment = category['Horizontal Alignment']
+
+        # category_width = card_width - category_left_padding * 2
+        # category_filename =  category.get('Image', '')
+        # self.category_filepath = os.path.join(self.style_path, category_filename)
+        # self.category_image_box = Box(category_left_padding, description_height, category_width, category_height)
+        self.category_box = Box(border_width + category_left_padding, card_height - category_top_padding - border_width, card_width - category_left_padding * 2 - border_width * 2, header_height - category_top_padding - border_width)
+        # self.category_box = Box(category_left_padding, description_height + category_height - category_top_padding, category_width, category_height - category_top_padding)
+        self.category_font_style = FontStyle(category_font, category_font_size, category_line_spacing, CENTER, TOP)
