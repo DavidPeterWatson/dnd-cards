@@ -6,15 +6,8 @@ Cards:
     Header: Backpack
     Cost: 2gp
     Weight: 5lb
-    Rarity: Std
+    Rarity: Common
     Description: A backpack can hold one cubic foot or 30 pounds of gear. You can also strap items, such as a Bedroll or a coil of rope, to the outside of a backpack.
-    Packs:
-      - Explorer's Pack
-      - Dungeoneer's Pack
-      - Burglar's Pack
-      - Entertainer's Pack
-      - Priest's Pack
-      - Scholar's Pack
     Image: Items/Backpack.png
     Links:
       - https://roll20.net/compendium/dnd5e/Backpack#h-Backpack
@@ -38,17 +31,16 @@ Cards:
     Type: Item
     Cost: 2gp
     Weight: 5lb
-    Rarity: Std
+    Rarity: Common
     Description: A cloth or leather pouch can hold up to 20 Sling bullets or 50 Blowgun needles, among other things. It can hold up to 1/5 cubic foot or 6 pounds of gear.
     Image: Items/Pouch.png
-
 
   Bedroll:
     Type: Item
     Subcategory: Sleeping
     Cost: 1gp
     Weight: 5lb
-    Rarity: Std
+    Rarity: Common
     Description: Bedroll.
     Image: Items/Bedroll.png
     Links:
@@ -59,7 +51,7 @@ Cards:
     Subcategory: Food & Drink
     Cost: 1gp
     Weight: 2lb
-    Rarity: Std
+    Rarity: Common
     Description: A mess kit was a compact collection of essential cutlery and kitchen implements that allowed preparation and consumption of food while traveling.
     Image: Items/Mess Kit.png
     Links:
@@ -70,7 +62,7 @@ Cards:
     Type: Item
     Cost: 1gp
     Weight: 1lb
-    Rarity: Std
+    Rarity: Common
     Description: Tinderbox.
     Image: Items/Tinderbox.png
     Links:
@@ -80,7 +72,7 @@ Cards:
     Type: Item
     Cost: 1gp
     Weight: 1lb
-    Rarity: Std
+    Rarity: Common
     Description: Torch.
     Image: Items/Torch.png
     Links:
@@ -91,7 +83,7 @@ Cards:
     Subcategory: Food & Drink
     Cost: 1gp
     Weight: 4lb
-    Rarity: Std
+    Rarity: Common
     Description: Rations.
     Image: Items/Rations.png
     Links:
@@ -102,7 +94,7 @@ Cards:
     Subcategory: Food & Drink
     Cost: 1gp
     Weight: 3lb
-    Rarity: Std
+    Rarity: Common
     Description: Waterskin.
     Image: Items/Waterskin.png
     Links:
@@ -113,7 +105,7 @@ Cards:
     Subcategory: Climbing
     Cost: 1gp
     Weight: 5lb
-    Rarity: Std
+    Rarity: Common
     Hit Points: 2
     Description: Hempen rope has 2 Hit Points and can be burst with a DC 17 Strength check.
     Image: Items/Hempen Rope.png
@@ -124,7 +116,7 @@ Cards:
     Type: Item
     Cost: 1gp
     Weight: 4lb
-    Rarity: Std
+    Rarity: Common
     Description: Staff
     Image: Items/Staff.png
     Links:
@@ -136,7 +128,7 @@ Cards:
     Subcategory: Hunting
     Cost: 1gp
     Weight: 4lb
-    Rarity: Std
+    Rarity: Common
     Description: Hunting Trap
     Details: |
       When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its Movement is limited by the length of the chain (typically 3 feet long). A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature.
@@ -149,7 +141,7 @@ Cards:
     Subcategory: 'Ammunition'
     Cost: 1gp
     Weight: 4lb
-    Rarity: Std
+    Rarity: Common
     Description: Quiver of Arrows
     Image: Items/Quiver of Arrows.png
     Links:
@@ -158,15 +150,21 @@ Cards:
 
   Tusk:
     Type: Item
-    Header: Tusk
-    Category: Item
     Subcategory: Trophy
     Cost: ''
     Weight: 2lb
-    Rarity: Std
+    Rarity: Common
     # Hit Points: 2
     Description: Tusk
     Image: Items/Tusk.png
     Links:
       - https://www.dndbeyond.com/equipment/quiver
       - https://roll20.net/compendium/dnd5e/Quiver#content
+
+  Jade Frog Statuette:
+    Type: Item
+    Cost: 40gp
+    Weight: 1lb
+    Rarity: Uncommon
+    Description: Jade statuette of a frog with tiny golden orbs for eyes, small enough to fit in a pocket or pouch.
+    Image: Items/Jade Frog Statuette.png

@@ -1,11 +1,13 @@
-from deck import Deck
 import yaml
 from card_type_provider import CardTypeProvider
 from card_types.character import Character
+from deck import Deck
 from card import Card
+from card_box import CardBox
 import traceback
 from deepmerge import always_merger
 from copy import deepcopy
+
 
 card_type_provider = CardTypeProvider()
 
@@ -22,6 +24,7 @@ def build_decks(library):
 
 def build_deck(deck: Deck):
     deck.cards = create_deck_cards(deck)
+    deck.box = create_box(deck)
     return deck
 
 
@@ -99,6 +102,7 @@ def create_creature_pack_cards(creature_info, deck: Deck):
 def create_creature_item_cards(creature_info, deck: Deck):
     return create_cards(creature_info.get('Equipment', {}).get('Items', []), deck)
 
+
 def create_creature_spell_slot_cards(creature_info, deck: Deck):
     cards = []
     for spell_slot_allocation_name in creature_info.get('Spell Slot Allocations', []):
@@ -106,6 +110,7 @@ def create_creature_spell_slot_cards(creature_info, deck: Deck):
         print(spell_slot_allocation_info)
         cards.extend(create_cards(spell_slot_allocation_info.get('Spell Slots', []), deck))
     return cards
+
 
 def create_creature_spell_cards(creature_info, deck: Deck):
     return create_cards_for_creature(creature_info.get('Spells', []), creature_info, deck)
@@ -167,6 +172,7 @@ def create_card(card_name: str, deck):
     except Exception:
         traceback.print_exc()
 
+
 def resolve_card_info(card_name: str, deck):
     card_info = deck.library.get_card_info(card_name)
     if card_info is not None:
@@ -175,6 +181,7 @@ def resolve_card_info(card_name: str, deck):
         if based_on_info is not None:
             return always_merger.merge(deepcopy(based_on_info), card_info)
     return deepcopy(card_info)
+
 
 def get_skills_list():
     return [
@@ -216,3 +223,6 @@ def get_combat_actions_list():
         'Use an Object',
     ]
   
+
+def create_box(deck):
+    return CardBox(deck)

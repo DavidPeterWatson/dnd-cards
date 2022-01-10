@@ -53,3 +53,6 @@ class Character(Creature):
         if info_value != '':
             return f'{info_name}: {info_value}\n'
         return ''
+
+    def has_specifications(self):
+        return True

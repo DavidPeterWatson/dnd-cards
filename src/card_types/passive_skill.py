@@ -20,3 +20,6 @@ class PassiveSkill(Skill):
     def is_proficient(self):
         if self.info['Skill'] in self.creature_info.get('Proficiencies', {}).get('Skills', []):
              return True
+
+    def has_specifications(self):
+        return True

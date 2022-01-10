@@ -18,3 +18,6 @@ class Action(Card):
 
         except Exception:
             traceback.print_exc()
+
+    def has_specifications(self):
+        return True

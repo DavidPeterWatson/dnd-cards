@@ -29,3 +29,6 @@ class Armor(Item):
         if self.info.get('Armor Type', 'Unspecified') in self.creature_info.get('Proficiencies', {}).get('Armor Type', []):
              return True
         return False
+
+    def has_specifications(self):
+        return True

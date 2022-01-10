@@ -56,3 +56,6 @@ class Creature(Card):
             ability_modifiers = self.info.get('Ability Modifiers', {})
             dexterity = ability_modifiers.get('Dexterity', '0')
             self.info['Initiative'] = int(10) + int(dexterity)
+
+    def has_specifications(self):
+        return True

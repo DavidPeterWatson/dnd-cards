@@ -42,3 +42,6 @@ class Skill(Card):
     def is_proficient(self):
         if self.name in self.creature_info.get('Proficiencies', {}).get('Skills', []) and self.info.get('Proficiency Bonus', '') != '':
              return True
+
+    def has_specifications(self):
+        return True

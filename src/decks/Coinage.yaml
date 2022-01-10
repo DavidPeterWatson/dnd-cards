@@ -1,78 +1,102 @@
 Packs:
-  20gp Worth of Coins:
+  Belt Pouch with 20gp:
     Cost: 20gp
     Items:
-      - 5 Gold Coins
-      - 5 Gold Coins
-      - Gold Coin
-      - Gold Coin
-      - Gold Coin
-      - Gold Coin
-      - 5 Silver Coins
-      - Silver Coin
-      - Silver Coin
-      - Silver Coin
-      - Silver Coin
-      - 5 Copper Coins
-      - Copper Coin
-      - Copper Coin
-      - Copper Coin
-      - Copper Coin
-      - Copper Coin
+      - 5 Gold Pieces
+      - 5 Gold Pieces
+      - Gold Piece
+      - Gold Piece
+      - Gold Piece
+      - Gold Piece
+      - 5 Silver Pieces
+      - Silver Piece
+      - Silver Piece
+      - Silver Piece
+      - Silver Piece
+      - 5 Copper Pieces
+      - Copper Piece
+      - Copper Piece
+      - Copper Piece
+      - Copper Piece
+      - Copper Piece
 
 Cards:
-  Gold Coin: 
+  Platinum Piece: 
     Type: Coin
-    Header: Gold Coin
+    Category: Currency
+    Subcategory: Platinum
+    Description: |
+      1 platinum is worth 10 gold pieces, 20 electrum pieces, 100 silver pieces and 1000 copper pieces
+    Image: Coins/Platinum Piece.png
+
+  Gold Piece: 
+    Type: Coin
     Category: Currency
     Subcategory: Gold
-    Description: Use to buy stuff
-    Image: Coins/Gold Coin.png
+    Description: |
+      1 gold piece is worth 2 electrum pieces, 10 silver pieces and 100 copper pieces
+      10 gold pieces are worth 1 platinum piece
+    Image: Coins/Gold Piece.png
 
-  5 Gold Coins:
+  Electrum Piece: 
     Type: Coin
-    Header: 5 Gold Coins
     Category: Currency
-    Subcategory: Gold
-    Description: Use to buy stuff
-    Image: Coins/5 Gold Coins.png
+    Subcategory: Electrum
+    Description: |
+      1 electrum piece is worth 5 silver pieces and 50 copper pieces
+      2 electrom pieces are worth 1 gold piece
+      20 electrom pieces are worth 1 platinum piece
+    Image: Coins/Electrum Piece.png
 
-  10 Gold Coins:
+  Silver Piece: 
     Type: Coin
-    Header: 10 Gold Coins
-    Category: Currency
-    Subcategory: Gold
-    Description: Use to buy stuff
-    Image: Coins/10 Gold Coins.png
-
-  Silver Coin: 
-    Type: Coin
-    Header: Silver Coin
     Category: Currency
     Subcategory: Silver
-    Description: Use to buy stuff
-    Image: Coins/Silver Coin.png
+    Description: |
+      1 silver piece is worth 10 copper pieces
+      5 silver pieces are worth 1 electrum piece
+      10 silver pieces are worth 1 gold piece
+      100 silver pieces are worth 1 platinum piece
+    Image: Coins/Silver Piece.png
 
-  5 Silver Coins:
+  Copper Piece: 
     Type: Coin
-    Header: 5 Silver Coins
-    Category: Currency
-    Subcategory: Silver
-    Description: Use to buy stuff
-    Image: Coins/5 Silver Coins.png
-
-  Copper Coin: 
-    Type: Coin
-    Header: Copper Coin
     Category: Currency
     Subcategory: Copper
-    Description: Use to buy stuff
-    Image: Coins/Copper Coin.png
+    Description: |
+      10 copper pieces are worth 1 silver piece
+      50 copper pieces are worth 1 electrum piece
+      100 copper pieces are worth 1 gold piece
+      1000 copper pieces are worth 1 platinum piece
+    Details:
+      Copper Pieces are called Thumbs in Cormyr, Fandars in Amn, Unarches in Calimport, Nibs in Waterdeep, Thalvers in Cormanthyr and Bits in Southern Lands. Sembia does not use Copper Pieceage (but they do use copper trade bars), but the cp's place in the economy is taken up by a square iron coin called a Steelpence.
+    Image: Coins/Copper Piece.png
 
-  5 Copper Coins:
-    Type: Coin
-    Header: 5 Copper Coins
-    Category: Currency
-    Subcategory: Copper
-    Description: Use to buy stuff
-    Image: Coins/5 Copper Coins.png
+  5 Gold Pieces:
+    Based on: Gold Piece
+    Image: Coins/5 Gold Pieces.png
+
+  10 Gold Pieces:
+    Based on: Gold Piece
+    Image: Coins/10 Gold Pieces.png
+
+  5 Silver Pieces:
+    Based on: Silver Piece
+    Image: Coins/5 Silver Pieces.png
+
+  10 Silver Pieces:
+    Based on: Silver Piece
+    Image: Coins/10 Silver Pieces.png
+
+  50 Silver Pieces:
+    Based on: Silver Piece
+    Image: Coins/50 Silver Pieces.png
+
+  5 Copper Pieces:
+    Based on: Copper Piece
+    Image: Coins/5 Copper Pieces.png
+
+  100 Copper Pieces:
+    Based on: Copper Piece
+    Image: Coins/100 Copper Pieces.png
+

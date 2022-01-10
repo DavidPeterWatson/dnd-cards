@@ -17,6 +17,7 @@ class Deck():
         self.style = Style(style_name, library)
         self.type = self.info.get('Type', '')
         self.cards = []
+        self.box = None
         self.card_type_provider = CardTypeProvider()
 
 

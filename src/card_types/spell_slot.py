@@ -16,3 +16,6 @@ class SpellSlot(Card):
             self.draw_specification('Level', self.info['Level'], position)
         except Exception:
             traceback.print_exc()
+
+    def has_specifications(self):
+        return True

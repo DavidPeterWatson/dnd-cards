@@ -54,8 +54,20 @@ Cards:
   Keen Hearing:
     Type: Capability
     Description: |
-      The creature has advantage on Wisdom (Perception) checks that rely on hearing.
+      The creature has advantage Perception checks that rely on hearing.
     Image: Capabilities/Keen Hearing.png
+
+  Keen Hearing and Smell:
+    Type: Capability
+    Description: |
+      The creature has Advantage on Perception checks that rely on hearing or smell. 
+    Image: Capabilities/Keen Hearing and Small.png
+
+  Pack Tactics:
+    Type: Capability
+    Description: |
+      Advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet and the ally isn't incapacitated.
+    Image: Capabilities/Pack Tactics.png
 
   Stonecunning:
     Type: Capability
@@ -92,3 +104,4 @@ Cards:
     Description: |
       You were a minor officer  among the Mintarn mercenaries, a position that still gets you some perks. Even though  you're not on active duty, Mintarn soldiers recognize your authority and influence, and  they defer to you if they are of a lower rank. You  can requisition simple equipment and horses for temporary use. You can also gain access to Mintarn mercenary encampments and fortresses.
     Image: Capabilities/Mercenary Sergeant.png
+

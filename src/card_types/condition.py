@@ -19,7 +19,5 @@ class Condition(Card):
         except Exception:
             traceback.print_exc()
 
-    # def is_in_deck(deck: Deck, card_info):
-    #     if deck.type == 'Character':
-    #         return True
-    #     return False
+    def has_specifications(self):
+        return True

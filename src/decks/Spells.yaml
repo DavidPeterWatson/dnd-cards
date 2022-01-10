@@ -227,7 +227,7 @@ Cards:
     Level: 1
     Range: Touch
     Casting Time: 1 action
-    Duration: Instantaneous
+    Duration: Instant
     Classes:
       - Cleric
     Components:

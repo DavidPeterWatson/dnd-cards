@@ -63,13 +63,16 @@ class Weapon(Card):
 
     def get_ability_modifier(self):
         if self.info['Attack Type'] == 'Melee':
-            if 'Finesse' in self.info.get('Properties', []):
+            if 'Finesse' in self.info.get('Properties', []) or 'Bite' == self.info.get('Subcategory', ''):
                 ability_scores = self.creature_info.get('Ability Scores', {})
                 if ability_scores.get('Dexterity', 0) > ability_scores.get('Strength', 0):
                     return 'Dexterity'
             return 'Strength'
         if self.info['Attack Type'] == 'Ranged':
             return 'Dexterity'
+
+    def has_specifications(self):
+        return True
 
 
 def get_property_string(property):

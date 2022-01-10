@@ -24,6 +24,16 @@ class Style():
         self.card_width = card_width
         card_height = self.card_size['Height'] * mm
         self.card_height = card_height
+        self.card_thickness = self.card_size['Thickness'] * mm
+        self.extra_box_space = self.card_size['Extra Box Space'] * mm
+        self.tab_length = self.card_size['Tab Length'] * mm
+        self.tab_cutout_length = self.card_size['Tab Cutout Length'] * mm
+        self.tab_cutout_width = self.card_size['Tab Cutout Width'] * mm
+        self.tongue_length = self.card_size['Tongue Length'] * mm
+        self.tongue_curve_height = self.card_size['Tongue Curve Height'] * mm
+        self.pull_depth = self.card_size['Pull Depth'] * mm
+        self.pull_width = self.card_size['Pull Width'] * mm
+        
         self.image = self.info['Image']
         self.image_folder = self.image['Folder']
         self.image_path = os.path.join(library.root_path, self.image_folder)

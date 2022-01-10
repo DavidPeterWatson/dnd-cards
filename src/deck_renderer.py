@@ -2,6 +2,7 @@ from deck import Deck
 from card import Card
 from card_back import CardBack
 from position import Position
+from card_box import CardBox
 
 FRONT_PAGE = 0.5
 BACK_PAGE = 10
@@ -59,6 +60,9 @@ def render_deck(deck: Deck):
             card_backs = []
     deck.canvas.showPage()
     deck.canvas.save()
+
+    cardbox = CardBox(deck)
+    cardbox.draw_box()
 
 
 def draw_cut_lines(deck: Deck, line_width):

@@ -19,9 +19,9 @@ Styles:
       Top: 12
       Left: 10
       Height: 54
-      Width: 40
+      Width: 38
     Back:
-      Folder: Backs
+      Folder: Images/Background
       Colour: '#000000'
       Image: Back1.png
     Specifications:
@@ -108,15 +108,12 @@ Styles:
           Row: 6
           Alignment: Right
     Category:
-      Font: Tiamat Condensed SC Regular Regular.ttf #LibreBaskerville-Regular.ttf
+      Font: Tiamat Condensed SC Regular Regular.ttf
       Font Size: 8
       Height: 0
       Top Padding: -1
       Left Padding: 11
       Line Spacing: 1
-      # Vertical Alignment: TOP
-      # Horizontal Alignment: MIDDLE
-      # Image: Wooden Sign.png
     Description:
       Image: Scroll Detail.png
       Height: 23
@@ -149,3 +146,13 @@ Card Sizes:
   Playing Card Size:
     Width: 64
     Height: 89
+    Thickness: 0.33
+    #23mm/70
+    Extra Box Space: 3
+    Tab Length: 20
+    Tongue Length: 30
+    Tongue Curve Height: 40
+    Tab Cutout Width: 5
+    Tab Cutout Length: 10
+    Pull Depth: 12
+    Pull Width: 24

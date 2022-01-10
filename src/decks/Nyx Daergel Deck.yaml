@@ -5,16 +5,16 @@ Decks:
     Back:
       Image: Back1.png
     Collections:
-      - Nyx Daergel
+      - Nyx Daergel Full
 
 Collections:
-  Nyx Daergel:
+  Nyx Daergel Full:
     Cards:
       - Nyx Daergel
     Equipment for:
       - Nyx Daergel
-    # Spells for:
-    #   - Nyx Daergel
+    Spells for:
+      - Nyx Daergel
     Actions for:
       - Nyx Daergel
     Capabilities for:
@@ -67,17 +67,17 @@ Cards:
       Weapons:
         - Shortsword
         - Longbow
-      # Armor:
-      #   - Leather Armor
-      # Packs:
-        # - Explorer's Pack
-        # - 20gp Worth of Coins
+      Armor:
+        - Leather Armor
+      Packs:
+        - Explorer's Pack
+        - Belt Pouch with 20gp
       Items:
-        # - Staff
-        # - Quiver of Arrows
-        # - Hunting Trap
-        # - Tusk
-        # - Traveler's Clothes
+        - Staff
+        - Quiver of Arrows
+        - Hunting Trap
+        - Tusk
+        - Traveler's Clothes
         - Belt Pouch
     Proficiencies:
       Weapon Skill Types:

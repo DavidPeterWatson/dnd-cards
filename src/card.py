@@ -111,16 +111,8 @@ class Card:
                 back_image_filepath = os.path.join(self.style.image_path, back_image)
                 max_image_height =  self.height - (top_padding + bottom_padding)
                 max_image_width =  self.width - side_padding
-                if os.path.isfile(back_image_filepath):
-                    iw, ih = utils.ImageReader(back_image_filepath).getSize()
-                    image_aspect_ratio = ih / float(iw)
-                    image_height = max_image_height
-                    image_width = image_height / image_aspect_ratio
-                    if image_width > max_image_width:
-                        image_width = max_image_width
-                        image_height = max_image_width * image_aspect_ratio
-                    back_image_box = Box((self.width - image_width) / 2, (max_image_height - image_height) / 2 + bottom_padding, image_width, image_height)
-                    self.draw_image(back_image_filepath, position, back_image_box)
+                back_image_box = Box((self.width - max_image_width) / 2, bottom_padding, max_image_width, max_image_height)
+                self.draw_image(back_image_filepath, position, back_image_box, 'Fit')
             else:
                 back = self.style.info['Back']
                 back_image = back['Image']
@@ -166,6 +158,9 @@ class Card:
             traceback.print_exc()
 
 
+    def has_specifications(self):
+        return False
+
     def draw_specifications(self, position: Position):
         pass
 
@@ -173,22 +168,15 @@ class Card:
     def draw_artwork(self, position: Position):
         try:
             image = self.style.info['Image']
-            max_image_height =  image['Height'] * mm
-            max_image_width =  image['Width'] * mm
+            image_height =  image['Height'] * mm
+            full_width = self.width - self.style.border_width * 2
+            image_width = image['Width'] * mm if self.has_specifications() else full_width
             image_top =  image['Top'] * mm
             image_filename = self.info['Image']
             image_filepath = os.path.join(self.style.image_path, image_filename)
             if os.path.isfile(image_filepath):
-                iw, ih = utils.ImageReader(image_filepath).getSize()
-                image_aspect_ratio = ih / float(iw)
-                image_height = max_image_height
-                image_width = image_height / image_aspect_ratio
-                if image_width > max_image_width:
-                    image_width = max_image_width
-                    image_height = max_image_width * image_aspect_ratio
-                    image_top = image_top + (max_image_height - image_height) / 2
                 image_box = Box((self.width - image_width) / 2, self.height - image_top - image_height, image_width, image_height)
-                self.draw_image(image_filepath, position, image_box)
+                self.draw_image(image_filepath, position, image_box, 'Fit')
         except Exception:
             traceback.print_exc()
 
@@ -277,8 +265,10 @@ class Card:
             traceback.print_exc()
 
 
-    def draw_image(self, image_filepath, position: Position, box: Box):
+    def draw_image(self, image_filepath, position: Position, box: Box, placement = 'None'):
         if os.path.isfile(image_filepath):
+            if placement == 'Fit':
+                box = fit_image(image_filepath, box)
             position.canvas.drawImage(image_filepath, position.x_offset + box.x_offset, position.y_offset + box.y_offset, box.width, box.height, mask='auto')
 
 
@@ -305,3 +295,14 @@ class Card:
     def register_font(self, font):
         detail_font_path = os.path.join(self.style.style_path, font)
         pdfmetrics.registerFont(TTFont(font, detail_font_path))
+
+
+def fit_image(image_filepath, box: Box):
+    iw, ih = utils.ImageReader(image_filepath).getSize()
+    image_aspect_ratio = ih / float(iw)
+    image_height = box.height
+    image_width = image_height / image_aspect_ratio
+    if image_width > box.width:
+        image_width = box.width
+        image_height = box.width * image_aspect_ratio
+    return Box(box.x_offset + (box.width - image_width) / 2, box.y_offset + (box.height - image_height) / 2, image_width, image_height)

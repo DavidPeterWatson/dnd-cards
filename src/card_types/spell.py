@@ -25,3 +25,6 @@ class Spell(Card):
             self.draw_specification('Duration', self.info['Duration'], position)
         except Exception:
             traceback.print_exc()
+
+    def has_specifications(self):
+        return True

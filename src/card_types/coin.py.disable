@@ -11,8 +11,8 @@ def get_card_type():
 
 class Coin(Item):
 
-    def draw_specifications(self, position):
-        try:
-            pass
-        except Exception:
-            traceback.print_exc()
+    # def draw_specifications(self, position):
+    #     try:
+    #         pass
+    #     except Exception:
+    #         traceback.print_exc()

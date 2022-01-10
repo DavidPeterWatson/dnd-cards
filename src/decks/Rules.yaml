@@ -78,6 +78,13 @@ Cards:
       Unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.
       A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.
 
+#       Coin	CP	SP	EP	GP	PP
+# Copper (cp)	1	10	50	100	1,000
+# Silver (sp)	1/10	1	5	10	100
+# Electrum (ep)	1/50	1/5	1	2	20
+# Gold (gp)	1/100	1/10	1/2	1	10
+# Platinum (pp)	1/1,000	1/100	1/20	1/10	1
+
   Surprise:
     Type: Rule
     Description: |

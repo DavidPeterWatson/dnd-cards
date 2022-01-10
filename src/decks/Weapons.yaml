@@ -10,7 +10,7 @@ Cards:
     Range with disadvantage: 600
     Damage: 1d8
     Damage Type: Piercing
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Heavy
       - Ammunition
@@ -26,7 +26,7 @@ Cards:
     Weight: 2lb
     Damage: 1d6
     Damage Type: Piercing
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Light
       - Finesse
@@ -41,7 +41,7 @@ Cards:
     Weight: 2lb
     Damage: 1d4
     Damage Type: Bludgeoning
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Light
     Image: Weapons/Wooden Club.png
@@ -57,7 +57,7 @@ Cards:
     Reach: 5ft
     Damage: 1d12
     Damage Type: Slashing
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Heavy
       - Two-Handed
@@ -73,7 +73,7 @@ Cards:
     Reach: 5ft
     Damage: 1d6
     Damage Type: Slashing
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Finesse
       - Light
@@ -90,7 +90,7 @@ Cards:
     Range with disadvantage: 320
     Damage: 1d6
     Damage Type: Piercing
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Ammunition
       - Two-Handed
@@ -106,7 +106,7 @@ Cards:
     Reach: 5ft
     Damage: 1d8
     Damage Type: Bludgeoning
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Versatile:
           Damage: 1d10
@@ -125,7 +125,7 @@ Cards:
     Reach: 5ft
     Damage: 1d6
     Damage Type: Slashing
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Light
       - Thrown:
@@ -146,7 +146,7 @@ Cards:
     Reach: 5ft
     Damage: 1d8
     Damage Type: Piercing
-    Rarity: Standard
+    Rarity: Common
     Image: Weapons/Morningstar.png
     Links:
      - https://roll20.net/compendium/dnd5e/Items:Morningstar#content
@@ -163,7 +163,7 @@ Cards:
     Reach: 5ft
     Damage: 1d4
     Damage Type: Piercing
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Finesse
       - Light
@@ -183,7 +183,7 @@ Cards:
     Weight: 2lb
     Damage: 1d6
     Damage Type: Piercing
-    Rarity: Standard
+    Rarity: Common
     Properties:
       - Thrown:
           Range: 30/120ft
@@ -191,3 +191,15 @@ Cards:
     Links:
      - https://www.dndbeyond.com/equipment/javelin
      - https://roll20.net/compendium/dnd5e/Javelin#content
+
+  Wolf Bite:
+    Type: Weapon
+    Subcategory: Bite
+    Skill Type: Simple
+    Attack Type: Melee
+    Damage: 2d4+2
+    Reach: 5ft
+    Damage Type: Piercing
+    Rarity: Common
+    Description: Target creature that fails a DC 11 Strength saving is knocked prone.
+    Image: Weapons/Wolf Bite.png

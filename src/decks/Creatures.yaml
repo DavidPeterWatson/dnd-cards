@@ -229,10 +229,8 @@ Cards:
     Challenge: 1/4
     Challenge XP: 50
     Description: |
-      Bite. Melee Weapon Attack: +4 to hit, reach 5 ft, one target. Hit: 7 (2d4 + 2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
-    Details: |
-      Keen Hearing and Smell. The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell. 
-      Pack Tactics. The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated.
+      Keen Hearing and Smell: Advantage on Perception checks that rely on hearing or smell. 
+      Pack Tactics: Advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet and the ally isn't incapacitated.
     Image: Creatures/Wolf.png
     Link:
       - https://roll20.net/compendium/dnd5e/Wolf#content
@@ -254,5 +252,6 @@ Cards:
     Capabilities:
       - Keen Hearing and Smell
       - Pack Tactics
-    Actions:
-      - "Bite. Melee Weapon Attack: +4 to hit, reach 5 ft, one target. Hit: 7 (2d4 + 2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone."
+    Equipment:
+      Weapons:
+        - Wolf Bite

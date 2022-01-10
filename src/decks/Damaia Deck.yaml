@@ -5,7 +5,7 @@ Decks:
     Back:
       Image: Back1.png
     Collections:
-      - Damaia Actions
+      - Damaia Full
 
 Collections:
   Damaia Full:
@@ -75,21 +75,21 @@ Cards:
       Charisma: '+0'
     Equipment:
       Weapons:
-        # - Greataxe
-        # - Dagger
+        - Greataxe
+        - Dagger
         - Javelin
         - Javelin
         - Javelin
         - Javelin
-      # Armor:
-      #   - Leather Armor
-      # Packs:
-      #   - Explorer's Pack
-      #   - 20gp Worth of Coins
+      Armor:
+        - Leather Armor
+      Packs:
+        - Explorer's Pack
+        - Belt Pouch with 20gp
       Items:
-        # - Staff
-        # - Hunting Trap
-        # - Tusk
+        - Staff
+        - Hunting Trap
+        - Tusk
         - Traveler's Clothes
         - Belt Pouch
     Proficiencies:

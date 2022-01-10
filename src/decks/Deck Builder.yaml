@@ -4,6 +4,7 @@ Files:
   - Spells.yaml
   - Weapons.yaml
   - Items.yaml
+  - Magical Items.yaml
   - Packs.yaml
   - Coinage.yaml
   - Conditions.yaml
@@ -17,4 +18,4 @@ Files:
   # - Kathra Rockseeker Deck.yaml
   - Lost Mine of Phandelver Part 1.yaml
   # - Lost Mine of Phandelver Part 2.yaml
-  - Dungeon Master's Deck.yaml
+  # - Dungeon Master's Deck.yaml

@@ -100,10 +100,10 @@ Cards:
       Armor:
         - Chain mail
         - Shield
-      # Packs:
-        # - Dungeoneer's Pack
-        # - 20gp Worth of Coins
-        # - Cleric Level 1 Spell Slots
+      Packs:
+        - Dungeoneer's Pack
+        - Belt Pouch with 20gp
+        - Cleric Level 1 Spell Slots
       Items:
         - Holy Symbol
         - Mason's tools

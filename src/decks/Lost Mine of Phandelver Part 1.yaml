@@ -43,13 +43,15 @@ Collections:
   Lost Mine of Phandelver Part 1 Cragmaw Hideout:
     Equipment for:
       - Klarg
+    Weapons for:
+      - Wolf
     Cards:
       - Cragmaw Hideout
       - Cave Mouth
       - Cave Mouth Developments
       - Goblin Blind
-      # - Goblin
-      # - Goblin
+      - Goblin
+      - Goblin
       - Kennel
       - Wolf
       - Wolf
@@ -58,12 +60,12 @@ Collections:
       - Kennel Developments
       - Steep Passage
       - Steep Passage Goblin Guard
-      # - Goblin
+      - Goblin
       - Steep Passage Rubble Passage
       - Overpass
       - Flood
       - Goblin Den
-      # - Goblin
+      - Goblin
       - Goblin
       - Goblin
       - Goblin
@@ -475,19 +477,27 @@ Cards:
       Fire Pit. The hot coals in the central fire pit deal 1 fire damage to any creature that enters the fire pit, or ld6 fire damage to any creature that falls prone there. A creature can take each type of damage only once per round.
       Natural Chimney. A niche in the western wall forms the top of a shaft that descends 30 feet to area 3. See that area for information on climbing the natural chimney.
       Supplies. The piles of sacks and crates can provide half cover to any creature fighting or hiding behind them. Most are marked with the image of a blue lion—the symbol of the Lionshield Coster, a merchant company with a warehouse and trading post in Phandalin.
-      Hidden among the supplies is an unlocked treasure chest belonging to Klarg (see the “Treasure” section). Any character who searches the supplies finds the chest.
+      Hidden among the supplies is an unlocked treasure chest belonging to Klarg. Any character who searches the supplies finds the chest.
 
   Klarg:
     Based on: Bugbear
+    Equipment:
+      Packs:
+        - Klarg's Treasure
+
+  Klarg's Treasure Chest:
+    Type: Item
+    Description: |
+      Contains 600 cp, 110 sp, two potions of healing, and a jade statuette of a frog with tiny golden orbs for eyes (40 gp). The frog statuette is small enough to fit in a pocket or pouch.
 
   Ripper:
     Based on: Wolf
 
-  Klarg's Treasure:
+  Stolen Provisions:
     Type: Item
     Description: |
-      In addition to the stolen provisions, Klarg has a treasure chest that contains 600 cp, 110 sp, two potions of healing, and a jade statuette of a frog with tiny golden orbs for eyes (40 gp). The frog statuette is small enough to fit in a pocket or pouch.
-    
+      Provisions stolen by goblins.
+
   Klarg's Cave Developments:
     Type: Narrative
     Number: 1.2.8.1
@@ -538,3 +548,34 @@ Cards:
       Level advancement rules for characters are provided on loose sheets included in this set. Hand these sheets to the players, and allow them to advance their characters to 2nd level before continuing the adventure. Make sure they've recorded their XP totals on their character sheets.
       In the next part of the adventure, you'll award XP differently. The characters will earn experience points based on the monsters and traps they overcome, the NPCs they interact with, and the goals they accomplish.
       If the adventurers come up with a nonviolent way to neutralize the threat that a monster poses, award them experience points as if they had defeated it.
+
+  Burglar's Pack:
+    Cost: 16gp
+    Items:
+      - Backpack
+      - 1,000 ball bearings
+      - 10 feet of string
+Packs:
+  Klarg's Treasure:
+    Items:
+      - Klarg's Treasure Chest
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - Potion of Healing
+      - Potion of Healing
+      - Jade Frog Statuette

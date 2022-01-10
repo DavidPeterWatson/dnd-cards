@@ -1,16 +1,16 @@
-from card import Card
+from card_types.item import Item
 import traceback
 
 from position import Position
 
 
 def get_class_name():
-    return 'Item'
+    return 'MagicalItem'
 
 def get_card_type():
-    return 'Item'
+    return 'Magical Item'
 
-class Item(Card):
+class MagicalItem(Item):
 
     def draw_specifications(self, position: Position):
         try:
