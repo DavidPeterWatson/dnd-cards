@@ -10,6 +10,7 @@ class Deck():
     def __init__(self, name, deck_info, library: Library):
         self.name = name
         self.info = deck_info
+        self.label = self.info.get('Label', name)
         self.library = library
         self.collate = self.info.get('Collate', True)
         self.canvas = Canvas('output/' + self.name + '.pdf')

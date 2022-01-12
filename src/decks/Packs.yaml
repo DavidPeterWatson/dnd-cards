@@ -18,7 +18,8 @@ Packs:
       - 1 day of Rations
       - 1 day of Rations
       - Waterskin
-      - 50 feet of hempen rope
+      - Hempen Rope:
+          50ft
 
   Burglar's Pack:
     Cost: 16gp
@@ -40,7 +41,8 @@ Packs:
       - 1 day of Rations
       - Tinderbox
       - Waterskin
-      - 50 feet of hempen rope
+      - Hempen Rope:
+          50ft
 
   Diplomat's Pack:
     Cost: 39gp
@@ -77,7 +79,8 @@ Packs:
       - 1 day of Rations
       - 1 day of Rations
       - Wwaterskin
-      - 50 feet of hempen rope
+      - Hempen Rope:
+          50ft
 
   Entertainer's Pack:
     Cost: 40gp

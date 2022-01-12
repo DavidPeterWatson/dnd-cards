@@ -1,13 +1,19 @@
 Decks:
-  Dungeon Master's Deck:
+  Monsters:
     Style: Scroll Deck Style
     Collate: True
     Back:
       Image: Back1.png
     Collections:
       - Creatures
-      # - Weapons
-      - Conditions
+
+  Weapons:
+    Style: Scroll Deck Style
+    Collate: True
+    Back:
+      Image: Back1.png
+    Collections:
+      - Weapons
 
 Collections:
   Creatures:

@@ -1,5 +1,8 @@
 Decks:
   Lost Mine of Phandelver Part 1 Goblin Ambush:
+    Label: |
+      LMoP Part 1
+      Goblin Ambush
     Style: Scroll Deck Style
     Collate: True
     Back:
@@ -8,6 +11,9 @@ Decks:
       - Lost Mine of Phandelver Part 1 Goblin Ambush
 
   Lost Mine of Phandelver Part 1 Cragmaw Hideout:
+    Label: |
+      LMoP Part 1
+      Cragmaw Hideout
     Style: Scroll Deck Style
     Collate: True
     Back:
@@ -71,7 +77,8 @@ Collections:
       - Goblin
       - Goblin
       - Yeemik
-      - Goblin Den Sildar Hallwinter
+      - Goblin Den Yeemik's Truce
+      - Gobalin Den Sildar Hallwinter
       - Sildar Knowledge
       - LMoP Background
       - Goblin Den Developments
@@ -222,6 +229,7 @@ Cards:
     Description: |
       Defeating the goblin ambushers and finding the Cragmaw hideout completes a story milestone. When the party arrives at the hideout, award each character 75 XP. Make sure the players record this gain on their character sheets.
 
+
   Cragmaw Hideout:
     Type: Narrative
     Number: 1.2
@@ -285,7 +293,6 @@ Cards:
       ""Just inside the cave mouth, a few uneven stone steps lead up to a small, dank chamber on the east side of the passage. The cave narrows to a steep fissure at the far end, and is filled with the stench of animals. Savage snarls and the sounds of rattling chains greet your ears where three wolves are chained up just inside the opening. Each wolf's chain leads to an iron rod driven into the base of a stalagmite.""
     Details: |
       Three wolves are confined here. They can't reach targets standing on the steps, but all three attack any creature except a goblin that moves into the room (see the “Developments” section). Goblins in nearby caves ignore the sounds of fighting wolves, since they constantly snap and snarl at each other. A character who tries to calm the animals can attempt a DC 15 Wisdom (Animal Handling) check. On a success, the wolves allow the character to move throughout the room. If the wolves are given food, the DC drops to 10.
-
 
   Kennel Fissure:
     Type: Narrative
@@ -384,7 +391,7 @@ Cards:
       Details: |
         Six goblins inhabit this den, and one of them is a leader with 12 hit points. The five ordinary goblins tend the cooking fire in the lower (northern) part of the cave near the entrance passage, while the leader rests in the upper (southern) part of the cave.
 
-  Goblin Den Sildar Hallwinter:
+  Goblin Den Yeemik's Truce:
     Type: Narrative
     Number: 1.2.6.1
     Campaign: Lost Mine of Phandelver
@@ -392,13 +399,20 @@ Cards:
     Chapter: Cragmaw Hideout
     Encounter: Goblin Den
     Description: |
-      Sildar Hallwinter, a human warrior, is held prisoner in this chamber. He is securely bound on the southern ledge of the cavern. The goblins have been beating and tormenting him, so he is weak and at 1 hit point.
-      The goblin leader, Yeemik, is second-in-command
-      of the whole hideout. If he sees that the characters are getting the upper hand, he grabs Sildar and drags him over to the edge of the upper level. “Truce, or this human dies!” he shouts.
+      Sildar Hallwinter is held prisoner in this chamber. He is securely bound on the southern ledge of the cavern. The goblins have been beating and tormenting him, so he is weak and at 1 hit point.
+      The goblin leader, Yeemik, is second-in-command of the whole hideout. If he sees that the characters are getting the upper hand, he grabs Sildar and drags him over to the edge of the upper level. 
+      “Truce, or this human dies!” he shouts.
       Yeemik wants to oust Klarg and become the new boss. If the adventurers agree to parley, Yeemik tries to convince them to kill Klarg in area 8, promising to release Sildar when they bring back the bugbear's head. Sildar groggily warns the characters that they shouldn't trust the goblin, and he's right. If the characters take the deal, Yeemik tries to force them to pay a rich ransom for Sildar even after they complete their part of the bargain.  If the characters refuse to parley, Yeemik shoves Sildar over the edge and continues with the fight. Sildar takes ld6 bludgeoning damage from the fall, which is enough to drop him to 0 hit points. Quick-acting characters can try to stabilize him before he dies. 
-    Details:
-      Sildar Hallwinter is a kindhearted human male of nearly
-      fifty years who holds a place of honor in the famous griffon cavalry of the great city of Waterdeep. He is an agent of the Lords' Alliance, a group of allied political powers concerned with mutual security and prosperity. Members of the order ensure the safety of cities and other settlements by proactively eliminating threats by any means, while bringing honor and glory to their leaders and homelands.
+
+  Goblin Den Sildar Hallwinter:
+    Type: Narrative
+    Number: 1.2.6.1.1
+    Campaign: Lost Mine of Phandelver
+    Part: 1
+    Chapter: Cragmaw Hideout
+    Encounter: Goblin Den
+    Description: |
+      Sildar Hallwinter is a kindhearted human male of nearly fifty years who holds a place of honor in the famous griffon cavalry of the great city of Waterdeep. He is an agent of the Lords' Alliance, a group of allied political powers concerned with mutual security and prosperity. Members of the order ensure the safety of cities and other settlements by proactively eliminating threats by any means, while bringing honor and glory to their leaders and homelands.
       Sildar met Gundren Rockseeker in Neverwinter and agreed to accompany him back to Phandalin. Sildar wants to investigate the fate of Iarno Albrek, a human wizard and fellow member of the Lords' Alliance who disappeared shortly after arriving in Phandalin. Sildar hopes to learn what happened to Iarno, assist Gundren in reopening the old mine, and help restore Phandalin to a civilized center of wealth and prosperity.
 
   Yeemik:
@@ -408,25 +422,24 @@ Cards:
   Sildar Hallwinter:
     Type: Creature
     Based on: HumanMaleCommoner
-    Description: Member of the Lords' Alliance with two quests for the party
+    Description: Kindhearted human male of fifty five years who holds a place of honor in the famous griffon cavalry of the great city of Waterdeep. He is an agent of The Lords' Alliance.
+    Image: Creatures/Sildar Hallwinter.png
+    Links:
+      - https://cathays.fandom.com/wiki/Sildar_Hallwinter
 
   Sildar Knowledge:
     Type: Narrative
-    Number: 
+    Number: 1.2.6.1.2
     Campaign: Lost Mine of Phandelver
     Part: 1
     Chapter: Cragmaw Hideout
     Encounter: Goblin Den
     Description: |
-      - The three Rockseeker brothers (Gundren, Tharden, and Nundro) recently located an entrance to the long-lost Wave Echo Cave, site of the mines of the Phandelver's Pact.
-      - Klarg, the bugbear who leads this goblin band, had orders to waylay Gundren. Sildar heard from the goblins that the Black Spider sent word that the dwarf was to be brought to him. Sildar doesn't know who or what the Black Spider is.
-      - Gundren had a map showing the secret location of Wave Echo Cave, but the goblins took it when they captured him. Sildar believes that Klarg sent the map and the dwarf to the chief of the Cragmaws at a place called Cragmaw Castle. Sildar doesn't know where that might be, but he suggests someone in Phandalin might know.
-      - Sildar's contact in Phandalin is a human wizard named Iarno Albrek. The wizard traveled to the town two months ago to establish order there. After the Lords' Alliance received no word from Iarno, Sildar decided to investigate.
-      - Sildar tells the characters that he intends to continue on to Phandalin, since it's the nearest settlement. He offers to pay the party 50 gp to provide escort. Although he has no money on him, Sildar can secure a loan to pay the characters within a day after arriving in Phandalin. First, he hopes they'll put a stop to the goblin raids by clearing out the caves.
+      The three Rockseeker brothers (Gundren, Tharden, and Nundro) recently located an entrance to the long-lost Wave Echo Cave, site of the mines of the Phandelver's Pact. Klarg had orders to waylay Gundren. Sildar heard from the goblins that the Black Spider sent word that the dwarf was to be brought to him, but doesn't know who the Black Spider is. Gundren had a map showing the secret location of Wave Echo Cave, but the goblins took it. Sildar believes that Klarg sent the map and the dwarf to the chief of the Cragmaws at a place called Cragmaw Castle. Sildar doesn't know where that might be, but he suggests someone in Phandalin might know. Sildar's contact in Phandalin is a human wizard named Iarno Albrek. The wizard traveled to the town two months ago to establish order there. After the Lords' Alliance received no word from Iarno, Sildar decided to investigate. Sildar tells the characters that he intends to continue on to Phandalin, since it's the nearest settlement. He offers to pay the party 50 gp to provide escort. Although he has no money on him, Sildar can secure a loan to pay the characters within a day after arriving in Phandalin. First, he hopes they'll put a stop to the goblin raids by clearing out the caves.
 
   LMoP Background:
     Type: Narrative
-    Number: 
+    Number: 1.2.6.1.3
     Campaign: Lost Mine of Phandelver
     Part: 1
     Chapter: Cragmaw Hideout
@@ -473,9 +486,9 @@ Cards:
       The leader of the goblinoids insists on keeping the bulk of the raiders' stolen goods in his den. The Cragmaws' plunder from the last month of raiding and ambushing caravans is here.
       ""Sacks and crates of looted provisions are piled up in the south end of this large cave. To the west, the floor slopes toward a narrow opening that descends into darkness. A larger opening leads north down a set of natural stone steps, the roar of falling water echoing from beyond. In the middle of the cavern, the coals of a large fire smolder.""
     Details: |
-      Klarg the bugbear shares this cave with his mangy pet wolf. Ripper, and two goblins. The bugbear is filled with delusions of grandeur and views himself as a mighty warlord just beginning his career of conquest. He is not entirely sane, referring to himself in the third person (“Who dares defy Klarg?” or “Klarg will build a throne from your bones, puny ones!”). The goblins under his command resent his bullying.
+      Klarg the bugbear shares this cave with his mangy pet wolf Ripper, and two goblins. He is filled with delusions of grandeur and views himself as a mighty warlord just beginning his career of conquest. He is not entirely sane, referring to himself in the third person. The goblins under his command resent his bullying.
       Fire Pit. The hot coals in the central fire pit deal 1 fire damage to any creature that enters the fire pit, or ld6 fire damage to any creature that falls prone there. A creature can take each type of damage only once per round.
-      Natural Chimney. A niche in the western wall forms the top of a shaft that descends 30 feet to area 3. See that area for information on climbing the natural chimney.
+      Natural Chimney. A niche in the western wall forms the top of a shaft that descends 30 feet to area 3.
       Supplies. The piles of sacks and crates can provide half cover to any creature fighting or hiding behind them. Most are marked with the image of a blue lion—the symbol of the Lionshield Coster, a merchant company with a warehouse and trading post in Phandalin.
       Hidden among the supplies is an unlocked treasure chest belonging to Klarg. Any character who searches the supplies finds the chest.
 
@@ -487,6 +500,7 @@ Cards:
 
   Klarg's Treasure Chest:
     Type: Item
+    Image: Items/Treasure Chest.png
     Description: |
       Contains 600 cp, 110 sp, two potions of healing, and a jade statuette of a frog with tiny golden orbs for eyes (40 gp). The frog statuette is small enough to fit in a pocket or pouch.
 

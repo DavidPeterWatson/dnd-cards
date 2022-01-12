@@ -78,13 +78,13 @@ Cards:
     Links:
       - https://roll20.net/compendium/dnd5e/
 
-  Rations:
+  1 day of Rations:
     Type: Item
     Subcategory: Food & Drink
     Cost: 1gp
     Weight: 4lb
     Rarity: Common
-    Description: Rations.
+    Description: 1 day of Rations
     Image: Items/Rations.png
     Links:
       - https://roll20.net/compendium/dnd5e/

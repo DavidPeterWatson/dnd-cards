@@ -149,10 +149,11 @@ Card Sizes:
     Thickness: 0.33
     #23mm/70
     Extra Box Space: 3
+    Extra Box Width: 0.5
     Tab Length: 20
-    Tongue Length: 30
+    Tongue Length: 40
     Tongue Curve Height: 40
     Tab Cutout Width: 5
-    Tab Cutout Length: 10
+    Tab Cutout Length: 15
     Pull Depth: 12
     Pull Width: 24

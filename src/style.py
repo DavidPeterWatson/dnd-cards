@@ -26,6 +26,7 @@ class Style():
         self.card_height = card_height
         self.card_thickness = self.card_size['Thickness'] * mm
         self.extra_box_space = self.card_size['Extra Box Space'] * mm
+        self.extra_box_width = self.card_size['Extra Box Width'] * mm
         self.tab_length = self.card_size['Tab Length'] * mm
         self.tab_cutout_length = self.card_size['Tab Cutout Length'] * mm
         self.tab_cutout_width = self.card_size['Tab Cutout Width'] * mm

@@ -1,0 +1,49 @@
+Decks:
+  Dungeon Master's Deck:
+    Style: Scroll Deck Style
+    Collate: True
+    Back:
+      Image: Back1.png
+    Collections:
+      - Creatures
+      # - Weapons
+      - Conditions
+
+Collections:
+  Creatures:
+    Cards:
+      - Damaia Creature
+      - Nyx Daergel Creature
+      - Kathra Rockseeker Creature
+      - Goblin
+      - Bat
+  Weapons:
+    Cards:
+      - Shortsword
+      - Longbow
+      - Handaxe
+      - Warhammer
+      - Scimitar
+      - Greataxe
+      - Shortbow
+      - Morningstar
+      - Dagger
+  Conditions:
+    Cards:
+      - Exhaustion Level 1
+      - Exhaustion Level 2
+      - Exhaustion Level 3
+      - Exhaustion Level 4
+      - Blinded
+      - Charmed
+      - Deafened
+      - Grappled
+      - Incapacitated
+      - Invisible
+      - Paralyzed
+      - Petrified
+      - Poisoned
+      - Prone
+      - Restrained
+      - Stunned
+      - Unconscious
