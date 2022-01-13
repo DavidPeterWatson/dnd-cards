@@ -126,7 +126,7 @@ Styles:
       Font Size: 6
       Line Spacing: 1.3
       Padding: 5
-    Background: Scroll Background.png
+    Background: Backgrounds/Scroll Background.png
     Style Folder: Themes/Scroll
     Page:
       Size: A4 Page Size

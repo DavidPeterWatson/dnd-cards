@@ -47,75 +47,115 @@ class CardBox:
             self.tongue_box = Box(thickness + width + thickness, height, width, thickness + tongue_length)
             self.front_box = Box(thickness, 0, width, height)
             self.back_box = Box(thickness + width + thickness, 0, width, height)
-            self.top_box = Box(thickness + width + thickness + border_width, height + border_width, width - border_width * 2, thickness - border_width * 2)
-            self.bottom_box = Box(thickness + width + thickness + border_width, -thickness + border_width, width - border_width * 2, thickness - border_width * 2)
+            self.label_height = 12*mm
+            self.top_box = Box(thickness + width + thickness + border_width, height + (thickness - self.label_height) / 2 , width - border_width * 2, self.label_height)
+            self.bottom_box = Box(thickness + width + thickness + border_width, -thickness + (thickness - self.label_height) / 2, width - border_width * 2, self.label_height)
+            self.front_label_box = Box(thickness + border_width, border_width, width - border_width * 2, self.label_height)
 
             self.draw_outside()
             self.canvas.showPage()
             
             self.canvas.setLineWidth(0.5)
             self.canvas.setStrokeColor(lightsteelblue)
-            self.draw_line(0, height, thickness + width + thickness + width, height)
-            self.draw_line(thickness + width + thickness, height + thickness, thickness + width + thickness + width, height + thickness)
+            left_side_top_left = Point(0, height)
+            back_top_right = Point(thickness + width + thickness + width, height)
+            lid_top_left = Point(thickness + width + thickness, height + thickness)
+            lid_top_right = Point(thickness + width + thickness + width, height + thickness)
+            self.draw_reverse_line(left_side_top_left, back_top_right)
+            self.draw_reverse_line(lid_top_left, lid_top_right)
 
-            self.draw_line(0, 0, thickness + width + thickness + width, 0)
-            self.draw_line(thickness, 0, thickness, height)
-            self.draw_line(thickness + width, 0, thickness + width, height)
-            self.draw_line(thickness + width + thickness, 0, thickness + width + thickness, height)
-            self.draw_line(thickness + width + thickness + width, 0, thickness + width + thickness + width, height)
+            left_bottom_left = Point(0, 0)
+            back_bottom_right = Point(thickness + width + thickness + width, 0)
+            front_bottom_left = Point(thickness, 0)
+            front_top_left = Point(thickness, height)
+            front_bottom_right = Point(thickness + width, 0)
+            front_top_right = Point(thickness + width, height)
+            back_bottom_left = Point(thickness + width + thickness, 0)
+            back_top_left = Point(thickness + width + thickness, height)
+            self.draw_reverse_line(left_bottom_left, back_bottom_right)
+            self.draw_reverse_line(front_bottom_left, front_top_left)
+            self.draw_reverse_line(front_bottom_right, front_top_right)
+            self.draw_reverse_line(back_bottom_left, back_top_left)
+            self.draw_reverse_line(back_bottom_right, back_top_right)
 
             self.canvas.setLineWidth(0.5)
             self.canvas.setStrokeColor(black)
 
-            self.draw_line(0, 0, 0, height + tab_length)
-            self.draw_line(0, height + tab_length, thickness - tab_cutout_width, height + tab_length)
-            self.draw_line(thickness - tab_cutout_width, height + tab_length, thickness, height + tab_length - tab_cutout_length)
-            self.draw_line(thickness, height + tab_length - tab_cutout_length, thickness, height)
+            top_left_tab_top_left = Point(0, height + tab_length)
+            top_left_tab_top_right = Point(thickness - tab_cutout_width, height + tab_length)
+            top_left_tab_middle_right = Point(thickness, height + tab_length - tab_cutout_length)
+            self.draw_reverse_line(left_bottom_left, top_left_tab_top_left)
+            self.draw_reverse_line(top_left_tab_top_left, top_left_tab_top_right)
+            self.draw_reverse_line(top_left_tab_top_right, top_left_tab_middle_right)
+            self.draw_reverse_line(top_left_tab_middle_right, front_top_left)
             
             # front top line
-            self.draw_line(thickness, height, thickness + (width - pull_width) / 2, height)
-            self.draw_line( thickness + (width - pull_width) / 2 + pull_width, height, thickness + width, height)
-            self.draw_arc(thickness + (width - pull_width) / 2, height - pull_depth, thickness + (width - pull_width) / 2 + pull_width, height + pull_depth, 180, 180)
+            front_top_thumb_left = Point(thickness + (width - pull_width) / 2, height)
+            front_top_thumb_right = Point(thickness + (width - pull_width) / 2 + pull_width, height)
+            front_top_thumb_bottom_left = Point(thickness + (width - pull_width) / 2, height - pull_depth)
+            front_top_thumb_top_right = Point(thickness + (width - pull_width) / 2 + pull_width, height + pull_depth)
+            self.draw_reverse_line(front_top_left, front_top_thumb_left)
+            self.draw_reverse_line(front_top_thumb_right, front_top_right)
+            self.draw_reverse_arc(front_top_thumb_bottom_left, front_top_thumb_top_right, 180, 180)
 
             # tab lines
-            self.draw_line(thickness + width, height, thickness + width, height + tab_length - tab_cutout_length)
-            self.draw_line(thickness + width, height + tab_length - tab_cutout_length, thickness + width + tab_cutout_width, height + tab_length)
-            self.draw_line(thickness + width + tab_cutout_width, height + tab_length, thickness + width + thickness, height + tab_length)
+            right_top_tab_middle_left = Point(thickness + width, height + tab_length - tab_cutout_length)
+            right_top_tab_top_left = Point(thickness + width + tab_cutout_width, height + tab_length)
+            right_top_tab_top_right = Point(thickness + width + thickness, height + tab_length)
+            self.draw_reverse_line(front_top_right, right_top_tab_middle_left)
+            self.draw_reverse_line(right_top_tab_middle_left, right_top_tab_top_left)
+            self.draw_reverse_line(right_top_tab_top_left, right_top_tab_top_right)
+            self.draw_reverse_line(right_top_tab_top_right, back_top_left)
 
             # tongue lines
-            self.draw_arc(thickness + width + thickness, height + thickness + tongue_length - tongue_curve_height, thickness + width + thickness + width, height + thickness + tongue_length, 0, 180)
-            self.draw_line(thickness + width + thickness, height, thickness + width + thickness, height + thickness + tongue_length - tongue_curve_height / 2)
-            self.draw_line(thickness + width + thickness + width, height + thickness + tongue_length - tongue_curve_height / 2, thickness + width + thickness + width, height)
+            tongue_bottom_left = Point(thickness + width + thickness, height + thickness + tongue_length - tongue_curve_height)
+            tongue_top_right = Point(thickness + width + thickness + width, height + thickness + tongue_length)
+            tongue_left = Point(thickness + width + thickness, height + thickness + tongue_length - tongue_curve_height / 2)
+            tongue_right = Point(thickness + width + thickness + width, height + thickness + tongue_length - tongue_curve_height / 2)
+            self.draw_reverse_arc(tongue_bottom_left, tongue_top_right, 0, 180)
+            self.draw_reverse_line(back_top_left, tongue_left)
+            self.draw_reverse_line(tongue_right, back_top_right)
 
             # pull cuts
-            self.draw_line(thickness + width + thickness + (width - pull_width) / 2, height + pull_depth, thickness + width + thickness + (width - pull_width) / 2, height - pull_depth)
-            self.draw_line(thickness + width + thickness + (width - pull_width) / 2 + pull_width, height + pull_depth, thickness + width + thickness + (width - pull_width) / 2 + pull_width, height - pull_depth)
+            pull_cut_left_top = Point(thickness + width + thickness + (width - pull_width) / 2, height + pull_depth)
+            pull_cut_left_bottom = Point(thickness + width + thickness + (width - pull_width) / 2, height - pull_depth)
+            pull_cut_right_top = Point(thickness + width + thickness + (width - pull_width) / 2 + pull_width, height + pull_depth)
+            pull_cut_right_bottom = Point(thickness + width + thickness + (width - pull_width) / 2 + pull_width, height - pull_depth)
+            self.draw_reverse_line(pull_cut_left_top, pull_cut_left_bottom)
+            self.draw_reverse_line(pull_cut_right_top, pull_cut_right_bottom)
 
             # glue tab lines
-            self.draw_line(thickness + width + thickness + width, height, thickness + width + thickness + width + thickness, height)
-            self.draw_line(thickness + width + thickness + width + thickness, height, thickness + width + thickness + width + thickness, 0)
-            self.draw_line(thickness + width + thickness + width + thickness, 0, thickness + width + thickness + width, 0)
+            side_tab_top_right = Point(thickness + width + thickness + width + thickness, height)
+            side_tab_bottom_right = Point(thickness + width + thickness + width + thickness, 0)
+            self.draw_reverse_line(back_top_right, side_tab_top_right)
+            self.draw_reverse_line(side_tab_top_right, side_tab_bottom_right)
+            self.draw_reverse_line(side_tab_bottom_right, back_bottom_right)
 
             # bottom back
-            self.draw_line(thickness + width + thickness + width, 0, thickness + width + thickness + width, -thickness)
-            self.draw_line(thickness + width + thickness + width, -thickness, thickness + width + thickness, -thickness)
-            self.draw_line(thickness + width + thickness, -thickness, thickness + width + thickness, 0)
+            outer_base_bottom_right = Point(thickness + width + thickness + width, -thickness)
+            outer_base_bottom_left = Point(thickness + width + thickness, -thickness)
+            self.draw_reverse_line(back_bottom_right, outer_base_bottom_right)
+            self.draw_reverse_line(outer_base_bottom_right, outer_base_bottom_left)
+            self.draw_reverse_line(outer_base_bottom_left, back_bottom_left)
             
             # tab bottom left 
-            self.draw_line(thickness + width + thickness, 0, thickness + width + thickness, -thickness)
-            self.draw_line(thickness + width + thickness, -thickness, thickness + width, -thickness)
-            self.draw_line(thickness + width, -thickness + tab_cutout_length, thickness + width, 0)
+            self.draw_reverse_line(back_bottom_left, outer_base_bottom_left)
+            inner_base_bottom_right = Point(thickness + width, -thickness)
+            self.draw_reverse_line(outer_base_bottom_left, inner_base_bottom_right)
+            self.draw_reverse_line(inner_base_bottom_right, front_bottom_right)
 
-            # front bottom line
-            self.draw_line(thickness + width, -thickness, thickness + width, 0)
+            # # front bottom line
+            # self.draw_line(inner_base_bottom_right, front_bottom_right)
 
             # front bottom base
-            self.draw_line(thickness + width, -thickness, thickness, -thickness)
-            self.draw_line(thickness, -thickness, thickness, 0)
+            inner_base_bottom_left_corner = Point(thickness, -thickness)
+            self.draw_reverse_line(inner_base_bottom_right, inner_base_bottom_left_corner)
+            self.draw_reverse_line(inner_base_bottom_left_corner, front_bottom_left)
 
-            self.draw_line(thickness, 0 , thickness, -thickness)
-            self.draw_line(thickness, -thickness, 0, -thickness)
-            self.draw_line(0, -thickness, 0, 0)
+            bottom_left_tab_bottom_left_corner = Point(0, -thickness)
+            self.draw_reverse_line(front_bottom_left, inner_base_bottom_left_corner)
+            self.draw_reverse_line(inner_base_bottom_left_corner, bottom_left_tab_bottom_left_corner)
+            self.draw_reverse_line(bottom_left_tab_bottom_left_corner, left_bottom_left)
 
             self.canvas.showPage()
 
@@ -153,17 +193,25 @@ class CardBox:
     def reverse_point(self, point: Point):
         return Point(point.x, self.deck.style.page_width - self.y_offset - point.y - self.y_offset)
 
+    def draw_line(self, point1: Point, point2: Point):
+        self.canvas.line(self.x_offset + point1.x, self.y_offset + point1.y, self.x_offset + point2.x, self.y_offset + point2.y)
 
-    def draw_line(self, x1, y1, x2, y2):
-        self.canvas.line(self.x_offset + x1, self.y_offset + y1, self.x_offset + x2, self.y_offset + y2)
+    def draw_reverse_line(self, point1: Point, point2: Point):
+        self.draw_line(self.reverse_point(point1), self.reverse_point(point2))
+    # def draw_line(self, x1, y1, x2, y2):
+    #     self.canvas.line(self.x_offset + x1, self.y_offset + y1, self.x_offset + x2, self.y_offset + y2)
 
 
     def draw_ellipse(self, x1, y1, x2, y2):
         self.canvas.ellipse(self.x_offset + x1, self.y_offset + y1, self.x_offset + x2, self.y_offset + y2)
 
+    def draw_reverse_arc(self, point1: Point, point2: Point, start_angle, extent):
+        self.draw_arc(self.reverse_point(point1), self.reverse_point(point2), start_angle, extent)
 
-    def draw_arc(self, x1, y1, x2, y2, start_angle, extent):
-        self.canvas.arc(self.x_offset + x1, self.y_offset + y1, self.x_offset + x2, self.y_offset + y2, start_angle, extent)
+
+    def draw_arc(self, point1: Point, point2: Point, start_angle, extent):
+        self.canvas.arc(self.x_offset + point1.x, self.y_offset + point1.y, self.x_offset + point2.x, self.y_offset + point2.y, start_angle + 180, extent)
+
 
 
     def draw_back(self, box: Box):
@@ -178,10 +226,16 @@ class CardBox:
 
     def draw_front(self, box: Box):
         try:
-            front = self.deck.info.get('Front', self.deck.info['Back'])
-            front_image = front.get('Image', 'back1.png')
+            front = self.deck.info.get('Front', None)
+            if front is not None:
+                self.draw_label(self.front_label_box)
+
+            if front is None:
+                front = self.deck.info.get('Back')
+            front_image = front.get('Image')
             front_image_filepath = os.path.join(self.deck.style.image_path, front_image)
-            self.draw_image(front_image_filepath, box, 'Fit')
+            front_image_box = Box(box.x_offset, box.y_offset + self.deck.style.border_width + self.label_height - self.deck.style.pull_depth, box.width, box.height)
+            self.draw_image(front_image_filepath, front_image_box, 'Fit')
         except Exception:
             traceback.print_exc()
 

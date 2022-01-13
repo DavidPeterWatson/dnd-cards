@@ -10,3 +10,4 @@ def fit_image(image_filepath, box: Box):
         image_width = box.width
         image_height = box.width * image_aspect_ratio
     return Box(box.x_offset + (box.width - image_width) / 2, box.y_offset + (box.height - image_height) / 2, image_width, image_height)
+
