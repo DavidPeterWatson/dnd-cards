@@ -6,7 +6,7 @@ Decks:
     Style: Scroll Deck Style
     Collate: True
     Back:
-      Image: Back1.png
+      Image: Backgrounds/Back1.png
     Collections:
       - Lost Mine of Phandelver Part 1 Goblin Ambush
 
@@ -17,9 +17,20 @@ Decks:
     Style: Scroll Deck Style
     Collate: True
     Back:
-      Image: Back1.png
+      Image: Backgrounds/Back1.png
     Collections:
       - Lost Mine of Phandelver Part 1 Cragmaw Hideout
+
+  Klarg's Treasure Chest:
+    Label: Treasure Chest
+    Style: Scroll Deck Style
+    Collate: True
+    Back:
+      Image: Backgrounds/Back1.png
+    Front:
+      Image: Items/Treasure Chest.png
+    Collections:
+      - Klarg's Treasure Chest
 
 Collections:
   Lost Mine of Phandelver Part 1 Goblin Ambush:
@@ -93,6 +104,29 @@ Collections:
       - Klarg's Cave Treasure
       - What's Next?
       - Experience Points
+
+  Klarg's Treasure Chest:
+    Cards:
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 100 Copper Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - 10 Silver Pieces
+      - Potion of Healing
+      - Potion of Healing
+      - Jade Frog Statuette
 
 Cards:
   1 Goblen Arrows:
@@ -494,15 +528,6 @@ Cards:
 
   Klarg:
     Based on: Bugbear
-    Equipment:
-      Packs:
-        - Klarg's Treasure
-
-  Klarg's Treasure Chest:
-    Type: Item
-    Image: Items/Treasure Chest.png
-    Description: |
-      Contains 600 cp, 110 sp, two potions of healing, and a jade statuette of a frog with tiny golden orbs for eyes (40 gp). The frog statuette is small enough to fit in a pocket or pouch.
 
   Ripper:
     Based on: Wolf
@@ -569,27 +594,3 @@ Cards:
       - Backpack
       - 1,000 ball bearings
       - 10 feet of string
-Packs:
-  Klarg's Treasure:
-    Items:
-      - Klarg's Treasure Chest
-      - 100 Copper Pieces
-      - 100 Copper Pieces
-      - 100 Copper Pieces
-      - 100 Copper Pieces
-      - 100 Copper Pieces
-      - 100 Copper Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - 10 Silver Pieces
-      - Potion of Healing
-      - Potion of Healing
-      - Jade Frog Statuette

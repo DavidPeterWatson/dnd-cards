@@ -117,7 +117,7 @@ class Card:
             else:
                 back = self.style.info['Back']
                 back_image = back['Image']
-                back_image_filepath = os.path.join(self.style.back_path, back_image)
+                back_image_filepath = os.path.join(self.style.image_path, back_image)
                 self.draw_image(back_image_filepath, position, self.style.card_box)
         except Exception:
             traceback.print_exc()
@@ -127,7 +127,7 @@ class Card:
         try:
             back = self.style.info['Back']
             back_image = back['Image']
-            back_image_filepath = os.path.join(self.style.back_path, back_image)
+            back_image_filepath = os.path.join(self.style.image_path, back_image)
             self.draw_image(back_image_filepath, position, self.style.card_box)
         except Exception:
             traceback.print_exc()

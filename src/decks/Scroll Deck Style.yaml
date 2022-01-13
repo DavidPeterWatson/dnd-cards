@@ -21,9 +21,8 @@ Styles:
       Height: 54
       Width: 38
     Back:
-      Folder: Images/Background
       Colour: '#000000'
-      Image: Back1.png
+      Image: Backgrounds/Back1.png
     Specifications:
       Offset: 3.5
       Label Font: LibreBaskerville-Regular.ttf
@@ -150,6 +149,7 @@ Card Sizes:
     #23mm/70
     Extra Box Space: 3
     Extra Box Width: 0.5
+    Minimum Box Thickness: 15
     Tab Length: 20
     Tongue Length: 40
     Tongue Curve Height: 40

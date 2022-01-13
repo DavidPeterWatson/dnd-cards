@@ -24,7 +24,8 @@ class Prop(Card):
 
     def draw_prop_background(self, position: Position):
         try:
-            back_filepath = os.path.join(self.style.back_path, 'Road Back.png')
+            back_background_image = self.info.get('Background', 'Backgrounds/Road Back.png')
+            back_filepath = os.path.join(self.style.image_path, back_background_image)
             self.draw_image(back_filepath, position, self.style.card_box)
         except Exception:
             traceback.print_exc()

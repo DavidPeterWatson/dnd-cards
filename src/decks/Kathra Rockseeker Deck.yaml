@@ -3,7 +3,7 @@ Decks:
     Collate: True
     Style: Scroll Deck Style
     Back:
-      Image: Back1.png
+      Image: Backgrounds/Back1.png
     Collections:
       - Kathra Rockseeker Full
 

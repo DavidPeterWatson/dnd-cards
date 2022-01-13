@@ -3,7 +3,7 @@ Decks:
     Style: Scroll Deck Style
     Collate: True
     Back:
-      Image: Back1.png
+      Image: Backgrounds/Back1.png
     Collections:
       - Lost Mine of Phandelver Part 2 Phandalin
 

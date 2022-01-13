@@ -27,6 +27,7 @@ class Style():
         self.card_thickness = self.card_size['Thickness'] * mm
         self.extra_box_space = self.card_size['Extra Box Space'] * mm
         self.extra_box_width = self.card_size['Extra Box Width'] * mm
+        self.min_box_thickness = self.card_size['Minimum Box Thickness'] * mm
         self.tab_length = self.card_size['Tab Length'] * mm
         self.tab_cutout_length = self.card_size['Tab Cutout Length'] * mm
         self.tab_cutout_width = self.card_size['Tab Cutout Width'] * mm
@@ -40,13 +41,10 @@ class Style():
         self.image_path = os.path.join(library.root_path, self.image_folder)
 
         self.back = self.info['Back']
-        self.back_folder = self.back['Folder']
-        self.back_path: str = os.path.join(library.root_path, self.back_folder)
-
         self.specifications = self.info['Specifications']['Named']
 
         self.background_filename =  self.info['Background']
-        self.background_filepath = os.path.join(self.style_path, self.background_filename)
+        self.background_filepath = os.path.join(self.image_path, self.background_filename)
 
         self.border = self.info['Border']
         border_width =  self.border['Width'] * mm
