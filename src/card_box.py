@@ -43,7 +43,9 @@ class CardBox:
             self.x_offset = self.deck.style.page_left_margin
             self.y_offset = self.deck.style.page_bottom_margin + thickness
 
-            self.full_box = Box(0, -thickness, thickness + width + thickness + width + thickness, height + thickness + thickness)
+            self.full_box = Box(0, -thickness, thickness + width + thickness + width + thickness, height + thickness)
+            self.top_left_tab_box = Box(0, height, thickness, tab_length)
+            self.top_right_tab_box = Box(thickness + width, height, thickness, tab_length)
             self.tongue_box = Box(thickness + width + thickness, height, width, thickness + tongue_length)
             self.front_box = Box(thickness, 0, width, height)
             self.back_box = Box(thickness + width + thickness, 0, width, height)
@@ -51,6 +53,7 @@ class CardBox:
             self.top_box = Box(thickness + width + thickness + border_width, height + (thickness - self.label_height) / 2 , width - border_width * 2, self.label_height)
             self.bottom_box = Box(thickness + width + thickness + border_width, -thickness + (thickness - self.label_height) / 2, width - border_width * 2, self.label_height)
             self.front_label_box = Box(thickness + border_width, border_width, width - border_width * 2, self.label_height)
+            self.front_image_box = Box(thickness + border_width, border_width + self.label_height + 2, width - border_width * 2, height - self.label_height - border_width * 2 - pull_depth )
 
             self.draw_outside()
             self.canvas.showPage()
@@ -170,6 +173,8 @@ class CardBox:
             self.canvas.setStrokeColor(black)
 
             self.draw_rectangle(self.full_box, 0, black)
+            self.draw_rectangle(self.top_left_tab_box, 0, black)
+            self.draw_rectangle(self.top_right_tab_box, 0, black)
             self.draw_rectangle(self.tongue_box, 0, black)
             self.draw_front(self.front_box)
             self.draw_back(self.back_box)
@@ -234,8 +239,7 @@ class CardBox:
                 front = self.deck.info.get('Back')
             front_image = front.get('Image')
             front_image_filepath = os.path.join(self.deck.style.image_path, front_image)
-            front_image_box = Box(box.x_offset, box.y_offset + self.deck.style.border_width + self.label_height - self.deck.style.pull_depth, box.width, box.height)
-            self.draw_image(front_image_filepath, front_image_box, 'Fit')
+            self.draw_image(front_image_filepath, self.front_image_box, 'Fit')
         except Exception:
             traceback.print_exc()
 
