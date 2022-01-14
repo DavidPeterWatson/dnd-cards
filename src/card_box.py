@@ -53,7 +53,7 @@ class CardBox:
             self.top_box = Box(thickness + width + thickness + border_width, height + (thickness - self.label_height) / 2 , width - border_width * 2, self.label_height)
             self.bottom_box = Box(thickness + width + thickness + border_width, -thickness + (thickness - self.label_height) / 2, width - border_width * 2, self.label_height)
             self.front_label_box = Box(thickness + border_width, border_width, width - border_width * 2, self.label_height)
-            self.front_image_box = Box(thickness + border_width, border_width + self.label_height + 2, width - border_width * 2, height - self.label_height - border_width * 2 - pull_depth )
+            self.front_image_box = Box(thickness + border_width, border_width + self.label_height + 2, width - border_width * 2, height - self.label_height - border_width * 2 - pull_depth)
 
             self.draw_outside()
             self.canvas.showPage()
@@ -234,12 +234,13 @@ class CardBox:
             front = self.deck.info.get('Front', None)
             if front is not None:
                 self.draw_label(self.front_label_box)
+                front_image = front.get('Image')
+                front_image_filepath = os.path.join(self.deck.style.image_path, front_image)
+                self.draw_image(front_image_filepath, self.front_image_box, 'Fit')
 
             if front is None:
-                front = self.deck.info.get('Back')
-            front_image = front.get('Image')
-            front_image_filepath = os.path.join(self.deck.style.image_path, front_image)
-            self.draw_image(front_image_filepath, self.front_image_box, 'Fit')
+                self.draw_back(box)
+
         except Exception:
             traceback.print_exc()
 
