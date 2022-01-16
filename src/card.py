@@ -159,6 +159,7 @@ class Card:
     def has_specifications(self):
         return False
 
+
     def draw_specifications(self, position: Position):
         pass
 
@@ -181,7 +182,6 @@ class Card:
 
     def draw_specification(self, label, value, position: Position):
         try:
-
             if value == '':
                 return
             value = str(value)
@@ -268,12 +268,3 @@ class Card:
             draw_paragraph(version_text, position, self.style.version_text_box, self.style.version_font_style)
         except Exception:
             traceback.print_exc()
-
-
-    # def draw_image(self, image_filepath, position: Position, box: Box, placement = 'None'):
-    #     if not os.path.isfile(image_filepath):
-    #         print(f'Image not found: {image_filepath}')
-    #     if os.path.isfile(image_filepath):
-    #         if placement == 'Fit':
-    #             box = fit_image(image_filepath, box)
-    #         position.canvas.drawImage(image_filepath, position.x_offset + box.x_offset, position.y_offset + box.y_offset, box.width, box.height, mask='auto')

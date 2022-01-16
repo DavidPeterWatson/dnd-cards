@@ -185,19 +185,23 @@ class CardBox:
             traceback.print_exc()
 
     def draw_outside(self):
-            self.canvas.setFillColor(black)
-            self.canvas.setLineWidth(10)
-            self.canvas.setStrokeColor(black)
 
-            self.draw_rectangle(self.full_box, 0, black)
-            self.draw_rectangle(self.top_left_tab_box, 0, black)
-            self.draw_rectangle(self.top_right_tab_box, 0, black)
-            self.draw_rectangle(self.tongue_box, 0, black)
-            self.draw_front(self.front_box)
-            self.draw_back(self.back_box)
+        if self.cover_card is not None:
+            self.cover_card.pre_draw()
 
-            self.draw_label(self.position, self.top_box)
-            self.draw_label(self.position, self.bottom_box)
+        self.canvas.setFillColor(black)
+        self.canvas.setLineWidth(10)
+        self.canvas.setStrokeColor(black)
+
+        self.draw_rectangle(self.full_box, 0, black)
+        self.draw_rectangle(self.top_left_tab_box, 0, black)
+        self.draw_rectangle(self.top_right_tab_box, 0, black)
+        self.draw_rectangle(self.tongue_box, 0, black)
+        self.draw_front(self.front_box)
+        self.draw_back(self.back_box)
+
+        self.draw_label(self.position, self.top_box)
+        self.draw_label(self.position, self.bottom_box)
 
 
 
@@ -234,7 +238,7 @@ class CardBox:
     def draw_back(self, box: Box):
         try:
             if self.cover_card is not None:
-                self.cover_card.draw_back(self.back_position)
+                self.cover_card.draw_front(self.back_position)
             else:
                 back = self.style.info['Back']
                 back_image = back['Image']
@@ -248,7 +252,7 @@ class CardBox:
     def draw_front(self, box: Box):
         try:
             if self.cover_card is not None:
-                self.cover_card.draw_front(self.front_position)
+                self.cover_card.draw_back(self.front_position)
             else:
                 front = self.deck.info.get('Front', None)
                 if front is not None:

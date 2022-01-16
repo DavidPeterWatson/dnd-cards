@@ -48,11 +48,13 @@ class Character(Creature):
             details = details + self.get_info_with_label(info_label)
         self.info['Details'] = details
 
+
     def get_info_with_label(self, info_name):
         info_value = self.info.get(info_name, '')
         if info_value != '':
             return f'{info_name}: {info_value}\n'
         return ''
+
 
     def has_specifications(self):
         return True
