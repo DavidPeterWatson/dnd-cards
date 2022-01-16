@@ -3,6 +3,7 @@ from card import Card
 from card_back import CardBack
 from position import Position
 from card_box import CardBox
+import os
 
 FRONT_PAGE = 0.5
 BACK_PAGE = 10
@@ -12,6 +13,9 @@ def render_decks(decks):
         render_deck(deck)
 
 def render_deck(deck: Deck):
+    output_folder = deck.style.output_folder
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder) 
     draw_cut_lines(deck, FRONT_PAGE)
     row = -1
     column = deck.style.columns

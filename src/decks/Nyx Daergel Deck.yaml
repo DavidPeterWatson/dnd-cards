@@ -4,8 +4,21 @@ Decks:
     Style: Scroll Deck Style
     Back:
       Image: Backgrounds/Back1.png
+    Cover Card: Nyx Daergel
     Collections:
       - Nyx Daergel Full
+
+  Nyx Daergel Belt Pouch:
+    Label: |
+      Nyx Daergel
+      Belt Pouch
+    Collate: True
+    Front:
+      Image: Items/Leather Pouch.png
+    Style: Scroll Deck Style
+    # Cover Card: Belt Pouch
+    Collections:
+      - Belt Pouch with 20gp
 
 Collections:
   Nyx Daergel Full:
@@ -78,7 +91,7 @@ Cards:
         - Hunting Trap
         - Tusk
         - Traveler's Clothes
-        - Belt Pouch
+        # - Belt Pouch
     Proficiencies:
       Weapon Skill Types:
         - Simple

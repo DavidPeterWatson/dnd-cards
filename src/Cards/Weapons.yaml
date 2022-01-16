@@ -1,0 +1,205 @@
+Cards:
+  Longbow:
+    Type: Weapon
+    Subcategory: Bow
+    Skill Type: Martial
+    Attack Type: Ranged
+    Cost: 50gp
+    Weight: 2lb
+    Range: 150
+    Range with disadvantage: 600
+    Damage: 1d8
+    Damage Type: Piercing
+    Rarity: Common
+    Properties:
+      - Heavy
+      - Ammunition
+      - Two-Handed
+    Image: Weapons/Longbow.png
+
+  Shortsword:
+    Type: Weapon
+    Subcategory: Sword
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 10gp
+    Weight: 2lb
+    Damage: 1d6
+    Damage Type: Piercing
+    Rarity: Common
+    Properties:
+      - Light
+      - Finesse
+    Image: Weapons/Shortsword.png
+    Link: https://roll20.net/compendium/dnd5e/Items:Shortsword/#h-Shortsword
+
+  Club:
+    Type: Weapon
+    Skill Type: Simple
+    Attack Type: Melee
+    Cost: 1sp
+    Weight: 2lb
+    Damage: 1d4
+    Damage Type: Bludgeoning
+    Rarity: Common
+    Properties:
+      - Light
+    Image: Weapons/Wooden Club.png
+    Link: hhttps://roll20.net/compendium/dnd5e/Club#content
+
+  Greataxe:
+    Type: Weapon
+    Subcategory: Axe
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 30gp
+    Weight: 7lb
+    Reach: 5ft
+    Damage: 1d12
+    Damage Type: Slashing
+    Rarity: Common
+    Properties:
+      - Heavy
+      - Two-Handed
+    Image: Weapons/Greataxe.png
+
+  Scimitar:
+    Type: Weapon
+    Subcategory: Sword
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 25gp
+    Weight: 3lb
+    Reach: 5ft
+    Damage: 1d6
+    Damage Type: Slashing
+    Rarity: Common
+    Properties:
+      - Finesse
+      - Light
+    Image: Weapons/Scimitar.png
+
+  Shortbow:
+    Type: Weapon
+    Subcategory: Bow
+    Skill Type: Martial
+    Attack Type: Ranged
+    Cost: 25gp
+    Weight: 2lb
+    Range: 80
+    Range with disadvantage: 320
+    Damage: 1d6
+    Damage Type: Piercing
+    Rarity: Common
+    Properties:
+      - Ammunition
+      - Two-Handed
+    Image: Weapons/Longbow.png
+
+  Warhammer:
+    Type: Weapon
+    Subcategory: Hammer
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 15gp
+    Weight: 2lb
+    Reach: 5ft
+    Damage: 1d8
+    Damage Type: Bludgeoning
+    Rarity: Common
+    Properties:
+      - Versatile:
+          Damage: 1d10
+    Image: Weapons/Warhammer.png
+    Links:
+     - https://roll20.net/compendium/dnd5e/Warhammer#content
+     - https://www.dndbeyond.com/equipment/warhammer
+
+  Handaxe:
+    Type: Weapon
+    Subcategory: Axe
+    Skill Type: Simple
+    Attack Type: Melee
+    Cost: 5gp
+    Weight: 2lb
+    Reach: 5ft
+    Damage: 1d6
+    Damage Type: Slashing
+    Rarity: Common
+    Properties:
+      - Light
+      - Thrown:
+          Range: 20/60
+    Image: Weapons/Handaxe.png
+    Links:
+     - https://roll20.net/compendium/dnd5e/Items:Handaxe/#h-Handaxe
+     - https://www.dndbeyond.com/equipment/handaxe
+
+
+  Morningstar:
+    Type: Weapon
+    Subcategory: Morningstar
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 15gp
+    Weight: 4lb
+    Reach: 5ft
+    Damage: 1d8
+    Damage Type: Piercing
+    Rarity: Common
+    Image: Weapons/Morningstar.png
+    Links:
+     - https://roll20.net/compendium/dnd5e/Items:Morningstar#content
+     - https://www.dndbeyond.com/equipment/morningstar
+
+
+  Dagger:
+    Type: Weapon
+    Subcategory: Morningstar
+    Skill Type: Martial
+    Attack Type: Melee
+    Cost: 2gp
+    Weight: 1lb
+    Reach: 5ft
+    Damage: 1d4
+    Damage Type: Piercing
+    Rarity: Common
+    Properties:
+      - Finesse
+      - Light
+      - Thrown:
+          Range: 20/60
+    Image: Weapons/Dagger.png
+    Links:
+     - https://www.dndbeyond.com/equipment/dagger
+     - https://roll20.net/compendium/dnd5e/Dagger#content
+
+  Javelin:
+    Type: Weapon
+    Subcategory: Javelin
+    Skill Type: Simple
+    Attack Type: Melee
+    Cost: 6sp
+    Weight: 2lb
+    Damage: 1d6
+    Damage Type: Piercing
+    Rarity: Common
+    Properties:
+      - Thrown:
+          Range: 30/120ft
+    Image: Weapons/Javelin.webp
+    Links:
+     - https://www.dndbeyond.com/equipment/javelin
+     - https://roll20.net/compendium/dnd5e/Javelin#content
+
+  Wolf Bite:
+    Type: Weapon
+    Subcategory: Bite
+    Skill Type: Simple
+    Attack Type: Melee
+    Damage: 2d4+2
+    Reach: 5ft
+    Damage Type: Piercing
+    Rarity: Common
+    Description: Target creature that fails a DC 11 Strength saving is knocked prone.
+    Image: Weapons/Wolf Bite.png

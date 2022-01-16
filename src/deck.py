@@ -13,9 +13,10 @@ class Deck():
         self.label = self.info.get('Label', name)
         self.library = library
         self.collate = self.info.get('Collate', True)
-        self.canvas = Canvas('output/' + self.name + '.pdf')
         style_name = self.info.get('Style')
         self.style = Style(style_name, library)
+        filepath =  os.path.join(self.style.output_folder, self.name + '.pdf')
+        self.canvas = Canvas(filepath)
         self.type = self.info.get('Type', '')
         self.cards = []
         self.box = None

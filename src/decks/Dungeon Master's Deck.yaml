@@ -1,4 +1,12 @@
 Decks:
+  Rules:
+    Style: Scroll Deck Style
+    Collate: True
+    Back:
+      Image: Backgrounds/Back1.png
+    Collections:
+      - Rules
+
   Monsters:
     Style: Scroll Deck Style
     Collate: True

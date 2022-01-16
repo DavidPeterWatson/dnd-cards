@@ -3,14 +3,17 @@ import yaml
 from reportlab.lib.units import mm
 from library import Library
 from font_style import FontStyle, TOP, BOTTOM, MIDDLE, LEFT, CENTER, RIGHT
-from box import Box
+from box import Box, add_padding
+from padding import Padding, padding_from_dict
 
 class Style():
     def __init__(self, name, library: Library):
         self.name = name
         self.info = library.get_style(name)
         self.style_folder = self.info['Style Folder']
-        self.style_path: str = os.path.join(library.root_path, self.style_folder)
+        self.output_folder = self.info['Output Folder']
+        self.font_path: str = self.info['Fonts']['Folder']
+        self.full_font_path: str = os.path.join(os.getcwd(), self.info['Fonts']['Folder'])
         self.page = self.info['Page']
         self.page_size = library.info['Page Sizes'][self.page['Size']]
         self.page_height = self.page_size['Height'] * mm
@@ -38,76 +41,75 @@ class Style():
         
         self.image = self.info['Image']
         self.image_folder = self.image['Folder']
-        self.image_path = os.path.join(library.root_path, self.image_folder)
+        self.image_path = os.path.join(self.image_folder)
 
         self.back = self.info['Back']
         self.specifications = self.info['Specifications']['Named']
 
-        self.background_filename =  self.info['Background']
+        self.background = self.info['Background']
+        self.background_filename =  self.background['Image']
         self.background_filepath = os.path.join(self.image_path, self.background_filename)
 
         self.border = self.info['Border']
         border_width =  self.border['Width'] * mm
         self.border_width =  border_width
         border_filename =  self.border['Image']
-        self.border_filepath = os.path.join(self.style_path, border_filename)
+        self.border_filepath = os.path.join(self.image_path, border_filename)
         self.card_box = Box(0, 0, card_width, card_height)
 
         header = self.info['Header']
         header_height = header['Height'] * mm
         self.header_height = header_height
         header_filename =  header['Image']
-        text_top = header['TextTop'] * mm
-        header_font = header['Font'] 
+        header_font = header['Font']
+        self.header_padding = padding_from_dict(header.get('Padding', {}))
+        header_font_path = os.path.join(self.full_font_path, header_font)
         header_font_size = header['Font Size']
         header_line_spacing = header['Line Spacing']
-        self.header_filepath = os.path.join(self.style_path, header_filename)
-        self.header_image_box = Box(0, card_height - header_height, card_width, header_height)
-        self.header_box = Box(border_width, card_height - text_top, card_width - border_width * 2, header_height - text_top)
-        self.header_font_style = FontStyle(header_font, header_font_size, header_line_spacing, CENTER, MIDDLE)
+        self.header_filepath = os.path.join(self.image_path, header_filename)
+        self.header_box = Box(0, card_height - header_height, card_width, header_height)
+        self.header_text_box = add_padding(self.header_box, self.header_padding)
+        self.header_font_style = FontStyle(header_font, header_font_path, header_font_size, header_line_spacing, CENTER, MIDDLE)
+
+        category = self.info['Category']
+        category_font = category['Font']
+        category_font_path = os.path.join(self.font_path, category_font)
+        category_font_size =  category['Font Size']
+        category_line_spacing =  category['Line Spacing']
+        self.category_padding = padding_from_dict(category.get('Padding', {}))
+        self.category_text_box =  add_padding(self.header_box, self.category_padding)
+        self.category_font_style = FontStyle(category_font, category_font_path, category_font_size, category_line_spacing, CENTER, TOP)
 
         details = self.info['Details']
-        details_padding =  details['Padding'] * mm
-        details_font =  details['Font']
+        self.details_padding = padding_from_dict(details.get('Padding', {}))
+        details_font = details['Font']
+        details_font_path = os.path.join(self.full_font_path, details_font)
         details_font_size =  details['Font Size']
         details_line_spacing =  details['Line Spacing']
-        self.details_font_style = FontStyle(details_font, details_font_size, details_line_spacing, LEFT, TOP)
-        self.details_box = Box(details_padding, card_height - header_height, card_width - details_padding * 2, card_height - header_height)
+        self.details_font_style = FontStyle(details_font, details_font_path, details_font_size, details_line_spacing, LEFT, TOP)
+        self.details_box = Box(border_width + self.details_padding.left, border_width + self.details_padding.bottom, card_width - self.details_padding.left - self.details_padding.right - border_width * 2, card_height - header_height - border_width - self.details_padding.top - self.details_padding.bottom)
 
         version = self.info['Version']
-        version_font = version['Font'] 
+        version_font = version['Font']
+        version_font_path = os.path.join(self.full_font_path, version_font)
         version_font_size = version['Font Size']
+        self.version_padding = padding_from_dict(version.get('Padding', {}))
         version_height = 5*mm
-        self.version_box = Box(border_width, border_width + version_height, card_width - border_width * 2, version_height)
-        self.version_font_style = FontStyle(version_font, version_font_size, 1, RIGHT, BOTTOM)
+        self.version_box = Box(border_width, border_width, card_width - border_width * 2, version_height)
+        self.version_text_box = add_padding(self.version_box, self.version_padding)
+        self.version_font_style = FontStyle(version_font, version_font_path, version_font_size, 1, RIGHT, BOTTOM)
 
         description = self.info['Description']
         description_filename =  description['Image']
         description_height =  description['Height'] * mm
-        description_font =  description['Font']
+        description_font = description['Font']
+        description_font_path = os.path.join(self.full_font_path, description_font)
         description_font_size =  description['Font Size']
         description_line_spacing =  description['Line Spacing']
-        description_left_padding =  description['Left Padding'] * mm
-        description_top_padding =  description['Top Padding'] * mm
-        self.description_filepath = os.path.join(self.style_path, description_filename)
-        self.description_image_box = Box(0, 0, card_width, description_height)
-        self.description_box = Box(description_left_padding, description_height - description_top_padding, card_width - description_left_padding * 2, description_height)
-        self.description_font_style = FontStyle(description_font, description_font_size, description_line_spacing, LEFT, TOP)
+        self.description_padding = padding_from_dict(description.get('Padding', {}))
+        self.description_filepath = os.path.join(self.image_path, description_filename)
+        self.description_image_box = Box(border_width, border_width, card_width - border_width * 2, description_height)
+        self.description_text_box = add_padding(self.description_image_box, self.description_padding)
+        self.description_font_style = FontStyle(description_font, description_font_path, description_font_size, description_line_spacing, LEFT, TOP)
 
-        category = self.info['Category']
-        category_font =  category['Font']
-        category_font_size =  category['Font Size']
-        category_line_spacing =  category['Line Spacing']
-        # category_height =  category['Height'] * mm
-        category_top_padding = category['Top Padding'] * mm
-        category_left_padding = category['Left Padding'] * mm
-        # category_vertical_alignment = category['Vertical Alignment']
-        # category_horizonal_alignment = category['Horizontal Alignment']
 
-        # category_width = card_width - category_left_padding * 2
-        # category_filename =  category.get('Image', '')
-        # self.category_filepath = os.path.join(self.style_path, category_filename)
-        # self.category_image_box = Box(category_left_padding, description_height, category_width, category_height)
-        self.category_box = Box(border_width + category_left_padding, card_height - category_top_padding - border_width, card_width - category_left_padding * 2 - border_width * 2, header_height - category_top_padding - border_width)
-        # self.category_box = Box(category_left_padding, description_height + category_height - category_top_padding, category_width, category_height - category_top_padding)
-        self.category_font_style = FontStyle(category_font, category_font_size, category_line_spacing, CENTER, TOP)

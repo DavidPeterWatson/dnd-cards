@@ -1,0 +1,150 @@
+Collections:
+  Rules:
+    Cards:
+      - Order of Combat
+      - Structure of Play
+      - Combat Turn
+      - Core Rule
+      - Coinage
+      - Surprise
+      - Passive Checks
+      - Cover
+      - NPC Party Members
+      - Short Rest
+      - Long Rest
+
+
+Cards:
+  Order of Combat:
+    Type: Rule
+    Description: |
+      <b>1.Determine surprise.</b>
+      The DM determines whether anyone involved in the combat encounter is surprised.
+
+      2. Establish positions.
+      The DM decides where all the characters and monsters are located. Given the adventurers' marching order or their stated positions in the room or other location, the DM figures out where the adversaries are—how far away and in what direction.
+
+      3.Roll initiative.
+      Everyone involved rolls initiative, determining the order of combatants' turns.
+
+      4.Take turns.
+      Each participant in the battle takes a turn in initiative order.
+
+      5.Begin the next round.
+      When everyone involved in the combat has had a turn, the round ends. Repeat step 4 until the fighting stops.
+
+  Structure of Play:
+    Type: Rule
+    Description: |
+      1. The DM describes the environment.
+      The DM tells the players where their adventurers are and what's around them, presenting the basic scope of options available: how many doors lead out of a room, what's on a table, who's in the tavern, and so on. The players can ask questions to make sure they understand what their characters perceive.
+
+      2. The players describe what they want to do.
+      The players don't need to take turns, but the DM listens to every player and decides how to resolve those actions. Sometimes, resolving a task is easy. If an adventurer wants to walk across a room and open a door, the DM might just say that the door opens and describe what lies beyond. But the door might be locked, the floor might hide a deadly trap, or some other circumstance might make it challenging for an adventurer to complete a task. In those cases, the DM decides what happens, often relying on the roll of a die to determine the results of an action.
+
+      3. The DM narrates the results of the adventurers' actions.
+      Describing the results often leads to another decision point, which brings the flow of the game right back to step 1.
+
+  Combat Turn:
+    Type: Rule
+    Description: |
+      On your turn, you can move a distance up to your speed and take one action. You decide whether to move first or take your action first. Your speed—sometimes called your walking speed—is noted on your character sheet.
+      The most common actions you can take are described in the “Actions in Combat” section later in this chapter. Many class features and other abilities provide additional options for your action.
+      The “Movement and Position” section later in this chapter gives the rules for your move.
+      You can forgo moving, taking an action, or doing anything at all on your turn. If you can't decide what to do on your turn, consider taking the Dodge or Ready action.
+
+  Core Rule:
+    Type: Rule
+    Description: |
+      1. Roll the die. Roll a d20, then add the modifier of the ability score used for the roll. A Dexterity saving throw, for instance, uses your Dexterity modifier.
+      2. Apply circumstantial bonuses and penalties. A spell, a particular circumstance, or some other effect might give a bonus or penalty to the roll.
+      3. Compare the total to a target number. If the total equals or exceeds the target number, the roll is a success. Otherwise, it's a failure. The target number for an ability check or saving throw is called a Difficulty Class (DC).
+        For an attack roll, it's the Armor Class (AC) of the target being attacked. The DM is usually the one who determines target numbers and tells players whether their ability checks, attack rolls, and saving throws succeed or fail.
+
+  Coinage:
+    Type: Rule
+    Description: |
+      Common coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).
+      One gold piece is worth ten silver pieces, the most prevalent coin among commoners. One silver piece is worth ten copper pieces, which are common among laborers and beggars.
+      Unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.
+      A standard coin weighs about a third of an ounce, so fifty coins weigh a pound.
+
+#       Coin	CP	SP	EP	GP	PP
+# Copper (cp)	1	10	50	100	1,000
+# Silver (sp)	1/10	1	5	10	100
+# Electrum (ep)	1/50	1/5	1	2	20
+# Gold (gp)	1/100	1/10	1/2	1	10
+# Platinum (pp)	1/1,000	1/100	1/20	1/10	1
+
+  Surprise:
+    Type: Rule
+    Description: |
+      The DM determines who might be surprised. If neither side tries to be stealthy, they automatically notice each other. Otherwise, the DM compares the Dexterity (Stealth) checks of anyone hiding with the passive Wisdom (Perception) score of each creature on the opposing side. Any character or monster that doesn't notice a threat is surprised at the start of the encounter.
+      If you're surprised, you can't move or take an action on your first turn of the combat, and you can't take a reaction until that turn ends. A member of a group can be surprised even if the other members aren't.
+
+  Passive Checks:
+    Type: Rule
+    Description: |
+      Passive Score = 10 + Modifier + Proficiency
+      Sucess = Passive Score > Difficulty Class
+    Details: |
+      A passive check is a Special kind of ability check that doesn't involve any die rolls. Such a check can represent the average result for a task done repeatedly, such as searching for Secret doors over and over again, or can be used when the GM wants to secretly determine whether the Characters succeed at something without rolling dice, such as noticing a hidden monster.
+
+      Here's how to determine a character's total for a passive check:
+      10 + all modifiers that normally apply to the check
+
+      If the character has advantage on the check, add 5. For disadvantage, subtract 5. The game refers to a passive check total as a score.
+
+      For example, if a 1st-level character has a Wisdom of 15 and proficiency in Perception, he or she has a passive Wisdom (Perception) score of 14.
+    Links:
+      - https://roll20.net/compendium/dnd5e/Ability%20Scores#content
+    Properties:
+      - Wisdom
+      - Intellegence
+      - Proficiency
+
+  Cover:
+    Type: Rule
+    Subcategory: Combat
+    Description: |
+      Half cover: +2 bonus to Armor Class and Dexterity saving throws.
+      Three-quarters cover: +5 bonus to AC and Dexterity saving throws.
+      Total cover: can't be targeted directly by an attack.
+    Details: |
+      Walls, trees, thiuckets, creatures, and other obstacles can provide cover during combat, making a target more difficult to harm. A target can benefit from cover only when an attack or other effect originates on the opposite side of the cover. There are three degrees of cover. If a target is behind multiple sources of cover, only the most protective degree of cover applies; the degrees aren't added together.
+      A target with half cover has a +2 bonus to AC and Dexterity saving throws. A target has half cover if an obstacle blocks at least half of its body. The obstacle might be a low wall, a large piece of furniture, a narrow tree trunk, or a creature, whether that creature is an enemy or a friend.
+      A target with three-quarters cover has a +5 bonus to AC and Dexterity saving throws. A target has three- quarters cover if about three-quarters of it is covered by an obstacle. The obstacle might be a portcullis, an arrow slit, or a thick tree trunk.
+      A target with total cover can't be targeted directly by an attack or a spell, although some spells can reach such a target by including it in an area of effect. A target has total cover if it is completely concealed by an obstacle.
+
+  NPC Party Members:
+    Type: Rule
+    Description: |
+      An NPC might join the party, if only for a short time. Here are some tips to help you run an NPC party member:
+      • Let the characters make the important decisions. They are the protagonists of the adventure. If the characters ask an NPC party member for advice or direction, remember that NPCs make mistakes too.
+      • An NPC won't deliberately put himself or herself in harm's way unless there's a good reason to do so.
+      • An NPC won't treat all party members the same way, which can create some fun friction. As an NPC gets to know the characters, think about which characters the NPC likes most and which ones the NPC likes least, and let those likes and dislikes affect how the NPC interacts with the party members. In a combat encounter, keep the NPC's actions simple and straightforward. Also, look for things that the NPC can do besides fighting. For example, an NPC might stabilize a dying character, guard a prisoner, or help barricade a door.
+      • If an NPC contributes greatly to the party's success in a battle, the NPC should receive an equal share of the XP earned for the encounter. (The characters receive less XP as a consequence.)
+      NPCs have their own lives and goals. Consequently, an NPC should remain with the party only as long as doing so makes sense for those goals.
+
+  Short Rest:
+    Type: Action
+    Description: |
+      A short rest is a period of downtime, at least 1 hour long, during which a character does nothing more strenuous than eating, drinking, reading, and tending to wounds.
+      A character can spend one or more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is equal to the character's level. For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total. The player can decide to spend an additional Hit Die after each roll. A character regains some spent Hit Dice upon finishing a long rest.
+      Restore Hit Points = Hit Dice + Constitution
+    Properties:
+      - Hit Dice
+      - Constitution
+
+  Long Rest:
+    Type: Action
+    Description: |
+      A long rest is a period of extended downtime, at least 8 hours long, during which a character sleeps or performs light activity: reading, talking, eating, or standing watch for no more than 2 hours. If the rest is interrupted by a period of strenuous activity—at least 1 hour of walking, fighting, casting spells, or similar adventuring activity— the characters must begin the rest again to gain any benefit from it.
+      At the end of a long rest, a character regains all lost hit points. The character also regains spent Hit Dice, up to a number of dice equal to half of the character's total number of them. For example, if a character has eight Hit Dice, he or she can regain four spent Hit Dice upon finishing a long rest.
+      A character can't benefit from more than one long rest in a 24-hour period, and a character must have at least 1 hit point at the start of the rest to gain its benefits.
+
+  Spell Slots:
+    Type: Action
+    Description: |
+      Regardless of how many spells a caster knows or prepares, he or she can cast only a limited number of spells before resting. Manipulating the fabric of magic and channeling its energy into even a simple spell is physically and mentally taxing, and higher-level spells are even more so. Thus, the character sheet for a spellcaster includes how many spell slots of each level the character can use at each character level. For example, at 3rd level, the wizard has four 1st-level slots and two 2nd-level slots.
+      When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with the spell. You can think of a spell slot as a groove of a certain size—small for a 1st-level slot, larger for a spell of higher level. A 1st-level spell fits into a slot of any size, but a 3rd-level spell fits only in a slot that is at least 3rd level. So when the wizard casts magic missile, a 1st-level spell, he or she spends a 1st-level slot and has three remaining. Finishing a long rest restores any expended spell slots. Some monsters have special abilities that let them cast spells without using spell slots.

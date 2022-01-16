@@ -15,14 +15,11 @@ import logging
 
 from position import Position
 from box import Box
-from font_style import FontStyle, CENTER
+from font_style import FontStyle, LEFT, CENTER, RIGHT, TOP, MIDDLE, BOTTOM
 from style import Style
 from fitting import fit_image
-
-
-TOP = 'top'
-BOTTOM = 'bottom'
-MIDDLE = 'middle'
+from paragraph import draw_paragraph
+from image import draw_image
 
 
 class Card:
@@ -77,7 +74,7 @@ class Card:
 
     def draw_background(self, position: Position):
         try:
-            self.draw_image(self.style.background_filepath, position, self.style.card_box)
+            draw_image(self.style.background_filepath, position, self.style.card_box)
         except Exception:
             traceback.print_exc()
 
@@ -113,12 +110,12 @@ class Card:
                 max_image_height =  self.height - (top_padding + bottom_padding)
                 max_image_width =  self.width - side_padding
                 back_image_box = Box((self.width - max_image_width) / 2, bottom_padding, max_image_width, max_image_height)
-                self.draw_image(back_image_filepath, position, back_image_box, 'Fit')
+                draw_image(back_image_filepath, position, back_image_box, 'Fit')
             else:
                 back = self.style.info['Back']
                 back_image = back['Image']
                 back_image_filepath = os.path.join(self.style.image_path, back_image)
-                self.draw_image(back_image_filepath, position, self.style.card_box)
+                draw_image(back_image_filepath, position, self.style.card_box)
         except Exception:
             traceback.print_exc()
 
@@ -128,7 +125,7 @@ class Card:
             back = self.style.info['Back']
             back_image = back['Image']
             back_image_filepath = os.path.join(self.style.image_path, back_image)
-            self.draw_image(back_image_filepath, position, self.style.card_box)
+            draw_image(back_image_filepath, position, self.style.card_box)
         except Exception:
             traceback.print_exc()
 
@@ -146,7 +143,7 @@ class Card:
     def draw_details(self, position: Position):
         try:
             detail_text = self.info.get('Details', '')
-            self.draw_paragraph(detail_text, position, self.style.details_box, self.style.details_font_style)
+            draw_paragraph(detail_text, position, self.style.details_box, self.style.details_font_style)
         except Exception:
             traceback.print_exc()
 
@@ -154,7 +151,7 @@ class Card:
     def draw_long_description(self, position: Position):
         try:
             description_text = self.info.get('Description', '')
-            self.draw_paragraph(description_text, position, self.style.details_box, self.style.details_font_style)
+            draw_paragraph(description_text, position, self.style.details_box, self.style.details_font_style)
         except Exception:
             traceback.print_exc()
 
@@ -177,22 +174,29 @@ class Card:
             image_filepath = os.path.join(self.style.image_path, image_filename)
             if os.path.isfile(image_filepath):
                 image_box = Box((self.width - image_width) / 2, self.height - image_top - image_height, image_width, image_height)
-                self.draw_image(image_filepath, position, image_box, 'Fit')
+                draw_image(image_filepath, position, image_box, 'Fit')
         except Exception:
             traceback.print_exc()
 
 
     def draw_specification(self, label, value, position: Position):
         try:
+
             if value == '':
                 return
+            value = str(value)
             image = self.style.info['Image']
             image_top =  image['Top'] * mm
             specs = self.style.info['Specifications']
             spec_label_font =  specs['Label Font']
+            spec_label_font_path = os.path.join(self.style.full_font_path, spec_label_font)
             spec_label_font_size =  specs['Label Font Size']
             spec_value_font =  specs['Value Font']
+            spec_value_font_path = os.path.join(self.style.full_font_path, spec_value_font)
             spec_value_font_size =  specs['Value Font Size']
+            long_value_count =  specs['Long Value Character Count']
+            if len(value) >= long_value_count:
+                spec_value_font_size = specs['Long Value Font Size']
             spec_line_spacing =  specs['Line Spacing']
             spec_offset =  specs['Offset'] * mm
             spec_height =  specs['Height'] * mm
@@ -200,16 +204,16 @@ class Card:
             spec_spacing =  specs['Spacing'] * mm
             alignment = self.style.specifications[label]['Alignment']
             row = self.style.specifications[label]['Row']
-            y_offset = self.height - image_top - row * (spec_height + spec_spacing)
+            y_offset = self.style.header_box.y_offset - row * (spec_height + spec_spacing)
             if alignment == 'Left':
                 x_offset = spec_offset
             if alignment == 'Right':
                 x_offset = self.width - spec_offset - spec_width
             spec_box = Box(x_offset, y_offset, spec_width, spec_height)
-            spec_label_font_style = FontStyle(spec_label_font, spec_label_font_size, spec_line_spacing, CENTER, TOP)
-            spec_value_font_style = FontStyle(spec_value_font, spec_value_font_size, spec_line_spacing, CENTER, MIDDLE)
-            self.draw_paragraph(label, position, spec_box, spec_label_font_style)
-            self.draw_paragraph(value, position, spec_box, spec_value_font_style)
+            spec_label_font_style = FontStyle(spec_label_font, spec_label_font_path, spec_label_font_size, spec_line_spacing, CENTER, TOP)
+            spec_value_font_style = FontStyle(spec_value_font, spec_value_font_path, spec_value_font_size, spec_line_spacing, CENTER, MIDDLE)
+            draw_paragraph(label, position, spec_box, spec_label_font_style)
+            draw_paragraph(value, position, spec_box, spec_value_font_style)
 
         except Exception:
             traceback.print_exc()
@@ -218,7 +222,7 @@ class Card:
     def draw_category(self, position: Position):
         try:
             category_text =  self.info['Category'].lower()
-            self.draw_paragraph(category_text, position, self.style.category_box, self.style.category_font_style)
+            draw_paragraph(category_text, position, self.style.category_text_box, self.style.category_font_style)
             pass
         except Exception:
             traceback.print_exc()
@@ -231,8 +235,8 @@ class Card:
                 description_text = f'{description_text}\n'
             instructions = self.get_instructions()
             description_text = f'{description_text}{instructions}'
-            self.draw_image(self.style.description_filepath, position, self.style.description_image_box)
-            self.draw_paragraph(description_text, position, self.style.description_box, self.style.description_font_style)
+            draw_image(self.style.description_filepath, position, self.style.description_image_box)
+            draw_paragraph(description_text, position, self.style.description_text_box, self.style.description_font_style)
         except Exception:
             traceback.print_exc()
 
@@ -243,7 +247,7 @@ class Card:
 
     def draw_border(self, position: Position):
         try:
-            self.draw_image(self.style.border_filepath, position, self.style.card_box)
+            draw_image(self.style.border_filepath, position, self.style.card_box)
         except Exception:
             traceback.print_exc()
 
@@ -251,8 +255,8 @@ class Card:
     def draw_header(self, position: Position):
         try:
             header_text = self.info['Header']
-            self.draw_image(self.style.header_filepath, position, self.style.header_image_box)
-            self.draw_paragraph(header_text, position, self.style.header_box, self.style.header_font_style)
+            draw_image(self.style.header_filepath, position, self.style.header_box)
+            draw_paragraph(header_text, position, self.style.header_text_box, self.style.header_font_style)
             self.draw_category(position)
         except Exception:
             traceback.print_exc()
@@ -261,39 +265,15 @@ class Card:
     def draw_version(self, position: Position):
         try:
             version_text = f'Deck Builder: {__version__}'
-            self.draw_paragraph(version_text, position, self.style.version_box, self.style.version_font_style)
+            draw_paragraph(version_text, position, self.style.version_text_box, self.style.version_font_style)
         except Exception:
             traceback.print_exc()
 
 
-    def draw_image(self, image_filepath, position: Position, box: Box, placement = 'None'):
-        if os.path.isfile(image_filepath):
-            if placement == 'Fit':
-                box = fit_image(image_filepath, box)
-            position.canvas.drawImage(image_filepath, position.x_offset + box.x_offset, position.y_offset + box.y_offset, box.width, box.height, mask='auto')
-
-
-    def draw_paragraph(self, msg, position: Position, box: Box, font_style: FontStyle):
-        self.register_font(font_style.name)
-        style = ParagraphStyle(
-            name='Normal',
-            fontName=font_style.name,
-            fontSize=font_style.size,
-            alignment=font_style.horizontal_alignment,
-            leading=font_style.size * font_style.line_spacing
-        )
-        message = str(msg).replace('\n', '<br/>')
-        message = Paragraph(message, style=style)
-        w, message_height = message.wrap(box.width, box.height)
-        effective_y = box.y_offset - message_height
-        if font_style.vertical_alignment == BOTTOM:
-            effective_y = box.y_offset - box.height
-        if font_style.vertical_alignment == MIDDLE:
-            effective_y = box.y_offset - ((box.height - message_height) / 2.0) - message_height
-        message.drawOn(position.canvas, position.x_offset + box.x_offset, position.y_offset + effective_y)
-
-
-    def register_font(self, font):
-        detail_font_path = os.path.join(self.style.style_path, font)
-        pdfmetrics.registerFont(TTFont(font, detail_font_path))
-
+    # def draw_image(self, image_filepath, position: Position, box: Box, placement = 'None'):
+    #     if not os.path.isfile(image_filepath):
+    #         print(f'Image not found: {image_filepath}')
+    #     if os.path.isfile(image_filepath):
+    #         if placement == 'Fit':
+    #             box = fit_image(image_filepath, box)
+    #         position.canvas.drawImage(image_filepath, position.x_offset + box.x_offset, position.y_offset + box.y_offset, box.width, box.height, mask='auto')

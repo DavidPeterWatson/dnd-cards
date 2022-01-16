@@ -1,0 +1,44 @@
+Cards:
+  Leather Armor:
+    Type: Armor
+    Category: Armor
+    Subcategory: Light
+    Header: Leather Armor
+    Cost: 10gp
+    Armor Class: 11
+    Weight: 10lb
+    Rarity: Common
+    Armor Type: Light
+    Description: |
+      Armor Class = Base Armor Class + Dexterity + Proficiency
+      The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. 
+    Image: Armor/Studded Leather Armor.png
+    Links:
+      - https://roll20.net/compendium/dnd5e/Leather%20Armor#content
+
+  Hide Armor:
+    Type: Armor
+    Subcategory: Medium
+    Cost: 10gp
+    Armor Class: '12+Dex'
+    Weight: 12lb
+    Rarity: Common
+    Armor Type: Light
+    Description: |
+      Armor Class = Base Armor Class + Dexterity + Proficiency
+      This crude armor, of thick furs and pelts, is used by Barbarians, evil Humanoids, and other folk who lack access to the resources needed to create better armor.
+    Image: Armor/Hide Armor.png
+
+  Shield:
+    Type: Armor
+    Cost: 10gp
+    Armor Class: '+2'
+    Weight: 6lb
+    Rarity: Common
+    Armor Type: Light
+    Description: |
+      Armor Class = Armor Class + 2
+      A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time.
+    Image: Armor/Shield.png
+    Links:
+      - https://www.dndbeyond.com/equipment/shield

@@ -3,7 +3,6 @@ from card_type_provider import CardTypeProvider
 from card_types.character import Character
 from deck import Deck
 from card import Card
-from card_box import CardBox
 import traceback
 from deepmerge import always_merger
 from copy import deepcopy
@@ -24,7 +23,7 @@ def build_decks(library):
 
 def build_deck(deck: Deck):
     deck.cards = create_deck_cards(deck)
-    deck.box = create_box(deck)
+    deck.cover_card = create_card(deck.info.get('Cover Card'), deck)
     return deck
 
 
@@ -224,5 +223,4 @@ def get_combat_actions_list():
     ]
   
 
-def create_box(deck):
-    return CardBox(deck)
+
