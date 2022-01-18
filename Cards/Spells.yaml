@@ -23,55 +23,48 @@ Cards:
   Level 1 Spell Slot:
     Type: Spell Slot
     Level: 1
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with the spell.
+    Description: |
+      When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with the spell.
     Image: Spells/Level 1 Spell Slot.png
 
   Level 2 Spell Slot:
-    Type: Spell Slot
+    Based on: Level 1 Spell Slot
     Level: 2
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with the spell.
     Image: Spells/Level 2 Spell Slot.png
 
   Level 3 Spell Slot:
-    Type: Spell Slot
+    Based on: Level 1 Spell Slot
     Level: 3
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
     Image: Spells/Level 3 Spell Slot.png
 
   Level 4 Spell Slot:
-    Type: Spell Slot
+    Based on: Level 1 Spell Slot
     Level: 4
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
     Image: Spells/Level 4 Spell Slot.png
 
   Level 5 Spell Slot:
-    Type: Spell Slot
+    Based on: Level 1 Spell Slot
     Level: 5
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
     Image: Spells/Level 5 Spell Slot.png
 
   Level 6 Spell Slot:
-    Type: Spell Slot
+    Based on: Level 1 Spell Slot
     Level: 6
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
     Image: Spells/Level 6 Spell Slot.png
 
   Level 7 Spell Slot:
-    Type: Spell Slot
+    Based on: Level 1 Spell Slot
     Level: 7
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
     Image: Spells/Level 7 Spell Slot.png
 
   Level 8 Spell Slot:
-    Type: Spell Slot
+    Based on: Level 1 Spell Slot
     Level: 8
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
     Image: Spells/Level 8 Spell Slot.png
 
   Level 9 Spell Slot:
-    Type: Spell Slot
+    Based on: Level 1 Spell Slot
     Level: 9
-    Description: When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively “filling” a slot with 
     Image: Spells/Level 9 Spell Slot.png
 
 

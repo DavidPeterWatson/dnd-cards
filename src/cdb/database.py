@@ -34,10 +34,11 @@ class Database:
                 card_name = result['name']
                 card_url = result['url']
                 full_card_url = f'{self.url}{card_url}'
-                print(f'downloading {card_name} from {full_card_url}')
-                card_info_response = urlopen(full_card_url, timeout=3)
-                card_info = yaml.safe_load(card_info_response.read())
-                card_data_root['Cards'][card_name] = card_info
+                if card_name not in card_data_root['Cards']:
+                    print(f'downloading {card_name} from {full_card_url}')
+                    card_info_response = urlopen(full_card_url, timeout=3)
+                    card_info = yaml.safe_load(card_info_response.read())
+                    card_data_root['Cards'][card_name] = card_info
         except Exception:
             traceback.print_exc()
         finally:
