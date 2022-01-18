@@ -23,9 +23,8 @@ from image import draw_image
 
 
 class Card:
-    def __init__(self, name, info, style: Style, quantity = 1):
+    def __init__(self, name, info, style: Style):
         self.name = name
-        self.quantity = quantity
         self.type = info.get('Type', 'General')
         self.style = style
         self.info = info
@@ -202,8 +201,12 @@ class Card:
             spec_height =  specs['Height'] * mm
             spec_width =  specs['Width'] * mm
             spec_spacing =  specs['Spacing'] * mm
-            alignment = self.style.specifications[label]['Alignment']
-            row = self.style.specifications[label]['Row']
+            specification = self.style.specifications.get(label, None)
+            if not specification:
+                print(f'Specification not found: {label}')
+                return
+            alignment = specification['Alignment']
+            row = specification['Row']
             y_offset = self.style.header_box.y_offset - row * (spec_height + spec_spacing)
             if alignment == 'Left':
                 x_offset = spec_offset

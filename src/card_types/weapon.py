@@ -9,8 +9,8 @@ def get_card_type():
 
 class Weapon(Card):
 
-    def __init__(self, name, info, style, quantity = 1):
-        super().__init__(name, info, style, quantity) 
+    def __init__(self, name, info, style):
+        super().__init__(name, info, style) 
         self.creature_info = {}
 
     def pre_draw(self):

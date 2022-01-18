@@ -1,9 +1,9 @@
 Path: cards
 Files:
   - Scroll Deck Style.yaml
+  - DND5eApi Equipment.yaml
   - Spells.yaml
   - Weapons.yaml
-  - Items.yaml
   - Magical Items.yaml
   - Packs.yaml
   - Coinage.yaml
@@ -14,3 +14,4 @@ Files:
   - Capabilities.yaml
   - Creatures.yaml
   - Rules.yaml
+  - Items.yaml
