@@ -1,6 +1,5 @@
 from card_types.action import Action
 
-
 def get_class_name():
     return 'Narrative'
 

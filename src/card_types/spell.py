@@ -1,7 +1,5 @@
-from card import Card
+from cdb.card import Card
 import traceback
-from deck import Deck
-import yaml
 
 def get_class_name():
     return 'Spell'

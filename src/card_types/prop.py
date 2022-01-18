@@ -1,10 +1,9 @@
-from card import Card
+from cdb.card import Card
 import traceback
-from reportlab.lib import utils
 from reportlab.lib.units import mm
 import os
 
-from position import Position
+from cdb.position import Position
 
 def get_class_name():
     return 'Prop'
@@ -18,7 +17,6 @@ class Prop(Card):
         try:
             self.draw_prop_background(position)
             self.draw_back_image(position, 5*mm, 5*mm, 5*mm)
-            # self.draw_border(position)
         except Exception:
             traceback.print_exc()
 

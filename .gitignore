@@ -1,5 +1,60 @@
 src/__pycache__/
+src/.pytest_cache/
 __pycache__/
 .DS_Store
 src/output/
 src/output files/
+build/lib/card_types/__init__.py
+build/lib/card_types/action.py
+build/lib/card_types/armor.py
+build/lib/card_types/basic.py
+build/lib/card_types/character.py
+build/lib/card_types/condition.py
+build/lib/card_types/creature.py
+build/lib/card_types/item.py
+build/lib/card_types/magical_item.py
+build/lib/card_types/narrative.py
+build/lib/card_types/passive_skill.py
+build/lib/card_types/prop.py
+build/lib/card_types/skill.py
+build/lib/card_types/spell_slot.py
+build/lib/card_types/spell.py
+build/lib/card_types/weapon.py
+build/lib/cdb/__init__.py
+build/lib/cdb/alignment.py
+build/lib/cdb/box.py
+build/lib/cdb/card_back.py
+build/lib/cdb/card_box.py
+build/lib/cdb/card_type_provider.py
+build/lib/cdb/card.py
+build/lib/cdb/cdb.py
+build/lib/cdb/condition.py
+build/lib/cdb/database.py
+build/lib/cdb/deck_builder.py
+build/lib/cdb/deck_renderer.py
+build/lib/cdb/deck.py
+build/lib/cdb/exceptions.py
+build/lib/cdb/fitting.py
+build/lib/cdb/font_style.py
+build/lib/cdb/image.py
+build/lib/cdb/library_loader.py
+build/lib/cdb/library.py
+build/lib/cdb/padding.py
+build/lib/cdb/paragraph.py
+build/lib/cdb/point.py
+build/lib/cdb/position.py
+build/lib/cdb/style.py
+build/lib/cdb/types.py
+build/lib/cdb/version.py
+output files/Barthen's Provisions Stock Box.pdf
+output files/Barthen's Provisions Stock.pdf
+output files/Damaia Box.pdf
+output files/Damaia.pdf
+output files/Lost Mine of Phandelver Part 2 Phandalin Box.pdf
+output files/Lost Mine of Phandelver Part 2 Phandalin.pdf
+output files/Monsters Box.pdf
+output files/Monsters.pdf
+output files/Rules Box.pdf
+output files/Rules.pdf
+output files/Weapons Box.pdf
+output files/Weapons.pdf

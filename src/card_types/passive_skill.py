@@ -1,5 +1,4 @@
 from card_types.skill import Skill
-import traceback
 
 def get_class_name():
     return 'PassiveSkill'
