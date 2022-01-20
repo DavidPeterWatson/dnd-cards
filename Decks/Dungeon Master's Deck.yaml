@@ -4,6 +4,7 @@ Decks:
     Collate: True
     Back:
       Image: Backgrounds/Back1.png
+    Minimum Cards: 40
     Collections:
       - Rules
 

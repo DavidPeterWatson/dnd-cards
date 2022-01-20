@@ -19,6 +19,7 @@ class Creature(Card):
             self.draw_specification('Hit Dice', self.info.get('Hit Dice', ''), position)
             self.draw_specification('Armor Class', self.info.get('Armor Class', ''), position)
             self.draw_specification('Initiative', self.info.get('Initiative', ''), position)
+            self.draw_specification('Perception', self.info.get('Passive Perception', ''), position)
 
             ability_modifiers = self.info.get('Ability Modifiers', {})
             self.draw_specification('Strength', ability_modifiers.get('Strength', ''), position)

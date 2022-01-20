@@ -29,10 +29,10 @@ src/cdb/database.py
 src/cdb/deck.py
 src/cdb/deck_builder.py
 src/cdb/deck_renderer.py
+src/cdb/draw.py
 src/cdb/exceptions.py
 src/cdb/fitting.py
 src/cdb/font_style.py
-src/cdb/image.py
 src/cdb/library.py
 src/cdb/library_loader.py
 src/cdb/padding.py

@@ -5,8 +5,9 @@ Decks:
     Back:
       Image: Backgrounds/Back1.png
     Cover Card: Nyx Daergel
+    Minimum Cards: 50
     Collections:
-      - Nyx Daergel Full
+      - Nyx Daergel Actions
 
   Nyx Daergel Belt Pouch:
     Label: |
@@ -16,15 +17,36 @@ Decks:
     Front:
       Image: Items/Leather Pouch.png
     Style: Scroll Deck Style
-    # Cover Card: Belt Pouch
+    Minimum Cards: 50
     Collections:
-      - Belt Pouch with 20gp
+      - 20gp of Coins
+
+  Nyx Daergel Backpack:
+    Label: |
+      Nyx Daergel
+      Backpack
+    Collate: True
+    Front:
+      Image: Items/Backpack.png
+    Style: Scroll Deck Style
+    Minimum Cards: 50
 
 Collections:
   Nyx Daergel Full:
     Cards:
       - Nyx Daergel
     Equipment for:
+      - Nyx Daergel
+    Spells for:
+      - Nyx Daergel
+    Actions for:
+      - Nyx Daergel
+    Capabilities for:
+      - Nyx Daergel
+    Skills for:
+      - Nyx Daergel
+  Nyx Daergel Actions:
+    Cards:
       - Nyx Daergel
     Spells for:
       - Nyx Daergel
@@ -51,7 +73,7 @@ Cards:
     Background: Outlander
     Gender: Female
     Alignment: Chaotic Good
-    Level: 1
+    Level: 2
     Speed: 30ft
     Hit Points: 11
     Hit Dice: 1d10

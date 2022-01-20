@@ -13,12 +13,10 @@ from cdb.paragraph import draw_paragraph
 from cdb.font_style import FontStyle
 from cdb.alignment import TOP, BOTTOM, MIDDLE, LEFT, CENTER, RIGHT
 from cdb.deck import Deck
-from cdb.card import Card
-from cdb.fitting import fit_image
 from cdb.box import Box
 from cdb.point import Point
 from cdb.position import Position
-from cdb.image import draw_image
+from cdb.draw import draw_image
 
 class CardBox:
     def __init__(self, deck: Deck):
@@ -34,7 +32,9 @@ class CardBox:
             self.position = Position(self.style, self.canvas, 0, self.style.rows - 1)
             card_thickness = self.style.card_thickness
             extra_box_space = self.style.extra_box_space
-            thickness = max(self.style.min_box_thickness, len(self.deck.cards) * card_thickness + extra_box_space)
+            card_count = max(self.deck.min_cards, len(self.deck.cards))
+            print(f'printing cards {card_count}')
+            thickness = max(self.style.min_box_thickness, card_count * card_thickness + extra_box_space)
             width = self.style.card_width + self.style.extra_box_width
             height = self.style.card_height
             tab_length = self.style.tab_length

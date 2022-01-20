@@ -20,7 +20,7 @@ from cdb.alignment import TOP, BOTTOM, MIDDLE, LEFT, CENTER, RIGHT
 from cdb.style import Style
 from cdb.fitting import fit_image
 from cdb.paragraph import draw_paragraph
-from cdb.image import draw_image
+from cdb.draw import draw_image, draw_rectangle
 
 
 class Card:
@@ -251,9 +251,15 @@ class Card:
 
     def draw_border(self, position: Position):
         try:
-            draw_image(self.style.border_filepath, position, self.style.card_box)
+            # draw_image(self.style.border_filepath, position, self.style.card_box)
+            draw_rectangle(position, Box(0,0,self.width, self.height), 4*mm)
         except Exception:
             traceback.print_exc()
+
+
+    # def draw_rectangle(self, position: Position, box: Box, corner_radius, stroke=1, fill=1):
+    #     position.canvas, position.x_offset + box.x_offset, position.y_offset
+    #     position.canvas.roundRect(position.x_offset + box.x_offset, position.y_offset + box.y_offset, box.width, box.height, corner_radius, stroke=stroke, fill=fill)
 
 
     def draw_header(self, position: Position):

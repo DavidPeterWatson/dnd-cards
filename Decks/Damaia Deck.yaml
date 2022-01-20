@@ -2,12 +2,32 @@ Decks:
   Damaia:
     Style: Scroll Deck Style
     Collate: True
-    Back:
-      Image: Backgrounds/Back1.png
     Cards:
       - Damaia Creature
     Collections:
       - Damaia Full
+
+  Damaia Belt Pouch:
+    Label: |
+      Damaia
+      Belt Pouch
+    Collate: True
+    Front:
+      Image: Items/Leather Pouch.png
+    Style: Scroll Deck Style
+    Minimum Cards: 50
+    Collections:
+      - 20gp of Coins
+
+  Damaia Backpack:
+    Label: |
+      Damaia
+      Backpack
+    Collate: True
+    Front:
+      Image: Items/Backpack.png
+    Style: Scroll Deck Style
+    Minimum Cards: 50
 
 Collections:
   Damaia Full:
@@ -51,7 +71,7 @@ Cards:
     Background: Outlander
     Gender: Female
     Alignment: Chaotic Nuetral
-    Level: 1
+    Level: 2
     Speed: 30ft
     Hit Points: 14
     Hit Dice: 1d12

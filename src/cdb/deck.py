@@ -19,4 +19,5 @@ class Deck():
         self.type = self.info.get('Type', '')
         self.cards = []
         self.box = None
+        self.min_cards = self.info.get('Minimum Cards', 10)
 
