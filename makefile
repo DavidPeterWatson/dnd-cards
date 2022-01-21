@@ -2,13 +2,14 @@ decks:
 	cd src && python3 main.py --file 'decks/Deck Builder.yaml'
 
 nyx:
-	cdp build -f 'Decks/Nyx Daergel Deck.yaml'
+	cdp print -f 'Decks/Nyx Daergel Deck.yaml'
 
 damaia:
-	cdp build -f 'Decks/Damaia Deck.yaml'
+	cdp print -f 'Decks/Damaia Deck.yaml'
 
 dm:
-	cdp build -f "Decks/Dungeon Master's Deck.yaml"
+	cdp print -f "Decks/Dungeon Master's Deck.yaml"
+
 install:
 	python3 -m pip install .
 

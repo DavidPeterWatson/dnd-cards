@@ -1,4 +1,6 @@
 Path: ''
+Output:
+  Folder: output-files
 Files:
   - Styles/Scroll Deck Style.yaml
   - Databases/DND5e Equipment.yaml

@@ -12,7 +12,7 @@ class Style():
         self.name = name
         self.info = library.get_style(name)
         self.style_folder = self.info['Style Folder']
-        self.output_folder = self.info['Output Folder']
+        self.output_folder = library.info.get('Output', {}).get('Folder', 'output')
         self.font_path: str = self.info['Fonts']['Folder']
         self.full_font_path: str = os.path.join(os.getcwd(), self.info['Fonts']['Folder'])
         self.page = self.info['Page']
