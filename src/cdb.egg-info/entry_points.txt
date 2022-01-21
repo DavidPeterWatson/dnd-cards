@@ -1,3 +1,0 @@
-[console_scripts]
-cdb = cdb.cdb:cli
-

@@ -1,4 +1,4 @@
-from cdb.card import Card
+from cdp.card import Card
 import traceback
 
 def get_class_name():

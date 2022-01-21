@@ -1,6 +1,6 @@
 import traceback
 from card_types.item import Item
-from cdb.position import Position
+from cdp.position import Position
 
 def get_class_name():
     return 'Armor'

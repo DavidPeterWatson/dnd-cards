@@ -1,7 +1,7 @@
-from cdb.card import Card
+from cdp.card import Card
 import traceback
 from reportlab.lib.units import mm
-from cdb.position import Position
+from cdp.position import Position
 
 def get_class_name():
     return 'Creature'

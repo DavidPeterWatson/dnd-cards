@@ -6,3 +6,6 @@ src/output/
 src/output files/
 build/
 output files/
+build/*
+src/cdb.egg-info/
+src/cdp.egg-info/

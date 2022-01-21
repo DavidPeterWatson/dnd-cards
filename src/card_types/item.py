@@ -1,6 +1,6 @@
 import traceback
-from cdb.card import Card
-from cdb.position import Position
+from cdp.card import Card
+from cdp.position import Position
 
 def get_class_name():
     return 'Item'

@@ -1,4 +1,0 @@
-Click
-reportlab
-PyYAML
-deepmerge

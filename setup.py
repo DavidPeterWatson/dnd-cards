@@ -1,21 +1,20 @@
 import os
 import setuptools
-from src.cdb.version import __version__
+from src.cdp.version import __version__
 
 
 with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='cdb',
+    name='cdp',
     version=__version__,
     author='David Watson',
     author_email='david.watson@tyme.com',
-    description='Card Deck Builder',
+    description='Card Deck Printer',
     long_description='Print a Deck of Cards',
     long_description_content_type='text/markdown',
     url='none',
-    # py_modules=['box', 'card_back', 'card_box', 'card_types', 'card_type_provider', 'card', 'cdb', 'database', 'deck_builder', 'deck_renderer', 'deck', 'exceptions', 'fitting', 'font_style', 'image', 'library_loader', 'library', 'padding', 'paragraph', 'point', 'position', 'style', 'types', 'version'],
     install_requires=[
         'Click',
         'reportlab',
@@ -32,7 +31,7 @@ setuptools.setup(
     python_requires='>=3.7',
     entry_points={
         "console_scripts": [
-            "cdb = cdb.cdb:cli"
+            "cdp = cdp.cdp:cli"
         ]
     }
 )

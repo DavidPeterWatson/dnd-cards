@@ -5,7 +5,7 @@ Decks:
     Back:
       Image: Backgrounds/Back1.png
     Cover Card: Nyx Daergel
-    Minimum Cards: 50
+    Minimum Cards: 40
     Collections:
       - Nyx Daergel Actions
 
@@ -17,7 +17,7 @@ Decks:
     Front:
       Image: Items/Leather Pouch.png
     Style: Scroll Deck Style
-    Minimum Cards: 50
+    Minimum Cards: 40
     Collections:
       - 20gp of Coins
 
@@ -29,7 +29,7 @@ Decks:
     Front:
       Image: Items/Backpack.png
     Style: Scroll Deck Style
-    Minimum Cards: 50
+    Minimum Cards: 40
 
 Collections:
   Nyx Daergel Full:
