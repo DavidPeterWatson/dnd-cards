@@ -8,5 +8,6 @@ class Padding():
         self.left = left
         self.right = right
 
+
 def padding_from_dict(padding):
     return Padding(padding.get('Top', 0) * mm, padding.get('Bottom', 0) * mm, padding.get('Left', 0) * mm, padding.get('Right', 0) * mm)

@@ -1,7 +1,5 @@
 import traceback
 import os
-import yaml
-from decimal import Decimal
 from cdb.version import __version__
 from reportlab.lib import utils
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
@@ -10,17 +8,14 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-import importlib
-import logging
+from reportlab.lib.colors import black
 
 from cdb.position import Position
 from cdb.box import Box
 from cdb.font_style import FontStyle
 from cdb.alignment import TOP, BOTTOM, MIDDLE, LEFT, CENTER, RIGHT
 from cdb.style import Style
-from cdb.fitting import fit_image
-from cdb.paragraph import draw_paragraph
-from cdb.draw import draw_image, draw_rectangle
+from cdb.draw import draw_image, draw_rectangle, draw_paragraph
 
 
 class Card:
@@ -70,13 +65,6 @@ class Card:
 
     def set_categories(self):
         self.info['Category'] = self.info.get('Category', self.info.get('Type', ''))
-
-
-    def draw_background(self, position: Position):
-        try:
-            draw_image(self.style.background_filepath, position, self.style.card_box)
-        except Exception:
-            traceback.print_exc()
 
 
     def draw_back(self, position: Position):
@@ -186,7 +174,6 @@ class Card:
                 return
             value = str(value)
             image = self.style.info['Image']
-            image_top =  image['Top'] * mm
             specs = self.style.info['Specifications']
             spec_label_font =  specs['Label Font']
             spec_label_font_path = os.path.join(self.style.full_font_path, spec_label_font)
@@ -251,15 +238,22 @@ class Card:
 
     def draw_border(self, position: Position):
         try:
-            # draw_image(self.style.border_filepath, position, self.style.card_box)
-            draw_rectangle(position, Box(0,0,self.width, self.height), 4*mm)
+            border_width =  self.style.border_width
+            half_border_width = border_width / 2.0
+            position.canvas.setLineWidth(border_width)
+            position.canvas.setStrokeColor(black)
+            draw_rectangle(position, Box(half_border_width, half_border_width, self.width - border_width, self.height - border_width), half_border_width, stroke=1, fill=0)
         except Exception:
             traceback.print_exc()
 
 
-    # def draw_rectangle(self, position: Position, box: Box, corner_radius, stroke=1, fill=1):
-    #     position.canvas, position.x_offset + box.x_offset, position.y_offset
-    #     position.canvas.roundRect(position.x_offset + box.x_offset, position.y_offset + box.y_offset, box.width, box.height, corner_radius, stroke=stroke, fill=fill)
+    def draw_background(self, position: Position):
+        try:
+            border_width =  self.style.border_width
+            background_box = Box(border_width, border_width, self.width - border_width * 2, self.height - border_width * 2)
+            draw_image(self.style.background_filepath, position, background_box)
+        except Exception:
+            traceback.print_exc()
 
 
     def draw_header(self, position: Position):

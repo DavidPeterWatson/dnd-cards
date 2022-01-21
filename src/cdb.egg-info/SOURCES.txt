@@ -36,7 +36,6 @@ src/cdb/font_style.py
 src/cdb/library.py
 src/cdb/library_loader.py
 src/cdb/padding.py
-src/cdb/paragraph.py
 src/cdb/point.py
 src/cdb/position.py
 src/cdb/style.py

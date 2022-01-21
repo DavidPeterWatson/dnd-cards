@@ -9,14 +9,13 @@ from reportlab.platypus import Paragraph
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-from cdb.paragraph import draw_paragraph
 from cdb.font_style import FontStyle
 from cdb.alignment import TOP, BOTTOM, MIDDLE, LEFT, CENTER, RIGHT
 from cdb.deck import Deck
 from cdb.box import Box
 from cdb.point import Point
 from cdb.position import Position
-from cdb.draw import draw_image
+from cdb.draw import draw_image, draw_paragraph
 
 class CardBox:
     def __init__(self, deck: Deck):
