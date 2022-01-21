@@ -2,10 +2,11 @@ Decks:
   Damaia:
     Style: Scroll Deck Style
     Collate: True
+    Minimum Cards: 40
     Cards:
       - Damaia Creature
     Collections:
-      - Damaia Full
+      - Damaia Actions
 
   Damaia Belt Pouch:
     Label: |
@@ -15,7 +16,7 @@ Decks:
     Front:
       Image: Items/Leather Pouch.png
     Style: Scroll Deck Style
-    Minimum Cards: 50
+    Minimum Cards: 40
     Collections:
       - 20gp of Coins
 
@@ -27,7 +28,7 @@ Decks:
     Front:
       Image: Items/Backpack.png
     Style: Scroll Deck Style
-    Minimum Cards: 50
+    Minimum Cards: 40
 
 Collections:
   Damaia Full:
@@ -46,14 +47,14 @@ Collections:
   Damaia Actions:
     Weapons for:
       - Damaia
-    # Spells for:
-    #   - Damaia
+    Spells for:
+      - Damaia
     Actions for:
       - Damaia
-    # Capabilities for:
-    #   - Damaia
-    # Skills for:
-    #   - Damaia
+    Capabilities for:
+      - Damaia
+    Skills for:
+      - Damaia
 
 Cards:
   Damaia Creature:
