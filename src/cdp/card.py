@@ -1,13 +1,7 @@
 import traceback
 import os
 from cdp.version import __version__
-from reportlab.lib import utils
-from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
-from reportlab.platypus import Paragraph
-from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.colors import black
 
 from cdp.position import Position

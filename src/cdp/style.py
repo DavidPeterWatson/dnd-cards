@@ -112,5 +112,3 @@ class Style():
         self.description_image_box = Box(border_width, border_width, card_width - border_width * 2, description_height)
         self.description_text_box = add_padding(self.description_image_box, self.description_padding)
         self.description_font_style = FontStyle(description_font, description_font_path, description_font_size, description_line_spacing, LEFT, TOP)
-
-

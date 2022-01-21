@@ -1,16 +1,9 @@
 import os
 import traceback
 from reportlab.pdfgen.canvas import Canvas
-from reportlab.lib.units import mm
 from reportlab.lib.pagesizes import A4, landscape
-from reportlab.lib.colors import gray, black, lightsteelblue
-from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.platypus import Paragraph
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.lib.colors import black, lightsteelblue
 
-from cdp.font_style import FontStyle
-from cdp.alignment import TOP, BOTTOM, MIDDLE, LEFT, CENTER, RIGHT
 from cdp.deck import Deck
 from cdp.box import Box
 from cdp.point import Point
