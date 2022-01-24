@@ -51,7 +51,7 @@ Collections:
       - 1.1.2.2 Goblin Ambush Developments - Goblin Knowledge
       - 1.1.2.2 Goblin Knowledge
       - 1.1.2.3 Goblin Ambush Developments - Goblin Guide
-      - 1.1.2.4 Goblin Ambush Developments - To Phandolin
+      - 1.1.2.4 Goblin Ambush Developments - To Phandalin
       - 1.1.3 Goblin Trail
       - 1.1.4 Goblin Trail Snare
       - 1.1.5 Goblin Trail Pit
@@ -94,6 +94,7 @@ Collections:
       - LMoP Background
       - Goblin Den Developments
       - Sildar Hallwinter
+      - Sildar Hallwinter Quest
       - Twin Pools Cave
       - Klarg's Cave
       - Klarg
@@ -139,12 +140,13 @@ Cards:
       "In the city of Neverwinter, a dwarf named Gundren Rockseeker asked you to bring a wagonload of provisions to the rough-and-tumble settlement of Phandalin, a couple of days' travel southeast of the city. Gundren was clearly excited and more than a little secretive about his reasons for the trip, saying only that he and his brothers had found “something big,” and that he'd pay you ten gold pieces each for escorting his supplies safely to Barthen's Provisions, a trading post in Phandalin. He then set out ahead of you on horse, along with a warrior escort named Sildar Hallwinter, claiming he needed to arrive early to “take care of business.”
       You've spent the last few days following the High Road south from Neverwinter, and you've just recently veered east along the Triboar Trail. You've encountered no trouble so far, but this territory can be dangerous. Bandits and outlaws have been known to lurk along the trail."
 
-  1.1 Along the Route:
+  1.1 Road to Phandalin:
     Type: Narrative
     Campaign: Lost Mine of Phandelver
     Part: 1
     Chapter: 0
     Card: 1
+    Back Image: Maps/Road to Phandalin.jpg
     Description: |
       Before continuing with the adventure, take a few minutes to do the following:
       - Encourage the players to introduce their characters to each other if they haven't done so already.
@@ -232,7 +234,7 @@ Cards:
       Persuasion:
       A goblin can also be persuaded to lead the party to the Cragmaw hideout while avoiding traps along the way.
 
-  1.1.2.4 Goblin Ambush Developments - To Phandolin:
+  1.1.2.4 Goblin Ambush Developments - To Phandalin:
     Type: Narrative
     Description: |
       The characters might not find the goblin trail, or they could decide to continue to Phandalin. In that case, skip ahead to part 2, “Phandalin.” Elmar Barthen (the owner of Barthen's Provisions) seeks out the characters and informs them that Gundren Rockseeker never arrived. He recounts the goblin troubles and suggests that the characters return to the ambush site to investigate further (after they rest). Barthen also tells the party that Linene Graywind of the Lionshield Coster (see page 16) can provide more information on the goblin attacks.
@@ -262,7 +264,6 @@ Cards:
     Type: Narrative
     Description: |
       Defeating the goblin ambushers and finding the Cragmaw hideout completes a story milestone. When the party arrives at the hideout, award each character 75 XP. Make sure the players record this gain on their character sheets.
-
 
   Cragmaw Hideout:
     Type: Narrative
@@ -470,6 +471,15 @@ Cards:
     Encounter: Goblin Den
     Description: |
       The three Rockseeker brothers (Gundren, Tharden, and Nundro) recently located an entrance to the long-lost Wave Echo Cave, site of the mines of the Phandelver's Pact. Klarg had orders to waylay Gundren. Sildar heard from the goblins that the Black Spider sent word that the dwarf was to be brought to him, but doesn't know who the Black Spider is. Gundren had a map showing the secret location of Wave Echo Cave, but the goblins took it. Sildar believes that Klarg sent the map and the dwarf to the chief of the Cragmaws at a place called Cragmaw Castle. Sildar doesn't know where that might be, but he suggests someone in Phandalin might know. Sildar's contact in Phandalin is a human wizard named Iarno Albrek. The wizard traveled to the town two months ago to establish order there. After the Lords' Alliance received no word from Iarno, Sildar decided to investigate. Sildar tells the characters that he intends to continue on to Phandalin, since it's the nearest settlement. He offers to pay the party 50 gp to provide escort. Although he has no money on him, Sildar can secure a loan to pay the characters within a day after arriving in Phandalin. First, he hopes they'll put a stop to the goblin raids by clearing out the caves.
+
+  Sildar Hallwinter Quest:
+    Type: Quest
+    Header: Escort Sildar
+    Reward: 50gp
+    Description: |
+      Objective: Escort Sildar Hallwinter to Phandalin.
+      Sildar will secure a loan to pay the reward within a day after arriving in Phandalin.
+    Image: Creatures/Sildar Hallwinter.png
 
   LMoP Background:
     Type: Narrative

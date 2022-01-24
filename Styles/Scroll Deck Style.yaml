@@ -67,6 +67,9 @@ Styles:
         Cost:
           Row: 1
           Alignment: Right
+        Reward:
+          Row: 1
+          Alignment: Right
         Weight:
           Row: 2
           Alignment: Right

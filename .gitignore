@@ -4,6 +4,7 @@ __pycache__/
 .DS_Store
 src/output/
 src/output files/
+src/output-files/
 build/
 output files/
 build/*

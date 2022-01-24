@@ -17,6 +17,7 @@ import card_types.skill
 import card_types.spell_slot
 import card_types.spell
 import card_types.weapon
+import card_types.quest
 
 logging.getLogger().setLevel(logging.INFO)
 
@@ -41,6 +42,8 @@ class CardTypeProvider:
         self.card_types['SpellSlot'] = card_types.spell_slot.SpellSlot
         self.card_types['Spell'] = card_types.spell.Spell
         self.card_types['Weapon'] = card_types.weapon.Weapon
+        self.card_types['Quest'] = card_types.quest.Quest
+
 
     def get_card_type(self, card_type: str):
         return self.card_types.get(card_type, card_types.basic.Basic)
@@ -48,12 +51,6 @@ class CardTypeProvider:
 
     def load_card_types(self):
         card_types = {}
-        # for filename in filter(lambda x: x.endswith('.py') and x != '__init__.py', os.listdir(CARD_TYPES_FOLDER)):
-        #     try:
-        #         card_type, card_class = self.load_card_type('{}.{}'.format(CARD_TYPES_FOLDER, filename[:-3]))
-        #         card_types[card_type] = card_class
-        #     except Exception as e:
-        #         logging.error(e, exc_info=True)
         return card_types
 
 

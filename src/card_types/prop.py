@@ -2,7 +2,7 @@ from cdp.card import Card
 import traceback
 from reportlab.lib.units import mm
 import os
-
+from cdp.draw import draw_image
 from cdp.position import Position
 
 def get_class_name():
@@ -24,6 +24,6 @@ class Prop(Card):
         try:
             back_background_image = self.info.get('Background', 'Backgrounds/Road Back.png')
             back_filepath = os.path.join(self.style.image_path, back_background_image)
-            self.draw_image(back_filepath, position, self.style.card_box)
+            draw_image(back_filepath, position, self.style.card_box)
         except Exception:
             traceback.print_exc()
