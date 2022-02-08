@@ -12,6 +12,27 @@ Cards:
     Links:
       - https://roll20.net/compendium/dnd5e/Backpack#h-Backpack
 
+  Carpenter's Tools:
+    Type: Item
+    Category: Tools
+    Cost: 8gp
+    Weight: 6lb
+    Rarity: Common
+    Description: Carpenter's tools consist of a saw, a hammer, nails, a hatchet, a square, a ruler, an adze, a plane, and a chisel.
+    Image: Items/Carpenter's Tools.png
+    Links:
+    - https://www.dnd5eapi.co/api/equipment/carpenters-tools
+
+  Mason's Tools:
+    Type: Item
+    Category: Tools
+    Cost: 10gp
+    Weight: 8lb
+    Rarity: Common
+    Description: Mason's tools consist of a trowel, a hammer, a chisel, brushes, and a square. Proficiency with this tool lets you add your proficiency bonus to any Mason's Tools (Strength) checks you make for your structures.
+    Image: Items/Mason's Tools.png
+    Links:
+    - https://www.dnd5eapi.co/api/equipment/masons-tools
 
   Belt Pouch:
     Based on: Leather Pouch
@@ -168,3 +189,14 @@ Cards:
     Rarity: Uncommon
     Description: Jade statuette of a frog with tiny golden orbs for eyes, small enough to fit in a pocket or pouch.
     Image: Items/Jade Frog Statuette.png
+
+  Travelers Clothes:
+    Type: Item
+    Category: Adventuring Gear
+    Cost: 2gp
+    Weight: 4lb
+    Rarity: Common
+    Description: ''
+    Image: Items/Clothes, traveler's.png
+    Links:
+    - https://www.dnd5eapi.co/api/equipment/clothes-travelers

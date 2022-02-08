@@ -7,6 +7,17 @@ Decks:
     Collections:
       - Lost Mine of Phandelver Part 2 Phandalin
 
+  Cellar Treasure:
+    Style: Scroll Deck Style
+    Collate: True
+    Back:
+      Image: Items/Satchel.png
+    Cards:
+      - Potion of healing
+      - Potion of invisibility
+      - 50 gp
+      - Travelers Clothes
+
   Trading Post:
     Style: Scroll Deck Style
     Collate: True
@@ -81,28 +92,42 @@ Collections:
     Cards:
       - Phandalin
       - Enter Phandalin
-      - Enter Phandalin w Sildar Hallwinter
-      - Encounters in Phandalin
-      - Nudge to Stonehill Inn
-      - Redbrand Ruffians
-      - Finding Cragmaw Castle
-      - Toblen Stonehill
-      - Elmar Barthen
-      - Daran Edermath
-      - Linene Graywind
-      - Halia Thornton
-      - Qelline Alderleaf
-      - Sister Garaele
-      - Harbin Wester
-      # - Sildar Hallwinter
-      - Roleplaying Phandalin NPCs
       - Town Description
+      - Encounters in Phandalin
+      - Roleplaying Phandalin NPCs
       - Stonehill Inn
+      - Toblen Stonehill
       - Barthen's Provisions
+      - Elmar Barthen
       - Edermath Orchard
+      - Daran Edermath
       - Lionshield Coster
+      - Linene Graywind
       - Phandalin Miner's Exchange
+      - Halia Thornton
       - Joining the Zhentarim
+      - Alderleaf Farm
+      - Qelline Alderleaf
+      - Shrine of Luck
+      - Sister Garaele
+      - Townmaster's Hall
+      - Harbin Wester
+      - Joining the Lords' Alliance
+      - The Sleeping Giant
+      - Redbrand Ruffians
+      - Sleeping Giant Confrontation
+      - Street Confrontation
+      - Redbrand Ruffians Developments
+      - What the Redbrands Know
+      - Redbrand Ruffians Experience Points
+      - Do the Players Need Direction?
+      - Tresendar Manor
+      - Redbrand Hideout
+      - Cellar
+      - Cellar Developments
+      - Cellar Treasure
+      - Barracks
+      - Barracks Treasure
       
 Cards:
   Phandalin:
@@ -120,125 +145,49 @@ Cards:
 
   Enter Phandalin:
     Type: Narrative
-    Number: 2.1
+    Number: 2.1.1
     Description: |
       If Sildar Hallwinter is with the party, add:
         <i>Sildar seems much more at ease.
         "My friends,” he says, "let us secure lodgings. I'm told the local inn is very quaint.”</i>
-
-      Sildar's plan is to get some rest at the Stonehill Inn, then search Phandalin for signs of the missing wizard, larno Albrek. When his investigation hits a dead end, he sets up a meeting with Townmaster Harbin Wester (see <b>Townmaster's Hall 2.10.0</b>). up a meeting with Townmaster Harbin Wester (see the “Townmaster's Hall” section).
-      During this part of the adventure, the characters can visit the various locations in Phandalin and talk to the NPCs there. (See the “Town Description” section for details.) The town is small enough that it takes only a few minutes to stroll from one end to the other. However, the characters arrive late in the day and can't get to more than one or two locations before it's time to seek lodgings for the night.
-
-  Enter Phandalin w Sildar Hallwinter:
-    Type: Narrative
-    Number: 2.1.1
-    Description: |
+      todo: check sentence
+      Sildar's plan is to get some rest at the Stonehill Inn, then search Phandalin for signs of the missing wizard, Iarno Albrek. When his investigation hits a dead end, he sets up a meeting with Townmaster Harbin Wester (see <b>Townmaster's Hall 2.10.0</b>).
+    # During this part of the adventure, the characters can visit the various locations in Phandalin and talk to the NPCs there. (See the “Town Description” section for details.) The town is small enough that it takes only a few minutes to stroll from one end to the other. However, the characters arrive late in the day and can't get to more than one or two locations before it's time to seek lodgings for the night.
+    Details: |
       During this part of the adventure, the characters can visit the various locations in Phandalin and talk to the NPCs there. (See the “Town Description” section for details.) The town is small enough that it takes only a few minutes to stroll from one end to the other. However, the characters arrive late in the day and can't get to more than one or two locations before it's time to seek lodgings for the night.
       Some locales the characters should visit include the following:
-      - <u>Barthen's Provisions</u>. If the characters have the wagon load of supplies from the “Meet Me in Phandalin” adventure hook, they are meant to deliver it to this shop.
-      - Lionshield Coster. If the characters retrieved the stolen goods from the Cragmaw hideout, they might want to return them to the rightful owner.
-      - Stonehill Inn. If the characters have Sildar Hallwinter with them, the knight suggests heading for this inn to find lodgings. If the characters are otherwise looking for a place to eat and sleep, they discover that the Stonehill appears to be the best available option.
+      - <u>Barthen's Provisions</u>: If the characters have the wagon load of supplies from the “Meet Me in Phandalin” adventure hook, they are meant to deliver it to this shop.
+      - <u>Lionshield Coster</u>: If the characters retrieved the stolen goods from the Cragmaw hideout, they might want to return them to the rightful owner.
+      - <u>Stonehill Inn</u>: If the characters have Sildar Hallwinter with them, the knight suggests heading for this inn to find lodgings. If the characters are otherwise looking for a place to eat and sleep, they discover that the Stonehill appears to be the best available option.
 
   Encounters in Phandalin:
     Type: Narrative
-    Number: 2.2
+    Number: 2.1.2
     Description: |
-      Encounters in Phandalin
       When the characters explore Phandalin, you don't need to keep track of how much time is spent at each location. Instead, imagine that you're directing an old-style western movie. Your goal is to present several scenes in which the adventurers walk into a store or saloon and meet the people there. By interacting with these NPCs, the adventurers learn what the NPCs need or what information they want to share, then can move on to the next location. These scenes are a series of roleplaying encounters that take place over the course of a couple of days of game time.
-      To begin, ask the players where they want to go and what they want to do in town. For example, you could tell them, “There's an inn, a town hall, a shrine, general stores and trading posts, and a few other homes and businesses. Where do you want to go?” When the players pick a spot, refer to the description in the following section, introduce the NPCs there, and let the interaction begin.
+      todo: check sentence
+      To begin, ask the players where they want to go and what they want to do in town.
+      <i>There's an inn, a town hall, a shrine, general stores and trading posts, and a few other homes and businesses. Where do you want to go?</i> When the players pick a spot, refer to the description in the card, introduce the NPCs there, and let the interaction begin. If the players aren't sure what their characters should do, encourage them to begin at the Stonehill Inn. By visiting the inn, the characters learn what other places they should visit.
+    Details: |
+      <u>Redbrand Ruffians</u>: Sooner or later, the adventurers run into the thugs who run Phandalin. All you need to do is choose when the ruffians appear. After the characters have had a chance to visit several locations in town and talk to the townsfolk, they might decide to go looking for the Redbrands. When they do, run the “Redbrand Ruffians" encounter. Alternatively, if the characters are reluctant to seek out the ruffians, the Redbrands can come looking for them at a time of your choosing.
+      <u>Finding Cragmaw Castle</u>: The characters might want to seek out Cragmaw Castle to find and rescue Gundren Rockseeker. Most of the townsfolk are preoccupied with the Redbrands and no one in town knows the location of Cragmaw Castle. Qelline Alderleaf, Sildar Hallwinter, and Halia Thornton can offer suggestions on how the party might find someone who knows the location.
 
-  Nudge to Stonehill Inn:
+  Town Description:
     Type: Narrative
-    Number: 2.2.1
+    Number: 2.0.3
     Description: |
-      The Stonehill Inn, If the players aren't sure what their characters should do, encourage them to begin at the Stonehill Inn. The NPCs there are “pointers” who can direct the characters toward the various adventure opportunities and important rumors that can be found in other parts of the town. By visiting the inn, the characters learn what other places they should visit.
-
-  Redbrand Ruffians:
-    Type: Narrative
-    Number: 2.2.2
-    Description: |
-      Redbrand Ruffians sooner or later, the adventurers run into the thugs who run Phandalin. All you need to do is choose when the ruffians appear. After the characters have had a chance to visit several locations in town and talk to the townsfolk, they might decide to go looking for the Redbrands. When they do, run the “Redbrand Ruffians" encounter. Alternatively, if the characters are reluctant to seek out the ruffians, the Redbrands can come looking for them at a time of your choosing.
-
-  Finding Cragmaw Castle:
-    Type: Narrative
-    Number: 2.2.3
-    Description: |
-      Finding Cragmaw Castle. The characters might want to seek out Cragmaw Castle to find and rescue Gundren Rockseeker. Most of the townsfolk are preoccupied with the Redbrands. and no one in town knows the location of Cragmaw Castle. Qelline Alderleaf, Sildar Hallwinter, and Halia Thornton can offer suggestions on how the party might find someone who knows the location.
-
-  Toblen Stonehill:
-    Based on: HumanMaleCommoner
-    Type: NPC
-    Description: Innkeeper
-    # Image: Creatures/Innkeeper.png
-
-  Elmar Barthen:
-    Based on: HumanFemaleCommoner
-    Type: NPC
-    Description: Owns a trading post; owes money to the party if you are using the “Meet Me in Phandalin” adventure hook
-    Image: Characters/Elmar Barthen.png
-    Links:
-      - https://sword-coast-adventurers.fandom.com/wiki/Elmar_Barthen
-
-  Daran Edermath:
-    Type: NPC
-    Based on: HumanMaleCommoner
-    Description:  Member of the Order of the Gauntlet with a quest for the party
-
-  Linene Graywind:
-    Type: NPC
-    Based on: HumanMaleCommoner
-    Description: Runs a trading post and offers a reward for retrieving her supplies
-
-  Halia Thornton:
-    Type: NPC
-    Based on: HumanFemaleCommoner
-    Description: Member of the Zhentarim with a quest for the party
-
-  Qelline Alderleaf:
-    Type: NPC
-    Based on: Commoner
-    Race: Halfling
-    Alignment: Lawful Good
-    Description: Helpful halfling farmer whose son, Carp, knows a secret way into the Redbrands' hideout
-
-  Sister Garaele:
-    Type: NPC
-    Based on: Commoner
-    Race: Elf
-    Class: Cleric
-    Alignment: Lawful Good
-    Description: Elf cleric of Tymora and Harper agent with a quest for the party
-
-  Harbin Wester:
-    Type: NPC
-    Based on: HumanMaleCommoner
-    Description: Townmaster of Phandalin with a quest for the party
-
-  Sildar Hallwinter:
-    Type: NPC
-    Based on: HumanMaleCommoner
-    Description: Member of the Lords' Alliance with two quests for the party
+      Phandalin is small, so the characters can visit multiple locations and NPCs throughout a given day. If the players choose to have their characters split up, they can cover more ground, but you'll have to take turns running each interaction for each player. Splitting the party also makes the “Redbrand Ruffians” encounter potentially more dangerous.
 
   Roleplaying Phandalin NPCs:
     Type: Narrative
-    Number: 2.0.3
+    Number: 2.1.3
     Description: |
       If you're not sure how to run an NPC, a good way to start is to have the character introduce himself or herself, welcome the adventurers to Phandalin, and ask who they are and what they want. You don't need to be an actor or stand-up comedian to get good drama or humor out of your NPCs, but if you want to ham it up, here's some advice:
       • Relax. Don't worry about impressing your players with your thespian skills (or lack thereof).
       • Get inside the NPCs' minds. Imagine how they might react to the characters, and strive to be realistic.
       • Mug it up. Scowl, smile, snarl, flutter your eyelashes, pout, cross your eyes, rub your hands together—what- ever it takes to make your NPCs come to life.
       • Try different voices. Borrow distinctive speech patterns from real life, movies, and television. Adjust the volume as appropriate. An NPC can be loud, soft-spoken, or something in between.
-      • Keep the game moving. Let the players steer the inter- actions with the NPCs.
-      Thecharactershavenoreasontofightordinary wr.s::'.k. Hence, no game statistics are provided for them. If statisticsbecomenecessary,usethecommonersta:bi: :k to represent an adult NPC of any race.
-
-  Town Description:
-    Type: Narrative
-    Number: 2.0.3
-    Description: |
-      Town Description
-      Phandalin is small, so the characters can visit multiple locations and NPCs throughout a given day. If the players choose to have their characters split up, they can cover more ground, but you'll have to take turns running
-      each interaction for each player. Splitting the party also makes the “Redbrand Ruffians” encounter potentially more dangerous.
-      The following sections detail specific locations in town.
+      • Keep the game moving. Let the players steer the inter-actions with the NPCs.
 
   Stonehill Inn:
     Type: Narrative
@@ -263,6 +212,11 @@ Cards:
 
       These leads should point the characters toward opportunities for adventure in and around Phandalin. In addition, any NPC at the inn can tell the characters that the Redbrands frequent the Sleeping Giant tap house at the east end of town—and that the ruffians are trouble.
 
+  Toblen Stonehill:
+    Based on: HumanMaleCommoner
+    Type: NPC
+    Description: Innkeeper
+
   Barthen's Provisions:
     Type: Narrative
     Number: 2.2.4
@@ -278,6 +232,13 @@ Cards:
       - https://forgottenrealms.fandom.com/wiki/Barthen%27s_Provisions
       - https://rysarian.fandom.com/wiki/Phandalin:_Barthen%27s_Provisions
 
+  Elmar Barthen:
+    Based on: HumanFemaleCommoner
+    Type: NPC
+    Description: Owns a trading post; owes money to the party if you are using the “Meet Me in Phandalin” adventure hook
+    Image: Characters/Elmar Barthen.png
+    Links:
+      - https://sword-coast-adventurers.fandom.com/wiki/Elmar_Barthen
 
   Edermath Orchard:
     Type: Narrative
@@ -290,6 +251,11 @@ Cards:
       Joining the Order of the Gauntlet
       If the party deals with the Redbrands and investigates Old Owl Well, Daran Edermath privately approaches certain members of the group to urge them to join the Order of the Gauntlet. He speaks with those who exemplify the virtues of the order, such as honor and vigilance. If a character agrees, Daran awards the person the title of Chevall.
 
+  Daran Edermath:
+    Type: NPC
+    Based on: HumanMaleCommoner
+    Description:  Member of the Order of the Gauntlet with a quest for the party
+
   Lionshield Coster:
     Type: Narrative
     Number: 2.4.0
@@ -299,6 +265,11 @@ Cards:
       The master of the Phandalin post is a sharp-tongued human woman of thirty-five named Linene Graywind. She knows that bandits have raided Lionshield caravans, but she doesn't know who is responsible.
       In a back room, Linene keeps a supply of armor and weapons, all of which are for sale to interested buyers. (For prices, see “Adventuring Gear” in the rulebook.) Linene has a few scruples, however, and won't sell weapons to anyone she thinks might be a threat to the town. Among those with whom she refuses to do business are the Redbrands. She warns the characters that the ruffians are trouble and advises them to avoid the Sleeping Giant tap house.
       Recovered Goods. If the characters return the stolen goods found in area 8 of the Cragmaw hideout (or if they left the goods but reveal where they can be found), Linene gives them a reward of 50 gp and promises to help the adventurers any way she can.
+
+  Linene Graywind:
+    Type: NPC
+    Based on: HumanMaleCommoner
+    Description: Runs a trading post and offers a reward for retrieving her supplies
 
   Phandalin Miner's Exchange:
     Type: Narrative
@@ -310,6 +281,11 @@ Cards:
       Halia doesn't know the location of Cragmaw Castle, but she has heard that the Redbrands have a goblin minion serving them. She suggests the goblin might know the location. She leverages this information to try to persuade the characters into helping her deal with the Redbrands.
       Quest: Halia'sJob Offer. If approached by characters she believes she can control, Halia explains that the Redbrands are a problem. She tells how the ruffians
       loiter around the Sleeping Giant tap house and have a base under Tresendar Manor, on the east edge of town. She then offers the characters 100 gp to eliminate the Redbrand leader, whom the outlaws call Glasstaff, and bring her any correspondence found in the leader's quarters. Halia doesn't reveal that she wants to take over the Redbrand operation herself. A DC 1 5 Wisdom (Insight) check indicates she has ulterior motives for wanting the Redbrand leader dead.
+
+  Halia Thornton:
+    Type: NPC
+    Based on: HumanFemaleCommoner
+    Description: Member of the Zhentarim with a quest for the party
 
   Joining the Zhentarim:
     Type: Narrative
@@ -327,6 +303,13 @@ Cards:
       a pair of Redbrands. They didn't see him, but it was close. Carp thinks that the bandits have a secret lair under the old manor house. He can take the characters to the tunnel or provide them with directions to the location. The tunnel leads to area 8 in the Redbrand hideout.
       Quest: Reidoth the Druid. Qelline is a longtime friend of a druid named Reidoth. If she figures out that the characters are looking for specific sites in the area, such as Cragmaw Castle or Wave Echo Cave, she suggests that they visit Reidoth and ask for his help, “since there's not an inch of the land he doesn't know.” She tells the characters that Reidoth recently set out for the ruins of a town called Thundertree, just west of the Neverwinter Wood. The ruins are about fifty miles northwest of Phandalin, and she provides directions so the characters can easily find the place. If the party pursues this quest, see “Ruins of Thundertree” (page 30).
 
+  Qelline Alderleaf:
+    Type: NPC
+    Based on: Commoner
+    Race: Halfling
+    Alignment: Lawful Good
+    Description: Helpful halfling farmer whose son, Carp, knows a secret way into the Redbrands' hideout
+
   Shrine of Luck:
     Type: Narrative
     Number: 2.8.0
@@ -342,11 +325,13 @@ Cards:
       If the party helps Garaele learn the fate of Bowgentle's spellbook, the elf privately approaches certain members of the group to urge them to join the Harpers. She speaks with those who exemplify the virtues of the network
       and possess a desire to enact positive change through information and secrecy. If a character agrees, Sister Garaele awards the individual the title of Watcher.
 
-  The Sleeping Giant:
-    Type: Narrative
-    Number: 2.9.0
-    Description: |
-      This rundown tap house is a dirty, dangerous watering hole at the end of Phandalin's main street. It is frequented by Redbrand thugs and operated by a surly female dwarf named Grista. If the characters choose to visit the place, run the “Redbrand Ruffians” encounter.
+  Sister Garaele:
+    Type: NPC
+    Based on: Commoner
+    Race: Elf
+    Class: Cleric
+    Alignment: Lawful Good
+    Description: Elf cleric of Tymora and Harper agent with a quest for the party
 
   Townmaster's Hall:
     Type: Narrative
@@ -359,19 +344,24 @@ Cards:
       Quest: Ore Trouble. Harbin is looking for someone to head east on the Triboar Trail, where travelers have reported trouble with a band of ores near Wyvern Tor. He offers 100 gp to any group that can take care of the problem. If the party pursues this quest, see “Wyvern Tor” (page 35).
       Quest: Finding Cragmaw Castle. After resting at the Stonehill Inn, Sildar Hallwinter establishes himself at the townmaster's hall. As an agent of the Lords' Alliance, his goal is to bring law and order to Phandalin. As such, he wants to find the lost mine of Wave Echo Cave and help the Rockseeker brothers put it back into production, believing that bringing prosperity to the region will help civilize the town.
       Sildar also encourages the characters to keep up the pressure on the Cragmaw goblins. He offers the party a 500 gp reward if they can locate Cragmaw Castle and  defeat or drive off the tribe's chieftain. Sildar suggests the party might find the castle by searching the lands around the Triboar Trail for more raiding parties (see “Wilderness Encounters” in the “Triboar Trail” section of part 3).
-      Quest: Finding Iarno. After questioning several locals, Sildar learns that larno Albrek, a fellow member of the Lords' Alliance, disappeared while exploring the area around Tresendar Manor about two months ago, shortly after arriving in Phandalin. Sildar asks the characters to investigate the manor and the surrounding area to find and bring back Iarno—or what's left of him, if something killed him. Sildar describes Iarno as “a short, dark- bearded human wizard in his thirties.”
+      Quest: Finding Iarno. After questioning several locals, Sildar learns that Iarno Albrek, a fellow member of the Lords' Alliance, disappeared while exploring the area around Tresendar Manor about two months ago, shortly after arriving in Phandalin. Sildar asks the characters to investigate the manor and the surrounding area to find and bring back Iarno—or what's left of him, if something killed him. Sildar describes Iarno as “a short, dark- bearded human wizard in his thirties.”
       Unknown to Sildar, Iarno created the Redbrands, installed himself as their leader, and took the alias Glasstaff to conceal his identity. (The Redbrands call him that because he carries a glass staff.) Once he learns the truth about Iarno, Sildar expresses a desire to have the wizard captured and transported to Neverwinter to face the judgment of a higher authority. Regardless of Iarno's fate, Sildar rewards the party with 200 gp for eliminating the Rcdbrand threat.
+
+  Harbin Wester:
+    Type: NPC
+    Based on: HumanMaleCommoner
+    Description: Townmaster of Phandalin with a quest for the party
 
   Joining the Lords' Alliance:
     Type: Narrative
     Description: |
       If the party eliminates the goblin threat from Cragmaw Castle or uncovers Iarno's treachery, Sildar Hallwinter privately approaches certain members of the group to urge them to join the Lords' Alliance. He speaks with those who exemplify a desire for the security of civilization through action. If a character agrees, Sildar Hallwinter awards the individual the title of Cloak.
 
-  Tresendar Manor:
+  The Sleeping Giant:
     Type: Narrative
-    Number: 2.11.0
+    Number: 2.9.0
     Description: |
-      More a castle than a house, Tresendar Manor stands at the east edge of town on a low hillside amid woods and thickets. The ancient manor has long been abandoned, but its cellars have been converted into a Redbrand stronghold. If the characters investigate this place, they find the entrance to the Redbrand hideout.
+      This rundown tap house is a dirty, dangerous watering hole at the end of Phandalin's main street. It is frequented by Redbrand thugs and operated by a surly female dwarf named Grista. If the characters choose to visit the place, run the “Redbrand Ruffians” encounter.
 
   Redbrand Ruffians:
     Type: Narrative
@@ -381,23 +371,23 @@ Cards:
       The characters decide to investigate Tresendar Manor. Skip the encounter and go straight to “Redbrand Hideout.”
       If the characters show no interest in the Redbrands, a gang of the ruffians seeks them out and picks a fight in street. Run this encounter as the characters are leaving one of the locations in the town.
 
-  Confrontation:
+  Sleeping Giant Confrontation:
     Type: Narrative
     Description: |
       If the characters confront the Redbrands at the ^ Sleeping Giant, read:
         The Sleeping Giant is a ramshackle taproom at the east end of town. Four human ruffians linger on the covered porch, perched on empty ale barrels or leaning against the wall. They all wear grimy scarlet cloaks, their sullen stares fixed on you as you approach.
         One of the thugs spits on the ground. “Well, well,” he snarls. "Here's a whole pack of little puppies. What do you want, puppies? Come here to bark at us?”
 
-  Confrontation:
+  Street Confrontation:
     Type: Narrative
     Description: |
       If the Redbrands confront the characters in the street, read:
-      As you head back into the street, you see four armed ruffians waiting for you. All of them are humans wearing grimy red cloaks, their hands on their weapons as they watch you.
-      One of the ruffians spits on the ground. “Time for you to move on, strangers. Give us your stuff, and be on your way.”
+      <i>As you head back into the street, you see four armed ruffians waiting for you. All of them are humans wearing grimy red cloaks, their hands on their weapons as they watch you.
+      One of the ruffians spits on the ground. “Time for you to move on, strangers. Give us your stuff, and be on your way.</i>
       Continue the insults and baiting as long as you like. The Redbrands attack in a round or two if the characters don't. Neither side is surprised, because it's obvious that a fight is brewing.
       The group consists of four Redbrand ruffians. If three of them are defeated, the last one flees toward Tresendar Manor.
 
-  Developments:
+  Redbrand Ruffians Developments:
     Type: Narrative
     Description: |
       Redbrands who are captured or charmed by the characters can impart useful information. (See the “What the Redbrands Know” sidebar on page 20.) Townmaster Harbin Wester won't want to keep Redbrand prisoners until he knows the whole gang has been defeated,
@@ -405,7 +395,17 @@ Cards:
       him into locking up any prisoners they capture for at least a few days.
       If the characters kill the ruffians, most members of the town are grateful. One exception is the townmaster, who fears Redbrand retaliation. Harbin doesn't punish the characters but warns them not to cause trouble.
 
-  Awarding Experience Points for Redbrands:
+  What the Redbrands Know:
+    Type: Narrative
+    Number: 2.12.0.1
+    Description: |
+      If the characters charm or successfully question any of the Redbrands, they can learn the location of their hideout under Tresendar Manor as well as the following useful information:
+      • TheleaderoftheRedbrandsisahumanwizardknownas Glasstaff, so named because his magic staff is made of glass. (Only Iarno Albrek and the Black Spider know Glasstaff's real name.) Glasstaff's chambers are in the western end of the stronghold (see areas H and 12).
+      • A mysterious figure called the Black Spider has hired the Redbrands to frighten off adventurers and intimidate the locals, for reasons unknown. The Black Spider has sent bugbears to reinforce the Redbrands and provide extra muscle (see area 9).
+      • Thelowerpartofthecomplexisguardedbyahideous“eye monster” (see area 8).
+      • TheRedbrandshaveahandfulofcaptivesinaholdingarea “near the old crypts,” which are guarded by skeletons (see areas 4 and 5).
+
+  Redbrand Ruffians Experience Points:
     Type: Narrative
     Description: |
       Divide 400 XP equally among the characters if the party defeats the ruffians.
@@ -415,6 +415,12 @@ Cards:
     Description: |
       After the “Redbrand Ruffians” encounter, the players should feel it's time to deal with the rest of the gang. If they aren't clear that investigating the Redbrand hideout should be their next move, have one of the NPCs they've already met in town make the suggestion directly and point them toward Tresendar Manor.
       If the players want to follow other leads in the area, it's okay to move on to part 3 of the adventure and let the ruffians wait. The next time the characters return to Phandalin, make it clear that the Redbrands are causing even more trouble, and that they need to be dealt with.
+
+  Tresendar Manor:
+    Type: Narrative
+    Number: 2.11.0
+    Description: |
+      More a castle than a house, Tresendar Manor stands at the east edge of town on a low hillside amid woods and thickets. The ancient manor has long been abandoned, but its cellars have been converted into a Redbrand stronghold. If the characters investigate this place, they find the entrance to the Redbrand hideout.
 
   Redbrand Hideout:
     Type: Narrative
@@ -427,21 +433,11 @@ Cards:
       General Features
       The hideout consists of well-built dungeon chambers with flagstone floors and walls of dressed stone blocks. The western end of the complex is lower than the eastern end, with stairs leading down as the characters explore.
       Ceilings. Passages and chambers are 10 feet high unless otherwise indicated.
-      Doors. All doors are made of wood with iron handles, hinges, and built-in locks. They are unlocked unless the text states otherwise. larno Albrek (area 12) and a bugbear named Mosk (area 9) each carry an iron key that can lock or unlock every door in the complex.
+      Doors. All doors are made of wood with iron handles, hinges, and built-in locks. They are unlocked unless the text states otherwise. Iarno Albrek (area 12) and a bugbear named Mosk (area 9) each carry an iron key that can lock or unlock every door in the complex.
       A locked door can be picked with thieves' tools and a successful DC 10 Dexterity check. A door can also be broken down with a successful DC 20 Strength check.
       Secret Doors. An “S” on the Redbrand Hideout map indicates the location of a secret door.
       Secret doors are made of stone and blend in with the surrounding walls. Spotting a secret door from a distance of no more than 10 feet without actively searching for it requires a passive Wisdom (Perception) score of 15 or higher, whereas a character who takes the time to search the wall can find the secret door with a successful DC 10 Wisdom (Perception) check. Secret doors swing open on hidden iron hinges and are not locked.
       Light. Most areas are brightly lit by oil lamps in wall sconces, refilled every few hours as needed.
-
-  What the Redbrands Know:
-    Type: Narrative
-    Number: 2.12.0.1
-    Description: |
-      If the characters charm or successfully question any of the Redbrands, they can learn the location of their hideout under Tresendar Manor as well as the following useful information:
-      • TheleaderoftheRedbrandsisahumanwizardknownas Glasstaff, so named because his magic staff is made of glass. (Only larno Albrek and the Black Spider know Glasstaff's real name.) Glasstaff's chambers are in the western end of the stronghold (see areas H and 12).
-      • A mysterious figure called the Black Spider has hired the Redbrands to frighten off adventurers and intimidate the locals, for reasons unknown. The Black Spider has sent bugbears to reinforce the Redbrands and provide extra muscle (see area 9).
-      • Thelowerpartofthecomplexisguardedbyahideous“eye monster” (see area 8).
-      • TheRedbrandshaveahandfulofcaptivesinaholdingarea “near the old crypts,” which are guarded by skeletons (see areas 4 and 5).
 
   Cellar:
     Type: Narrative
@@ -467,8 +463,8 @@ Cards:
     Type: Narrative
     Number: 2.12.1.2
     Description: |
-      The satchel hidden in the cistern is waterproof and contains a potion ofhealing, a potion ofinvisibility, 50
-      gp, and a clean set of ordinary travel clothing. This is a getaway kit that larno keeps here in case of an emergency.
+      The satchel hidden in the cistern is waterproof and contains a potion of healing, a potion of invisibility, 50
+      gp, and a clean set of ordinary travel clothing. This is a getaway kit that Iarno keeps here in case of an emergency.
 
   Barracks:
     Type: Narrative
@@ -476,24 +472,32 @@ Cards:
     Description: |
       Most of the Redbrands' human members have lodgings in Phandalin. This barracks is a good place to lie low after shaking down local miners and fur traders.
       This appears to be a storeroom pressed into service as living quarters. Two double bunks stand against the wall near the door, while barrels and crates fill the southern half of the chamber.
-      Three Redbrand ruffians are resting in this room. If they hearagooddealofnoiseinarea1 (includingloudvoices or barrels being rolled around), they prepare themselves for a fight and try to surprise intruders.
+      Three Redbrand ruffians are resting in this room. If they hear a good deal of noise in area1 (including loud voices or barrels being rolled around), they prepare themselves for a fight and try to surprise intruders.
       The barrels here contain similar provisions to those in area 1.
+
+  Redbrand Ruffian:
+    Type: NPC
+    Based on: HumanMaleCommoner
+    Description: 
 
   Barracks Treasure:
     Type: Narrative
     Number: 2.12.2.1
     Description: |
       All three Redbrands wear belt pouches holding treasure. The first holds 16 sp and 7 gp; the second, 12 sp and 5 gp; and the third, 15 ep and two garnets (10 gp each). Additionally, three dirty scarlet cloaks hang from the bunks.
-      Awarding Experience Points
-      Divide 300 XP equally among the characters if the party defeats the ruffians.
 
+  Barracks Experience Points:
+    Type: Narrative
+    Number: 2.12.2.2
+    Description: |
+      Divide 300 XP equally among the characters if the party defeats the ruffians.
 
   Trapped Hall:
     Type: Narrative
     Number: 2.12.3.0
     Description: |
       This area was part of Tresendar Manor's original cellars. The Redbrands dug out the dirt beneath the stone floor, creating a hidden pit trap.
-      ""Thick dust covers the flagstones of this somber hallway. The walls are decorated with faux columns every ten feet, and the double doors at the west end of the hall are sheathed in copper plate, now green with age. A relief carving of a mournful angel graces the doors.""
+      <i>Thick dust covers the flagstones of this somber hallway. The walls are decorated with faux columns every ten feet, and the double doors at the west end of the hall are sheathed in copper plate, now green with age. A relief carving of a mournful angel graces the doors.</i>
       The pit trap in the middle of the hall way is hidden under a false floor consisting of loose stone tiles laid atop breakaway timbers. The tiles and timbers collapse under 100 or more pounds of weight. A character searching the hall for traps can spot the covered pit with a successful DC 15 Wisdom (Perception) check. A successful check also reveals narrow ledges on the north and south sides of the pit. A creature attempting to skirt around the pit using one of these ledges must succeed on a DC 10 Dexterity (Acrobatics) check.
       A creature that triggers the trap or fails the Dexterity check to skirt around the edge of the pit must attempt a DC 1 5 Dexterity saving throw to catch the edge. On a failed save, the creature falls 20 feet to the dirt floor of the pit, taking 2d6 bludgeoning damage and landing prone.
 
@@ -629,8 +633,8 @@ Cards:
     Description: |
       A character who listens at this door with a successful DC 10 Wisdom (Perception) check hears several gruff voices issuing demeaning commands in the Goblin tongue. Examples include “Lick the floor! and Roll like a dog! The bugbears here are bullying their goblin slave.
       ""This barracks contains four roughly built wooden bunks, with heaped-up blankets and dirty dishes scattered about. A strong smell of unwashed bodies and rotten meat fills the air. Three tall, furry humanoids are lounging among the mess, barking orders at a sad little goblin that demeans itself for their amusement. Your sudden appearance causes the goblin to faint.""
-      Three bugbears and one goblin are present. The goblin, Droop, falls unconscious at the sight of the party, but another creature can use an action to wake him. Otherwise, Droop remains unconscious for Id 10 minutes. The bugbears work for the Black Spider and were sent here to help larno keep the Redbrands and the citizens of Phandalin in line. The leader is named Mosk. He wears a jeweled eye patch even though he has both his eyes. Mosk wears the eye patch because he thinks it's fancy.
-      The bugbears avoid the human members of the Redbrands. If the characters are wearing scarlet cloaks taken from elsewhere, the bugbears assume that they serve larno. Clever characters might even persuade the bugbears to help deal with “traitors” or “impostors” elsewhere in the dungeon. If you don t think the players are doing a great job roleplaying the deception, you can have the character who is doing most of the talking make a DC 15 Charisma (Deception) check to convince the bugbears to do what the party wants.
+      Three bugbears and one goblin are present. The goblin, Droop, falls unconscious at the sight of the party, but another creature can use an action to wake him. Otherwise, Droop remains unconscious for Id 10 minutes. The bugbears work for the Black Spider and were sent here to help Iarno keep the Redbrands and the citizens of Phandalin in line. The leader is named Mosk. He wears a jeweled eye patch even though he has both his eyes. Mosk wears the eye patch because he thinks it's fancy.
+      The bugbears avoid the human members of the Redbrands. If the characters are wearing scarlet cloaks taken from elsewhere, the bugbears assume that they serve Iarno. Clever characters might even persuade the bugbears to help deal with “traitors” or “impostors” elsewhere in the dungeon. If you don t think the players are doing a great job roleplaying the deception, you can have the character who is doing most of the talking make a DC 15 Charisma (Deception) check to convince the bugbears to do what the party wants.
 
   Roleplaying Droop:
     Type: Narrative
@@ -732,7 +736,7 @@ Cards:
       A former member of the Lords' Alliance, Iarno seized an opportunity in Phandalin to line his own pockets. Originally tasked with setting up a constabulary, the mage instead assembled a group of outlaws and local ruffians to secure his own position in town.
       Iarno knew of the Black Spider through his contacts in the Lords' Alliance and brokered a meeting. The drow promised to share the secrets and wealth of the Forge of Spells with the wizard in exchange for his help and loyalty.
       Iarno puts on airs of gentility and courteous manners, addressing his ruffians as “my good gentlemen,” and referring to sordid acts such as kidnapping or arson as “that unpleasant little business” or “those unfortunate events.” He refers to the characters as “guests” and expresses regret that he cannot provide suitable entertainment for their visit. Beneath his genteel demeanor, however, Iarno is just as thuggish and arrogant as any Redbrand outlaws.
-      If threatened, Iarno uses his staff of defense to cast mage armor on himself. He then casts offensive spells at enemies he can see. larno's stat block contains a list of the spells he has prepared. For descriptions of those spells and their effects, see the rulebook. Iarno uses the shield power of his staff for added protection.
+      If threatened, Iarno uses his staff of defense to cast mage armor on himself. He then casts offensive spells at enemies he can see. Iarno's stat block contains a list of the spells he has prepared. For descriptions of those spells and their effects, see the rulebook. Iarno uses the shield power of his staff for added protection.
       If he is reduced to 8 or fewer hit points and has no avenues of escape, Iarno surrenders. He values his life more than anything, and he remains a model prisoner in the hopes that the Black Spider will somehow learn of his predicament and “arrange for his freedom.”
 
   Iarno Knowledge:

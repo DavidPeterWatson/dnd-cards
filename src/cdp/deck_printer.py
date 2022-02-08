@@ -4,6 +4,7 @@ from cdp.card_back import CardBack
 from cdp.position import Position
 from cdp.card_box import CardBox
 import os
+import yaml
 
 FRONT_PAGE = 0.5
 BACK_PAGE = 10

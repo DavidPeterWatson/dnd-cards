@@ -541,20 +541,7 @@ Cards:
     Image: Items/Candle.png
     Links:
     - https://www.dnd5eapi.co/api/equipment/candle
-  Carpenter's Tools:
-    Type: Item
-    Category: Tools
-    Cost: 8gp
-    Weight: 6lb
-    Rarity: Common
-    Description: These special tools include the items needed to pursue a craft or
-      trade. The table shows examples of the most common types of tools, each providing
-      items related to a single craft. Proficiency with a set of artisan's tools lets
-      you add your proficiency bonus to any ability checks you make using the tools
-      in your craft. Each type of artisan's tools requires a separate proficiency.
-    Image: Items/Carpenter's Tools.png
-    Links:
-    - https://www.dnd5eapi.co/api/equipment/carpenters-tools
+
   Carriage:
     Type: Item
     Category: Mounts and Vehicles
@@ -728,16 +715,7 @@ Cards:
     Image: Items/Clothes, fine.png
     Links:
     - https://www.dnd5eapi.co/api/equipment/clothes-fine
-  Clothes, traveler's:
-    Type: Item
-    Category: Adventuring Gear
-    Cost: 2gp
-    Weight: 4lb
-    Rarity: Common
-    Description: ''
-    Image: Items/Clothes, traveler's.png
-    Links:
-    - https://www.dnd5eapi.co/api/equipment/clothes-travelers
+
   Club:
     Type: Item
     Category: Weapon
@@ -1592,20 +1570,7 @@ Cards:
     Image: Items/Manacles.png
     Links:
     - https://www.dnd5eapi.co/api/equipment/manacles
-  Mason's Tools:
-    Type: Item
-    Category: Tools
-    Cost: 10gp
-    Weight: 8lb
-    Rarity: Common
-    Description: These special tools include the items needed to pursue a craft or
-      trade. The table shows examples of the most common types of tools, each providing
-      items related to a single craft. Proficiency with a set of artisan's tools lets
-      you add your proficiency bonus to any ability checks you make using the tools
-      in your craft. Each type of artisan's tools requires a separate proficiency.
-    Image: Items/Mason's Tools.png
-    Links:
-    - https://www.dnd5eapi.co/api/equipment/masons-tools
+
   Mastiff:
     Type: Item
     Category: Mounts and Vehicles

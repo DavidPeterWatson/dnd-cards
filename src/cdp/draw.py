@@ -16,8 +16,10 @@ import os
 
 
 def draw_image(image_filepath, position: Position, box: Box, placement = 'None'):
+    
     if not os.path.isfile(image_filepath):
         print(f'Image not found: {image_filepath}')
+        
     if os.path.isfile(image_filepath):
         if placement == 'Fit':
             box = fit_image(image_filepath, box)
