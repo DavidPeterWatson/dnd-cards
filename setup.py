@@ -19,7 +19,8 @@ setuptools.setup(
         'Click',
         'reportlab',
         'PyYAML',
-        'deepmerge'
+        'deepmerge',
+        'requests'
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),

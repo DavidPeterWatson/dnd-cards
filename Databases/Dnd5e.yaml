@@ -4,7 +4,7 @@ Card Databases:
     Url: https://www.dnd5eapi.co
     Data Path: /api/equipment
 
-  DND5e Spells:
-    Type: dnd5eapi
-    Url: https://www.dnd5eapi.co
-    Data Path: /api/spells
+  # DND5e Spells:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/spells

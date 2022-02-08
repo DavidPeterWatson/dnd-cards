@@ -1,10 +1,12 @@
 from urllib.request import urlopen
+import requests
 import yaml
 import json
 import traceback
 import os
 
 DICTIONARY_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
+INFO_URL = 'https://www.dndbeyond.com/equipment/'
 # DICTIONARY_URL = 'https://wordsapiv1.p.mashape.com/words/'
 DICTIONARY_FILE = 'Dictionary.yaml'
 
@@ -57,32 +59,73 @@ class Database:
                 count += 1
                 print(f'importing {raw_card_name}')
                 raw_card_info = raw_data['Cards'][raw_card_name]
-                card_url = raw_card_info['url']
-                card_info = {
-                    'Type': 'Item',
-                    'Category': raw_card_info['equipment_category']['name'],
-                    'Subcategory': '',
-                    'Cost': str(raw_card_info['cost']['quantity']) + raw_card_info['cost']['unit'],
-                    'Weight': str(raw_card_info.get('weight', "?")) + 'lb',
-                    'Rarity': 'Common',
-                    'Description': raw_card_info.get('desc', ''),
-                    'Image': f'Items/{raw_card_name}.png',
-                    'Links': [f'{self.url}{card_url}'],
-                }
-                if card_info['Description'] == '':
-                    card_info['Description'] = get_definition(raw_card_name.lower(), self.dictionary)
-                card_data_root['Cards'][raw_card_name] = card_info
+                card_data_root['Cards'][raw_card_name] = self.get_card_info(raw_card_name, raw_card_info)
         except Exception:
             traceback.print_exc()
         finally:
             print(f'Saving {count} cards to {filename}')
             with open(filename, 'w') as f:
                 f.write(yaml.safe_dump(card_data_root, sort_keys=False))
-            
+
+    def get_card_info(self, name, info):
+        if '/api/equipment/' in info['url']:
+            return self.get_equipment_info(name, info)
+        if '/api/spells/' in info['url']:
+            return self.get_spell_info(name, info)
+
+    def get_equipment_info(self, name, info):
+        card_url = info['url']
+        description = ' '.join(info.get('desc', ''))
+        print(f'description {description}')
+        if info.get('desc', '') == '':
+            print(f'description: {description}')
+            description = get_definition(name.lower(), self.dictionary)
+            print(f'description after: {description}')
+        return {
+            'Type': 'Item',
+            'Category': info['equipment_category']['name'],
+            'Cost': str(info.get('cost', {}).get('quantity', '')) + info.get('cost', {}).get('unit', ''),
+            'Weight': str(info.get('weight', '')) + 'lb',
+            'Rarity': 'Common',
+            'Description': description,
+            'Image': f'Items/{name}.png',
+            'Links': [f'{self.url}{card_url}'],
+        }
+
+    def get_spell_info(self, name, info):
+        card_url = info['url']
+        description = ' '.join(info.get('desc', ''))
+        if info.get('desc', '') == '':
+            print(f'description before: {description}')
+            description = get_definition(name.lower(), self.dictionary)
+            print(f'description after: {description}')
+
+        return {
+            'Type': 'Item',
+            'Range': info.get('range', ''),
+            'School': info['school']['name'],
+            'Duration': info['duration'],
+            'Casting Time': info['casting_time'],
+            'Attack Type': info.get('attack_type', ''),
+            'Level': info['level'],
+            'Description': description,
+            'Image': f'Items/{name}.png',
+            'Links': [f'{self.url}{card_url}'],
+        }
+
+# def get_website_info(name, info):
+#     index = info['index']
+#     info_url = f'{INFO_URL}{index}'
+#     print(f'info_url: {info_url}')
+#     page = requests.get(info_url)
+#     print(page.text)
+    # raw_info = urlopen(info_url, timeout=3)
+    # print(raw_info)
 
 def get_definition(word, dictionary):
     try:
         if word in dictionary:
+            print(f'in dictionary: {word}')
             return dictionary[word]
         definition = get_online_definition(word)
         if definition or definition == '':
