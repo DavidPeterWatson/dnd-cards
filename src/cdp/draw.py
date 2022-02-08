@@ -1,7 +1,11 @@
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import Paragraph
 from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.pdfmetrics import registerFont, registerFontFamily
 from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.colors import black
+
 import traceback
 from cdp.position import Position
 from cdp.box import Box
@@ -25,33 +29,66 @@ def draw_rectangle(position: Position, box: Box, corner_radius, stroke=1, fill=1
     position.canvas.roundRect(position.x_offset + box.x_offset, position.y_offset + box.y_offset, box.width, box.height, corner_radius, stroke=stroke, fill=fill)
 
 
-def draw_paragraph(msg, position: Position, box: Box, font_style: FontStyle):
+def draw_paragraph(text, position: Position, box: Box, font_style: FontStyle):
     try:
         register_font(font_style)
+        # styles = getSampleStyleSheet()
         style = ParagraphStyle(
             name='Normal',
+            # parent=styles['default'],
+            # fontFamily = font_style.name,
             fontName=font_style.name,
             fontSize=font_style.size,
             alignment=font_style.horizontal_alignment,
             leading=font_style.size * font_style.line_spacing
         )
-        message = Paragraph(str(msg).replace('\n', '<br/>'), style=style)
-        w, message_height = message.wrap(box.width, box.height)
+        # style = getSampleStyleSheet()['BodyText']
+        # style.fontFamily = font_style.name
+        # style.fontSize = font_style.size
+        # style.alignment = font_style.horizontal_alignment
+        # style.leading = font_style.size * font_style.line_spacing
+        # text = '<font name="{}">{}</font>'.format(font_style.name, text)
+        position.canvas.setLineWidth(0.5)
+        position.canvas.setStrokeColor(black)
+        paragraph = Paragraph(str(text).replace('\n', '<br/>'), style)
+        w, message_height = paragraph.wrap(box.width, box.height)
         effective_y = box.y_offset + box.height - message_height
         if font_style.vertical_alignment == BOTTOM:
             effective_y = box.y_offset
         if font_style.vertical_alignment == MIDDLE:
             effective_y = box.y_offset + ((box.height - message_height) / 2.0)
-        message.drawOn(position.canvas, position.x_offset + box.x_offset, position.y_offset + effective_y)
+        paragraph.drawOn(position.canvas, position.x_offset + box.x_offset, position.y_offset + effective_y)
     except Exception:
         pass
         # traceback.print_exc()
 
+        # styleSheet = getSampleStyleSheet()
+        # B = styleSheet['BodyText']
+        # text = "X<font name=Courier>Y</font>Z"
+        # P = Paragraph(text, B)
 
 def register_font(font_style: FontStyle):
     try:
-        if not os.path.isfile(font_style.font_path):
-            print(f'Font not found: {font_style.font_path}')
-        pdfmetrics.registerFont(TTFont(font_style.name, font_style.font_path))
+        regular_font_path = f'{font_style.font_path}-Regular.ttf'
+        bold_font_path = f'{font_style.font_path}-Bold.ttf'
+        italic_font_path = f'{font_style.font_path}-Italic.ttf'
+
+        if os.path.isfile(regular_font_path):
+            registerFont(TTFont(font_style.name, regular_font_path))
+        else:
+            print(f'Font not found: {regular_font_path}')
+        if os.path.isfile(bold_font_path):
+            registerFont(TTFont(f'{font_style.name}-bold', bold_font_path))
+        else:
+            registerFont(TTFont(f'{font_style.name}-bold', regular_font_path))
+        if os.path.isfile(italic_font_path):
+            registerFont(TTFont(f'{font_style.name}-italic', italic_font_path))
+        else:
+            registerFont(TTFont(f'{font_style.name}-italic', regular_font_path))
+        registerFontFamily(font_style.name, 
+            normal=font_style.name,
+            bold=f'{font_style.name}-bold',
+            italic=f'{font_style.name}-italic',
+            boldItalic=f'{font_style.name}-bold')
     except Exception:
         traceback.print_exc()

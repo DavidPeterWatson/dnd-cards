@@ -3,7 +3,7 @@ Styles:
     Type: Deck Style
     Header:
       Image: Backgrounds/Centered Scroll Header.png
-      Font: Tiamat Condensed SC Regular Regular.ttf
+      Font: Tiamat Condensed SC
       Font Size: 12
       Line Spacing: 0.9
       Height: 12.0
@@ -13,7 +13,7 @@ Styles:
       Image: Backgrounds/Border.png
       Width: 3.5
     Version:
-      Font: LibreBaskerville-Regular.ttf
+      Font: LibreBaskerville
       Font Size: 3
       Padding:
         Bottom: 0.5
@@ -29,9 +29,9 @@ Styles:
       Image: Backgrounds/Back1.png
     Specifications:
       Offset: 3.5
-      Label Font: LibreBaskerville-Regular.ttf
+      Label Font: LibreBaskerville
       Label Font Size: 5
-      Value Font: LibreBaskerville-Regular.ttf
+      Value Font: LibreBaskerville
       Value Font Size: 8
       Long Value Character Count: 6
       Long Value Font Size: 6
@@ -113,7 +113,7 @@ Styles:
           Row: 6
           Alignment: Right
     Category:
-      Font: Tiamat Condensed SC Regular Regular.ttf
+      Font: Tiamat Condensed SC
       Font Size: 8
       Height: 0
       Line Spacing: 1
@@ -122,7 +122,7 @@ Styles:
     Description:
       Image: Backgrounds/Scroll Detail.png
       Height: 27.0
-      Font: LibreBaskerville-Regular.ttf
+      Font: LibreBaskerville
       Font Size: 7
       Line Spacing: 1.3
       Padding:
@@ -130,7 +130,7 @@ Styles:
         Left: 1.0
         Right: 1.0
     Details:
-      Font: LibreBaskerville-Regular.ttf
+      Font: LibreBaskerville
       Font Size: 6
       Line Spacing: 1.3
       Padding:

@@ -7,13 +7,14 @@ Decks:
     Collections:
       - Lost Mine of Phandelver Part 2 Phandalin
 
-  Barthen's Provisions Stock:
+  Trading Post:
     Style: Scroll Deck Style
     Collate: True
     Back:
       Image: Backgrounds/Back1.png
     Front:
       Image: Buildings/Trading Post.png
+    Minimum Cards: 60
     Cards:
       - Arrow
       - Arrow
@@ -107,36 +108,34 @@ Cards:
   Phandalin:
     Type: Narrative
     Campaign: Lost Mine of Phandelver
-    Number: 2 
+    Number: 2
     Chapter: Phandalin
     Encounter: Overview
     Description: |
-      For DM
-      The frontier town of Phandalin is built on the ruins of a much older settlement. Hundreds of years ago, the old Phandalin was a thriving human town whose people were firmly allied with the dwarves and gnomes of the Phandelver's Pact. However, the same ore horde that sacked the mines at Wave Echo Cave laid waste to the settlement, and Phandalin was abandoned for centuries.
+      The frontier town of <strike>Phandalin</strike> <sup>is</sup> built on the ruins of a much older settlement. Hundreds of years ago, the old Phandalin was a thriving human town whose people were firmly allied with the dwarves and gnomes of the Phandelver's Pact. However, the same orc horde that sacked the mines at Wave Echo Cave laid waste to the settlement, and Phandalin was abandoned for centuries.
       In the last three or four years, hardy settlers from the cities of Neverwinter and Waterdeep have begun the hard work of reclaiming the ruins of Phandalin. A bustling frontier settlement has grown up on the site of the old town, and is home now to farmers, woodcutters, fur traders, and prospectors drawn by stories of gold and platinum in the foothills of the Sword Mountains. Unfortunately, more than a few bandits and brigands have settled here as well, taking advantage of the fact that the area has no local lord or authority to chase them off. A gang known as the Redbrands has controlled Phandalin for the past two months, extorting and bullying everyone in town. The gang is led by a mysterious figure known to the townsfolk as Glasstaff.
     Details: |
-      The rutted track emerges from a wooded hillside, and you catch your first glimpse of Phandalin. The town consists of forty or fifty simple log buildings, some built on old fieldstone foundations. More old ruins—crumbling stone walls covered in ivy and briars—surround the newer houses and shops, showing how this must have been a much larger town in centuries past. Most of the newer buildings are set on the sides of the cart track, which widens into a muddy main street of sorts as it climbs toward a ruined manor house on a hillside at the east side of town.
-      As you approach, you see children playing on the town green and townsfolk tending to chores or running errands at shops. Many people look up as you approach, but all return to their business as you go by.
+      <i>The rutted track emerges from a wooded hillside, and you catch your first glimpse of Phandalin. The town consists of forty or fifty simple log buildings, some built on old fieldstone foundations. More old ruins—crumbling stone walls covered in ivy and briars—surround the newer houses and shops, showing how this must have been a much larger town in centuries past. Most of the newer buildings are set on the sides of the cart track, which widens into a muddy main street of sorts as it climbs toward a ruined manor house on a hillside at the east side of town.
+      As you approach, you see children playing on the town green and townsfolk tending to chores or running errands at shops. Many people look up as you approach, but all return to their business as you go by.</i>
 
   Enter Phandalin:
     Type: Narrative
     Number: 2.1
     Description: |
       If Sildar Hallwinter is with the party, add:
-        Sildar seems much more at ease.
-        My friends,” he says, "let us secure lodgings. I'm told the local inn is very quaint.”
+        <i>Sildar seems much more at ease.
+        "My friends,” he says, "let us secure lodgings. I'm told the local inn is very quaint.”</i>
 
-
-      Sildar's plan is to get some rest at the Stonehill Inn, then search Phandalin for signs of the missing wizard, larno Albrek. When his investigation hits a dead end, he sets up a meeting with Townmaster Harbin Wester (see the “Townmaster's Hall” section). up a meeting with Townmaster Harbin Wester (see the “Townmaster's Hall” section).
-      During this part of the adventure, the characters can visit the various locations in Phandalin and talk to the NPCs there. (See the “Town Description”section for details.) The town is small enough that it takes only a few minutes to stroll from one end to the other. However, the characters arrive late in the day and can't get to more than one or two locations before it's time to seek lodgings for the night.
+      Sildar's plan is to get some rest at the Stonehill Inn, then search Phandalin for signs of the missing wizard, larno Albrek. When his investigation hits a dead end, he sets up a meeting with Townmaster Harbin Wester (see <b>Townmaster's Hall 2.10.0</b>). up a meeting with Townmaster Harbin Wester (see the “Townmaster's Hall” section).
+      During this part of the adventure, the characters can visit the various locations in Phandalin and talk to the NPCs there. (See the “Town Description” section for details.) The town is small enough that it takes only a few minutes to stroll from one end to the other. However, the characters arrive late in the day and can't get to more than one or two locations before it's time to seek lodgings for the night.
 
   Enter Phandalin w Sildar Hallwinter:
     Type: Narrative
     Number: 2.1.1
     Description: |
-      During this part of the adventure, the characters can visit the various locations in Phandalin and talk to the NPCs there. (See the “Town Description”section for details.) The town is small enough that it takes only a few minutes to stroll from one end to the other. However, the characters arrive late in the day and can't get to more than one or two locations before it's time to seek lodgings for the night.
+      During this part of the adventure, the characters can visit the various locations in Phandalin and talk to the NPCs there. (See the “Town Description” section for details.) The town is small enough that it takes only a few minutes to stroll from one end to the other. However, the characters arrive late in the day and can't get to more than one or two locations before it's time to seek lodgings for the night.
       Some locales the characters should visit include the following:
-      - Barthen's Provisions. If the characters have the wagon load of supplies from the “Meet Me in Phandalin” adventure hook, they are meant to deliver it to this shop.
+      - <u>Barthen's Provisions</u>. If the characters have the wagon load of supplies from the “Meet Me in Phandalin” adventure hook, they are meant to deliver it to this shop.
       - Lionshield Coster. If the characters retrieved the stolen goods from the Cragmaw hideout, they might want to return them to the rightful owner.
       - Stonehill Inn. If the characters have Sildar Hallwinter with them, the knight suggests heading for this inn to find lodgings. If the characters are otherwise looking for a place to eat and sleep, they discover that the Stonehill appears to be the best available option.
 
@@ -493,10 +492,10 @@ Cards:
     Type: Narrative
     Number: 2.12.3.0
     Description: |
-      This area was part of Tresendar Manor’s original cellars. The Redbrands dug out the dirt beneath the stone floor, creating a hidden pit trap.
-    ""Thick dust covers the flagstones of this somber hallway. The walls are decorated with faux columns every ten feet, and the double doors at the west end of the hall are sheathed in copper plate, now green with age. A relief carving of a mournful angel graces the doors.""
-    The pit trap in the middle of the hall way is hidden under a false floor consisting of loose stone tiles laid atop breakaway timbers. The tiles and timbers collapse under 100 or more pounds of weight. A character searching the hall for traps can spot the covered pit with a successful DC 15 Wisdom (Perception) check. A successful check also reveals narrow ledges on the north and south sides of the pit. A creature attempting to skirt around the pit using one of these ledges must succeed on a DC 10 Dexterity (Acrobatics) check.
-    A creature that triggers the trap or fails the Dexterity check to skirt around the edge of the pit must attempt a DC 1 5 Dexterity saving throw to catch the edge. On a failed save, the creature falls 20 feet to the dirt floor of the pit, taking 2d6 bludgeoning damage and landing prone.
+      This area was part of Tresendar Manor's original cellars. The Redbrands dug out the dirt beneath the stone floor, creating a hidden pit trap.
+      ""Thick dust covers the flagstones of this somber hallway. The walls are decorated with faux columns every ten feet, and the double doors at the west end of the hall are sheathed in copper plate, now green with age. A relief carving of a mournful angel graces the doors.""
+      The pit trap in the middle of the hall way is hidden under a false floor consisting of loose stone tiles laid atop breakaway timbers. The tiles and timbers collapse under 100 or more pounds of weight. A character searching the hall for traps can spot the covered pit with a successful DC 15 Wisdom (Perception) check. A successful check also reveals narrow ledges on the north and south sides of the pit. A creature attempting to skirt around the pit using one of these ledges must succeed on a DC 10 Dexterity (Acrobatics) check.
+      A creature that triggers the trap or fails the Dexterity check to skirt around the edge of the pit must attempt a DC 1 5 Dexterity saving throw to catch the edge. On a failed save, the creature falls 20 feet to the dirt floor of the pit, taking 2d6 bludgeoning damage and landing prone.
 
   Trapped Hall Experience Points:
     Type: Narrative
@@ -541,14 +540,14 @@ Cards:
       A heap of discarded clothing is piled carelessly against the far wall.
       Two Redbrand ruffians in scarlet cloaks stand guard here, though they spend most of their time taunting the hapless prisoners (see the “Captives” section). If they hear fighting in area 5, they take up positions against the wall near the door, then try to surprise intruders. The captives are too intimidated to shout warnings or call for help.
       The heap of clothing belongs to the various captives who have been housed here over the last two months—at least a dozen people to judge by the size of the pile.
-      Cell Doors. The cell doors feature simple locks requiring thieves’ tools and a successful DC 10 Dexterity check to pick. The doors can also be wrenched open by brute force with a successful DC 22 Strength check.
+      Cell Doors. The cell doors feature simple locks requiring thieves' tools and a successful DC 10 Dexterity check to pick. The doors can also be wrenched open by brute force with a successful DC 22 Strength check.
 
   Slave Pen Captives:
     Type: Narrative
     Number: 2.12.5.1
     Description: |
-      The three human commoners imprisoned here are Mirna Dendrar and her two teenage children, thirteen-year-old Nars and eighteen-year-old Nilsa. A few days ago, the Redbrands murdered Mima’s husband, Thel, for defying them. (His corpse can be found in area 8.) That night, the gang returned and abducted the family from their home in Phandalin. The gang plans to sell the family into slavery.
-      The Dendrars are grateful to the characters for rescuing them, but they can’t provide much information about the Redbrand hideout. All they know is that the boss is a wizard (though they haven’t met him and don’t know his name), and that he has “tall, furry monsters with big ears” (bugbears) working for him.
+      The three human commoners imprisoned here are Mirna Dendrar and her two teenage children, thirteen-year-old Nars and eighteen-year-old Nilsa. A few days ago, the Redbrands murdered Mima's husband, Thel, for defying them. (His corpse can be found in area 8.) That night, the gang returned and abducted the family from their home in Phandalin. The gang plans to sell the family into slavery.
+      The Dendrars are grateful to the characters for rescuing them, but they can't provide much information about the Redbrand hideout. All they know is that the boss is a wizard (though they haven't met him and don't know his name), and that he has “tall, furry monsters with big ears” (bugbears) working for him.
 
   Slave Pen Side Quest:
     Type: Quest
@@ -584,7 +583,7 @@ Cards:
     Type: Narrative
     Number: 2.12.7.1
     Description: |
-      Most of the provisions and goods here aren’t valuable, but lying among them are thirty beaver pelts (2 gp each). They were looted from a caravan on the Triboar Trail a few days ago.
+      Most of the provisions and goods here aren't valuable, but lying among them are thirty beaver pelts (2 gp each). They were looted from a caravan on the Triboar Trail a few days ago.
 
   Crevasse:
     Type: Narrative
@@ -593,8 +592,8 @@ Cards:
       The characters arrive here by one of three routes: the tunnel from area 1, the storeroom at area 7, or the rough- hewn passage to the south, which continues off the map for about one hundred feet and emerges from a tunnel in the woods south of Tresendar Manor. The passage is an excellent way to smuggle people or goods in and out of Phandalin without being seen, and is thus perfect for a gang of slavers and thieves.
       A cold breeze fills this large natural cavern, carrying with it the faint scent of decaying flesh. A crevasse divides the cavern and is flanked by two rough stone columns that support the twenty-foot-high ceiling. Two arched wooden bridges span the chasm.
       The guardian of this cave is a nothic—an insane subterranean monster that hungers for flesh. The creature, lured by a faint magical effect emanating from the crevasse, was occupying the area when the Redbrands moved in. Iarno managed to strike a bargain with the monster, convincing it to help guard the stronghold in exchange for treasure and the occasional gift of fresh meat. Still, the nothic is untrustworthy.
-      The nothic lurks near the west ends of the two bridges. If it notices intruders entering the cave, it hides behind one of the large stone columns and watches them, attempting to use its Weird Insight (see the creature’s stat block) to discern the characters’ secrets.
-      The nothic communicates using telepathy. If detected, it prefers to negotiate and isn’t above betraying the Redbrands for the right incentive, such as the promise of food. When roleplaying the nothic, consider speaking in whispers and throwing in some mad cackles and bits of gibberish. Also be sure to mention that the creature isn’t actually talking but rather filling the characters’ heads with its foul murmurings and demands for food. The nothic knows everything the Redbrands know; see the “What the Redbrands Know” sidebar on page 20.
+      The nothic lurks near the west ends of the two bridges. If it notices intruders entering the cave, it hides behind one of the large stone columns and watches them, attempting to use its Weird Insight (see the creature's stat block) to discern the characters' secrets.
+      The nothic communicates using telepathy. If detected, it prefers to negotiate and isn't above betraying the Redbrands for the right incentive, such as the promise of food. When roleplaying the nothic, consider speaking in whispers and throwing in some mad cackles and bits of gibberish. Also be sure to mention that the creature isn't actually talking but rather filling the characters' heads with its foul murmurings and demands for food. The nothic knows everything the Redbrands know; see the “What the Redbrands Know” sidebar on page 20.
 
   Crevasse Bridges:
     Type: Narrative
@@ -614,7 +613,7 @@ Cards:
     Type: Narrative
     Number: 2.12.8.3
     Description: |
-      The nothic keeps its hoard in a battered wooden chest hidden in a cubbyhole at the bottom of the crevasse, under the north bridge. The chest can’t be seen from the edge of the crevasse, but is obvious to any character who descends  into the fissure. The chest contains 160 sp, 120 gp, five malachite gems (15 gp each), two potions ofhealing, and a scroll of augury.
+      The nothic keeps its hoard in a battered wooden chest hidden in a cubbyhole at the bottom of the crevasse, under the north bridge. The chest can't be seen from the edge of the crevasse, but is obvious to any character who descends  into the fissure. The chest contains 160 sp, 120 gp, five malachite gems (15 gp each), two potions ofhealing, and a scroll of augury.
       The chest also holds a +1 longsword in a silver-chased scabbard. The sword is inscribed with the name “Talon, and its hilt is worked in the shape of a bird of prey with outspread wings. It once belonged to a great knight named Aldith Tresendar, known as the Black Hawk. A character who succeeds on a DC 15 Intelligence (History) check recognizes the sword and recalls this lore.
       Sir Aldith died fighting off the orcs that attacked through the hidden caverns below his manor. Talon was lost here until the nothic found it.
 
@@ -630,7 +629,7 @@ Cards:
     Description: |
       A character who listens at this door with a successful DC 10 Wisdom (Perception) check hears several gruff voices issuing demeaning commands in the Goblin tongue. Examples include “Lick the floor! and Roll like a dog! The bugbears here are bullying their goblin slave.
       ""This barracks contains four roughly built wooden bunks, with heaped-up blankets and dirty dishes scattered about. A strong smell of unwashed bodies and rotten meat fills the air. Three tall, furry humanoids are lounging among the mess, barking orders at a sad little goblin that demeans itself for their amusement. Your sudden appearance causes the goblin to faint.""
-      Three bugbears and one goblin are present. The goblin, Droop, falls unconscious at the sight of the party, but another creature can use an action to wake him. Otherwise, Droop remains unconscious for Id 10 minutes. The bugbears work for the Black Spider and were sent here to help larno keep the Redbrands and the citizens of Phandalin in line. The leader is named Mosk. He wears a jeweled eye patch even though he has both his eyes. Mosk wears the eye patch because he thinks it’s fancy.
+      Three bugbears and one goblin are present. The goblin, Droop, falls unconscious at the sight of the party, but another creature can use an action to wake him. Otherwise, Droop remains unconscious for Id 10 minutes. The bugbears work for the Black Spider and were sent here to help larno keep the Redbrands and the citizens of Phandalin in line. The leader is named Mosk. He wears a jeweled eye patch even though he has both his eyes. Mosk wears the eye patch because he thinks it's fancy.
       The bugbears avoid the human members of the Redbrands. If the characters are wearing scarlet cloaks taken from elsewhere, the bugbears assume that they serve larno. Clever characters might even persuade the bugbears to help deal with “traitors” or “impostors” elsewhere in the dungeon. If you don t think the players are doing a great job roleplaying the deception, you can have the character who is doing most of the talking make a DC 15 Charisma (Deception) check to convince the bugbears to do what the party wants.
 
   Roleplaying Droop:
@@ -639,15 +638,15 @@ Cards:
     Description: |
       The goblin, Droop, is not a threat to the party. He has been cowed by the bugbears and follows their orders until someone stronger comes along.
       If he regains consciousness during combat, Droop hides and avoids the fight. He is such a coward that if he is ordered to fight, he does so with disadvantage (as explained in the rulebook).
-      Droop knows the general layout of the Redbrand hideout, as well as the location of its secret doors and traps. He doesn’t think to offer up the information, but if prompted, he reveals as much as he can remember in an attempt to be useful to the party. Some of the details might be confusing or mixed up. He is a goblin, after all.
-      If the bugbears are dispatched, Droop tries to ingratiate himself with the party. He doesn’t remember the route to Cragmaw Castle, but he knows it’s up north, in the forest. He also knows that Cragmaw goblins patrol around Phandalin, and he suggests the characters might be able to capture a patrol to learn more about the castle.
+      Droop knows the general layout of the Redbrand hideout, as well as the location of its secret doors and traps. He doesn't think to offer up the information, but if prompted, he reveals as much as he can remember in an attempt to be useful to the party. Some of the details might be confusing or mixed up. He is a goblin, after all.
+      If the bugbears are dispatched, Droop tries to ingratiate himself with the party. He doesn't remember the route to Cragmaw Castle, but he knows it's up north, in the forest. He also knows that Cragmaw goblins patrol around Phandalin, and he suggests the characters might be able to capture a patrol to learn more about the castle.
       Characters might be inclined to keep Droop around for a while. See the “NPC Party Members” sidebar (page 11) for advice on how to run Droop as a member of the party.
 
   Guard Barracks Developments:
     Type: Narrative
     Number: 2.12.9.2
     Description: |
-      The bugbears are the only ones in the Redbrand hideout who know the location of Wave Echo Cave. They won’t willingly divulge this Black Spider more information, since they fear the than they fear the characters. The bugbears also know the location Cragmaw Castle, but again, they don’t share this information readily. A character who interrogates a captured bugbear can pry the information loose with a successful DC 15 Charisma (Intimidation) check.
+      The bugbears are the only ones in the Redbrand hideout who know the location of Wave Echo Cave. They won't willingly divulge this Black Spider more information, since they fear the than they fear the characters. The bugbears also know the location Cragmaw Castle, but again, they don't share this information readily. A character who interrogates a captured bugbear can pry the information loose with a successful DC 15 Charisma (Intimidation) check.
 
   Guard Barracks Treasure:
     Type: Narrative
@@ -662,7 +661,6 @@ Cards:
       Divide 600 XP equally among the characters if the party defeats the bugbears.
 
 
-
   Common Room:
     Type: Narrative
     Number: 2.12.10.0
@@ -673,14 +671,14 @@ Cards:
       ""Several worn tables and chairs are scattered around this large room. Wooden benches are drawn up against walls decorated with draperies of brown and red, and several ale kegs are propped up and tapped.
       Four tough-looking human warriors wearing scarlet cloaks are gathered around one of the tables. A stack of coins and trinkets is heaped upon the tabletop between them.""
 
-      Four Redbrand ruffians are drinking and playing knucklebones when the characters enter. The game isn’t far from turning acrimonious, as most of them do. The dice are loaded, and the ruffian to which they belong is naturally winning. All four have been drinking heavily, and they are poisoned (see the appendix in the rulebook for the effects of being poisoned).
-      The Redbrands immediately recognize characters wearing scarlet cloaks as impostors. However, fast- talking characters might still be able to pass themselves off as “new recruits,” especially if they offer to join the game. If you don’t think the players are doing a great job roleplaying the deception, you can have the character who is doing most of the talking make a DC 10 Charisma (Deception) check to fool the Redbrands.
+      Four Redbrand ruffians are drinking and playing knucklebones when the characters enter. The game isn't far from turning acrimonious, as most of them do. The dice are loaded, and the ruffian to which they belong is naturally winning. All four have been drinking heavily, and they are poisoned (see the appendix in the rulebook for the effects of being poisoned).
+      The Redbrands immediately recognize characters wearing scarlet cloaks as impostors. However, fast- talking characters might still be able to pass themselves off as “new recruits,” especially if they offer to join the game. If you don't think the players are doing a great job roleplaying the deception, you can have the character who is doing most of the talking make a DC 10 Charisma (Deception) check to fool the Redbrands.
 
   Common Room Treasure:
     Type: Narrative
     Number: 2.12.10.0
     Description: |
-      The wealth in the room is all on the table, having been bet in the game. (Knocking over the table or mixing up all the enemies’ loot is a great way to distract them for a short time.) The total amounts to 75 cp, 55 sp, 22 ep, 15 gp, and a gold earring set with a tiny ruby (30 gp).
+      The wealth in the room is all on the table, having been bet in the game. (Knocking over the table or mixing up all the enemies' loot is a great way to distract them for a short time.) The total amounts to 75 cp, 55 sp, 22 ep, 15 gp, and a gold earring set with a tiny ruby (30 gp).
 
   Common Room Experience Points:
     Type: Narrative
@@ -688,35 +686,35 @@ Cards:
     Description: |
       Divide 400 XP equally among the characters if the party defeats the Redbrands in this room.
 
-  Wizard’s Workshop:
+  Wizard's Workshop:
     Type: Narrative
     Number: 2.12.11.0
     Description: |
       Faint bubbling and dripping sounds can be heard through either door of this room with a successful DC 15 Wisdom (Perception) check.
-    This room appears to be a wizard's workshop. A rat scurries across the floor and takes refuge under a large worktable set up with alembics, retorts, distillation coils, and other alchemical devices, all of it stewing and bubbling away. Bookshelves are crowded with sheaves of parchment and strange-looking tomes.
-    Iarno has left his rat familiar here to watch for intruders. The rat shares a telepathic bond with its master, and it sends a brief warning message to Iarno as soon as it detects intruders. The rat moves at a speed of 20 feet and hasAC10,1 hitpoint,andnoeffectiveattacks.Iftheratis killed, it disappears.
-    If the characters leave the rat unharmed, it follows them around as though curious or hungry. It might even feign affection for a character who feeds it, though it remains absolutely loyal to Iarno.
+      This room appears to be a wizard's workshop. A rat scurries across the floor and takes refuge under a large worktable set up with alembics, retorts, distillation coils, and other alchemical devices, all of it stewing and bubbling away. Bookshelves are crowded with sheaves of parchment and strange-looking tomes.
+      Iarno has left his rat familiar here to watch for intruders. The rat shares a telepathic bond with its master, and it sends a brief warning message to Iarno as soon as it detects intruders. The rat moves at a speed of 20 feet and hasAC10,1 hitpoint,andnoeffectiveattacks.Iftheratis killed, it disappears.
+      If the characters leave the rat unharmed, it follows them around as though curious or hungry. It might even feign affection for a character who feeds it, though it remains absolutely loyal to Iarno.
 
-  Wizard’s Workshop Books and Notes:
-   Type: Narrative
+  Wizard's Workshop Books and Notes:
+    Type: Narrative
     Number: 2.12.11.1
     Description: |
-      Iarno is trying to master the art of brewing potions and concocting alchemical mixtures. The books and notes scattered around the room are basic texts on alchemy. Any character proficient in Arcana can see that Iarno’s apparatus appears to be set up to brew potions ofinvisibility—not that he has succeeded so far.
-      Among the books is a tome written in Dwarvish. The journal of an adventurer named Urmon, it describes the history of the Lost Mine of Phandelver and the Forge of Spells. (Share the information in the first and second paragraph of the “Background” section if you have not already done so.) In addition, Urmon records that a magic mace named Lightbringer was commissioned by priests of Lathander, the god of dawn, from the mages working with the gnomes and dwarves of the Phandelver’s Pact. The mace was lost when Wave Echo Cave and its mine vanished from history. (Characters might find the mace in part 4, “Wave Echo Cave.”)
+      Iarno is trying to master the art of brewing potions and concocting alchemical mixtures. The books and notes scattered around the room are basic texts on alchemy. Any character proficient in Arcana can see that Iarno's apparatus appears to be set up to brew potions ofinvisibility—not that he has succeeded so far.
+      Among the books is a tome written in Dwarvish. The journal of an adventurer named Urmon, it describes the history of the Lost Mine of Phandelver and the Forge of Spells. (Share the information in the first and second paragraph of the “Background” section if you have not already done so.) In addition, Urmon records that a magic mace named Lightbringer was commissioned by priests of Lathander, the god of dawn, from the mages working with the gnomes and dwarves of the Phandelver's Pact. The mace was lost when Wave Echo Cave and its mine vanished from history. (Characters might find the mace in part 4, “Wave Echo Cave.”)
 
-  Wizard’s Workshop Developments:
+  Wizard's Workshop Developments:
     Type: Narrative
     Number: 2.12.11.2
     Description: |
       Because Iarno and his rat familiar share a telepathic bond, the mage (in area 12) knows the characters are coming and has time to prepare for them.
 
-  Wizard’s Workshop Treasure:
+  Wizard's Workshop Treasure:
     Type: Narrative
     Number: 2.12.11.3
     Description: |
       Most of the materials in this room have no value, but three small bottles hold rare reagents: mercury, dragon bile, and powdered nightshade. These are worth 25 gp each to an apothecary or alchemist.
 
-  Glasstaff’s Quarters:
+  Glasstaff's Quarters:
     Type: Narrative
     Number: 2.12.12.0
     Description: |
@@ -731,10 +729,10 @@ Cards:
     Type: Narrative
     Number: 2.12.12.1
     Description: |
-      A former member of the Lords’ Alliance, Iarno seized an opportunity in Phandalin to line his own pockets. Originally tasked with setting up a constabulary, the mage instead assembled a group of outlaws and local ruffians to secure his own position in town.
-      Iarno knew of the Black Spider through his contacts in the Lords’ Alliance and brokered a meeting. The drow promised to share the secrets and wealth of the Forge of Spells with the wizard in exchange for his help and loyalty.
+      A former member of the Lords' Alliance, Iarno seized an opportunity in Phandalin to line his own pockets. Originally tasked with setting up a constabulary, the mage instead assembled a group of outlaws and local ruffians to secure his own position in town.
+      Iarno knew of the Black Spider through his contacts in the Lords' Alliance and brokered a meeting. The drow promised to share the secrets and wealth of the Forge of Spells with the wizard in exchange for his help and loyalty.
       Iarno puts on airs of gentility and courteous manners, addressing his ruffians as “my good gentlemen,” and referring to sordid acts such as kidnapping or arson as “that unpleasant little business” or “those unfortunate events.” He refers to the characters as “guests” and expresses regret that he cannot provide suitable entertainment for their visit. Beneath his genteel demeanor, however, Iarno is just as thuggish and arrogant as any Redbrand outlaws.
-      If threatened, Iarno uses his staff of defense to cast mage armor on himself. He then casts offensive spells at enemies he can see. larno’s stat block contains a list of the spells he has prepared. For descriptions of those spells and their effects, see the rulebook. Iarno uses the shield power of his staff for added protection.
+      If threatened, Iarno uses his staff of defense to cast mage armor on himself. He then casts offensive spells at enemies he can see. larno's stat block contains a list of the spells he has prepared. For descriptions of those spells and their effects, see the rulebook. Iarno uses the shield power of his staff for added protection.
       If he is reduced to 8 or fewer hit points and has no avenues of escape, Iarno surrenders. He values his life more than anything, and he remains a model prisoner in the hopes that the Black Spider will somehow learn of his predicament and “arrange for his freedom.”
 
   Iarno Knowledge:
@@ -743,34 +741,34 @@ Cards:
     Description: |
       If he is questioned while in captivity, Iarno relates the following information, all of which is true:
       • The Black Spider is a drow (dark elf). The Black Spider sent three bugbears to help Iarno keep the population of Phandalin under control, but the Redbrands have managed without them. The bugbears know the way to Wave Echo Cave, but Iarno does not. 
-      • The Black Spider is searching Wave Echo Cave for the Forge of Spells. Dwarves and gnomes of the Phandelver’s Pact used the magical forge to fashion powerful magic items.
-      • No other members of the Lords’ Alliance know of Iarno’s betrayal.
+      • The Black Spider is searching Wave Echo Cave for the Forge of Spells. Dwarves and gnomes of the Phandelver's Pact used the magical forge to fashion powerful magic items.
+      • No other members of the Lords' Alliance know of Iarno's betrayal.
 
-  Glasstaff’s Quarters Developments:
+  Glasstaff's Quarters Developments:
     Type: Narrative
     Number: 2.12.12.3
     Description: |
-      Various papers and notes are stacked neatly on the desk, mostly consisting of Iarno’s written orders to apothecaries and alchemists in nearby settlements for more materials for his workshop. The characters also find a letter signed with the Black Spider’s symbol.
+      Various papers and notes are stacked neatly on the desk, mostly consisting of Iarno's written orders to apothecaries and alchemists in nearby settlements for more materials for his workshop. The characters also find a letter signed with the Black Spider's symbol.
 
-      ""Lord Albrek, My spies in Neverwinter tell me that strangers are due to arrive in Phandalin. They could be working for the dwarves. Capture them if you can, kill them if you must, but don’t allow them to upset our plans. See that any dwarven maps in their possession are delivered to me with haste. I’m counting on you, Iarno. Don’t disappoint me.""
+      ""Lord Albrek, My spies in Neverwinter tell me that strangers are due to arrive in Phandalin. They could be working for the dwarves. Capture them if you can, kill them if you must, but don't allow them to upset our plans. See that any dwarven maps in their possession are delivered to me with haste. I'm counting on you, Iarno. Don't disappoint me.""
 
 
-      If Iarno is taken into custody, Sildar Hallwinter arranges to have the wizard incarcerated in the townmaster’s hall until he can be safely transported back to Neverwinter. Whether Iarno stands trial for his crimes is beyond the scope of this adventure. The Black Spider is too preoccupied to meddle in the wizard’s fate.
+      If Iarno is taken into custody, Sildar Hallwinter arranges to have the wizard incarcerated in the townmaster's hall until he can be safely transported back to Neverwinter. Whether Iarno stands trial for his crimes is beyond the scope of this adventure. The Black Spider is too preoccupied to meddle in the wizard's fate.
 
-  Glasstaff’s Quarters Treasure:
+  Glasstaff's Quarters Treasure:
     Type: Narrative
     Number: 2.12.12.4
     Description: |
-      At the foot of Iarno’s bed is a sturdy, unlocked wooden chest holding the best pickings of the Redbrands’ loot over the last two months. It contains 180 sp, 130 gp, and a silk pouch containing five carnelians (10 gp each), two peridots (15 gp each), and one pearl (100 gp). It also contains two magic items that Iarno brought with him from Neverwinter: a scroll of charm person and a scroll offireball. Iarno also wields a staff of defense (see appendix A).
+      At the foot of Iarno's bed is a sturdy, unlocked wooden chest holding the best pickings of the Redbrands' loot over the last two months. It contains 180 sp, 130 gp, and a silk pouch containing five carnelians (10 gp each), two peridots (15 gp each), and one pearl (100 gp). It also contains two magic items that Iarno brought with him from Neverwinter: a scroll of charm person and a scroll offireball. Iarno also wields a staff of defense (see appendix A).
 
-  Glasstaff’s Quarters Experience Points:
+  Glasstaff's Quarters Experience Points:
     Type: Narrative
     Number: 2.12.12.5
     Description: |
       Divide 200 XP equally among the characters if the party slays Iarno Albrek. Double the XP award if they capture Iarno and deliver him to Sildar Hallwinter in Phandalin.
 
-  Phandalin What’s Next?:
+  Phandalin What's Next?:
     Type: Narrative
     Number: 2.12.12.5
     Description: |
-      The next stage of the adventure continues with part 3, “The Spider’s Web,” in which the characters undertake a number of short adventures that advance the story. At some point during part 2, the characters are likely to advance to 3rd level, so make sure the players are keeping track of their XP.
+      The next stage of the adventure continues with part 3, “The Spider's Web,” in which the characters undertake a number of short adventures that advance the story. At some point during part 2, the characters are likely to advance to 3rd level, so make sure the players are keeping track of their XP.
