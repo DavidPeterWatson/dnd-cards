@@ -59,7 +59,13 @@ class Style():
         self.card_box = Box(0, 0, card_width, card_height)
 
         header = self.info['Header']
+        header_margin = header['Margin']
+        header_top_margin = header_margin['Top'] * mm
+        header_left_margin = header_margin['Left'] * mm
+        header_right_margin = header_margin['Right'] * mm
+        header_bottom_margin = header_margin['Bottom'] * mm
         header_height = header['Height'] * mm
+        header_width = card_width - header_left_margin - header_right_margin
         self.header_height = header_height
         header_filename =  header['Image']
         header_font = header['Font']
@@ -68,7 +74,7 @@ class Style():
         header_font_size = header['Font Size']
         header_line_spacing = header['Line Spacing']
         self.header_filepath = os.path.join(self.image_path, header_filename)
-        self.header_box = Box(0, card_height - header_height, card_width, header_height)
+        self.header_box = Box(header_left_margin, card_height - header_height - header_top_margin, header_width, header_height)
         self.header_text_box = add_padding(self.header_box, self.header_padding)
         self.header_font_style = FontStyle(header_font, header_font_path, header_font_size, header_line_spacing, CENTER, MIDDLE)
 
@@ -88,7 +94,7 @@ class Style():
         details_font_size =  details['Font Size']
         details_line_spacing =  details['Line Spacing']
         self.details_font_style = FontStyle(details_font, details_font_path, details_font_size, details_line_spacing, LEFT, TOP)
-        self.details_box = Box(border_width + self.details_padding.left, border_width + self.details_padding.bottom, card_width - self.details_padding.left - self.details_padding.right - border_width * 2, card_height - header_height - border_width - self.details_padding.top - self.details_padding.bottom)
+        self.details_box = Box(border_width + self.details_padding.left, border_width + self.details_padding.bottom, card_width - self.details_padding.left - self.details_padding.right - border_width * 2, card_height - header_height - header_top_margin - border_width - self.details_padding.top - self.details_padding.bottom)
 
         version = self.info['Version']
         version_font = version['Font']

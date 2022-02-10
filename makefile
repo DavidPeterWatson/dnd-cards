@@ -7,6 +7,9 @@ nyx:
 damaia:
 	cdp print -f 'Decks/Damaia Deck.yaml'
 
+kathra:
+	cdp print -f 'Decks/Kathra Rockseeker Deck.yaml'
+
 dm:
 	cdp print -f "Decks/Dungeon Master's Deck.yaml"
 
