@@ -14,6 +14,8 @@ Styles:
       Height: 11.0
       Padding:
         Top: 2.5
+        Left: 10
+        Right: 10
     Border:
       Image: Backgrounds/Border.png
       Width: 3.5

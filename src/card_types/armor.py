@@ -13,7 +13,7 @@ class Armor(Item):
     def draw_specifications(self, position: Position):
         try:
             super().draw_specifications(position)
-            self.draw_specification('Dexterity', 'x', position)
+            # self.draw_specification('Dexterity', 'x', position)
 
             if self.is_proficient():
                 self.draw_specification('Proficiency', 'x', position)

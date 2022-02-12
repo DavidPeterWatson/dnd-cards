@@ -6,7 +6,7 @@ Cards:
     Weight: 0.5lb
     Rarity: Common
     Description: You regain 2d4+2 hit points when you drink this potion. The potion's red liquid glimmers when agitated.
-    Image: Magical Items/Healing Potion.png
+    Image: Magical Items/Potion of Healing.png
     Links:
       - https://roll20.net/compendium/dnd5e/Potion%20of%20Healing#content
       - https://www.dndbeyond.com/equipment/potion-of-healing
@@ -29,3 +29,11 @@ Cards:
     Cost: 1350gp
     Rarity: Very rare
     Description: You regain 10d4+20 hit points when you drink this potion. The potion's red liquid glimmers when agitated.
+
+  Potion of Invisibility:
+    Rarity: Very Rare
+    Description: |
+      This potion's container looks empty but feels as though it holds liquid. When you drink it, you become invisible for 1 hour. Anything you wear or carry is invisible with you. The effect ends early if you attack or cast a spell.
+    Image: Magical Items/Potion of Invisibility.png
+    Links:
+      - https://www.dnd5eapi.co/api/magic-items/potion-of-invisibility

@@ -1,24 +1,14 @@
 Decks:
-  Lost Mine of Phandelver Part 1 Goblin Ambush:
+  Lost Mine of Phandelver Part 1 On The Trail:
     Label: |
-      LMoP Part 1
-      Goblin Ambush
+      Lost Mine of Phandelver
+      Part 1 - On The Trail
     Style: Scroll Deck Style
     Collate: True
     Back:
       Image: Backgrounds/Back1.png
     Collections:
       - Lost Mine of Phandelver Part 1 Goblin Ambush
-
-  Lost Mine of Phandelver Part 1 Cragmaw Hideout:
-    Label: |
-      LMoP Part 1
-      Cragmaw Hideout
-    Style: Scroll Deck Style
-    Collate: True
-    Back:
-      Image: Backgrounds/Back1.png
-    Collections:
       - Lost Mine of Phandelver Part 1 Cragmaw Hideout
 
   Klarg's Treasure Chest:

@@ -13,6 +13,9 @@ kathra:
 dm:
 	cdp print -f "Decks/Dungeon Master's Deck.yaml"
 
+magicitems:
+	cdp download -f 'Databases/Dnd5e Magic Items.yaml'
+
 install:
 	python3 -m pip install .
 
