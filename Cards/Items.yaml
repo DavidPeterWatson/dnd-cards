@@ -106,7 +106,7 @@ Cards:
     Weight: 4lb
     Rarity: Common
     Description: 1 day of food and drink for a single character
-    Image: Items/Rations.png
+    Image: Items/Rations (1 day).png
     Links:
       - https://roll20.net/compendium/dnd5e/
 
@@ -157,14 +157,14 @@ Cards:
     Links:
       - https://roll20.net/compendium/dnd5e/Hunting%20trap#content
 
-  Quiver of Arrows:
+  Quiver:
     Type: Item
     Subcategory: 'Ammunition'
     Cost: 1gp
     Weight: 4lb
     Rarity: Common
-    Description: Quiver of Arrows
-    Image: Items/Quiver of Arrows.png
+    Description: Quiver
+    Image: Items/Quiver.png
     Links:
       - https://www.dndbeyond.com/equipment/quiver
       - https://roll20.net/compendium/dnd5e/Quiver#content

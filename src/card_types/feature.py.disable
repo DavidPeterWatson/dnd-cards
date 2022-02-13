@@ -1,0 +1,10 @@
+from card_types.action import Action
+
+
+def get_class_name():
+    return 'Feature'
+
+def get_card_type():
+    return 'Feature'
+
+class Feature(Action):

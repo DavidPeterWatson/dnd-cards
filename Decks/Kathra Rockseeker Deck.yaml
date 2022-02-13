@@ -17,7 +17,7 @@ Collections:
       - Kathra Rockseeker
     Actions for:
       - Kathra Rockseeker
-    Capabilities for:
+    Features for:
       - Kathra Rockseeker
     Skills for:
       - Kathra Rockseeker
@@ -26,7 +26,7 @@ Collections:
       - Kathra Rockseeker
     Actions for:
       - Kathra Rockseeker
-    Capabilities for:
+    Features for:
       - Kathra Rockseeker
     Skills for:
       - Kathra Rockseeker
@@ -137,7 +137,7 @@ Cards:
       - Wisdom
       - Charisma
     Primary Abilities: []
-    Capabilities:
+    Features:
       - Stonecunning
       - Darkvision:
           Range: 60 ft
@@ -148,6 +148,3 @@ Cards:
       - Dwarven Toughness
       - Mercenary Sergeant
 
-  Kathra Rockseeker Equipment:
-    Type: Equipment
-    Creature: Goblin with Scimitar

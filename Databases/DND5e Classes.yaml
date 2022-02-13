@@ -1,5 +1,20 @@
 Card Databases:
-  DND5e Classes:
+  # DND5e Classes:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/classes
+
+  # DND5e Barbarian Levels:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/classes/barbarian/levels
+
+  # DND5e Ranger Levels:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/classes/ranger/levels
+
+  DND5e Wizard Levels:
     Type: dnd5eapi
     Url: https://www.dnd5eapi.co
-    Data Path: /api/classes
+    Data Path: /api/classes/wizard/levels

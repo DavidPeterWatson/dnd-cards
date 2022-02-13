@@ -1,5 +1,4 @@
 from urllib.request import urlopen
-import requests
 import yaml
 import json
 import traceback
@@ -7,7 +6,6 @@ import os
 
 DICTIONARY_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
 INFO_URL = 'https://www.dndbeyond.com/equipment/'
-# DICTIONARY_URL = 'https://wordsapiv1.p.mashape.com/words/'
 DICTIONARY_FILE = 'Dictionary.yaml'
 
 class Database:
@@ -32,7 +30,7 @@ class Database:
             download_data = yaml.safe_load(response.read())
             with open(self.name + '-list.yaml', 'w') as f:
                 f.write(yaml.safe_dump(download_data, sort_keys=False))
-            for result in download_data['results']:
+            for result in self.get_results(download_data):
                 card_name = result['name']
                 card_url = result['url']
                 full_card_url = f'{self.url}{card_url}'
@@ -47,6 +45,12 @@ class Database:
             print(f'saving raw data from {raw_filename}')
             with open(raw_filename, 'w') as f:
                 f.write(yaml.safe_dump(card_data_root, sort_keys=False))
+
+    def get_results(self, download_data):
+        if 'results' in download_data:
+            return download_data['results']
+        if type(download_data) is list:
+            return download_data
 
     def import_database(self):
         try:
@@ -112,15 +116,6 @@ class Database:
             'Image': f'Items/{name}.png',
             'Links': [f'{self.url}{card_url}'],
         }
-
-# def get_website_info(name, info):
-#     index = info['index']
-#     info_url = f'{INFO_URL}{index}'
-#     print(f'info_url: {info_url}')
-#     page = requests.get(info_url)
-#     print(page.text)
-    # raw_info = urlopen(info_url, timeout=3)
-    # print(raw_info)
 
 def get_definition(word, dictionary):
     try:

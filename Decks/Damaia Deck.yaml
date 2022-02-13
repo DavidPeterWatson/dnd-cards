@@ -40,7 +40,7 @@ Collections:
       - Damaia
     Actions for:
       - Damaia
-    Capabilities for:
+    Features for:
       - Damaia
     Skills for:
       - Damaia
@@ -51,7 +51,7 @@ Collections:
       - Damaia
     Actions for:
       - Damaia
-    Capabilities for:
+    Features for:
       - Damaia
     Skills for:
       - Damaia
@@ -79,7 +79,7 @@ Cards:
     Armor Class: 15
     Proficiency Bonus: '+2'
     Description: |
-      Capabilities: Darkvision 60 ft, Hellish Resistance, Infernal Legacy, Rage, Unarmored Defense
+      Features: Darkvision 60 ft, Hellish Resistance, Infernal Legacy, Rage, Unarmored Defense
     Image: Creatures/Tiefling Barbarian.png
     Back Image: Creatures/Tiefling Barbarian.png
     Ability Scores:
@@ -137,8 +137,9 @@ Cards:
       - Constitution
     Primary Abilities:
       - Strength
-    Capabilities:
-      - Darkvision 60 ft
+    Features:
+      - Darkvision:
+          60 ft
       - Hellish Resistance
       - Infernal Legacy
       - Rage:

@@ -30,6 +30,8 @@ Decks:
       Image: Items/Backpack.png
     Style: Scroll Deck Style
     Minimum Cards: 40
+    Collections:
+      - Nyx Daergel Equipment
 
 Collections:
   Nyx Daergel Full:
@@ -41,7 +43,7 @@ Collections:
       - Nyx Daergel
     Actions for:
       - Nyx Daergel
-    Capabilities for:
+    Features for:
       - Nyx Daergel
     Skills for:
       - Nyx Daergel
@@ -52,9 +54,12 @@ Collections:
       - Nyx Daergel
     Actions for:
       - Nyx Daergel
-    Capabilities for:
+    Features for:
       - Nyx Daergel
     Skills for:
+      - Nyx Daergel
+  Nyx Daergel Equipment:
+    Equipment for:
       - Nyx Daergel
 
 Cards:
@@ -76,7 +81,7 @@ Cards:
     Level: 2
     Speed: 30ft
     Hit Points: 11
-    Hit Dice: 1d10
+    Hit Dice: 2d10
     Armor Class: 15
     Proficiency Bonus: '+2'
     Description: Nyx Daergel was outcast by her fellow gnomes and now protects the forests.
@@ -96,8 +101,12 @@ Cards:
       Intelligence: '+2'
       Wisdom: '+2'
       Charisma: '+0'
-    Spells:
-      - Minor Illusion
+    Saving Throws:
+      - Strength
+      - Dexterity
+    Primary Abilities:
+      - Dexterity
+      - Wisdom
     Equipment:
       Weapons:
         - Shortsword
@@ -109,11 +118,10 @@ Cards:
         - Belt Pouch with 20gp
       Items:
         - Staff
-        - Quiver of Arrows
+        - Quiver
         - Hunting Trap
         - Tusk
         - Traveler's Clothes
-        # - Belt Pouch
     Proficiencies:
       Weapon Skill Types:
         - Simple
@@ -132,17 +140,47 @@ Cards:
       - Common
       - Gnomish
       - One of your choice
-    Saving Throws:
-      - Strength
-      - Dexterity
-    Primary Abilities:
-      - Dexterity
-      - Wisdom
-    Capabilities:
+    Features:
       - Natural Illusionist
-      - Favored Enemy
+      - Favored Enemy:
+        - Orc
+      - Favored Terrain:
+        - Forest
       - Natural Explorer
-      - Speak with small beasts
+      - Speak with Small Beasts
       - Gnome Cunning
       - Darkvision:
           Range: 60 ft
+      - Fighting Style:
+        - Archery
+        - Defense
+        - Dueling
+        - Two-Weapon Fighting
+      - Spellcasting:
+          Spellcasting Ability: Wisdom
+          Spell Save DC: 12
+          Spell Attack Bonus: +4
+          Spell Splots:
+            - Level 1: 2
+          Number of Known Spells: 2
+          Spells Known:
+            - 1st:
+              - Animal Friendship
+              - Cure Wounds
+          Spells:
+            - 1st:
+              - Alarm
+              - Animal Friendship
+              - Cure Wounds
+              - Detect Magic
+              - Detect Poison and Disease
+              - Ensnaring Strike
+              - Fog Cloud
+              - Goodberry
+              - Hail of Thorns
+              - Hunters Mark
+              - Jump
+              - Longstrider
+              - Speak with Animals
+
+

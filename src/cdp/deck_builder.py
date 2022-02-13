@@ -55,10 +55,10 @@ def create_collection_cards(collection_name, deck: Deck):
         if creature_info is not None:
             cards.extend(create_creature_weapon_cards(creature_info, deck))
 
-    for creature in collection.get('Capabilities for', []):
+    for creature in collection.get('Features for', []):
         creature_info = resolve_card_info(creature, deck)
         if creature_info is not None:
-            cards.extend(create_creature_capabilitiy_cards(creature_info, deck))
+            cards.extend(create_creature_feature_cards(creature_info, deck))
 
     for creature in collection.get('Skills for', []):
         creature_info = resolve_card_info(creature, deck)
@@ -121,8 +121,8 @@ def create_creature_skill_cards(creature_info, deck: Deck):
     return create_cards_for_creature(get_skills_list(), creature_info, deck)
 
 
-def create_creature_capabilitiy_cards(creature_info, deck: Deck):
-    return create_cards_for_creature(creature_info.get('Capabilities', []), creature_info, deck)
+def create_creature_feature_cards(creature_info, deck: Deck):
+    return create_cards_for_creature(creature_info.get('Features', []), creature_info, deck)
 
 
 def create_creature_action_cards(creature_info, deck: Deck):

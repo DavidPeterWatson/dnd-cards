@@ -110,7 +110,7 @@ Cards:
       Intelligence: '-4'
       Wisdom: '+1'
       Charisma: '-3'
-    Capabilities:
+    Features:
       - Echolocation
       - Keen Hearing
     Actions:
@@ -155,7 +155,7 @@ Cards:
     Senses:
       - Darkvision 60 ft
       - Passive Perception 9
-    Capabilities:
+    Features:
       - Nimble Escape
     Languages:
       - Common
@@ -203,7 +203,7 @@ Cards:
     Senses:
       - Darkvision 60 ft
       - Passive Perception 9
-    Capabilities:
+    Features:
       - Brute
       - Surprise Attack
     Languages:
@@ -250,7 +250,7 @@ Cards:
       Intelligence: '-4'
       Wisdom: '+1'
       Charisma: '-2'
-    Capabilities:
+    Features:
       - Keen Hearing and Smell
       - Pack Tactics
     Equipment:
