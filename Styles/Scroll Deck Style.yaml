@@ -50,21 +50,27 @@ Styles:
         Strength:
           Row: 1
           Alignment: Left
+          Label: STR
         Dexterity:
           Row: 2
           Alignment: Left
+          Label: DEX
         Constitution:
           Row: 3
           Alignment: Left
+          Label: CON
         Intelligence:
           Row: 4
           Alignment: Left
+          Label: INT
         Wisdom:
           Row: 5
           Alignment: Left
+          Label: WIS
         Charisma:
           Row: 6
           Alignment: Left
+          Label: CHA
         Proficiency:
           Row: 7
           Alignment: Left

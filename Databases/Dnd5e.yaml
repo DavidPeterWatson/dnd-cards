@@ -1,25 +1,121 @@
 Card Databases:
+  DND5e ability-scores:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/ability-scores
+  
+  DND5e skills:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/skills
+  
+  DND5e proficiencies:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/proficiencies
+  
+  DND5e languages:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/languages
+  
+  DND5e alignment:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/alignment
+
+  DND5e Backgrounds:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/backgrounds
+
+  # DND5e Classes:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/classes
+
+  # DND5e Subclasses:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/subclasses
+
+  # DND5e Features:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/features
+
+  DND5e Races:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/races
+
+  DND5e Subraces:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/subraces
+
+  DND5e Traits:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/traits
+
+  DND5e Equipment Categories:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/equipment-categories
+
   # DND5e Equipment:
   #   Type: dnd5eapi
   #   Url: https://www.dnd5eapi.co
   #   Data Path: /api/equipment
-
-  # DND5e Spells:
-  #   Type: dnd5eapi
-  #   Url: https://www.dnd5eapi.co
-  #   Data Path: /api/spells
 
   # DND5e Magic Items:
   #   Type: dnd5eapi
   #   Url: https://www.dnd5eapi.co
   #   Data Path: /api/magic-items
 
-  DND5e Classes:
+  DND5e Weapon Properties:
     Type: dnd5eapi
     Url: https://www.dnd5eapi.co
-    Data Path: /api/classes
+    Data Path: /api/weapon-properties
 
-  # DND5e Features:
+  # DND5e Spells:
   #   Type: dnd5eapi
   #   Url: https://www.dnd5eapi.co
-  #   Data Path: /api/features
+  #   Data Path: /api/spells
+
+  DND5e Feats:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/feats
+
+  DND5e Monsters:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/monsters
+
+  DND5e Conditions:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/conditions
+
+  DND5e Damage Types:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/damage-types
+
+  DND5e Magic Schools:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/magic-schools
+
+  DND5e Rules:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/rules
+
+  DND5e Rule Sections:
+    Type: dnd5eapi
+    Url: https://www.dnd5eapi.co
+    Data Path: /api/rule-sections
+

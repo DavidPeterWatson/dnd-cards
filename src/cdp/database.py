@@ -16,7 +16,6 @@ class Database:
         self.url = self.info['Url']
         self.data_path = self.info['Data Path']
         self.dictionary = load_dictionary()
-        print(yaml.safe_dump(self.dictionary))
 
     def download(self):
         raw_filename = f'{self.name}-raw.yaml'

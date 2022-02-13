@@ -173,7 +173,7 @@ class Card:
             traceback.print_exc()
 
 
-    def draw_specification(self, label, value, position: Position):
+    def draw_specification(self, specification_name, value, position: Position):
         try:
             if value == '':
                 return
@@ -194,10 +194,11 @@ class Card:
             spec_height =  specs['Height'] * mm
             spec_width =  specs['Width'] * mm
             spec_spacing =  specs['Spacing'] * mm
-            specification = self.style.specifications.get(label, None)
+            specification = self.style.specifications.get(specification_name, None)
             if not specification:
-                print(f'Specification not found: {label}')
+                print(f'Specification not found: {specification_name}')
                 return
+            specification_label = specification.get('Label', specification_name)
             alignment = specification['Alignment']
             row = specification['Row']
             y_offset = self.style.header_box.y_offset- self.style.header_bottom_margin - row * (spec_height + spec_spacing)
@@ -208,7 +209,7 @@ class Card:
             spec_box = Box(x_offset, y_offset, spec_width, spec_height)
             spec_label_font_style = FontStyle(spec_label_font, spec_label_font_path, spec_label_font_size, spec_line_spacing, CENTER, TOP)
             spec_value_font_style = FontStyle(spec_value_font, spec_value_font_path, spec_value_font_size, spec_line_spacing, CENTER, MIDDLE)
-            draw_paragraph(label, position, spec_box, spec_label_font_style)
+            draw_paragraph(specification_label, position, spec_box, spec_label_font_style)
             draw_paragraph(value, position, spec_box, spec_value_font_style)
 
         except Exception:

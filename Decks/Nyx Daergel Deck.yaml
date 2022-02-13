@@ -121,7 +121,7 @@ Cards:
         - Quiver
         - Hunting Trap
         - Tusk
-        - Traveler's Clothes
+        - Clothes, traveler's
     Proficiencies:
       Weapon Skill Types:
         - Simple
@@ -140,17 +140,18 @@ Cards:
       - Common
       - Gnomish
       - One of your choice
+    Traits:
+      - Darkvision:
+          Range: 60 ft
     Features:
       - Natural Illusionist
       - Favored Enemy:
-        - Orc
+        - Goblin
       - Favored Terrain:
         - Forest
       - Natural Explorer
       - Speak with Small Beasts
       - Gnome Cunning
-      - Darkvision:
-          Range: 60 ft
       - Fighting Style:
         - Archery
         - Defense

@@ -2,21 +2,14 @@ Packs:
   Explorer's Pack:
     Cost: 10gp
     Items:
-      - Backpack
+      - Name: Backpack
       - Bedroll
       - Mess Kit
       - Tinderbox
-      - 10 Torches
-      - Rations
-      - Rations
-      - Rations
-      - Rations
-      - Rations
-      - Rations
-      - Rations
-      - Rations
-      - Rations
-      - Rations
+      - Torch:
+          Quantity: 10
+      - Rations:
+          Quantity: 10
       - Waterskin
       - Hempen Rope:
           50ft
@@ -49,7 +42,7 @@ Packs:
     Items:
       - chest
       - 2 cases for maps and scrolls
-      - set of fine clothes
+      - Clothes, fine
       - bottle of ink
       - ink pen
       - lamp
