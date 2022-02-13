@@ -9,7 +9,17 @@ Card Databases:
   #   Url: https://www.dnd5eapi.co
   #   Data Path: /api/spells
 
-  DND5e Magic Items:
+  # DND5e Magic Items:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/magic-items
+
+  DND5e Classes:
     Type: dnd5eapi
     Url: https://www.dnd5eapi.co
-    Data Path: /api/magic-items
+    Data Path: /api/classes
+
+  # DND5e Features:
+  #   Type: dnd5eapi
+  #   Url: https://www.dnd5eapi.co
+  #   Data Path: /api/features

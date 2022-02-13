@@ -9,7 +9,6 @@ Cards:
     Armor Class: 10
     Alignment: Any
     Race: Any
-    Link: https://roll20.net/compendium/dnd5e/Commoner#h-Commoner
     Languages:
       - Common
     Challenge: 0
@@ -29,6 +28,8 @@ Cards:
       Intelligence: '+0'
       Wisdom: '+0'
       Charisma: '+0'
+    Links: 
+      - https://roll20.net/compendium/dnd5e/Commoner#h-Commoner
 
   HumanMaleCommoner:
     Based on: Commoner

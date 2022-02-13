@@ -31,9 +31,9 @@ class Card:
             if self.use_long_description():
                 self.draw_long_description(position)
             else:
-                self.draw_artwork(position)
+                if self.has_front_image(): self.draw_artwork(position)
                 self.draw_description(position)
-                self.draw_specifications(position)
+                if self.has_specifications(): self.draw_specifications(position)
             self.draw_version(position)
             self.draw_border(position)
             self.draw_header(position)
@@ -43,7 +43,7 @@ class Card:
 
 
     def use_long_description(self):
-        return not 'Image' in self.info
+        return not self.has_specifications() and not self.has_front_image()
 
 
     def pre_draw(self):
@@ -65,19 +65,30 @@ class Card:
         try:
             if 'Details' in self.info:
                 self.draw_back_with_details(position)
-            elif 'Back Image' in self.info:
+            elif self.has_back_image():
                 self.draw_back_with_image(position)
             else:
                 self.draw_deck_back(position)
         except Exception:
             traceback.print_exc()
 
+    def has_back_image(self):
+        return self.get_back_image() != ''
+
+    def get_back_image(self):
+        return self.info.get('Back Image', '')
+
+    def has_front_image(self):
+        return 'Image' in self.info
+
+    def get_front_image(self):
+        return self.info['Image']
 
     def draw_back_with_image(self, position: Position):
         try:
             border_width =  self.style.border_width
             self.draw_background(position)
-            self.draw_back_image(position, self.style.header_height, border_width, border_width)
+            self.draw_back_image(position, self.style.header_height + self.style.header_top_margin + self.style.header_bottom_margin, border_width, border_width)
             self.draw_border(position)
             self.draw_header(position)
         except Exception:
@@ -86,8 +97,8 @@ class Card:
 
     def draw_back_image(self, position: Position, top_padding, bottom_padding, side_padding):
         try:
-            if 'Back Image' in self.info:
-                back_image = self.info.get('Back Image', '')
+            if self.has_back_image():
+                back_image = self.get_back_image()
                 back_image_filepath = os.path.join(self.style.image_path, back_image)
                 max_image_height =  self.height - (top_padding + bottom_padding)
                 max_image_width =  self.width - side_padding
@@ -153,7 +164,7 @@ class Card:
             full_width = self.width - self.style.border_width * 2
             image_width = image['Width'] * mm if self.has_specifications() else full_width
             image_top =  image['Top'] * mm
-            image_filename = self.info['Image']
+            image_filename = self.get_front_image()
             image_filepath = os.path.join(self.style.image_path, image_filename)
             if os.path.isfile(image_filepath):
                 image_box = Box((self.width - image_width) / 2, self.height - image_top - image_height, image_width, image_height)
@@ -189,7 +200,7 @@ class Card:
                 return
             alignment = specification['Alignment']
             row = specification['Row']
-            y_offset = self.style.header_box.y_offset - row * (spec_height + spec_spacing)
+            y_offset = self.style.header_box.y_offset- self.style.header_bottom_margin - row * (spec_height + spec_spacing)
             if alignment == 'Left':
                 x_offset = spec_offset
             if alignment == 'Right':

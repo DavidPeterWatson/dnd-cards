@@ -37,8 +37,12 @@ class Creature(Card):
         super().pre_draw()
         self.set_passive_perception()
         self.set_initiative()
-        self.info['Back Image'] = self.info['Image']
-        pass
+
+    def has_back_image(self):
+        return super().has_front_image()
+
+    def get_back_image(self):
+        return self.get_front_image()
 
     def draw_back_image(self, position, top_padding, bottom_padding, side_padding):
         super().draw_back_image(position, self.style.header_height, 10*mm, 5*mm)

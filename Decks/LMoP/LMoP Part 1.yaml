@@ -28,8 +28,9 @@ Collections:
       - Goblin with Shortbow
       - Goblin with Scimitar
     Cards:
-      - 1 Goblen Arrows
-      - 1.1 Along the Route
+      - Phandalin Supplies Quest
+      - Goblen Arrows
+      - Along the Route
       - 1.1.1 The Wagon
       - 1.1.2 Goblin Ambush
       - 1.1.2 Dead Horses
@@ -120,22 +121,20 @@ Collections:
       - Jade Frog Statuette
 
 Cards:
-  1 Goblen Arrows:
-    Type: Narrative
-    Campaign: Lost Mine of Phandelver
-    Part: 1
-    Chapter: 0
-    Card: 0
+  Phandalin Supplies Quest:
+    Type: Quest
+    Number: 1
+    Reward: 10gp ea
     Description: |
-      "In the city of Neverwinter, a dwarf named Gundren Rockseeker asked you to bring a wagonload of provisions to the rough-and-tumble settlement of Phandalin, a couple of days' travel southeast of the city. Gundren was clearly excited and more than a little secretive about his reasons for the trip, saying only that he and his brothers had found “something big,” and that he'd pay you ten gold pieces each for escorting his supplies safely to Barthen's Provisions, a trading post in Phandalin. He then set out ahead of you on horse, along with a warrior escort named Sildar Hallwinter, claiming he needed to arrive early to “take care of business.”
-      You've spent the last few days following the High Road south from Neverwinter, and you've just recently veered east along the Triboar Trail. You've encountered no trouble so far, but this territory can be dangerous. Bandits and outlaws have been known to lurk along the trail."
+      Escort Gundren Rockseeker's supplies to Barthen's Provisions in Phandalin.
+    Details: |
+      <i>In the city of Neverwinter, a dwarf named Gundren Rockseeker asked you to bring a wagonload of provisions to the rough-and-tumble settlement of Phandalin, a couple of days' travel southeast of the city. Gundren was clearly excited and more than a little secretive about his reasons for the trip, saying only that he and his brothers had found “something big,” and that he'd pay you ten gold pieces each for escorting his supplies safely to Barthen's Provisions, a trading post in Phandalin. He then set out ahead of you on horse, along with a warrior escort named Sildar Hallwinter, claiming he needed to arrive early to “take care of business.”
+      You've spent the last few days following the High Road south from Neverwinter, and you've just recently veered east along the Triboar Trail. You've encountered no trouble so far, but this territory can be dangerous. Bandits and outlaws have been known to lurk along the trail.</i>
+    Image: Characters/Gundren Rockseeker.png
 
-  1.1 Road to Phandalin:
+  Along the Route:
     Type: Narrative
-    Campaign: Lost Mine of Phandelver
-    Part: 1
-    Chapter: 0
-    Card: 1
+    Number: 1.1
     Back Image: Maps/Road to Phandalin.jpg
     Description: |
       Before continuing with the adventure, take a few minutes to do the following:
@@ -448,7 +447,7 @@ Cards:
     Type: Creature
     Based on: HumanMaleCommoner
     Description: Kindhearted human male of fifty five years who holds a place of honor in the famous griffon cavalry of the great city of Waterdeep. He is an agent of The Lords' Alliance.
-    Image: Creatures/Sildar Hallwinter.png
+    Image: Characters/Sildar Hallwinter.png
     Links:
       - https://cathays.fandom.com/wiki/Sildar_Hallwinter
 
@@ -469,7 +468,7 @@ Cards:
     Description: |
       Objective: Escort Sildar Hallwinter to Phandalin.
       Sildar will secure a loan to pay the reward within a day after arriving in Phandalin.
-    Image: Creatures/Sildar Hallwinter.png
+    Image: Characters/Sildar Hallwinter.png
 
   LMoP Background:
     Type: Narrative

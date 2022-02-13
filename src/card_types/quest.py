@@ -12,7 +12,6 @@ class Quest(Card):
     def draw_specifications(self, position):
         try:
             reward = self.info.get('Reward', 'reward')
-            print(f'reward: {reward}')
             self.draw_specification('Reward', reward, position)
 
         except Exception:
