@@ -1,0 +1,37 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam handwritten false
+
+Component "Neverwinter" as Neverwinter
+Component "Goblin Ambush" as GoblinAmbush
+Component "Cragmaw Hideout" as CragmawHideout
+Component "Phandolin" as Phandolin
+Component "Redbrand Hideout" as RedbrandHideout
+Component "Thundertree" as Thundertree
+Component "CragmawCastle" as CragmawCastle
+Component "TriboarTrail" as TriboarTrail
+Component "AgathasLair" as AgathasLair
+Component "WaveEchoCave" as WaveEchoCave
+Component "Conyberry" as Conyberry
+Component "Old Owl Well" as OldOwlWell
+
+Neverwinter --> GoblinAmbush
+GoblinAmbush -> CragmawHideout
+GoblinAmbush --> Phandolin
+' Phandolin -> GoblinAmbush : if defeated 1st time
+CragmawHideout <-- Phandolin
+Phandolin --> RedbrandHideout
+Phandolin --> TriboarTrail
+TriboarTrail --> AgathasLair
+TriboarTrail --> WaveEchoCave
+CragmawCastle <- Phandolin
+CragmawHideout -> CragmawCastle
+Phandolin -> Thundertree
+CragmawCastle <-- Thundertree
+Thundertree -> CragmawHideout
+
+rectangle "Neverwinter" as nw {
+    Actor "Gundren\nRockseeker" as Gundren
+    note top of Gundren: Take this wagon to Phandolin
+}
+@enduml

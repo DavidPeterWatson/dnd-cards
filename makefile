@@ -19,4 +19,7 @@ magicitems:
 install:
 	python3 -m pip install .
 
+plantuml:
+	docker run -d -p 8080:8090 plantuml/plantuml-server:jetty
+
 .PHONY: decks, nyx

@@ -1,0 +1,14 @@
+@startuml Neverwinter
+skinparam componentStyle rectangle
+skinparam handwritten false
+
+
+rectangle "Neverwinter" as Neverwinter {
+    Actor "Gundren\nRockseeker" as Gundren
+    note top of Gundren: Take this wagon to Phandolin
+}
+Component "Goblin Ambush" as GoblinAmbush
+Gundren --> GoblinAmbush
+
+
+@enduml

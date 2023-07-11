@@ -1,0 +1,51 @@
+@startuml Phandolin
+skinparam componentStyle rectangle
+skinparam handwritten false
+
+Component "Goblin Ambush" as GoblinAmbush
+Component "Cragmaw Hideout" as CragmawHideout
+Component "Cragmaw Castle" as CragmawCastle
+
+Component "Phandolin" as Phandolin {
+
+    Component "Barthen's Provisions" as BarthensProvisions
+    Component "Lionshield Coster" as LionshieldCoster
+    Component "Shrine of Luck" as ShrineOfLuck 
+    ' Component "Sister Garaele' Home" as SisterGaraelesHome
+    ' Component "Smithy" as Smithy
+    Component "Stonehill Inn" as StonehillInn
+    Component "Edermath Orchard" as EdermathOrchard
+    ' Component "Linene's Home" as LinenesHome
+    Component "Townmaster's Hall" as TownmastersHall
+    Component "Sleeping Giant" as SleepingGiant 
+    ' Component "Woodworker" as Woodworker
+    Component "Phandolin Miners Exchange" as MinersExchange
+    ' Component "Halia's Home" as HaliasHome 
+    ' Component "Harbin Westers Home" as HarbinsHome
+    Component "Alderleaf Farm" as AlderleafFarm
+    Component "Tresendar Manor" as TresendarManor
+    ' Component "Town Green" as TownGreen 
+
+    Actor "Redbrand Ruffians" as RedbrandRuffians
+    ' note top of Gundren: Take this wagon to Phandolin
+}
+
+GoblinAmbush --> BarthensProvisions: Side Quest Finish:\nDeliver Wagon
+GoblinAmbush --> LionshieldCoster: return stolen goods\nor\nbuy weapons
+CragmawHideout --> StonehillInn: with Sildar
+CragmawCastle --> StonehillInn: with Gundren
+
+StonehillInn --> ShrineOfLuck
+StonehillInn --> EdermathOrchard
+StonehillInn --> TownmastersHall
+StonehillInn --> SleepingGiant
+StonehillInn --> AlderleafFarm
+StonehillInn --> MinersExchange
+
+SleepingGiant --> RedbrandRuffians
+
+RedbrandRuffians --> TresendarManor
+AlderleafFarm --> TresendarManor
+
+
+@enduml

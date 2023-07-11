@@ -1,0 +1,23 @@
+@startuml Neverwinter
+skinparam componentStyle rectangle
+skinparam handwritten false
+
+Component "Neverwinter" as Neverwinter
+
+rectangle "Goblin Ambush" as GoblinAmbush {
+    Actor "Dead Horses" as DeadHorses
+    Actor "4 Goblins" as Goblins
+    Interface "Defeat" as Defeat
+}
+
+Component "Cragmaw Hideout" as CragmawHideout
+Component "Phandolin" as Phandolin
+
+Neverwinter --> DeadHorses
+DeadHorses --> Goblins
+Goblins --> CragmawHideout
+Goblins --> Defeat
+Defeat --> Phandolin
+
+
+@enduml
