@@ -1,6 +1,9 @@
 decks:
 	cd src && python3 main.py --file 'decks/Deck Builder.yaml'
 
+wdh:
+	cdp print -f 'Decks/Waterdeep Dragon Heist Deck.yaml'
+
 nyx:
 	cdp print -f 'Decks/Nyx Daergel Deck.yaml'
 

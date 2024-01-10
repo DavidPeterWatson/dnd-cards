@@ -1,0 +1,13 @@
+Decks:
+  Waterdeep Dragon Heist:
+    Label: |
+      Waterdeep Dragon Heist
+      Magical items
+    Style: Scroll Deck Style
+    Collate: True
+    Back:
+      Image: Backgrounds/Back1.png
+    Cards:
+      - Paper Bird
+      - Ring of Truth Telling
+
