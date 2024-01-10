@@ -64,3 +64,19 @@ Cards:
     Links:
       - https://forgottenrealms.fandom.com/wiki/Ring_of_truth_telling
       - https://www.worldanvil.com/block/489219
+
+  Smokepowder:
+    Type: Magical Item
+    Category: Wondrous Items
+    Rarity: Uncommon
+    Description: |
+      Smokepowder is a magical explosive chiefly used to propel a bullet out of the barrel of a firearm.
+    Details: |
+      It is stored in airtight wooden kegs or tiny, waterproof leather packets. A packet contains enough Smokepowder for five shots, and a keg holds enough Smokepowder for five hundred shots.
+      If Smokepowder is set on fire, dropped, or otherwise handled roughly, it explodes and deals fire damage to each creature or object within 20 feet of it: 1d6 for a packet, 9d6 for a keg. A successful DC 12 Dexterity saving throw halves the damage.
+      Casting Dispel Magic on Smokepowder renders it permanently inert.
+    Image: Magical Items/Smokepowder.png
+    Links:
+      - https://forgottenrealms.fandom.com/wiki/Smokepowder
+      - https://www.worldanvil.com/block/489219
+
